@@ -1,0 +1,15 @@
+__turbopack_load_page_chunks__("/_error", [
+  "static/chunks/3635d_next_dist_compiled_799fc76e._.js",
+  "static/chunks/3635d_next_dist_shared_lib_baeb99b4._.js",
+  "static/chunks/3635d_next_dist_client_d62d3a19._.js",
+  "static/chunks/3635d_next_dist_ca1077a1._.js",
+  "static/chunks/3635d_next_error_c862e9c5.js",
+  "static/chunks/[next]_entry_page-loader_ts_1263ba26._.js",
+  "static/chunks/3635d_react_e6f769e0._.js",
+  "static/chunks/3635d_react-dom_cjs_react-dom_development_d9a9e84a.js",
+  "static/chunks/3635d_react-dom_9c8a8f76._.js",
+  "static/chunks/3635d_8c0acc9a._.js",
+  "static/chunks/[root-of-the-server]__6aadbbae._.js",
+  "static/chunks/cshr-website-full_pages__error_2da965e7._.js",
+  "static/chunks/turbopack-cshr-website-full_pages__error_b7777dff._.js"
+])

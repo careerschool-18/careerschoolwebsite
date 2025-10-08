@@ -1,0 +1,54 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/": [
+      "static/chunks/[root-of-the-server]__70a75202._.js",
+      "static/chunks/3635d_next_dist_compiled_a105de5c._.js",
+      "static/chunks/3635d_next_dist_shared_lib_d30d4cbf._.js",
+      "static/chunks/3635d_next_dist_client_d62d3a19._.js",
+      "static/chunks/3635d_next_dist_bec782a6._.js",
+      "static/chunks/3635d_react_3709692c._.js",
+      "static/chunks/3635d_react-dom_cjs_react-dom_development_d9a9e84a.js",
+      "static/chunks/3635d_react-dom_9c8a8f76._.js",
+      "static/chunks/_529b3efe._.js",
+      "static/chunks/cshr-website-full_pages_index_2da965e7._.js",
+      "static/chunks/turbopack-cshr-website-full_pages_index_3070125d._.js"
+    ],
+    "/_app": [
+      "static/chunks/3635d_next_dist_compiled_799fc76e._.js",
+      "static/chunks/3635d_next_dist_shared_lib_d30d4cbf._.js",
+      "static/chunks/3635d_next_dist_client_d62d3a19._.js",
+      "static/chunks/3635d_next_dist_bec782a6._.js",
+      "static/chunks/3635d_react_3709692c._.js",
+      "static/chunks/3635d_react-dom_cjs_react-dom_development_d9a9e84a.js",
+      "static/chunks/3635d_react-dom_9c8a8f76._.js",
+      "static/chunks/3635d_8c0acc9a._.js",
+      "static/chunks/[root-of-the-server]__44f2c5fd._.js",
+      "static/chunks/cshr-website-full_styles_globals_ea667bfc.css",
+      "static/chunks/cshr-website-full_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-cshr-website-full_pages__app_435b12e7._.js"
+    ],
+    "/_error": [
+      "static/chunks/3635d_next_dist_compiled_799fc76e._.js",
+      "static/chunks/3635d_next_dist_shared_lib_baeb99b4._.js",
+      "static/chunks/3635d_next_dist_client_d62d3a19._.js",
+      "static/chunks/3635d_next_dist_ca1077a1._.js",
+      "static/chunks/3635d_next_error_c862e9c5.js",
+      "static/chunks/[next]_entry_page-loader_ts_1263ba26._.js",
+      "static/chunks/3635d_react_e6f769e0._.js",
+      "static/chunks/3635d_react-dom_cjs_react-dom_development_d9a9e84a.js",
+      "static/chunks/3635d_react-dom_9c8a8f76._.js",
+      "static/chunks/3635d_8c0acc9a._.js",
+      "static/chunks/[root-of-the-server]__6aadbbae._.js",
+      "static/chunks/cshr-website-full_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-cshr-website-full_pages__error_b7777dff._.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": []
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js"
+];
