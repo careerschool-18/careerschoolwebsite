@@ -11,7 +11,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/menu.js [ssr] (ecmascript) <export default as Menu>"); // ✅ icons for toggle
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/menu.js [ssr] (ecmascript) <export default as Menu>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [ssr] (ecmascript) <export default as X>");
 ;
 ;
@@ -19,14 +19,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 function Header() {
     const [menuOpen, setMenuOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("header", {
-        className: "flex items-center justify-between px-4 sm:px-6 py-4 bg-[#ffffff] shadow relative",
+        className: "flex items-center justify-between px-6 py-4 bg-white shadow relative",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "flex-shrink-0",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
                     src: "/logo.png",
                     alt: "Logo",
-                    className: "h-12 w-auto"
+                    className: "h-10 w-auto"
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Header.js",
                     lineNumber: 11,
@@ -38,63 +38,39 @@ function Header() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("nav", {
-                className: "hidden md:flex gap-8 text-gray-700 font-medium",
+                className: "hidden md:flex items-center gap-3 ml-auto mr-4",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                    "Courses",
+                    "Placement",
+                    "Services",
+                    "Hire Students"
+                ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                         href: "#",
-                        className: "hover:text-blue-600",
-                        children: "HOME"
-                    }, void 0, false, {
+                        className: "bg-blue-100 text-blue-700 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
+                        children: item
+                    }, item, false, {
                         fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "#",
-                        className: "hover:text-blue-600",
-                        children: "COURSES"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "#",
-                        className: "hover:text-blue-600",
-                        children: "ABOUT"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 22,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "#",
-                        className: "hover:text-blue-600",
-                        children: "CONTACT"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                        lineNumber: 17,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 19,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "hidden md:block",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                    className: "bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition",
-                    children: "CONTACT"
+                    className: "bg-blue-600 text-white px-5 py-2 rounded font-semibold text-sm hover:bg-blue-700 transition",
+                    children: "Contact Us"
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Header.js",
-                    lineNumber: 28,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -104,71 +80,49 @@ function Header() {
                     size: 28
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Header.js",
-                    lineNumber: 38,
+                    lineNumber: 39,
                     columnNumber: 21
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                     size: 28
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Header.js",
-                    lineNumber: 38,
+                    lineNumber: 39,
                     columnNumber: 39
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             menuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-6 md:hidden z-50",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "#",
-                        className: "text-gray-700 font-medium hover:text-blue-600",
-                        children: "MENU"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 44,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "#",
-                        className: "text-gray-700 font-medium hover:text-blue-600",
-                        children: "MENU"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 45,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "#",
-                        className: "text-gray-700 font-medium hover:text-blue-600",
-                        children: "MENU"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 46,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "#",
-                        className: "text-gray-700 font-medium hover:text-blue-600",
-                        children: "MENU"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 47,
-                        columnNumber: 11
-                    }, this),
+                    [
+                        "Courses",
+                        "Placement",
+                        "Services",
+                        "Hire Students"
+                    ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                            href: "#",
+                            className: "bg-blue-100 text-blue-700 px-6 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
+                            children: item
+                        }, item, false, {
+                            fileName: "[project]/cshr-website-full/components/Header.js",
+                            lineNumber: 46,
+                            columnNumber: 13
+                        }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                        className: "bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition",
-                        children: "CONTACT"
+                        className: "bg-blue-600 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition",
+                        children: "Contact Us"
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 48,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 9
             }, this)
         ]
@@ -190,45 +144,51 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$run
 ;
 function FullImage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-        className: "relative w-full h-screen bg-cover bg-center flex items-center justify-start",
-        style: {
-            backgroundImage: "url('/full-image.jpeg')"
-        },
+        className: "relative w-full h-screen overflow-hidden",
         children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                src: "/full-image.jpg",
+                alt: "Full Screen",
+                className: "w-full h-full object-cover"
+            }, void 0, false, {
+                fileName: "[project]/cshr-website-full/components/FullImage.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 bg-black/40"
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/FullImage.js",
-                lineNumber: 8,
+                lineNumber: 12,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "relative z-10 pl-8 sm:pl-12 md:pl-20 max-w-xl text-left",
+                className: "absolute left-4 top-1/2 transform -translate-y-1/2 max-w-md",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
-                    className: "text-[#ffd02b] text-2xl sm:text-5xl md:text-5x1 font-bold leading-snug",
+                    className: "text-[#ffd02b] text-base sm:text-2xl md:text-4xl font-bold leading-snug",
                     children: [
                         "Learn In-Demand ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/cshr-website-full/components/FullImage.js",
-                            lineNumber: 13,
-                            columnNumber: 23
+                            lineNumber: 17,
+                            columnNumber: 27
                         }, this),
-                        " Skills and Get Ready  ",
+                        " Skills and Get Ready ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/cshr-website-full/components/FullImage.js",
-                            lineNumber: 13,
-                            columnNumber: 52
+                            lineNumber: 17,
+                            columnNumber: 55
                         }, this),
                         " For Your Dream Job"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/cshr-website-full/components/FullImage.js",
-                    lineNumber: 12,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/FullImage.js",
-                lineNumber: 11,
+                lineNumber: 15,
                 columnNumber: 7
             }, this)
         ]
@@ -260,28 +220,21 @@ function ShowcaseSection() {
     const [text, setText] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])("");
     const [index, setIndex] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
     const [isDeleting, setIsDeleting] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
-    const [step, setStep] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0); // 0 = Google Reviews, 1 = Instagram
-    // 🎬 Typewriter Effect (CareerSchool style)
+    // 🎬 Typewriter Effect
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        if (step !== 0) return; // stop typing when Instagram is visible
         const current = words[index];
         const speed = isDeleting ? 80 : 120;
         const typingEffect = setTimeout(()=>{
             if (!isDeleting) {
                 setText(current.substring(0, text.length + 1));
                 if (text === current) {
-                    setTimeout(()=>setIsDeleting(true), 1000); // pause before deleting
+                    setTimeout(()=>setIsDeleting(true), 1000);
                 }
             } else {
                 setText(current.substring(0, text.length - 1));
                 if (text === "") {
                     setIsDeleting(false);
-                    if (index + 1 === words.length) {
-                        // ✅ After finishing all words, switch to Instagram
-                        setTimeout(()=>setStep(1), 1000);
-                    } else {
-                        setIndex((prev)=>prev + 1);
-                    }
+                    setIndex((prev)=>(prev + 1) % words.length);
                 }
             }
         }, speed);
@@ -289,40 +242,52 @@ function ShowcaseSection() {
     }, [
         text,
         isDeleting,
-        index,
-        step
+        index
     ]);
-    // 🔁 Auto return from Instagram to Google after few seconds
-    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        if (step === 1) {
-            const timer = setTimeout(()=>{
-                // Reset everything to start again
-                setText("");
-                setIndex(0);
-                setIsDeleting(false);
-                setStep(0);
-            }, 5000); // Instagram visible for 3 seconds
-            return ()=>clearTimeout(timer);
+    // 🖼️ Slides
+    const slides = [
+        {
+            src: "/Website - Social Media Banner (Google).png",
+            link: "https://www.google.com/search?q=Career+School+HR+Solutions+Reviews",
+            alt: "Google Reviews"
+        },
+        {
+            src: "/Website - Social Media Banner (LinkedIn).png",
+            link: "https://www.linkedin.com/company/careerschool-hr-solutions/",
+            alt: "LinkedIn Page"
+        },
+        {
+            src: "/Website - Social Media Banner (Instagram).png",
+            link: "https://www.instagram.com/careerschoolhrsolutions",
+            alt: "Instagram Page"
         }
+    ];
+    const [current, setCurrent] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
+    // ⏱️ Auto-slide every 5 seconds
+    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
+        const interval = setInterval(()=>{
+            setCurrent((prev)=>(prev + 1) % slides.length);
+        }, 5000);
+        return ()=>clearInterval(interval);
     }, [
-        step
+        slides.length
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-        className: "relative w-full h-[100vh] overflow-hidden bg-white flex items-center justify-center",
+        className: "w-full flex flex-col items-center justify-start text-center overflow-hidden bg-white",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: `absolute inset-0 flex flex-col justify-center items-center text-center bg-white px-4 transition-opacity duration-1000 ${step === 0 ? "opacity-100 z-10" : "opacity-0 z-0"}`,
+                className: "py-10 px-4 z-10 relative bg-white",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                        className: "text-lg sm:text-xl font-semibold text-gray-700",
+                        className: "text-lg sm:text-xl font-semibold text-gray-700 mb-4",
                         children: "Learners’ Career Transitions"
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 63,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                        className: "text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-gray-900",
+                        className: "text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900",
                         children: [
                             "TRUSTED BY 1,000+",
                             " ",
@@ -335,162 +300,85 @@ function ShowcaseSection() {
                                         children: "|"
                                     }, void 0, false, {
                                         fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                        lineNumber: 71,
+                                        lineNumber: 74,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                lineNumber: 69,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 67,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "mt-10 grid grid-cols-1 md:grid-cols-3 items-center gap-8 max-w-5xl mx-auto",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col items-center",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                        src: "/google.jpeg",
-                                        alt: "Google Logo",
-                                        className: "w-16 h-16 sm:w-20 sm:h-20"
-                                    }, void 0, false, {
-                                        fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                        lineNumber: 78,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                        className: "mt-2 text-lg font-semibold text-blue-600",
-                                        children: "500+ REVIEWS"
-                                    }, void 0, false, {
-                                        fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                        lineNumber: 83,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                lineNumber: 77,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col items-center",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                        className: "text-7xl font-extrabold text-blue-700",
-                                        children: "4.9"
-                                    }, void 0, false, {
-                                        fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                        lineNumber: 89,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                        className: "flex mt-2",
-                                        children: Array(5).fill(0).map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                className: "text-yellow-400 text-3xl",
-                                                children: "★"
-                                            }, i, false, {
-                                                fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                                lineNumber: 94,
-                                                columnNumber: 19
-                                            }, this))
-                                    }, void 0, false, {
-                                        fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                        lineNumber: 90,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                lineNumber: 88,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "flex justify-center",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                    href: "https://www.google.com/search?q=Career+School+HR+Solutions+Reviews",
-                                    target: "_blank",
-                                    rel: "noopener noreferrer",
-                                    className: "bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md hover:bg-blue-800",
-                                    children: "Take Me To Google Reviews"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                    lineNumber: 102,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                lineNumber: 101,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 76,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                lineNumber: 58,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: `absolute inset-0 flex flex-col items-center justify-center bg-pink-50 text-center px-4 transition-opacity duration-1000 ${step === 1 ? "opacity-100 z-10" : "opacity-0 z-0"}`,
+                className: "relative w-full h-[90vh] overflow-hidden bg-gray-100 flex items-center justify-center",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                        className: "text-3xl sm:text-4xl font-bold mb-6 text-gray-800",
-                        children: "Follow Us on Instagram"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        className: "flex transition-transform duration-[1000ms] ease-in-out",
+                        style: {
+                            transform: `translateX(-${current * 100}%)`,
+                            width: `${slides.length * 100}%`
+                        },
+                        children: slides.map((slide, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                href: slide.link,
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                className: "w-full h-[90vh] flex-shrink-0 flex items-center justify-center bg-white",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: slide.src,
+                                    alt: slide.alt,
+                                    className: "max-w-[95%] max-h-[85vh] object-contain rounded-2xl shadow-lg"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/GoogleReview.js",
+                                    lineNumber: 97,
+                                    columnNumber: 15
+                                }, this)
+                            }, i, false, {
+                                fileName: "[project]/cshr-website-full/components/GoogleReview.js",
+                                lineNumber: 90,
+                                columnNumber: 13
+                            }, this))
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 120,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "https://www.instagram.com/careerschoolhrsolutions?igsh=MWEyc3RsZTZhMW15eg==",
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                            src: "/cshr.png",
-                            alt: "Instagram Profile",
-                            className: "w-72 h-72 sm:w-96 sm:h-96 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-                        }, void 0, false, {
-                            fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                            lineNumber: 128,
-                            columnNumber: 11
-                        }, this)
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        className: "absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3",
+                        children: slides.map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                onClick: ()=>setCurrent(i),
+                                className: `w-3 h-3 rounded-full transition-colors duration-300 ${current === i ? "bg-blue-600" : "bg-gray-300"}`
+                            }, i, false, {
+                                fileName: "[project]/cshr-website-full/components/GoogleReview.js",
+                                lineNumber: 109,
+                                columnNumber: 13
+                            }, this))
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 123,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: "https://www.instagram.com/careerschoolhrsolutions?igsh=MWEyc3RsZTZhMW15eg==",
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        className: "mt-8 bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition",
-                        children: "Visit Our Instagram →"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 134,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                lineNumber: 115,
+                lineNumber: 80,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-        lineNumber: 56,
+        lineNumber: 63,
         columnNumber: 5
     }, this);
 }
@@ -516,7 +404,7 @@ function StudentsReview() {
         {
             id: 2,
             name: "Sarathi",
-            training: "Python Training",
+            training: "Python with AI",
             review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             photo: "/sarathi pic.jpeg"
         },

@@ -1,32 +1,33 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; // ✅ icons for toggle
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between px-4 sm:px-6 py-4 bg-[#ffffff] shadow relative">
+    <header className="flex items-center justify-between px-6 py-4 bg-white shadow relative">
       {/* 🔹 Left: Logo */}
       <div className="flex-shrink-0">
-        <img
-          src="/logo.png"
-          alt="Logo"
-          className="h-12 w-auto" // Logo fixed size, no animation
-        />
+        <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
       </div>
 
       {/* 🔹 Center: Menu (Desktop) */}
-      <nav className="hidden md:flex gap-8 text-gray-700 font-medium">
-        <a href="#" className="hover:text-blue-600">HOME</a>
-        <a href="#" className="hover:text-blue-600">COURSES</a>
-        <a href="#" className="hover:text-blue-600">ABOUT</a>
-        <a href="#" className="hover:text-blue-600">CONTACT</a>
+      <nav className="hidden md:flex items-center gap-3 ml-auto mr-4">
+        {["Courses", "Placement", "Services", "Hire Students"].map((item) => (
+          <a
+            key={item}
+            href="#"
+            className="bg-blue-100 text-blue-700 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition"
+          >
+            {item}
+          </a>
+        ))}
       </nav>
 
       {/* 🔹 Right: Contact Button (Desktop) */}
       <div className="hidden md:block">
-        <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition">
-          CONTACT
+        <button className="bg-blue-600 text-white px-5 py-2 rounded font-semibold text-sm hover:bg-blue-700 transition">
+          Contact Us
         </button>
       </div>
 
@@ -41,15 +42,20 @@ export default function Header() {
       {/* 🔹 Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-6 md:hidden z-50">
-          <a href="#" className="text-gray-700 font-medium hover:text-blue-600">MENU</a>
-          <a href="#" className="text-gray-700 font-medium hover:text-blue-600">MENU</a>
-          <a href="#" className="text-gray-700 font-medium hover:text-blue-600">MENU</a>
-          <a href="#" className="text-gray-700 font-medium hover:text-blue-600">MENU</a>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition">
-            CONTACT
+          {["Courses", "Placement", "Services", "Hire Students"].map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="bg-blue-100 text-blue-700 px-6 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition"
+            >
+              {item}
+            </a>
+          ))}
+          <button className="bg-blue-600 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition">
+            Contact Us
           </button>
         </div>
       )}
     </header>
-  );
+  );
 }

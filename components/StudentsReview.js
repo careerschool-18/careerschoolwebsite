@@ -11,7 +11,7 @@ export default function StudentsReview() {
     {
       id: 2,
       name: "Sarathi",
-      training: "Python Training",
+      training: "Python with AI",
       review:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       photo: "/sarathi pic.jpeg",

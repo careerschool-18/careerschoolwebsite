@@ -6,12 +6,9 @@ export default function ShowcaseSection() {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [step, setStep] = useState(0); // 0 = Google Reviews, 1 = Instagram
 
-  // 🎬 Typewriter Effect (CareerSchool style)
+  // 🎬 Typewriter Effect
   useEffect(() => {
-    if (step !== 0) return; // stop typing when Instagram is visible
-
     const current = words[index];
     const speed = isDeleting ? 80 : 120;
 
@@ -19,126 +16,105 @@ export default function ShowcaseSection() {
       if (!isDeleting) {
         setText(current.substring(0, text.length + 1));
         if (text === current) {
-          setTimeout(() => setIsDeleting(true), 1000); // pause before deleting
+          setTimeout(() => setIsDeleting(true), 1000);
         }
       } else {
         setText(current.substring(0, text.length - 1));
         if (text === "") {
           setIsDeleting(false);
-          if (index + 1 === words.length) {
-            // ✅ After finishing all words, switch to Instagram
-            setTimeout(() => setStep(1), 1000);
-          } else {
-            setIndex((prev) => prev + 1);
-          }
+          setIndex((prev) => (prev + 1) % words.length);
         }
       }
     }, speed);
 
     return () => clearTimeout(typingEffect);
-  }, [text, isDeleting, index, step]);
+  }, [text, isDeleting, index]);
 
-  // 🔁 Auto return from Instagram to Google after few seconds
+  // 🖼️ Slides
+  const slides = [
+    {
+      src: "/Website - Social Media Banner (Google).png",
+      link: "https://www.google.com/search?q=Career+School+HR+Solutions+Reviews",
+      alt: "Google Reviews",
+    },
+    {
+      src: "/Website - Social Media Banner (LinkedIn).png",
+      link: "https://www.linkedin.com/company/careerschool-hr-solutions/",
+      alt: "LinkedIn Page",
+    },
+    {
+      src: "/Website - Social Media Banner (Instagram).png",
+      link: "https://www.instagram.com/careerschoolhrsolutions",
+      alt: "Instagram Page",
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  // ⏱️ Auto-slide every 5 seconds
   useEffect(() => {
-    if (step === 1) {
-      const timer = setTimeout(() => {
-        // Reset everything to start again
-        setText("");
-        setIndex(0);
-        setIsDeleting(false);
-        setStep(0);
-      }, 5000); // Instagram visible for 3 seconds
-      return () => clearTimeout(timer);
-    }
-  }, [step]);
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   return (
-    <section className="relative w-full h-[100vh] overflow-hidden bg-white flex items-center justify-center">
-      {/* 🔹 GOOGLE REVIEWS SECTION */}
-      <div
-        className={`absolute inset-0 flex flex-col justify-center items-center text-center bg-white px-4 transition-opacity duration-1000 ${
-          step === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
-        }`}
-      >
-        <h3 className="text-lg sm:text-xl font-semibold text-gray-700">
+    <section className="w-full flex flex-col items-center justify-start text-center overflow-hidden bg-white">
+      {/* 🔹 Top Text */}
+      <div className="py-10 px-4 z-10 relative bg-white">
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4">
           Learners’ Career Transitions
         </h3>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-gray-900">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
           TRUSTED BY 1,000+{" "}
           <span className="bg-yellow-400 px-4 py-1 rounded font-extrabold text-gray-900">
             {text}
             <span className="animate-pulse">|</span>
           </span>
         </h2>
-
-        {/* ⭐ Google Reviews */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 items-center gap-8 max-w-5xl mx-auto">
-          <div className="flex flex-col items-center">
-            <img
-              src="/google.jpeg"
-              alt="Google Logo"
-              className="w-16 h-16 sm:w-20 sm:h-20"
-            />
-            <p className="mt-2 text-lg font-semibold text-blue-600">
-              500+ REVIEWS
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <span className="text-7xl font-extrabold text-blue-700">4.9</span>
-            <div className="flex mt-2">
-              {Array(5)
-                .fill(0)
-                .map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-3xl">
-                    ★
-                  </span>
-                ))}
-            </div>
-          </div>
-
-          <div className="flex justify-center">
-            <a
-              href="https://www.google.com/search?q=Career+School+HR+Solutions+Reviews"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md hover:bg-blue-800"
-            >
-              Take Me To Google Reviews
-            </a>
-          </div>
-        </div>
       </div>
 
-      {/* 🔹 INSTAGRAM SECTION */}
-      <div
-        className={`absolute inset-0 flex flex-col items-center justify-center bg-pink-50 text-center px-4 transition-opacity duration-1000 ${
-          step === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
-        }`}
-      >
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
-          Follow Us on Instagram
-        </h2>
-        <a
-          href="https://www.instagram.com/careerschoolhrsolutions?igsh=MWEyc3RsZTZhMW15eg=="
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* 🔹 Full Image Slider */}
+      <div className="relative w-full h-[90vh] overflow-hidden bg-gray-100 flex items-center justify-center">
+        {/* Slider Container */}
+        <div
+          className="flex transition-transform duration-[1000ms] ease-in-out"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+            width: `${slides.length * 100}%`,
+          }}
         >
-          <img
-            src="/cshr.png"
-            alt="Instagram Profile"
-            className="w-72 h-72 sm:w-96 sm:h-96 object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-          />
-        </a>
-        <a
-          href="https://www.instagram.com/careerschoolhrsolutions?igsh=MWEyc3RsZTZhMW15eg=="
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition"
-        >
-          Visit Our Instagram →
-        </a>
+          {slides.map((slide, i) => (
+            <a
+              key={i}
+              href={slide.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-[90vh] flex-shrink-0 flex items-center justify-center bg-white"
+            >
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                className="max-w-[95%] max-h-[85vh] object-contain rounded-2xl shadow-lg"
+              />
+            </a>
+          ))}
+        </div>
+
+        {/* 🔸 Dots Indicator */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                current === i ? "bg-blue-600" : "bg-gray-300"
+              }`}
+            ></button>
+          ))}
+        </div>
       </div>
     </section>
   );
