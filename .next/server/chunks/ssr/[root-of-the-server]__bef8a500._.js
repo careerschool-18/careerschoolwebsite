@@ -147,7 +147,7 @@ function FullImage() {
         className: "relative w-full h-screen overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                src: "/full-image.jpg",
+                src: "/Home Page - 3840 x 2160.png",
                 alt: "Full Screen",
                 className: "w-full h-full object-cover"
             }, void 0, false, {
@@ -263,7 +263,7 @@ function ShowcaseSection() {
         }
     ];
     const [current, setCurrent] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
-    // ⏱️ Auto-slide every 5 seconds
+    // ⏱️ Auto-slide every 5 seconds (rotation)
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const interval = setInterval(()=>{
             setCurrent((prev)=>(prev + 1) % slides.length);
@@ -324,49 +324,38 @@ function ShowcaseSection() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "relative w-full h-[90vh] overflow-hidden bg-gray-100 flex items-center justify-center",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "flex transition-transform duration-[1000ms] ease-in-out",
-                        style: {
-                            transform: `translateX(-${current * 100}%)`,
-                            width: `${slides.length * 100}%`
-                        },
-                        children: slides.map((slide, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                href: slide.link,
-                                target: "_blank",
-                                rel: "noopener noreferrer",
-                                className: "w-full h-[90vh] flex-shrink-0 flex items-center justify-center bg-white",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: slide.src,
-                                    alt: slide.alt,
-                                    className: "max-w-[95%] max-h-[85vh] object-contain rounded-2xl shadow-lg"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                    lineNumber: 97,
-                                    columnNumber: 15
-                                }, this)
-                            }, i, false, {
+                    slides.map((slide, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                            href: slide.link,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            className: `absolute w-full h-[90vh] flex items-center justify-center transition-opacity duration-[1500ms] ease-in-out ${current === i ? "opacity-100 z-10" : "opacity-0 z-0"}`,
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                src: slide.src,
+                                alt: slide.alt,
+                                className: "w-full h-full object-cover rounded-none brightness-105 transition-transform duration-700 hover:scale-105"
+                            }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                lineNumber: 90,
+                                lineNumber: 91,
                                 columnNumber: 13
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 82,
-                        columnNumber: 9
-                    }, this),
+                            }, this)
+                        }, i, false, {
+                            fileName: "[project]/cshr-website-full/components/GoogleReview.js",
+                            lineNumber: 82,
+                            columnNumber: 11
+                        }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3",
+                        className: "absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-20",
                         children: slides.map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                 onClick: ()=>setCurrent(i),
                                 className: `w-3 h-3 rounded-full transition-colors duration-300 ${current === i ? "bg-blue-600" : "bg-gray-300"}`
                             }, i, false, {
                                 fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                lineNumber: 109,
+                                lineNumber: 102,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 107,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, this)
                 ]

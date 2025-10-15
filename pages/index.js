@@ -4,7 +4,6 @@ import FullImage from "../components/FullImage";
 import GoogleReview from "../components/GoogleReview";   // 👈 must match file name
 import StudentsReview from "../components/StudentsReview";
 import MeetOurStars from "../components/MeetOurStars";
-import About from "../components/About";
 import Courses from "../components/Courses";
 import Alumni from "../components/Alumni";
 import Discover from "../components/Discover";
@@ -30,7 +29,7 @@ export default function Home() {
     
     
       <MeetOurStars />
-      <About />
+     
       <Courses />
       <Alumni />
       <Discover />

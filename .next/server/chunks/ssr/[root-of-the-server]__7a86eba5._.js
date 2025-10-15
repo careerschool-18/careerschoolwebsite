@@ -209,7 +209,7 @@ function FullImage() {
         className: "relative w-full h-screen overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                src: "/full-image.jpg",
+                src: "/Home Page - 3840 x 2160.png",
                 alt: "Full Screen",
                 className: "w-full h-full object-cover"
             }, void 0, false, {
@@ -325,7 +325,7 @@ function ShowcaseSection() {
         }
     ];
     const [current, setCurrent] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
-    // ⏱️ Auto-slide every 5 seconds
+    // ⏱️ Auto-slide every 5 seconds (rotation)
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const interval = setInterval(()=>{
             setCurrent((prev)=>(prev + 1) % slides.length);
@@ -386,49 +386,38 @@ function ShowcaseSection() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "relative w-full h-[90vh] overflow-hidden bg-gray-100 flex items-center justify-center",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "flex transition-transform duration-[1000ms] ease-in-out",
-                        style: {
-                            transform: `translateX(-${current * 100}%)`,
-                            width: `${slides.length * 100}%`
-                        },
-                        children: slides.map((slide, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                href: slide.link,
-                                target: "_blank",
-                                rel: "noopener noreferrer",
-                                className: "w-full h-[90vh] flex-shrink-0 flex items-center justify-center bg-white",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: slide.src,
-                                    alt: slide.alt,
-                                    className: "max-w-[95%] max-h-[85vh] object-contain rounded-2xl shadow-lg"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                    lineNumber: 97,
-                                    columnNumber: 15
-                                }, this)
-                            }, i, false, {
+                    slides.map((slide, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                            href: slide.link,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            className: `absolute w-full h-[90vh] flex items-center justify-center transition-opacity duration-[1500ms] ease-in-out ${current === i ? "opacity-100 z-10" : "opacity-0 z-0"}`,
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                src: slide.src,
+                                alt: slide.alt,
+                                className: "w-full h-full object-cover rounded-none brightness-105 transition-transform duration-700 hover:scale-105"
+                            }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                lineNumber: 90,
+                                lineNumber: 91,
                                 columnNumber: 13
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 82,
-                        columnNumber: 9
-                    }, this),
+                            }, this)
+                        }, i, false, {
+                            fileName: "[project]/cshr-website-full/components/GoogleReview.js",
+                            lineNumber: 82,
+                            columnNumber: 11
+                        }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3",
+                        className: "absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-20",
                         children: slides.map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                 onClick: ()=>setCurrent(i),
                                 className: `w-3 h-3 rounded-full transition-colors duration-300 ${current === i ? "bg-blue-600" : "bg-gray-300"}`
                             }, i, false, {
                                 fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                                lineNumber: 109,
+                                lineNumber: 102,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/GoogleReview.js",
-                        lineNumber: 107,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, this)
                 ]
@@ -453,120 +442,272 @@ __turbopack_context__.s([
     ()=>StudentsReview
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
+"use client";
+;
 ;
 function StudentsReview() {
+    const [selectedReview, setSelectedReview] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(null);
     const reviews = [
         {
             id: 1,
-            name: "Pavithra",
-            training: "HR Training",
-            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            photo: "/pavi pic.jpeg"
-        },
-        {
-            id: 2,
-            name: "Sarathi",
-            training: "Python with AI",
-            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Velmurugan Vignesh",
+            training: "Data Analytics",
+            review: "Excellent Data Analytics training and placement support! Helped me start my IT career confidently.",
             photo: "/sarathi pic.jpeg"
         },
         {
+            id: 2,
+            name: "Pavithra S",
+            training: "Python with AI",
+            review: "Great learning experience! The sessions were simple and clear. I got placed successfully as a Software Trainee.",
+            photo: "/pavi pic.jpeg"
+        },
+        {
             id: 3,
-            name: "Pavithra",
-            training: "Data Analytics",
-            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Subha Vadivu Lakshmi",
+            training: "HR Training",
+            review: "Hands-on HR training helped me gain real-world skills in recruitment. It built my confidence and career path.",
             photo: "/pavi pic.jpeg"
         },
         {
             id: 4,
-            name: "Sarathi",
-            training: "Java Fullstack",
-            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Rajiya",
+            training: "Data Analytics",
+            review: "After a long career gap, I restarted my career with Careerschool’s amazing IT training and placement support.",
             photo: "/sarathi pic.jpeg"
+        },
+        {
+            id: 5,
+            name: "Karthik",
+            training: "Full Stack Development",
+            review: "Practical sessions and live projects helped me master full stack development quickly and efficiently.",
+            photo: "/sarathi pic.jpeg"
+        },
+        {
+            id: 6,
+            name: "Monika",
+            training: "Digital Marketing",
+            review: "Learned SEO, Ads, and campaign setup with real examples. The mentors were super supportive and skilled.",
+            photo: "/pavi pic.jpeg"
+        },
+        {
+            id: 7,
+            name: "Saranya",
+            training: "Python Programming",
+            review: "Clear and interactive sessions improved my coding skills. I now feel confident attending interviews.",
+            photo: "/pavi pic.jpeg"
+        },
+        {
+            id: 8,
+            name: "Aravind",
+            training: "Data Science",
+            review: "Covered Power BI, Python, and ML basics. Excellent structure and guidance throughout the course.",
+            photo: "/sarathi pic.jpeg"
+        },
+        {
+            id: 9,
+            name: "Nivetha",
+            training: "UI/UX Design",
+            review: "Creative training sessions helped me design real projects and build a portfolio for my career.",
+            photo: "/pavi pic.jpeg"
+        },
+        {
+            id: 10,
+            name: "Vignesh",
+            training: "Software Testing",
+            review: "Manual and automation testing were explained clearly. Helpful for placement preparation.",
+            photo: "/sarathi pic.jpeg"
+        },
+        {
+            id: 11,
+            name: "Deepika",
+            training: "Frontend Development",
+            review: "React and Tailwind sessions were practical. I created my own frontend projects confidently.",
+            photo: "/pavi pic.jpeg"
+        },
+        {
+            id: 12,
+            name: "Manoj Kumar",
+            training: "Cloud Computing",
+            review: "Good exposure to AWS and cloud fundamentals with live practice sessions and excellent trainer support.",
+            photo: "/sarathi pic.jpeg"
+        },
+        {
+            id: 13,
+            name: "Priya",
+            training: "Graphic Design",
+            review: "Covered Photoshop and Illustrator basics perfectly. The practical assignments were very helpful.",
+            photo: "/pavi pic.jpeg"
+        },
+        {
+            id: 14,
+            name: "Sathish",
+            training: "Java Full Stack",
+            review: "Java Full Stack sessions were clear and project-oriented. The placement guidance was strong.",
+            photo: "/sarathi pic.jpeg"
+        },
+        {
+            id: 15,
+            name: "Harini",
+            training: "Artificial Intelligence",
+            review: "AI training included real examples and ML concepts. It made complex topics easy to understand.",
+            photo: "/pavi pic.jpeg"
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-        className: "py-12 sm:py-16 bg-white text-center overflow-hidden px-4 sm:px-6",
+        className: "py-10 bg-white text-center overflow-hidden px-6 relative",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                className: "text-xl sm:text-2xl md:text-3xl font-bold mb-8 text-gray-900",
-                children: "Student Reviews"
+                className: "text-2xl font-extrabold mb-8 text-gray-900",
+                children: "Hear It From Our Learners"
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                lineNumber: 39,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto",
+                className: "grid grid-cols-5 gap-5 max-w-full mx-auto justify-center",
                 children: reviews.map((student)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "bg-blue-700 text-white p-4 sm:p-6 rounded-2xl shadow-md text-left hover:scale-[1.02] transition-transform duration-300",
+                        onClick: ()=>setSelectedReview(student),
+                        className: "bg-blue-700 text-white p-6 rounded-xl flex flex-col items-center gap-3 cursor-pointer hover:scale-[1.05] transition-transform duration-300 shadow-lg",
+                        style: {
+                            width: "230px",
+                            height: "260px"
+                        },
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "flex items-center mb-3 sm:mb-4",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                        src: student.photo,
-                                        alt: student.name,
-                                        className: "w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover flex-shrink-0"
-                                    }, void 0, false, {
-                                        fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                        lineNumber: 51,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                        className: "ml-3 sm:ml-4",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                                className: "font-bold text-base sm:text-lg",
-                                                children: student.name
-                                            }, void 0, false, {
-                                                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                                lineNumber: 57,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                className: "text-xs sm:text-sm opacity-90",
-                                                children: student.training
-                                            }, void 0, false, {
-                                                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                                lineNumber: 58,
-                                                columnNumber: 17
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                        lineNumber: 56,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                src: student.photo,
+                                alt: student.name,
+                                className: "w-20 h-20 rounded-full object-cover border-2 border-white shadow-md"
+                            }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                lineNumber: 50,
+                                lineNumber: 40,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
+                                className: "font-semibold text-[16px] truncate w-full text-center",
+                                children: student.name
+                            }, void 0, false, {
+                                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                className: "text-xs sm:text-sm leading-relaxed",
-                                children: student.review
+                                className: "text-[13px] opacity-95 truncate w-full text-center",
+                                children: student.training
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                lineNumber: 65,
+                                lineNumber: 48,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                className: "flex text-yellow-400 justify-center mt-1",
+                                children: [
+                                    ...Array(5)
+                                ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                        className: "text-[12px]",
+                                        children: "★"
+                                    }, i, false, {
+                                        fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                                        lineNumber: 53,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                                lineNumber: 51,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, student.id, true, {
                         fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                        lineNumber: 45,
+                        lineNumber: 34,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                lineNumber: 43,
+                lineNumber: 32,
                 columnNumber: 7
+            }, this),
+            selectedReview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                className: "fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50 px-4",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                    className: "bg-white text-gray-800 rounded-xl shadow-lg max-w-md w-full p-6 relative",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                            onClick: ()=>setSelectedReview(null),
+                            className: "absolute top-2 right-3 text-gray-500 hover:text-gray-800 text-lg",
+                            children: "✖"
+                        }, void 0, false, {
+                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                            lineNumber: 64,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                            className: "flex items-center mb-4 gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: selectedReview.photo,
+                                    alt: selectedReview.name,
+                                    className: "w-14 h-14 rounded-full object-cover border border-gray-300"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                                    lineNumber: 72,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
+                                            className: "font-bold text-base",
+                                            children: selectedReview.name
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                                            lineNumber: 78,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                            className: "text-sm text-gray-600",
+                                            children: selectedReview.training
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                                            lineNumber: 79,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                                    lineNumber: 77,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                            lineNumber: 71,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                            className: "text-[15px] leading-relaxed",
+                            children: selectedReview.review
+                        }, void 0, false, {
+                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                            lineNumber: 83,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                    lineNumber: 63,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
+                lineNumber: 62,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-        lineNumber: 38,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
@@ -580,6 +721,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$styled$2d$jsx$2f$style$2e$js__$5b$external$5d$__$28$styled$2d$jsx$2f$style$2e$js$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/styled-jsx/style.js [external] (styled-jsx/style.js, cjs)");
+"use client";
 ;
 ;
 function MeetOurStars() {
@@ -620,158 +762,154 @@ function MeetOurStars() {
             landed: "HR Specialist"
         }
     ];
+    // 🔹 Duplicate for seamless looping
+    const loopedStudents = [
+        ...students,
+        ...students
+    ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-        className: "jsx-7e9979ef6398a6b0" + " " + "py-16 bg-gray-50 text-center overflow-hidden",
+        className: "jsx-399f1f5880812373" + " " + "py-16 bg-gray-50 text-center overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                className: "jsx-7e9979ef6398a6b0" + " " + "text-2xl font-bold mb-10",
+                className: "jsx-399f1f5880812373" + " " + "text-2xl font-bold mb-10",
                 children: "Meet Our Stars"
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                lineNumber: 42,
+                lineNumber: 47,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "jsx-7e9979ef6398a6b0" + " " + "relative w-full overflow-hidden",
+                className: "jsx-399f1f5880812373" + " " + "relative w-full overflow-hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "jsx-7e9979ef6398a6b0" + " " + "flex animate-marquee whitespace-nowrap",
-                    children: [
-                        ...Array(3)
-                    ].map((_, copyIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "jsx-7e9979ef6398a6b0" + " " + "flex gap-4 flex-shrink-0",
-                            children: students.map((student, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "jsx-7e9979ef6398a6b0" + " " + "bg-white rounded-xl shadow overflow-hidden min-w-[220px] flex-shrink-0",
+                    className: "jsx-399f1f5880812373" + " " + "flex animate-marquee gap-5",
+                    children: loopedStudents.map((student, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                            className: "jsx-399f1f5880812373" + " " + "bg-white rounded-xl shadow overflow-hidden min-w-[240px] flex-shrink-0",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: student.img,
+                                    alt: student.name,
+                                    className: "jsx-399f1f5880812373" + " " + "h-52 w-full object-cover"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                    lineNumber: 56,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                    className: "jsx-399f1f5880812373" + " " + "bg-blue-700 text-white p-4 h-52 flex flex-col justify-between text-center",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                            src: student.img,
-                                            alt: student.name,
-                                            className: "jsx-7e9979ef6398a6b0" + " " + "h-48 w-full object-cover"
-                                        }, void 0, false, {
-                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                            lineNumber: 54,
-                                            columnNumber: 19
-                                        }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            className: "jsx-7e9979ef6398a6b0" + " " + "bg-blue-700 text-white p-3 h-44 flex flex-col justify-between text-center",
+                                            className: "jsx-399f1f5880812373",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "jsx-7e9979ef6398a6b0",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                                            className: "jsx-7e9979ef6398a6b0" + " " + "font-bold text-base",
-                                                            children: student.name
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                            lineNumber: 61,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                            className: "jsx-7e9979ef6398a6b0" + " " + "text-xs",
-                                                            children: student.training
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                            lineNumber: 62,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 60,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "jsx-7e9979ef6398a6b0",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                                            className: "jsx-7e9979ef6398a6b0" + " " + "bg-yellow-400 text-black font-bold text-xs px-2 py-1 rounded",
-                                                            children: "Where I Started"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                            lineNumber: 65,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                            className: "jsx-7e9979ef6398a6b0" + " " + "mt-1 text-sm",
-                                                            children: student.started
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                            lineNumber: 68,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 64,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "jsx-7e9979ef6398a6b0" + " " + "text-yellow-400 text-lg",
-                                                    children: "⬇"
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
+                                                    className: "jsx-399f1f5880812373" + " " + "font-bold text-base",
+                                                    children: student.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 70,
-                                                    columnNumber: 21
+                                                    lineNumber: 63,
+                                                    columnNumber: 19
                                                 }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "jsx-7e9979ef6398a6b0",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                                            className: "jsx-7e9979ef6398a6b0" + " " + "bg-yellow-400 text-black font-bold text-xs px-2 py-1 rounded",
-                                                            children: "Where I Landed"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                            lineNumber: 72,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                            className: "jsx-7e9979ef6398a6b0" + " " + "mt-1 font-bold text-sm",
-                                                            children: student.landed
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                            lineNumber: 75,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                    className: "jsx-399f1f5880812373" + " " + "text-sm opacity-90",
+                                                    children: student.training
+                                                }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 71,
-                                                    columnNumber: 21
+                                                    lineNumber: 64,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                            lineNumber: 59,
-                                            columnNumber: 19
+                                            lineNumber: 62,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                            className: "jsx-399f1f5880812373",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                                    className: "jsx-399f1f5880812373" + " " + "bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded",
+                                                    children: "Where I Started"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                                    lineNumber: 68,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                    className: "jsx-399f1f5880812373" + " " + "mt-1 text-sm",
+                                                    children: student.started
+                                                }, void 0, false, {
+                                                    fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                                    lineNumber: 71,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                            lineNumber: 67,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                            className: "jsx-399f1f5880812373" + " " + "text-yellow-400 text-lg",
+                                            children: "⬇"
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                            lineNumber: 74,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                            className: "jsx-399f1f5880812373" + " " + "mb-2",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                                    className: "jsx-399f1f5880812373" + " " + "bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded",
+                                                    children: "Where I Landed"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                                    lineNumber: 77,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                    className: "jsx-399f1f5880812373" + " " + "mt-1 font-bold text-sm",
+                                                    children: student.landed
+                                                }, void 0, false, {
+                                                    fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                                    lineNumber: 80,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                            lineNumber: 76,
+                                            columnNumber: 17
                                         }, this)
                                     ]
-                                }, `${copyIndex}-${i}`, true, {
+                                }, void 0, true, {
                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                    lineNumber: 50,
-                                    columnNumber: 17
-                                }, this))
-                        }, copyIndex, false, {
+                                    lineNumber: 61,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, i, true, {
                             fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                            lineNumber: 48,
+                            lineNumber: 52,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                    lineNumber: 45,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                lineNumber: 44,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$styled$2d$jsx$2f$style$2e$js__$5b$external$5d$__$28$styled$2d$jsx$2f$style$2e$js$2c$__cjs$29$__["default"], {
-                id: "7e9979ef6398a6b0",
-                children: "@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-33.333%)}}.animate-marquee.jsx-7e9979ef6398a6b0{animation:30s linear infinite marquee;display:flex}"
+                id: "399f1f5880812373",
+                children: "@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-50%)}}.animate-marquee.jsx-399f1f5880812373{width:max-content;animation:35s linear infinite marquee;display:flex}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-        lineNumber: 41,
+        lineNumber: 46,
         columnNumber: 5
     }, this);
 }

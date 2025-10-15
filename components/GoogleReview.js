@@ -51,7 +51,7 @@ export default function ShowcaseSection() {
 
   const [current, setCurrent] = useState(0);
 
-  // ⏱️ Auto-slide every 5 seconds
+  // ⏱️ Auto-slide every 5 seconds (rotation)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -64,7 +64,7 @@ export default function ShowcaseSection() {
       {/* 🔹 Top Text */}
       <div className="py-10 px-4 z-10 relative bg-white">
         <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4">
-          Learners’ Career Transitions
+        
         </h3>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
@@ -76,35 +76,28 @@ export default function ShowcaseSection() {
         </h2>
       </div>
 
-      {/* 🔹 Full Image Slider */}
+      {/* 🔹 Full Image Rotating Slider */}
       <div className="relative w-full h-[90vh] overflow-hidden bg-gray-100 flex items-center justify-center">
-        {/* Slider Container */}
-        <div
-          className="flex transition-transform duration-[1000ms] ease-in-out"
-          style={{
-            transform: `translateX(-${current * 100}%)`,
-            width: `${slides.length * 100}%`,
-          }}
-        >
-          {slides.map((slide, i) => (
-            <a
-              key={i}
-              href={slide.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full h-[90vh] flex-shrink-0 flex items-center justify-center bg-white"
-            >
-              <img
-                src={slide.src}
-                alt={slide.alt}
-                className="max-w-[95%] max-h-[85vh] object-contain rounded-2xl shadow-lg"
-              />
-            </a>
-          ))}
-        </div>
+        {slides.map((slide, i) => (
+          <a
+            key={i}
+            href={slide.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`absolute w-full h-[90vh] flex items-center justify-center transition-opacity duration-[1500ms] ease-in-out ${
+              current === i ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          >
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className="w-full h-full object-cover rounded-none brightness-105 transition-transform duration-700 hover:scale-105"
+            />
+          </a>
+        ))}
 
         {/* 🔸 Dots Indicator */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
           {slides.map((_, i) => (
             <button
               key={i}
