@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 export default function ShowcaseSection() {
-  const words = ["STUDENTS", "TRAINING", "PLACEMENT"];
+  const words = ["STUDENTS", "COLLEGES", "CLIENTS","PROFESSIONALS"];
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

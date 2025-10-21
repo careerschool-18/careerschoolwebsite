@@ -5,9 +5,15 @@ export default function Discover() {
         Discover the Right Training to Boost Your Career
       </h2>
 
-      <button className="mt-6 sm:mt-8 bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition">
-        Get Free Career Guidance
-      </button>
+      <a
+        href="https://wa.me/7708938866"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="mt-6 sm:mt-8 bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition">
+          Get Free Career Guidance
+        </button>
+      </a>
     </section>
   );
 }

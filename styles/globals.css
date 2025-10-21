@@ -5,3 +5,6 @@
 body {
   font-family: sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}

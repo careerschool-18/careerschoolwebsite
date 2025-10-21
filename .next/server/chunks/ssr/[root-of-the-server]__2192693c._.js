@@ -270,8 +270,9 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$
 function ShowcaseSection() {
     const words = [
         "STUDENTS",
-        "TRAINING",
-        "PLACEMENT"
+        "COLLEGES",
+        "CLIENTS",
+        "PROFESSIONALS"
     ];
     const [text, setText] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])("");
     const [index, setIndex] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(0);
@@ -446,78 +447,78 @@ function StudentsReview() {
             id: 1,
             name: "Velmurugan Vignesh",
             training: "Data Analytics",
-            review: "Excellent Data Analytics training and placement support! Helped me start my IT career confidently.",
-            photo: "/sarathi pic.jpeg"
+            review: "I’m truly grateful to Careerschool for providing excellent Data Analytics Training and Placement support. Coming from a non-IT background, I was unsure how to start my career in IT field, but their training and internship program gave me the right guidance and hands-on experience to confidently begin my journey as a Data Analyst. Thanks to their continuous support, I was able to secure a job and build my career in the IT domain. I highly recommend Careerschool to anyone looking for career-oriented Online & Offline Training or internships in Data Analytics or other software programs.",
+            photo: "/Velmurugan.png"
         },
         {
             id: 2,
             name: "Pavithra S",
             training: "Python with AI",
-            review: "Great learning experience! The sessions were simple and clear. I got placed successfully as a Software Trainee.",
+            review: "I recently completed my Python with AI training at Careerschool, and it was an amazing learning experience. The Offline sessions in chennai were clear, practical, and easy to understand, which helped me build strong technical knowledge and confidence. With the effective placement support and guidance from the team, I successfully got placed as a Software Trainee. I highly recommend Careerschool HR Solutions to anyone who wants to start a successful career in IT.",
             photo: "/pavi pic.jpeg"
         },
         {
             id: 3,
             name: "Subha Vadivu Lakshmi",
             training: "HR Training",
-            review: "Hands-on HR training helped me gain real-world skills in recruitment. It built my confidence and career path.",
-            photo: "/pavi pic.jpeg"
+            review: "I’m delighted to share that I’ve been placed as an HR Recruiter, and I’m truly thankful to Careerschool for this wonderful opportunity. The HR training and internship program helped me gain practical knowledge of key HR functions such as recruitment, college visits, and candidate interviews. It was an unforgettable experience that shaped my confidence and skills. I’m really happy to be moving closer to my dream career at such an early stage.",
+            photo: "/Subha Vadivu Lakshmi.png"
         },
         {
             id: 4,
             name: "Rajiya",
             training: "Data Analytics",
-            review: "After a long career gap, I restarted my career with Careerschool’s amazing IT training and placement support.",
-            photo: "/sarathi pic.jpeg"
+            review: "I’m Rajiya, and I recently completed my IT training in nellore at Careerschool IT Solutions. Even after a 5-year career gap, I was able to secure a job in an IT company thanks to their excellent training, mentorship, and placement guidance. For students and job seekers in and around Nellore, I highly recommend Careerschool IT Solutions — it’s the best place to upgrade your skills and restart your career in IT.",
+            photo: "/Rajiya.png"
         },
         {
             id: 5,
-            name: "Karthik",
-            training: "Full Stack Development",
-            review: "Practical sessions and live projects helped me master full stack development quickly and efficiently.",
-            photo: "/sarathi pic.jpeg"
+            name: "Malathi",
+            training: "Data Analytics",
+            review: "I completed a Data analytics course from Careerschool HR solutions. Good experience of training and placements session.Whole team full support and guidance for interviews.This is a good platform of start your career. Thank you...",
+            photo: "/Malathi.png"
         },
         {
             id: 6,
-            name: "Monika",
-            training: "Digital Marketing",
-            review: "Learned SEO, Ads, and campaign setup with real examples. The mentors were super supportive and skilled.",
-            photo: "/pavi pic.jpeg"
+            name: "Ranjith",
+            training: "Data Analystics",
+            review: "First of all special thanks to my great teacher 👩‍🏫‍ karthick sir, my moral supporter kathiya mam and my king maker brindha mam.My dear folks I have 7+ years of experience in the industry back end operations just robotic work I have done in this 7 years. Upcoming technology developments and process developments companies just rejected me because no upgraded skills. In that time only I came to know about careerschool.      I joined for the course Data analytics. Before entering into the careerschool I had a  knowledge in excel after 2 months am a little master in excel.Now I'm feeling very confident to show my skills whatever Karthick sir trained me in Excel and kathya mam advised me how to handle the office environment in the way I am following currently and getting a lot of appreciation in my company that's what careerschool specialty.        So I strongly agree and refer to join in careerschool and get your career more bright all the best",
+            photo: "/Ranjith.png"
         },
         {
             id: 7,
-            name: "Saranya",
-            training: "Python Programming",
-            review: "Clear and interactive sessions improved my coding skills. I now feel confident attending interviews.",
-            photo: "/pavi pic.jpeg"
+            name: "Afsal Ahamed",
+            training: "HR Training",
+            review: "I am incredibly grateful to Career School HR Solutions for the invaluable guidance and support I received during my HR internship. A special thanks to Brindha Ma'am for her exceptional mentorship and for guiding not just our group but also me personally. Her encouragement and insights have been instrumental in my growth.I am thrilled to share that I have been placed as an HRBP in a corporate company, a significant milestone in my career. This achievement wouldn’t have been possible without the foundation and support I received from Career School HR Solutions.Once again thank you, Brindha Ma'am, and the entire team at Career School HR Solutions for helping me achieve this dream.",
+            photo: "/Afsal Ahamed.png"
         },
         {
             id: 8,
-            name: "Aravind",
-            training: "Data Science",
-            review: "Covered Power BI, Python, and ML basics. Excellent structure and guidance throughout the course.",
-            photo: "/sarathi pic.jpeg"
+            name: "Shyam Ganesh Prasad",
+            training: "HR Training",
+            review: "It's perfect for learning I joined CareerSchool 4 months ago I worked as a HR intern their very friendly staffs and mam especially Keerthana mam , Brintha mam & Roshini mam not only them all the other staffs are amazingly doing well. I'm happy that I Selected & placed in a Very good Company as a HR Recruiter.It's all Because of CareerSchool HR solutions Thank you all the staffs All the very best for your future ❤️",
+            photo: "/Shyam Ganesh Prasad.png"
         },
         {
             id: 9,
-            name: "Nivetha",
-            training: "UI/UX Design",
-            review: "Creative training sessions helped me design real projects and build a portfolio for my career.",
-            photo: "/pavi pic.jpeg"
+            name: "Manav Magesh",
+            training: "Data Analytics",
+            review: "I joined Careerschool HR Solutions to pursue Data Analytics, and it completely changed me. The training was excellent — Karthikey Sir is one of the most friendly and patient mentors I’ve ever met. He explains every concept in detail and gives important tips that really helped me in interviews.Kathya Ma’am has been a big pillar of support, always encouraging me to grow not only in technical skills but also in soft skills. Careerschool conducts regular soft skill sessions, which made me more confident and ready for the corporate world.I started my journey clueless, but today I’m placed, confident, and grateful. Careerschool is truly the best training institute in Chennai! Highly recommended !!!",
+            photo: "/Manav.png"
         },
         {
             id: 10,
-            name: "Vignesh",
-            training: "Software Testing",
-            review: "Manual and automation testing were explained clearly. Helpful for placement preparation.",
-            photo: "/sarathi pic.jpeg"
+            name: "Bhuvaneshwaran",
+            training: "Data Analytics",
+            review: "I have completed the Data Analytics course at Careerschool. The training mainly covered Advanced Excel, SQL, and Power BI. The teaching was clear and practical, with real-time examples that made it easier to understand and apply the concepts.The HR team also guided us with resume preparation and interview support, which was very helpful.",
+            photo: "/Bhuwaneswar.png"
         },
         {
             id: 11,
-            name: "Deepika",
+            name: "Saikumar Mallarapu",
             training: "Frontend Development",
-            review: "React and Tailwind sessions were practical. I created my own frontend projects confidently.",
-            photo: "/pavi pic.jpeg"
+            review: "Hi this is Sai Kumar. I'm from Nellore, recently I attended the Campus Drive conducted by Careerschool IT Solutions at Krishna Chaitanya college. Now I got selected in Software Trainee in software company. Big thanks to Careerschool IT Solutions. It's a goodplatform to learn IT courses like Python or Java Full Stack, AI and Data Analytics. They will give job assistance also I genuinely share my words.",
+            photo: "/Saikumar.png"
         },
         {
             id: 12,
@@ -544,7 +545,7 @@ function StudentsReview() {
             id: 15,
             name: "Harini",
             training: "Artificial Intelligence",
-            review: "AI training included real examples and ML concepts. It made complex topics easy to understand.",
+            review: "I have completed the Data Analytics course at Careerschool HR Solutions. The training mainly covered Advanced Excel, SQL, and Power BI. The teaching was clear and practical.",
             photo: "/pavi pic.jpeg"
         }
     ];
@@ -720,59 +721,101 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$styled$2d$jsx$2f$style$2e$
 function MeetOurStars() {
     const students = [
         {
-            img: "/pavi pic.jpeg",
-            name: "Pavithra",
-            training: "HR Training",
-            started: "B.COM",
-            landed: "HR GENERALIST"
+            img: "/Shalini.png",
+            name: "Shalini",
+            training: "DATA ANALYTICS TRAINING",
+            started: "BSC",
+            landed: "Jr Software Developer"
         },
         {
-            img: "/sarathi pic.jpeg",
-            name: "Sarathi",
-            training: "Python Training",
+            img: "/Jayakumar.png",
+            name: "Jayakumar",
+            training: "DATA ANALYTICS TRAINING",
+            started: "BSC",
+            landed: "Operations"
+        },
+        {
+            img: "/Sirisha Dasari.png",
+            name: "Sirisha Dasari",
+            started: "BSC Data Science",
+            landed: "IT Internship"
+        },
+        {
+            img: "/Prem.png",
+            name: "Prem",
+            training: "HR TRAINING",
+            started: "MSW",
+            landed: "HR Recruiter"
+        },
+        {
+            img: "/Balakumaran.png",
+            name: "Balakumaran",
+            training: "WEB DEVELOPER TRAINING",
             started: "BCA",
-            landed: "Software Engineer"
+            landed: "IT Backend"
         },
         {
-            img: "/pavi pic.jpeg",
-            name: "Pavithra",
-            training: "Data Analytics",
-            started: "M.Sc Maths",
-            landed: "Data Analyst"
+            img: "/Sindhu.png",
+            name: "Sindhu",
+            training: "HR TRAINING",
+            started: "BE ECE",
+            landed: "HR Executive"
         },
         {
-            img: "/sarathi pic.jpeg",
-            name: "Sarathi",
-            training: "Java Fullstack",
-            started: "B.E CSE",
-            landed: "Fullstack Developer"
+            img: "/HariPriya.png",
+            name: "Haripriya",
+            training: "HR TRAINING",
+            started: "BE CSE",
+            landed: "HR Recruiter"
         },
         {
-            img: "/pavi pic.jpeg",
-            name: "Pavithra",
-            training: "HR with Analytics",
-            started: "MBA HR",
-            landed: "HR Specialist"
+            img: "/Shanthini.png",
+            name: "Shanthini",
+            training: "DATA ANALYTICS TRAINING",
+            started: "B.COM",
+            landed: "Data Executive"
+        },
+        {
+            img: "/Medhuru Girish Kumar.png",
+            name: "Medhuru Girish Kumar",
+            started: "BCA",
+            landed: "UI/UX Designer"
+        },
+        {
+            img: "/Dhanyasree Javali.png",
+            name: "Dhanyasree Javali",
+            started: "MCA",
+            landed: "Python Developer"
+        },
+        {
+            img: "/Ashwathi.png",
+            name: "Aswathi",
+            training: "PYTHON WITH AI TRAINING",
+            started: "BE ECE",
+            landed: "Prompt Engineer"
         }
     ];
-    // 🔹 Duplicate for seamless looping
     const loopedStudents = [
         ...students,
         ...students
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-        className: "jsx-399f1f5880812373" + " " + "py-16 bg-gray-50 text-center overflow-hidden",
+        id: "meet-our-stars",
+        style: {
+            backgroundColor: "#1d1e22"
+        },
+        className: "jsx-399f1f5880812373" + " " + "py-16 text-center overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                className: "jsx-399f1f5880812373" + " " + "text-2xl font-bold mb-10",
+                className: "jsx-399f1f5880812373" + " " + "text-2xl sm:text-2xl md:text-3xl font-bold text-white",
                 children: "Meet Our Stars"
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                lineNumber: 47,
+                lineNumber: 89,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "jsx-399f1f5880812373" + " " + "relative w-full overflow-hidden",
+                className: "jsx-399f1f5880812373" + " " + "relative w-full overflow-hidden mt-6",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                     className: "jsx-399f1f5880812373" + " " + "flex animate-marquee gap-5",
                     children: loopedStudents.map((student, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -784,115 +827,123 @@ function MeetOurStars() {
                                     className: "jsx-399f1f5880812373" + " " + "h-52 w-full object-cover"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                    lineNumber: 56,
+                                    lineNumber: 100,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                     className: "jsx-399f1f5880812373" + " " + "bg-blue-700 text-white p-4 h-52 flex flex-col justify-between text-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            className: "jsx-399f1f5880812373",
+                                            className: "jsx-399f1f5880812373" + " " + "mb-4",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
                                                     className: "jsx-399f1f5880812373" + " " + "font-bold text-base",
                                                     children: student.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 63,
+                                                    lineNumber: 107,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-399f1f5880812373" + " " + "text-sm opacity-90",
+                                                    className: "jsx-399f1f5880812373" + " " + "text-sm font-semibold text-yellow-400 mt-1",
                                                     children: student.training
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 64,
+                                                    lineNumber: 108,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                            lineNumber: 62,
+                                            lineNumber: 106,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                             className: "jsx-399f1f5880812373",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                                    className: "jsx-399f1f5880812373" + " " + "bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                    className: "jsx-399f1f5880812373" + " " + "text-xs text-white mb-1",
                                                     children: "Where I Started"
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 68,
+                                                    lineNumber: 114,
                                                     columnNumber: 19
                                                 }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-399f1f5880812373" + " " + "mt-1 text-sm",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                                    className: "jsx-399f1f5880812373" + " " + "bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded",
                                                     children: student.started
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 71,
+                                                    lineNumber: 115,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                            lineNumber: 67,
+                                            lineNumber: 113,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            className: "jsx-399f1f5880812373" + " " + "text-yellow-400 text-lg",
-                                            children: "⬇"
+                                            className: "jsx-399f1f5880812373" + " " + "flex justify-center my-1",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                                src: "/Arrow[1].png",
+                                                alt: "Arrow Down",
+                                                className: "jsx-399f1f5880812373" + " " + "h-5 w-5 animate-bounce opacity-90"
+                                            }, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
+                                                lineNumber: 121,
+                                                columnNumber: 19
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                            lineNumber: 74,
+                                            lineNumber: 120,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                             className: "jsx-399f1f5880812373" + " " + "mb-2",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                                    className: "jsx-399f1f5880812373" + " " + "bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                    className: "jsx-399f1f5880812373" + " " + "text-xs text-white mb-1",
                                                     children: "Where I Landed"
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 77,
+                                                    lineNumber: 129,
                                                     columnNumber: 19
                                                 }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-399f1f5880812373" + " " + "mt-1 font-bold text-sm",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                                    className: "jsx-399f1f5880812373" + " " + "bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded",
                                                     children: student.landed
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                                    lineNumber: 80,
+                                                    lineNumber: 130,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                            lineNumber: 76,
+                                            lineNumber: 128,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                                    lineNumber: 61,
+                                    lineNumber: 105,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                            lineNumber: 52,
+                            lineNumber: 96,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                    lineNumber: 50,
+                    lineNumber: 94,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-                lineNumber: 49,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$styled$2d$jsx$2f$style$2e$js__$5b$external$5d$__$28$styled$2d$jsx$2f$style$2e$js$2c$__cjs$29$__["default"], {
@@ -902,7 +953,7 @@ function MeetOurStars() {
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/MeetOurStars.js",
-        lineNumber: 46,
+        lineNumber: 84,
         columnNumber: 5
     }, this);
 }
@@ -924,160 +975,188 @@ function Courses() {
             title: "Learn Python with AI",
             duration: "3 Months (Rapid Learning)",
             highlight: "Internship & Placement Included",
-            poster: "/Python-AI--(1).webp"
+            poster: "/Python Banner.jpg"
         },
         {
             title: "HR with Analytics",
             duration: "3 Months (Rapid Learning)",
             highlight: "ZOHO Pay Roll Module Included",
-            poster: "/HR-Analytics.jpg"
+            poster: "/HR Analytics Banner.png"
         },
         {
             title: "Data Analytics",
             duration: "3 Months (Rapid Learning)",
             highlight: "ZOHO Pay Roll Module Included",
-            poster: "/data-analysis-skills-duties-responsibilities.jpeg"
+            poster: "/Data Analytics Banner.png"
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-        className: "jsx-a13527dbde69b075" + " " + "py-12 sm:py-16 bg-blue-50 text-center px-4 sm:px-6 overflow-hidden",
+        style: {
+            backgroundColor: "#FFFFFF"
+        },
+        className: "jsx-20afbeb9e1e0d4f5" + " " + "py-12 sm:py-16 text-center px-4 sm:px-6 overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                className: "jsx-a13527dbde69b075" + " " + "text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-gray-900",
+                className: "jsx-20afbeb9e1e0d4f5" + " " + "text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#004AAD]",
                 children: "Next Batch Starts Soon"
-            }, void 0, false, {
-                fileName: "[project]/cshr-website-full/components/Courses.js",
-                lineNumber: 25,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                className: "jsx-a13527dbde69b075" + " " + "mb-8 text-sm sm:text-base text-gray-600 max-w-2xl mx-auto",
-                children: "Industry-ready Training Programs with Internships & Placement Support for Students, Freshers and Working Professionals."
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Courses.js",
                 lineNumber: 29,
                 columnNumber: 7
             }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                className: "jsx-20afbeb9e1e0d4f5" + " " + "mb-10 text-sm sm:text-base text-gray-700 max-w-2xl mx-auto",
+                children: "Industry-ready Training Programs with Internships & Placement Support for Students, Freshers and Working Professionals."
+            }, void 0, false, {
+                fileName: "[project]/cshr-website-full/components/Courses.js",
+                lineNumber: 34,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "jsx-a13527dbde69b075" + " " + "overflow-hidden relative",
+                className: "jsx-20afbeb9e1e0d4f5" + " " + "overflow-hidden relative",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "jsx-a13527dbde69b075" + " " + "flex animate-marquee gap-6 sm:gap-8",
+                    className: "jsx-20afbeb9e1e0d4f5" + " " + "flex animate-marquee gap-6 sm:gap-8",
                     children: courses.concat(courses).map((course, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "jsx-a13527dbde69b075" + " " + "rounded-xl overflow-hidden shadow-lg bg-white flex flex-col hover:scale-[1.02] transition-transform duration-300 min-w-[280px] flex-shrink-0",
+                            style: {
+                                borderRadius: "20px",
+                                overflow: "hidden",
+                                backgroundColor: "#004AAD",
+                                minWidth: "280px",
+                                maxWidth: "280px",
+                                height: "380px"
+                            },
+                            className: "jsx-20afbeb9e1e0d4f5" + " " + "shadow-lg flex flex-col hover:scale-[1.02] transition-transform duration-300 flex-shrink-0",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
                                     src: course.poster,
                                     alt: course.title,
-                                    className: "jsx-a13527dbde69b075" + " " + "h-40 sm:h-48 w-full object-cover"
+                                    style: {
+                                        height: "160px",
+                                        borderTopLeftRadius: "20px",
+                                        borderTopRightRadius: "20px"
+                                    },
+                                    className: "jsx-20afbeb9e1e0d4f5" + " " + "w-full object-cover"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                    lineNumber: 43,
+                                    lineNumber: 56,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "jsx-a13527dbde69b075" + " " + "bg-blue-700 text-white p-4 sm:p-6 flex flex-col flex-grow justify-between",
+                                    className: "jsx-20afbeb9e1e0d4f5" + " " + "flex flex-col justify-between flex-grow p-4 sm:p-6 text-center text-white",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            className: "jsx-a13527dbde69b075",
+                                            className: "jsx-20afbeb9e1e0d4f5",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                                    className: "jsx-a13527dbde69b075" + " " + "font-bold text-base sm:text-lg",
+                                                    className: "jsx-20afbeb9e1e0d4f5" + " " + "font-bold text-base sm:text-lg",
                                                     children: course.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 52,
+                                                    lineNumber: 70,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-a13527dbde69b075" + " " + "text-xs sm:text-sm flex items-center gap-2 mt-2",
+                                                    className: "jsx-20afbeb9e1e0d4f5" + " " + "text-xs sm:text-sm mt-2",
                                                     children: [
                                                         "⏰ ",
                                                         course.duration
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 53,
+                                                    lineNumber: 74,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-a13527dbde69b075" + " " + "bg-yellow-400 text-black font-semibold text-[10px] sm:text-xs px-2 py-1 rounded mt-3 inline-block",
+                                                    style: {
+                                                        backgroundColor: "#FFD02B"
+                                                    },
+                                                    className: "jsx-20afbeb9e1e0d4f5" + " " + "text-black font-semibold text-[10px] sm:text-xs px-2 py-1 rounded mt-3 inline-block",
                                                     children: course.highlight
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 56,
+                                                    lineNumber: 79,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/cshr-website-full/components/Courses.js",
-                                            lineNumber: 51,
+                                            lineNumber: 69,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            className: "jsx-a13527dbde69b075" + " " + "mt-4 sm:mt-6 flex flex-col gap-2",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                                    className: "jsx-a13527dbde69b075" + " " + "border border-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-white hover:text-blue-700 transition",
-                                                    children: "Learn More"
+                                            className: "jsx-20afbeb9e1e0d4f5" + " " + "mt-4 flex justify-center",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                                href: "#",
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                                className: "jsx-20afbeb9e1e0d4f5",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                                    style: {
+                                                        backgroundColor: "#FFFFFF",
+                                                        color: "#004AAD",
+                                                        borderRadius: "20px"
+                                                    },
+                                                    className: "jsx-20afbeb9e1e0d4f5" + " " + "font-bold px-4 py-2 rounded text-xs sm:text-sm transition",
+                                                    children: "ENROLL NOW"
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 63,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                                    className: "jsx-a13527dbde69b075" + " " + "bg-white text-blue-700 font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm",
-                                                    children: "ENROLL"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 66,
-                                                    columnNumber: 19
+                                                    lineNumber: 90,
+                                                    columnNumber: 21
                                                 }, this)
-                                            ]
-                                        }, void 0, true, {
+                                            }, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Courses.js",
+                                                lineNumber: 89,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Courses.js",
-                                            lineNumber: 62,
+                                            lineNumber: 88,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                    lineNumber: 50,
+                                    lineNumber: 68,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/cshr-website-full/components/Courses.js",
-                            lineNumber: 38,
+                            lineNumber: 43,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                    lineNumber: 36,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Courses.js",
-                lineNumber: 35,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "jsx-a13527dbde69b075" + " " + "mt-8 sm:mt-10",
+                className: "jsx-20afbeb9e1e0d4f5" + " " + "mt-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                    className: "jsx-a13527dbde69b075" + " " + "bg-blue-700 hover:bg-blue-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium shadow-md text-sm sm:text-base",
+                    style: {
+                        backgroundColor: "#004AAD",
+                        borderRadius: "20px"
+                    },
+                    className: "jsx-20afbeb9e1e0d4f5" + " " + "text-white px-6 py-3 font-medium shadow-md text-sm sm:text-base transition hover:scale-[1.03]",
                     children: "Explore More Courses"
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                    lineNumber: 78,
+                    lineNumber: 110,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Courses.js",
-                lineNumber: 77,
+                lineNumber: 109,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$styled$2d$jsx$2f$style$2e$js__$5b$external$5d$__$28$styled$2d$jsx$2f$style$2e$js$2c$__cjs$29$__["default"], {
-                id: "a13527dbde69b075",
-                children: "@keyframes marquee{0%{transform:translate(0%)}to{transform:translate(-50%)}}.animate-marquee.jsx-a13527dbde69b075{gap:1.5rem;animation:25s linear infinite marquee;display:flex}"
+                id: "20afbeb9e1e0d4f5",
+                children: "@keyframes marquee{0%{transform:translate(0%)}to{transform:translate(-50%)}}.animate-marquee.jsx-20afbeb9e1e0d4f5{gap:1.5rem;animation:30s linear infinite marquee;display:flex}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
@@ -1100,10 +1179,10 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$styled$2d$jsx$2f$style$2e$
 ;
 function Alumni() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-        className: "jsx-a5d8d500947c4eb3" + " " + "py-12 sm:py-16 text-center bg-blue-900 overflow-hidden",
+        className: "jsx-c5a6fd2ee6e09b1d" + " " + "py-12 sm:py-16 text-center bg-blue-900 overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                className: "jsx-a5d8d500947c4eb3" + " " + "text-xl sm:text-2xl font-bold mb-8 sm:mb-10 text-white",
+                className: "jsx-c5a6fd2ee6e09b1d" + " " + "text-xl sm:text-2xl font-bold mb-8 sm:mb-10 text-white",
                 children: "Our Alumni Proudly Placed In"
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Alumni.js",
@@ -1111,66 +1190,102 @@ function Alumni() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "jsx-a5d8d500947c4eb3" + " " + "relative w-full overflow-hidden py-2 sm:py-3",
+                className: "jsx-c5a6fd2ee6e09b1d" + " " + "relative w-full overflow-hidden py-2 sm:py-3",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "jsx-a5d8d500947c4eb3" + " " + "flex animate-marquee-left gap-6 sm:gap-10",
+                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "flex animate-marquee-left gap-6 sm:gap-10",
                     children: [
                         ...Array(2)
                     ].map((_, copy)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "jsx-a5d8d500947c4eb3" + " " + "flex gap-6 sm:gap-10 items-center",
+                            className: "jsx-c5a6fd2ee6e09b1d" + " " + "flex gap-6 sm:gap-10 items-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/tcs.jpg",
-                                    alt: "TCS",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Cognizant.png",
+                                    alt: "Cognizant",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
                                     lineNumber: 13,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/tcs.jpg",
-                                    alt: "Infosys",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Concentrix.png",
+                                    alt: "Concentrix",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
                                     lineNumber: 14,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/tcs.jpg",
-                                    alt: "Wipro",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Foundever.png",
+                                    alt: "Foundever",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
                                     lineNumber: 15,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/tcs.jpg",
-                                    alt: "Amazon",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Datamark.png",
+                                    alt: "Datamart",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
                                     lineNumber: 16,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/tcs.jpg",
-                                    alt: "Zoho",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Hexaware.png",
+                                    alt: "Hexaware",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
                                     lineNumber: 17,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/tcs.jpg",
+                                    src: "/Hcl.png",
                                     alt: "HCL",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
                                     lineNumber: 18,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Ideas.png",
+                                    alt: "Ideal 2 IT",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 19,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Hinduja.png",
+                                    alt: "Hinduja",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 20,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Induslnd.png",
+                                    alt: "Indusind Bank",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 21,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Tata Consultancy Services.png",
+                                    alt: "Tata Consultancy Services",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 22,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -1190,166 +1305,238 @@ function Alumni() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "jsx-a5d8d500947c4eb3" + " " + "relative w-full overflow-hidden py-2 sm:py-3",
+                className: "jsx-c5a6fd2ee6e09b1d" + " " + "relative w-full overflow-hidden py-2 sm:py-3",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "jsx-a5d8d500947c4eb3" + " " + "flex animate-marquee-right gap-6 sm:gap-10",
+                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "flex animate-marquee-right gap-6 sm:gap-10",
                     children: [
                         ...Array(2)
                     ].map((_, copy)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "jsx-a5d8d500947c4eb3" + " " + "flex gap-6 sm:gap-10 items-center",
+                            className: "jsx-c5a6fd2ee6e09b1d" + " " + "flex gap-6 sm:gap-10 items-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/google.jpg",
-                                    alt: "Google",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 29,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/google.jpg",
-                                    alt: "Cognizant",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 30,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/google.jpg",
-                                    alt: "Deloitte",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 31,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/google.jpg",
-                                    alt: "Accenture",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 32,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/google.jpg",
-                                    alt: "Microsoft",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/VThink.png",
+                                    alt: "VThink",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
                                     lineNumber: 33,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/google.jpg",
-                                    alt: "Capgemini",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Movate.png",
+                                    alt: "Movate",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
                                     lineNumber: 34,
                                     columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Omega Healthcare.png",
+                                    alt: "Omega Healthcare",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 35,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Quess.png",
+                                    alt: "Quess",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 36,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Advertflair.png",
+                                    alt: "Advertflair",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 37,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Altruist.png",
+                                    alt: "Altruist",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 38,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Ison.png",
+                                    alt: "Ison",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 39,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Teleperformance.png",
+                                    alt: "Teleperformance",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 40,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Tech Mahindra.png",
+                                    alt: "Tech Mahindra",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 41,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Startek.png",
+                                    alt: "Startek",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 42,
+                                    columnNumber: 15
                                 }, this)
                             ]
                         }, copy, true, {
                             fileName: "[project]/cshr-website-full/components/Alumni.js",
-                            lineNumber: 28,
+                            lineNumber: 32,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Alumni.js",
-                    lineNumber: 26,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Alumni.js",
-                lineNumber: 25,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "jsx-a5d8d500947c4eb3" + " " + "relative w-full overflow-hidden py-2 sm:py-3",
+                className: "jsx-c5a6fd2ee6e09b1d" + " " + "relative w-full overflow-hidden py-2 sm:py-3",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: "jsx-a5d8d500947c4eb3" + " " + "flex animate-marquee-left gap-6 sm:gap-10",
+                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "flex animate-marquee-left gap-6 sm:gap-10",
                     children: [
                         ...Array(2)
                     ].map((_, copy)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "jsx-a5d8d500947c4eb3" + " " + "flex gap-6 sm:gap-10 items-center",
+                            className: "jsx-c5a6fd2ee6e09b1d" + " " + "flex gap-6 sm:gap-10 items-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/flipkart.jpg",
-                                    alt: "Flipkart",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Zoho.png",
+                                    alt: "Zoho",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 45,
+                                    lineNumber: 53,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/flipkart.jpg",
-                                    alt: "PayPal",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/HDFC Bank.png",
+                                    alt: "HDFC",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 46,
+                                    lineNumber: 54,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/flipkart.jpg",
-                                    alt: "Oracle",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/STAR Health Insurance.png",
+                                    alt: "STAR Health Insurance",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 47,
+                                    lineNumber: 55,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/flipkart.jpg",
-                                    alt: "IBM",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Sysekam.png",
+                                    alt: "Sysekam",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 48,
+                                    lineNumber: 56,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/flipkart.jpg",
-                                    alt: "HP",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Access Healthcare.png",
+                                    alt: "Access Healthcare",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 49,
+                                    lineNumber: 57,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                                    src: "/flipkart.jpg",
-                                    alt: "Siemens",
-                                    className: "jsx-a5d8d500947c4eb3" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                    src: "/Emayam Tech.png",
+                                    alt: "Emayam Tech",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Alumni.js",
-                                    lineNumber: 50,
+                                    lineNumber: 58,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Paisabazaar.png",
+                                    alt: "Paisabazaar",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 59,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Mtutor.png",
+                                    alt: "Mtutor",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 60,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/ICICI Bank.png",
+                                    alt: "ICICI Bank",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 61,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                    src: "/Sutherland.png",
+                                    alt: "Sutherland",
+                                    className: "jsx-c5a6fd2ee6e09b1d" + " " + "h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Alumni.js",
+                                    lineNumber: 62,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, copy, true, {
                             fileName: "[project]/cshr-website-full/components/Alumni.js",
-                            lineNumber: 44,
+                            lineNumber: 52,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Alumni.js",
-                    lineNumber: 42,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Alumni.js",
-                lineNumber: 41,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$styled$2d$jsx$2f$style$2e$js__$5b$external$5d$__$28$styled$2d$jsx$2f$style$2e$js$2c$__cjs$29$__["default"], {
-                id: "a5d8d500947c4eb3",
-                children: "@keyframes marquee-left{0%{transform:translate(0)}to{transform:translate(-50%)}}@keyframes marquee-right{0%{transform:translate(0)}to{transform:translate(50%)}}.animate-marquee-left.jsx-a5d8d500947c4eb3,.animate-marquee-right.jsx-a5d8d500947c4eb3{will-change:transform;width:max-content;animation-timing-function:linear;animation-iteration-count:infinite;display:flex}.animate-marquee-left.jsx-a5d8d500947c4eb3{animation:25s linear infinite marquee-left}.animate-marquee-right.jsx-a5d8d500947c4eb3{animation:30s linear infinite marquee-right}"
+                id: "c5a6fd2ee6e09b1d",
+                children: "@keyframes marquee-left{0%{transform:translate(0)}to{transform:translate(-50%)}}.animate-marquee-left.jsx-c5a6fd2ee6e09b1d,.animate-marquee-right.jsx-c5a6fd2ee6e09b1d{will-change:transform;width:max-content;animation-timing-function:linear;animation-iteration-count:infinite;display:flex}.animate-marquee-left.jsx-c5a6fd2ee6e09b1d{animation:25s linear infinite marquee-left}.animate-marquee-right.jsx-c5a6fd2ee6e09b1d{animation:25s linear infinite reverse marquee-left}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
@@ -1380,9 +1567,18 @@ function Discover() {
                 lineNumber: 4,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                className: "mt-6 sm:mt-8 bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition",
-                children: "Get Free Career Guidance"
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                href: "https://wa.me/7708938866",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                    className: "mt-6 sm:mt-8 bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition",
+                    children: "Get Free Career Guidance"
+                }, void 0, false, {
+                    fileName: "[project]/cshr-website-full/components/Discover.js",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Discover.js",
                 lineNumber: 8,
@@ -1404,45 +1600,102 @@ __turbopack_context__.s([
     ()=>NeedHelp
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
+"use client";
+;
 ;
 function NeedHelp() {
+    // ✅ 6 Python Questions and Answers
+    const faqs = [
+        {
+            q: " What are the best placement-oriented training courses after graduation?",
+            a: "At Careerschool HR & IT Solutions, we offer top-rated career programs like Python Full Stack, Data Analytics, HR Analytics, Digital Marketing, and Java Training with internship and placement support."
+        },
+        {
+            q: " Does Careerschool provide placement assistance after completing the training?",
+            a: "Yes! Every training program at Careerschool includes pre-placement and post-placement support — covering interview preparation, resume building, aptitude sessions, and company tie-ups to help you get hired faster."
+        },
+        {
+            q: "Why should I choose Careerschool HR & IT Solutions for training and placement?",
+            a: "Careerschool stands out for its industry-ready curriculum, live tools exposure, certified trainers, internships, and placement tie-ups with leading companies. With branches in Guindy (Chennai) and Nellore (Andhra Pradesh), we’re helping learners across allover India launch their dream careers."
+        },
+        {
+            q: "Who can enroll in Careerschool training & internship programs?",
+            a: "Our programs are open to college students, fresh graduates (freshers), and working professionals who want to start or switch careers in IT, HR, or Analytics domains. No prior technical background is required — our courses are beginner-friendly and skill-based."
+        },
+        {
+            q: "Do you have any free courses or demo training programs?",
+            a: "Yes, Careerschool provides free demo training sessions and career guidance workshops for students, freshers, and professionals. These sessions cover the basics and helps learners choose the right course for their career goals."
+        },
+        {
+            q: "Do you have courses in Chennai and Nellore only?",
+            a: "Careerschool currently has training centers in Guindy, Chennai and Nellore, Andhra Pradesh, where we conduct offline sessions with internship and placement support. However, we also offer LIVE online classes with the same benefits that can be accessed from anywhere in India. So, whether you’re in Chennai, Nellore, or another city, you can still join our programs and learn from our expert trainers."
+        }
+    ];
+    // ✅ State to track which question is open
+    const [openIndex, setOpenIndex] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(null);
+    // ✅ Toggle open/close on click
+    const toggleAnswer = (index)=>{
+        setOpenIndex(openIndex === index ? null : index);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
         className: "py-12 sm:py-16 bg-blue-800 text-center px-4 sm:px-6",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
                 className: "text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8 text-white",
-                children: "Need Help?"
+                children: "Need Help"
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/NeedHelp.js",
-                lineNumber: 4,
+                lineNumber: 44,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "max-w-4xl mx-auto space-y-4 sm:space-y-6",
-                children: [
-                    1,
-                    2,
-                    3
-                ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "h-20 sm:h-24 rounded-xl shadow-md flex items-center justify-center  text-base sm:text-lg font-semibold text-gray-800 bg-gradient-to-r from-white via-yellow-200 to-yellow-400 hover:scale-[1.02] transition-transform duration-300",
+                className: "max-w-3xl mx-auto flex flex-col items-center space-y-4 sm:space-y-6",
+                children: faqs.map((faq, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        className: "w-full rounded-xl shadow-md overflow-hidden bg-gradient-to-r from-white via-yellow-200 to-yellow-400 transition-transform duration-300 hover:scale-[1.02]",
                         children: [
-                            "Box ",
-                            i
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                onClick: ()=>toggleAnswer(i),
+                                className: "w-full text-left px-5 py-4 text-gray-800 font-semibold text-base sm:text-lg flex justify-between items-center",
+                                children: [
+                                    faq.q,
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                        className: "text-gray-700 font-bold text-xl",
+                                        children: openIndex === i ? "−" : "+"
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/NeedHelp.js",
+                                        lineNumber: 61,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/cshr-website-full/components/NeedHelp.js",
+                                lineNumber: 56,
+                                columnNumber: 13
+                            }, this),
+                            openIndex === i && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                className: "bg-white text-gray-800 text-sm sm:text-base px-5 py-4 border-t border-yellow-400",
+                                children: faq.a
+                            }, void 0, false, {
+                                fileName: "[project]/cshr-website-full/components/NeedHelp.js",
+                                lineNumber: 68,
+                                columnNumber: 15
+                            }, this)
                         ]
                     }, i, true, {
                         fileName: "[project]/cshr-website-full/components/NeedHelp.js",
-                        lineNumber: 10,
+                        lineNumber: 51,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/NeedHelp.js",
-                lineNumber: 8,
+                lineNumber: 49,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/NeedHelp.js",
-        lineNumber: 3,
+        lineNumber: 42,
         columnNumber: 5
     }, this);
 }
@@ -1455,8 +1708,22 @@ __turbopack_context__.s([
     ()=>Footer
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/node_modules/react-icons/fa/index.mjs [ssr] (ecmascript)");
+"use client";
+;
+;
 ;
 function Footer() {
+    const [showContact, setShowContact] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false); // 👈 For "Contact Us"
+    const [showCSIT, setShowCSIT] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])({
+        number: false,
+        address: false
+    });
+    const [showCSHR, setShowCSHR] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])({
+        number: false,
+        address: false
+    });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("footer", {
         className: "bg-gradient-to-r from-gray-100 to-gray-300 text-gray-900 py-12 sm:py-16 px-4 sm:px-6",
         children: [
@@ -1470,7 +1737,7 @@ function Footer() {
                                 children: "TRENDING COURSE"
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 8,
+                                lineNumber: 17,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("ul", {
@@ -1491,23 +1758,23 @@ function Footer() {
                                             children: course
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 21,
+                                            lineNumber: 30,
                                             columnNumber: 17
                                         }, this)
                                     }, i, false, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 20,
+                                        lineNumber: 29,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 9,
+                                lineNumber: 18,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                        lineNumber: 7,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1517,7 +1784,7 @@ function Footer() {
                                 children: "RESOURCES"
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 34,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("ul", {
@@ -1536,23 +1803,23 @@ function Footer() {
                                             children: res
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 45,
+                                            lineNumber: 51,
                                             columnNumber: 17
                                         }, this)
                                     }, i, false, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 44,
+                                        lineNumber: 50,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 35,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                        lineNumber: 33,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1562,40 +1829,82 @@ function Footer() {
                                 children: "PLACEMENTS"
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 58,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("ul", {
                                 className: "space-y-2 text-sm sm:text-base",
                                 children: [
-                                    "Success Story",
-                                    "Speak With Campus Team",
-                                    "Speak With Placement Team",
-                                    "Non-IT Jobs"
-                                ].map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                            href: "#meet-our-stars",
+                                            className: "hover:text-blue-700 transition duration-300 block",
+                                            children: "Success Story"
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 64,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 63,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                                             href: "#",
                                             className: "hover:text-blue-700 transition duration-300 block",
-                                            children: item
+                                            children: "Speak With Campus Team"
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 67,
-                                            columnNumber: 17
+                                            lineNumber: 72,
+                                            columnNumber: 15
                                         }, this)
-                                    }, i, false, {
+                                    }, void 0, false, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 66,
-                                        columnNumber: 15
-                                    }, this))
-                            }, void 0, false, {
+                                        lineNumber: 71,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "hover:text-blue-700 transition duration-300 block",
+                                            children: "Speak With Placement Team"
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 77,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 76,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "hover:text-blue-700 transition duration-300 block",
+                                            children: "Non-IT Jobs"
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 82,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 81,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 59,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                        lineNumber: 57,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1605,45 +1914,68 @@ function Footer() {
                                 children: "COMPANY"
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 80,
+                                lineNumber: 91,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("ul", {
                                 className: "space-y-2 text-sm sm:text-base",
                                 children: [
-                                    "About us",
-                                    "Contact us",
-                                    "FAQs"
-                                ].map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                                             href: "#",
                                             className: "hover:text-blue-700 transition duration-300 block",
-                                            children: item
+                                            children: "About Us"
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 84,
-                                            columnNumber: 17
+                                            lineNumber: 94,
+                                            columnNumber: 15
                                         }, this)
-                                    }, i, false, {
+                                    }, void 0, false, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 83,
-                                        columnNumber: 15
-                                    }, this))
-                            }, void 0, false, {
+                                        lineNumber: 93,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>setShowContact(!showContact),
+                                                className: "hover:text-blue-700 transition duration-300 block text-left w-full font-medium",
+                                                children: "Contact Us"
+                                            }, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 101,
+                                                columnNumber: 15
+                                            }, this),
+                                            showContact && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                className: "mt-2 text-sm font-semibold text-gray-800",
+                                                children: "📞 77089 38866"
+                                            }, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 108,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 100,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 81,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                        lineNumber: 79,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                lineNumber: 5,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1654,11 +1986,19 @@ function Footer() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "mx-auto md:mx-0 bg-gray-400 h-16 w-32 flex items-center justify-center font-bold text-white mb-4 rounded-lg",
-                                    children: "LOGO"
+                                    className: "mb-4 flex justify-center md:justify-start",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                        src: "/logo.png",
+                                        alt: "CSHR Logo",
+                                        className: "h-16 w-auto object-contain"
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 124,
+                                        columnNumber: 15
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                    lineNumber: 101,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h4", {
@@ -1666,166 +2006,62 @@ function Footer() {
                                     children: "Follow Us"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                    lineNumber: 104,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "flex justify-center md:justify-start gap-3",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                            href: "#",
-                                            className: "w-8 h-8 rounded-full bg-blue-700 hover:bg-blue-800 transition"
-                                        }, void 0, false, {
-                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 106,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                            href: "#",
-                                            className: "w-8 h-8 rounded-full bg-blue-700 hover:bg-blue-800 transition"
-                                        }, void 0, false, {
-                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 110,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                            href: "#",
-                                            className: "w-8 h-8 rounded-full bg-blue-700 hover:bg-blue-800 transition"
-                                        }, void 0, false, {
-                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 114,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                            href: "#",
-                                            className: "w-8 h-8 rounded-full bg-blue-700 hover:bg-blue-800 transition"
-                                        }, void 0, false, {
-                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 118,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                    lineNumber: 105,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                            lineNumber: 100,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "md:col-span-2",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h4", {
-                                    className: "font-bold text-center mb-6 text-lg",
-                                    children: "OUR BRANCHES"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/Footer.js",
                                     lineNumber: 127,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "grid grid-cols-1 sm:grid-cols-2 gap-6 text-center",
+                                    className: "flex justify-center md:justify-start gap-3 text-white",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                                    href: "#",
-                                                    className: "bg-blue-700 text-white h-24 flex items-center justify-center font-bold rounded-lg hover:bg-blue-800 transition",
-                                                    children: "Google Map"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 131,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "mt-3 font-bold text-sm sm:text-base",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:text-blue-700 transition",
-                                                        children: "CSIT Number"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                        lineNumber: 138,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 137,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "font-bold text-sm sm:text-base",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:text-blue-700 transition",
-                                                        children: "CSIT Address"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                        lineNumber: 143,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 142,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-pink-600 transition",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaInstagram"], {}, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 129,
+                                                columnNumber: 134
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 129,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 transition",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaFacebookF"], {}, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 130,
+                                                columnNumber: 134
+                                            }, this)
+                                        }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
                                             lineNumber: 130,
                                             columnNumber: 15
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                                    href: "#",
-                                                    className: "bg-blue-700 text-white h-24 flex items-center justify-center font-bold rounded-lg hover:bg-blue-800 transition",
-                                                    children: "Google Map"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 151,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "mt-3 font-bold text-sm sm:text-base",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:text-blue-700 transition",
-                                                        children: "CSHR Number"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                        lineNumber: 158,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 157,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                    className: "font-bold text-sm sm:text-base",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:text-blue-700 transition",
-                                                        children: "CSHR Address"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                        lineNumber: 163,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 162,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-600 transition",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaLinkedinIn"], {}, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 131,
+                                                columnNumber: 134
+                                            }, this)
+                                        }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 150,
+                                            lineNumber: 131,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-red-500 transition",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$ssr$5d$__$28$ecmascript$29$__["FaGoogle"], {}, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 132,
+                                                columnNumber: 133
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 132,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -1837,18 +2073,302 @@ function Footer() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                            lineNumber: 126,
+                            lineNumber: 122,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                            className: "md:col-span-2",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h4", {
+                                    className: "font-bold text-center mb-6 text-lg",
+                                    children: "OUR BRANCHES"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                    lineNumber: 138,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                    className: "grid grid-cols-1 sm:grid-cols-2 gap-6 text-center justify-items-center",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                            className: "flex flex-col items-center bg-transparent p-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                                    href: "https://maps.app.goo.gl/Dp5tKAe5r29MFmCDA",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "w-full max-w-[420px] h-48 bg-blue-700 rounded-lg overflow-hidden shadow-md block transform transition hover:scale-105 cursor-pointer",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("iframe", {
+                                                        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.9361762215854!2d79.97834327566755!3d14.419817784712054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf2d284d13ed3%3A0xe52b9f52d17b904a!2sCareer%20School%20IT!5e0!3m2!1sen!2sin!4v1729154600000!5m2!1sen!2sin",
+                                                        width: "100%",
+                                                        height: "100%",
+                                                        style: {
+                                                            border: 0,
+                                                            pointerEvents: "none"
+                                                        },
+                                                        loading: "lazy",
+                                                        title: "Career School IT"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                        lineNumber: 149,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                    lineNumber: 143,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                    className: "mt-3 text-center max-w-[420px]",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                            className: "flex justify-center items-center gap-2",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                    className: "font-bold text-sm sm:text-base",
+                                                                    children: "CSIT"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                                    lineNumber: 162,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                                                    src: "/call icon.jpg",
+                                                                    alt: "Phone",
+                                                                    className: "w-6 h-6 cursor-pointer",
+                                                                    onClick: ()=>setShowCSIT((prev)=>({
+                                                                                ...prev,
+                                                                                number: !prev.number
+                                                                            }))
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                                    lineNumber: 163,
+                                                                    columnNumber: 21
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 161,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        showCSIT.number && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-sm sm:text-base mt-1",
+                                                            children: "NUMBER: 77089 38866"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 173,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                            className: "flex justify-center items-center gap-2 mt-3",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                    className: "font-bold text-sm sm:text-base",
+                                                                    children: "ADDRESS"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                                    lineNumber: 180,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                                                    src: "/location icon.jpg",
+                                                                    alt: "Address",
+                                                                    className: "w-6 h-6 cursor-pointer",
+                                                                    onClick: ()=>setShowCSIT((prev)=>({
+                                                                                ...prev,
+                                                                                address: !prev.address
+                                                                            }))
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                                    lineNumber: 181,
+                                                                    columnNumber: 21
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 179,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        showCSIT.address && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-sm sm:text-base mt-1",
+                                                            children: "Careerschool IT Solutions, Children's Park Road, Opposite to Aditya Degree College, Aditya Nagar, Nellore, Andhra Pradesh 524002"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 191,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                                            href: "https://maps.app.goo.gl/Dp5tKAe5r29MFmCDA",
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            className: "text-blue-700 hover:underline text-sm font-semibold block mt-2"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 196,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                    lineNumber: 159,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 142,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                            className: "flex flex-col items-center bg-transparent p-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                                    href: "https://maps.app.goo.gl/h1JTS1oJBWV8Fxeg6",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "w-full max-w-[420px] h-48 bg-blue-700 rounded-lg overflow-hidden shadow-md block transform transition hover:scale-105 cursor-pointer",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("iframe", {
+                                                        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.1737921842065!2d80.21105637572875!3d13.021341013514183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52675a57b4f5cf%3A0x1c74b3b91c6e75f1!2sCareer%20School%20HR!5e0!3m2!1sen!2sin!4v1729154500000!5m2!1sen!2sin",
+                                                        width: "100%",
+                                                        height: "100%",
+                                                        style: {
+                                                            border: 0,
+                                                            pointerEvents: "none"
+                                                        },
+                                                        loading: "lazy",
+                                                        title: "Career School HR"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                        lineNumber: 214,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                    lineNumber: 208,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                    className: "mt-3 text-center max-w-[420px]",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                            className: "flex justify-center items-center gap-2",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                    className: "font-bold text-sm sm:text-base",
+                                                                    children: "CSHR"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                                    lineNumber: 227,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                                                    src: "/call icon.jpg",
+                                                                    alt: "Phone",
+                                                                    className: "w-6 h-6 cursor-pointer",
+                                                                    onClick: ()=>setShowCSHR((prev)=>({
+                                                                                ...prev,
+                                                                                number: !prev.number
+                                                                            }))
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                                    lineNumber: 228,
+                                                                    columnNumber: 21
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 226,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        showCSHR.number && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-sm sm:text-base mt-1",
+                                                            children: "NUMBER: 77089 38866"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 238,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                            className: "flex justify-center items-center gap-2 mt-3",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                    className: "font-bold text-sm sm:text-base",
+                                                                    children: "ADDRESS"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                                    lineNumber: 245,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                                                    src: "/location icon.jpg",
+                                                                    alt: "Address",
+                                                                    className: "w-6 h-6 cursor-pointer",
+                                                                    onClick: ()=>setShowCSHR((prev)=>({
+                                                                                ...prev,
+                                                                                address: !prev.address
+                                                                            }))
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                                    lineNumber: 246,
+                                                                    columnNumber: 21
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 244,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        showCSHR.address && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-sm sm:text-base mt-1",
+                                                            children: "Careerschool HR Solutions, L2, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 256,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                                            href: "https://maps.app.goo.gl/h1JTS1oJBWV8Fxeg6",
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            className: "text-blue-700 hover:underline text-sm font-semibold block mt-2"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 261,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                    lineNumber: 224,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 207,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                    lineNumber: 139,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                            lineNumber: 137,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                    lineNumber: 98,
+                    lineNumber: 119,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                lineNumber: 97,
+                lineNumber: 118,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1857,18 +2377,18 @@ function Footer() {
                     children: "© 2025 CSHR. All Rights Reserved."
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                    lineNumber: 175,
+                    lineNumber: 278,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                lineNumber: 174,
+                lineNumber: 277,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/Footer.js",
-        lineNumber: 3,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }

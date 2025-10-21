@@ -3,50 +3,94 @@
 export default function MeetOurStars() {
   const students = [
     {
-      img: "/pavi pic.jpeg",
-      name: "Pavithra",
-      training: "HR Training",
-      started: "B.COM",
-      landed: "HR GENERALIST",
+      img: "/Shalini.png",
+      name: "Shalini",
+      training: "DATA ANALYTICS TRAINING",
+      started: "BSC",
+      landed: "Jr Software Developer",
     },
     {
-      img: "/sarathi pic.jpeg",
-      name: "Sarathi",
-      training: "Python Training",
+      img: "/Jayakumar.png",
+      name: "Jayakumar",
+      training: "DATA ANALYTICS TRAINING",
+      started: "BSC",
+      landed: "Operations",
+    },
+    {
+      img: "/Sirisha Dasari.png",
+      name: "Sirisha Dasari",
+      started: "BSC Data Science",
+      landed: "IT Internship",
+    },
+    {
+      img: "/Prem.png",
+      name: "Prem",
+      training: "HR TRAINING",
+      started: "MSW",
+      landed: "HR Recruiter",
+    },
+    {
+      img: "/Balakumaran.png",
+      name: "Balakumaran",
+      training: "WEB DEVELOPER TRAINING",
       started: "BCA",
-      landed: "Software Engineer",
+      landed: "IT Backend",
     },
     {
-      img: "/pavi pic.jpeg",
-      name: "Pavithra",
-      training: "Data Analytics",
-      started: "M.Sc Maths",
-      landed: "Data Analyst",
+      img: "/Sindhu.png",
+      name: "Sindhu",
+      training: "HR TRAINING",
+      started: "BE ECE",
+      landed: "HR Executive",
     },
     {
-      img: "/sarathi pic.jpeg",
-      name: "Sarathi",
-      training: "Java Fullstack",
-      started: "B.E CSE",
-      landed: "Fullstack Developer",
+      img: "/HariPriya.png",
+      name: "Haripriya",
+      training: "HR TRAINING",
+      started: "BE CSE",
+      landed: "HR Recruiter",
     },
     {
-      img: "/pavi pic.jpeg",
-      name: "Pavithra",
-      training: "HR with Analytics",
-      started: "MBA HR",
-      landed: "HR Specialist",
+      img: "/Shanthini.png",
+      name: "Shanthini",
+      training: "DATA ANALYTICS TRAINING",
+      started: "B.COM",
+      landed: "Data Executive",
+    },
+    {
+      img: "/Medhuru Girish Kumar.png",
+      name: "Medhuru Girish Kumar",
+      started: "BCA",
+      landed: "UI/UX Designer",
+    },
+    {
+      img: "/Dhanyasree Javali.png",
+      name: "Dhanyasree Javali",
+      started: "MCA",
+      landed: "Python Developer",
+    },
+    {
+      img: "/Ashwathi.png",
+      name: "Aswathi",
+      training: "PYTHON WITH AI TRAINING",
+      started: "BE ECE",
+      landed: "Prompt Engineer",
     },
   ];
 
-  // 🔹 Duplicate for seamless looping
   const loopedStudents = [...students, ...students];
 
   return (
-    <section className="py-16 bg-gray-50 text-center overflow-hidden">
-      <h2 className="text-2xl font-bold mb-10">Meet Our Stars</h2>
+    <section
+      id="meet-our-stars"
+      className="py-16 text-center overflow-hidden"
+      style={{ backgroundColor: "#1d1e22" }}
+    >
+      <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-white">
+        Meet Our Stars
+      </h2>
 
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden mt-6">
         <div className="flex animate-marquee gap-5">
           {loopedStudents.map((student, i) => (
             <div
@@ -59,25 +103,33 @@ export default function MeetOurStars() {
                 className="h-52 w-full object-cover"
               />
               <div className="bg-blue-700 text-white p-4 h-52 flex flex-col justify-between text-center">
-                <div>
+                <div className="mb-4">
                   <h3 className="font-bold text-base">{student.name}</h3>
-                  <p className="text-sm opacity-90">{student.training}</p>
+                  <p className="text-sm font-semibold text-yellow-400 mt-1">
+                    {student.training}
+                  </p>
                 </div>
 
                 <div>
+                  <p className="text-xs text-white mb-1">Where I Started</p>
                   <button className="bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded">
-                    Where I Started
+                    {student.started}
                   </button>
-                  <p className="mt-1 text-sm">{student.started}</p>
                 </div>
 
-                <div className="text-yellow-400 text-lg">⬇</div>
+                <div className="flex justify-center my-1">
+                  <img
+                    src="/Arrow[1].png"
+                    alt="Arrow Down"
+                    className="h-5 w-5 animate-bounce opacity-90"
+                  />
+                </div>
 
                 <div className="mb-2">
+                  <p className="text-xs text-white mb-1">Where I Landed</p>
                   <button className="bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded">
-                    Where I Landed
+                    {student.landed}
                   </button>
-                  <p className="mt-1 font-bold text-sm">{student.landed}</p>
                 </div>
               </div>
             </div>
@@ -85,7 +137,6 @@ export default function MeetOurStars() {
         </div>
       </div>
 
-      {/* 🔹 Animation CSS */}
       <style jsx>{`
         @keyframes marquee {
           0% {
@@ -102,5 +153,5 @@ export default function MeetOurStars() {
         }
       `}</style>
     </section>
-  );
+  );
 }

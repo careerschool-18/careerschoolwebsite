@@ -9,6 +9,8 @@
   "static/chunks/3635d_react_3709692c._.js",
   "static/chunks/3635d_react-dom_cjs_react-dom_development_d9a9e84a.js",
   "static/chunks/3635d_react-dom_9c8a8f76._.js",
+  "static/chunks/3635d_react-icons_fa_index_mjs_f3870863._.js",
+  "static/chunks/3635d_react-icons_lib_1829f2dd._.js",
   "static/chunks/_529b3efe._.js"
 ],
     source: "entry"
