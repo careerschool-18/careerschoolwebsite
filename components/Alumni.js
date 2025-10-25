@@ -1,7 +1,7 @@
 export default function Alumni() {
   return (
     <section className="py-12 sm:py-16 text-center bg-blue-900 overflow-hidden">
-      <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-10 text-white">
+      <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-10 text-white">
         Our Alumni Proudly Placed In
       </h2>
 
@@ -13,7 +13,7 @@ export default function Alumni() {
               <img src="/Cognizant.png" alt="Cognizant" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
               <img src="/Concentrix.png" alt="Concentrix" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
               <img src="/Foundever.png" alt="Foundever" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Datamark.png" alt="Datamart" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Zoho.png" alt="Zoho" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
               <img src="/Hexaware.png" alt="Hexaware" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
               <img src="/Hcl.png" alt="HCL" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
               <img src="/Ideas.png" alt="Ideal 2 IT" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
@@ -50,7 +50,7 @@ export default function Alumni() {
         <div className="flex animate-marquee-left gap-6 sm:gap-10">
           {[...Array(2)].map((_, copy) => (
             <div key={copy} className="flex gap-6 sm:gap-10 items-center">
-              <img src="/Zoho.png" alt="Zoho" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Datamark.png" alt="Datamark" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
               <img src="/HDFC Bank.png" alt="HDFC" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
               <img src="/STAR Health Insurance.png" alt="STAR Health Insurance" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
               <img src="/Sysekam.png" alt="Sysekam" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
@@ -94,5 +94,5 @@ export default function Alumni() {
         }
       `}</style>
     </section>
-  );
+  );
 }

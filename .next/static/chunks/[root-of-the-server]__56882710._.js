@@ -474,61 +474,49 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$n
 ;
 ;
 function HeroBanner() {
-    // ✅ Common link for Enroll button
-    const enrollLink = "https://243742367.hs-sites-na2.com/training-internship-with-certification-launch-your-career-today";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "jsx-e40d150802c177da" + " " + "py-1 sm:py-2 relative overflow-hidden bg-[#f9ca1b]",
+        className: "jsx-5e5e868ec3c375f7" + " " + "py-1 sm:py-2 relative overflow-hidden bg-[#f9ca1b]",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-e40d150802c177da" + " " + "container mx-auto flex items-center justify-between px-4 relative",
+                className: "jsx-5e5e868ec3c375f7" + " " + "container mx-auto flex items-center justify-between px-4 relative",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-e40d150802c177da" + " " + "overflow-hidden whitespace-nowrap w-full relative pr-[130px]",
+                        className: "jsx-5e5e868ec3c375f7" + " " + "overflow-hidden whitespace-nowrap w-full relative pr-[130px]",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-e40d150802c177da" + " " + "animate-marquee text-sm sm:text-lg md:text-xl font-bold text-black inline-block",
+                            className: "jsx-5e5e868ec3c375f7" + " " + "animate-marquee text-sm sm:text-lg md:text-xl font-bold text-black inline-block",
                             children: "PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •"
                         }, void 0, false, {
                             fileName: "[project]/cshr-website-full/components/HeroBanner.js",
-                            lineNumber: 12,
+                            lineNumber: 8,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/HeroBanner.js",
-                        lineNumber: 10,
+                        lineNumber: 6,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                        href: enrollLink,
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        className: "jsx-e40d150802c177da" + " " + "absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 z-10",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: "jsx-e40d150802c177da" + " " + "bg-[#1f4a7e] text-[#f9ca1b] px-3 sm:px-5 py-1.5 font-semibold rounded-[7px] text-xs sm:text-sm transition hover:scale-105 hover:bg-[#173a65]",
-                            children: "ENROLL NOW"
-                        }, void 0, false, {
-                            fileName: "[project]/cshr-website-full/components/HeroBanner.js",
-                            lineNumber: 24,
-                            columnNumber: 11
-                        }, this)
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "jsx-5e5e868ec3c375f7" + " " + "bg-[#1f4a7e] text-[#f9ca1b] px-3 sm:px-5 py-1.5 font-semibold rounded-[7px] text-xs sm:text-sm absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 z-10",
+                        children: "ENROLL NOW"
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/HeroBanner.js",
-                        lineNumber: 18,
+                        lineNumber: 14,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/cshr-website-full/components/HeroBanner.js",
-                lineNumber: 8,
+                lineNumber: 4,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "e40d150802c177da",
-                children: "@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-100%)}}.animate-marquee.jsx-e40d150802c177da{white-space:nowrap;animation:15s linear infinite marquee;display:inline-block}"
+                id: "5e5e868ec3c375f7",
+                children: "@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-100%)}}.animate-marquee.jsx-5e5e868ec3c375f7{white-space:nowrap;animation:15s linear infinite marquee;display:inline-block}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/HeroBanner.js",
-        lineNumber: 7,
+        lineNumber: 3,
         columnNumber: 5
     }, this);
 }
@@ -552,24 +540,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [client] (ecmascript) <export default as X>");
 ;
 var _s = __turbopack_context__.k.signature();
-"use client";
 ;
 ;
 function Header() {
     _s();
     const [menuOpen, setMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    // ✅ WhatsApp links
-    const hireStudentsLink = "https://wa.me/7305014818";
-    const contactLink = "https://wa.me/7708938866";
-    // ✅ Smooth scroll to sections
-    const scrollToSection = (id)=>{
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: "flex items-center justify-between px-6 py-4 bg-white shadow relative",
         children: [
@@ -581,74 +556,48 @@ function Header() {
                     className: "h-10 w-auto"
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Header.js",
-                    lineNumber: 24,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 23,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                 className: "hidden md:flex items-center gap-3 ml-auto mr-4",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>scrollToSection("courses"),
+                    "Courses",
+                    "Placement",
+                    "Services",
+                    "Hire Students"
+                ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        href: "#",
                         className: "bg-blue-100 text-blue-700 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
-                        children: "Courses"
-                    }, void 0, false, {
+                        children: item
+                    }, item, false, {
                         fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 30,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>scrollToSection("meet-our-stars"),
-                        className: "bg-blue-100 text-blue-700 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
-                        children: "Placement"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 38,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                        href: hireStudentsLink,
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        className: "bg-blue-100 text-blue-700 px-4 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
-                        children: "Hire Students"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 46,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                        lineNumber: 17,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 28,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "hidden md:block",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                    href: contactLink,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "bg-blue-600 text-white px-5 py-2 rounded font-semibold text-sm hover:bg-blue-700 transition",
-                        children: "Contact Us"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 63,
-                        columnNumber: 11
-                    }, this)
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    className: "bg-blue-600 text-white px-5 py-2 rounded font-semibold text-sm hover:bg-blue-700 transition",
+                    children: "Contact Us"
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Header.js",
-                    lineNumber: 58,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 57,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -658,87 +607,55 @@ function Header() {
                     size: 28
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Header.js",
-                    lineNumber: 74,
+                    lineNumber: 39,
                     columnNumber: 21
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                     size: 28
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Header.js",
-                    lineNumber: 74,
+                    lineNumber: 39,
                     columnNumber: 39
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 70,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             menuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-6 md:hidden z-50",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>{
-                            scrollToSection("courses");
-                            setMenuOpen(false);
-                        },
-                        className: "bg-blue-100 text-blue-700 px-6 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
-                        children: "Courses"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 81,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>{
-                            scrollToSection("meet-our-stars");
-                            setMenuOpen(false);
-                        },
-                        className: "bg-blue-100 text-blue-700 px-6 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
-                        children: "Placement"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 92,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                        href: hireStudentsLink,
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        onClick: ()=>setMenuOpen(false),
-                        className: "bg-blue-100 text-blue-700 px-6 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
-                        children: "Hire Students"
-                    }, void 0, false, {
-                        fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 103,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                        href: contactLink,
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                        onClick: ()=>setMenuOpen(false),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: "bg-blue-600 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition",
-                            children: "Contact Us"
-                        }, void 0, false, {
+                    [
+                        "Courses",
+                        "Placement",
+                        "Services",
+                        "Hire Students"
+                    ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "#",
+                            className: "bg-blue-100 text-blue-700 px-6 py-2 rounded font-semibold text-sm hover:bg-blue-200 transition",
+                            children: item
+                        }, item, false, {
                             fileName: "[project]/cshr-website-full/components/Header.js",
-                            lineNumber: 120,
+                            lineNumber: 46,
                             columnNumber: 13
-                        }, this)
+                        }, this)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "bg-blue-600 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition",
+                        children: "Contact Us"
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/Header.js",
-                        lineNumber: 114,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/cshr-website-full/components/Header.js",
-                lineNumber: 79,
+                lineNumber: 44,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/Header.js",
-        lineNumber: 21,
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 }
@@ -1048,307 +965,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/cshr-website-full/components/StudentsReview.js [client] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "default",
-    ()=>StudentsReview
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/node_modules/react/index.js [client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
-"use client";
-;
-function StudentsReview() {
-    _s();
-    const [selectedReview, setSelectedReview] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [showAllMobile, setShowAllMobile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false); // 👈 For "See More" toggle in mobile
-    const reviews = [
-        {
-            id: 1,
-            name: "Velmurugan Vignesh",
-            training: "DATA ANALYTICS",
-            review: "I’m truly grateful to Careerschool for providing excellent Data Analytics Training and Placement support. Coming from a non-IT background, I was unsure how to start my career in IT field, but their training and internship program gave me the right guidance and hands-on experience to confidently begin my journey as a Data Analyst. Thanks to their continuous support, I was able to secure a job and build my career in the IT domain. I highly recommend Careerschool to anyone looking for career-oriented Online & Offline Training or internships in Data Analytics or other software programs.",
-            photo: "/Velmurugan.png"
-        },
-        {
-            id: 2,
-            name: "Pavithra S",
-            training: "PYTHON WITH AI",
-            review: "I recently completed my Python with AI training at Careerschool, and it was an amazing learning experience. The Offline sessions in Chennai were clear, practical, and easy to understand, which helped me build strong technical knowledge and confidence. With the effective placement support and guidance from the team, I successfully got placed as a Software Trainee. I highly recommend Careerschool HR Solutions to anyone who wants to start a successful career in IT.",
-            photo: "/pavi pic.jpeg"
-        },
-        {
-            id: 3,
-            name: "Subha Vadivu Lakshmi",
-            training: "HR TRAINING",
-            review: "I’m delighted to share that I’ve been placed as an HR Recruiter, and I’m truly thankful to Careerschool for this wonderful opportunity. The HR training and internship program helped me gain practical knowledge of key HR functions such as recruitment, college visits, and candidate interviews. It was an unforgettable experience that shaped my confidence and skills. I’m really happy to be moving closer to my dream career at such an early stage.",
-            photo: "/Subha Vadivu Lakshmi.png"
-        },
-        {
-            id: 4,
-            name: "Rajiya",
-            training: "DATA ANALYTICS",
-            review: "I’m Rajiya, and I recently completed my IT training in Nellore at Careerschool IT Solutions. Even after a 5-year career gap, I was able to secure a job in an IT company thanks to their excellent training, mentorship, and placement guidance. For students and job seekers in and around Nellore, I highly recommend Careerschool IT Solutions — it’s the best place to upgrade your skills and restart your career in IT.",
-            photo: "/Rajiya.png"
-        },
-        {
-            id: 5,
-            name: "Malathi",
-            training: "DATA ANALYTICS",
-            review: "I completed a Data Analytics course from Careerschool HR Solutions. Good experience of training and placement sessions. The whole team gave full support and guidance for interviews. This is a good platform to start your career. Thank you...",
-            photo: "/Malathi.png"
-        },
-        {
-            id: 6,
-            name: "Ranjith",
-            training: "DATA ANALYTICS",
-            review: "First of all, special thanks to my great teacher Karthick Sir, my moral supporter Kathiya Ma'am, and my king maker Brindha Ma'am. I have 7+ years of experience in backend operations but lacked updated skills. When I joined Careerschool for Data Analytics, the training completely changed my confidence and career direction. Thanks to Careerschool, I now feel skilled and appreciated in my workplace!",
-            photo: "/Ranjith.png"
-        },
-        {
-            id: 7,
-            name: "Afsal Ahamed",
-            training: "HR TRAINING",
-            review: "I am incredibly grateful to Careerschool HR Solutions for the invaluable guidance and support during my HR internship. A special thanks to Brindha Ma'am for her mentorship and encouragement. I’m thrilled to share that I’ve been placed as an HRBP — this achievement wouldn’t have been possible without the Careerschool team.",
-            photo: "/Afsal Ahamed.png"
-        },
-        {
-            id: 8,
-            name: "Shyam Ganesh Prasad",
-            training: "HR TRAINING",
-            review: "I joined Careerschool 4 months ago as an HR intern. The staff and mentors were very supportive, especially Keerthana Ma'am, Brintha Ma'am, and Roshini Ma'am. I’m now placed as an HR Recruiter in a reputed company. Thanks to Careerschool HR Solutions!",
-            photo: "/Shyam Ganesh Prasad.png"
-        },
-        {
-            id: 9,
-            name: "Manav Magesh",
-            training: "DATA ANALYTICS",
-            review: "I joined Careerschool HR Solutions to pursue Data Analytics, and it completely changed me. The training was excellent — Karthick Sir explains every concept clearly and gives interview tips. Kathya Ma’am encouraged me in both technical and soft skills. Now I’m placed and confident — highly recommended!",
-            photo: "/Manav.png"
-        },
-        {
-            id: 10,
-            name: "Bhuvaneshwaran",
-            training: "DATA ANALYTICS",
-            review: "I completed the Data Analytics course at Careerschool. The sessions covered Advanced Excel, SQL, and Power BI with real-time examples. The HR team also provided strong resume and interview guidance.",
-            photo: "/Bhuwaneswar.png"
-        },
-        {
-            id: 11,
-            name: "Saikumar Mallarapu",
-            training: "FRONTEND DEVELOPMENT",
-            review: "Hi, I’m Sai Kumar from Nellore. I attended the Careerschool Campus Drive and got selected as a Software Trainee. Great place to learn Python, Java Full Stack, AI, and Data Analytics with placement assistance.",
-            photo: "/Saikumar.png"
-        },
-        {
-            id: 12,
-            name: "Manoj Kumar",
-            training: "CLOUD COMPUTING",
-            review: "Good exposure to AWS and cloud fundamentals with live practice sessions and excellent trainer support.",
-            photo: "/sarathi pic.jpeg"
-        },
-        {
-            id: 13,
-            name: "Priya",
-            training: "GRAPHIC DESIGN",
-            review: "Covered Photoshop and Illustrator basics perfectly. The practical assignments were very helpful.",
-            photo: "/pavi pic.jpeg"
-        },
-        {
-            id: 14,
-            name: "Sathish",
-            training: "JAVA FULL STACK",
-            review: "Java Full Stack sessions were clear and project-oriented. The placement guidance was strong.",
-            photo: "/sarathi pic.jpeg"
-        },
-        {
-            id: 15,
-            name: "Harini",
-            training: "ARTIFICIAL INTELLIGENCE",
-            review: "I completed the Data Analytics course at Careerschool HR Solutions. The training mainly covered Advanced Excel, SQL, and Power BI. The teaching was clear and practical.",
-            photo: "/pavi pic.jpeg"
-        }
-    ];
-    // ✅ Show only 5 reviews in mobile view unless "See More" is clicked
-    const visibleReviews = ("TURBOPACK compile-time value", "object") !== "undefined" && window.innerWidth < 640 && !showAllMobile ? reviews.slice(0, 5) : reviews;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-10 bg-white text-center overflow-hidden px-4 sm:px-6 relative",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-2xl sm:text-2xl md:text-3xl font-bold mb-8 text-[#004AAD]",
-                children: "Hear It From Our Learners"
-            }, void 0, false, {
-                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                lineNumber: 34,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 justify-center",
-                children: visibleReviews.map((student)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "bg-blue-700 text-white p-4 sm:p-6 rounded-xl flex flex-col items-center gap-3 shadow-lg w-full",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                src: student.photo,
-                                alt: student.name,
-                                className: "w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-white shadow-md"
-                            }, void 0, false, {
-                                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                lineNumber: 45,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "font-semibold text-[14px] sm:text-[16px] truncate w-full text-center",
-                                children: student.name
-                            }, void 0, false, {
-                                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                lineNumber: 50,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-[12px] sm:text-[13px] opacity-95 text-yellow-300 font-semibold truncate w-full text-center",
-                                children: student.training
-                            }, void 0, false, {
-                                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                lineNumber: 53,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setSelectedReview(student),
-                                className: "mt-2 bg-yellow-400 text-blue-900 font-semibold text-[12px] sm:text-[13px] px-3 py-1 rounded-lg hover:bg-yellow-300 transition",
-                                children: "Read Review"
-                            }, void 0, false, {
-                                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                lineNumber: 57,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, student.id, true, {
-                        fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                        lineNumber: 41,
-                        columnNumber: 11
-                    }, this))
-            }, void 0, false, {
-                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                lineNumber: 39,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-6 sm:hidden",
-                children: !showAllMobile ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: ()=>setShowAllMobile(true),
-                    className: "bg-blue-700 text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-blue-800 transition",
-                    children: "See More"
-                }, void 0, false, {
-                    fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                    lineNumber: 70,
-                    columnNumber: 11
-                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: ()=>setShowAllMobile(false),
-                    className: "bg-gray-300 text-gray-800 font-semibold text-sm px-4 py-2 rounded-lg hover:bg-gray-400 transition",
-                    children: "See Less"
-                }, void 0, false, {
-                    fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                    lineNumber: 77,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                lineNumber: 68,
-                columnNumber: 7
-            }, this),
-            selectedReview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50 px-4",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "bg-white text-gray-800 rounded-xl shadow-lg max-w-md w-full p-6 relative",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            onClick: ()=>setSelectedReview(null),
-                            className: "absolute top-2 right-3 text-gray-500 hover:text-gray-800 text-lg",
-                            children: "✖"
-                        }, void 0, false, {
-                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                            lineNumber: 90,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center mb-4 gap-3",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: selectedReview.photo,
-                                    alt: selectedReview.name,
-                                    className: "w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border border-gray-300"
-                                }, void 0, false, {
-                                    fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                    lineNumber: 99,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "font-bold text-base sm:text-lg text-left",
-                                            children: selectedReview.name
-                                        }, void 0, false, {
-                                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                            lineNumber: 105,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-sm sm:text-base text-yellow-500 font-semibold text-left",
-                                            children: selectedReview.training
-                                        }, void 0, false, {
-                                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                            lineNumber: 108,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                                    lineNumber: 104,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                            lineNumber: 98,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-[13px] sm:text-[15px] leading-relaxed text-justify",
-                            children: selectedReview.review
-                        }, void 0, false, {
-                            fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                            lineNumber: 114,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                    lineNumber: 89,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-                lineNumber: 88,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/cshr-website-full/components/StudentsReview.js",
-        lineNumber: 33,
-        columnNumber: 5
-    }, this);
-}
-_s(StudentsReview, "eCqtJ/m61IFIKPk+jAtda0RTr2Y=");
-_c = StudentsReview;
-var _c;
-__turbopack_context__.k.register(_c, "StudentsReview");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
-}),
 "[project]/cshr-website-full/components/MeetOurStars.js [client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -1639,10 +1255,7 @@ function Courses() {
             poster: "/Data Analytics Banner.png"
         }
     ];
-    // ✅ Common link for all buttons
-    const enrollLink = "https://243742367.hs-sites-na2.com/training-internship-with-certification-launch-your-career-today";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        id: "courses",
         style: {
             backgroundColor: "#FFFFFF"
         },
@@ -1653,7 +1266,7 @@ function Courses() {
                 children: "Next Batch Starts Soon"
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Courses.js",
-                lineNumber: 34,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1661,7 +1274,7 @@ function Courses() {
                 children: "Industry-ready Training Programs with Internships & Placement Support for Students, Freshers and Working Professionals."
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Courses.js",
-                lineNumber: 39,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1690,7 +1303,7 @@ function Courses() {
                                     className: "jsx-20afbeb9e1e0d4f5" + " " + "w-full object-cover"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                    lineNumber: 61,
+                                    lineNumber: 56,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1704,7 +1317,7 @@ function Courses() {
                                                     children: course.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 75,
+                                                    lineNumber: 70,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1715,7 +1328,7 @@ function Courses() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 79,
+                                                    lineNumber: 74,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1726,19 +1339,19 @@ function Courses() {
                                                     children: course.highlight
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 82,
+                                                    lineNumber: 79,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/cshr-website-full/components/Courses.js",
-                                            lineNumber: 74,
+                                            lineNumber: 69,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "jsx-20afbeb9e1e0d4f5" + " " + "mt-4 flex justify-center",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: enrollLink,
+                                                href: "#",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
                                                 className: "jsx-20afbeb9e1e0d4f5",
@@ -1748,49 +1361,49 @@ function Courses() {
                                                         color: "#004AAD",
                                                         borderRadius: "20px"
                                                     },
-                                                    className: "jsx-20afbeb9e1e0d4f5" + " " + "font-bold px-4 py-2 rounded text-xs sm:text-sm transition hover:scale-[1.05]",
+                                                    className: "jsx-20afbeb9e1e0d4f5" + " " + "font-bold px-4 py-2 rounded text-xs sm:text-sm transition hover:scale-[1.02]",
                                                     children: "ENROLL NOW"
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                    lineNumber: 97,
+                                                    lineNumber: 90,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/cshr-website-full/components/Courses.js",
-                                                lineNumber: 92,
+                                                lineNumber: 89,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Courses.js",
-                                            lineNumber: 91,
+                                            lineNumber: 88,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                                    lineNumber: 73,
+                                    lineNumber: 68,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/cshr-website-full/components/Courses.js",
-                            lineNumber: 48,
+                            lineNumber: 43,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                    lineNumber: 46,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Courses.js",
-                lineNumber: 45,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "jsx-20afbeb9e1e0d4f5" + " " + "mt-10 flex justify-center",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                    href: enrollLink,
+                    href: "#",
                     target: "_blank",
                     rel: "noopener noreferrer",
                     className: "jsx-20afbeb9e1e0d4f5",
@@ -1800,21 +1413,21 @@ function Courses() {
                             color: "#FFFFFF",
                             borderRadius: "20px"
                         },
-                        className: "jsx-20afbeb9e1e0d4f5" + " " + "font-extrabold px-6 py-3 rounded text-xs sm:text-sm transition hover:scale-[1.05]",
+                        className: "jsx-20afbeb9e1e0d4f5" + " " + "font-extrabold px-6 py-3 rounded text-xs sm:text-sm transition hover:scale-[1.02]",
                         children: "Explore More Courses"
                     }, void 0, false, {
                         fileName: "[project]/cshr-website-full/components/Courses.js",
-                        lineNumber: 118,
+                        lineNumber: 111,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Courses.js",
-                    lineNumber: 117,
+                    lineNumber: 110,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Courses.js",
-                lineNumber: 116,
+                lineNumber: 109,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1824,7 +1437,7 @@ function Courses() {
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/Courses.js",
-        lineNumber: 28,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }
@@ -2407,55 +2020,15 @@ var _s = __turbopack_context__.k.signature();
 ;
 function Footer() {
     _s();
-    const [showContact, setShowContact] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    // ✅ Common course link
-    const courseLink = "https://243742367.hs-sites-na2.com/training-internship-with-certification-launch-your-career-today";
-    // ✅ Resource links mapping
-    const resources = [
-        {
-            name: "Referral Rewards",
-            link: "https://wa.me/6369119564"
-        },
-        {
-            name: "Hire Students",
-            link: "https://wa.me/7305014818"
-        },
-        {
-            name: "Work with us",
-            link: "https://wa.me/7708938866"
-        },
-        {
-            name: "Become a Mobilizer",
-            link: "https://wa.me/6369119564"
-        },
-        {
-            name: "Connect With Training Team",
-            link: "https://wa.me/6369119564"
-        },
-        {
-            name: "Blogs",
-            link: "#"
-        }
-    ];
-    // ✅ Placement links mapping
-    const placements = [
-        {
-            name: "Success Story",
-            link: "#meet-our-stars"
-        },
-        {
-            name: "Speak With Campus Team",
-            link: "https://wa.me/7708938866"
-        },
-        {
-            name: "Speak With Placement Team",
-            link: "https://wa.me/7305014818"
-        },
-        {
-            name: "Non-IT Jobs",
-            link: "https://wa.me/6382585438"
-        }
-    ];
+    const [showContact, setShowContact] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false); // 👈 For "Contact Us"
+    const [showCSIT, setShowCSIT] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])({
+        number: false,
+        address: false
+    });
+    const [showCSHR, setShowCSHR] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])({
+        number: false,
+        address: false
+    });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
         className: "bg-gradient-to-r from-gray-100 to-gray-300 text-gray-900 py-12 sm:py-16 px-4 sm:px-6",
         children: [
@@ -2469,7 +2042,7 @@ function Footer() {
                                 children: "TRENDING COURSE"
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 43,
+                                lineNumber: 17,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2485,30 +2058,28 @@ function Footer() {
                                     "Accounts & Finance"
                                 ].map((course, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: courseLink,
-                                            target: "_blank",
-                                            rel: "noopener noreferrer",
+                                            href: "#",
                                             className: "hover:text-blue-700 transition duration-300 block",
                                             children: course
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 56,
+                                            lineNumber: 30,
                                             columnNumber: 17
                                         }, this)
                                     }, i, false, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 55,
+                                        lineNumber: 29,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 44,
+                                lineNumber: 18,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                        lineNumber: 42,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2518,37 +2089,42 @@ function Footer() {
                                 children: "RESOURCES"
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 71,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                 className: "space-y-2 text-sm sm:text-base",
-                                children: resources.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: [
+                                    "Referral Rewards",
+                                    "Hire Students",
+                                    "Work with us",
+                                    "Become a Mobilizer",
+                                    "Connect With Training Team",
+                                    "Blogs"
+                                ].map((res, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: item.link,
-                                            target: "_blank",
-                                            rel: "noopener noreferrer",
+                                            href: "#",
                                             className: "hover:text-blue-700 transition duration-300 block",
-                                            children: item.name
+                                            children: res
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 75,
+                                            lineNumber: 51,
                                             columnNumber: 17
                                         }, this)
                                     }, i, false, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 74,
+                                        lineNumber: 50,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 72,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                        lineNumber: 70,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2558,37 +2134,82 @@ function Footer() {
                                 children: "PLACEMENTS"
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 90,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                 className: "space-y-2 text-sm sm:text-base",
-                                children: placements.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: item.link,
-                                            target: "_blank",
-                                            rel: "noopener noreferrer",
+                                            href: "#meet-our-stars",
                                             className: "hover:text-blue-700 transition duration-300 block",
-                                            children: item.name
+                                            children: "Success Story"
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 94,
-                                            columnNumber: 17
+                                            lineNumber: 64,
+                                            columnNumber: 15
                                         }, this)
-                                    }, i, false, {
+                                    }, void 0, false, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 93,
-                                        columnNumber: 15
-                                    }, this))
-                            }, void 0, false, {
+                                        lineNumber: 63,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "hover:text-blue-700 transition duration-300 block",
+                                            children: "Speak With Campus Team"
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 72,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 71,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "hover:text-blue-700 transition duration-300 block",
+                                            children: "Speak With Placement Team"
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 77,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 76,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "hover:text-blue-700 transition duration-300 block",
+                                            children: "Non-IT Jobs"
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 82,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 81,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 91,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                        lineNumber: 89,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2598,7 +2219,7 @@ function Footer() {
                                 children: "COMPANY"
                             }, void 0, false, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 109,
+                                lineNumber: 91,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2611,47 +2232,55 @@ function Footer() {
                                             children: "About Us"
                                         }, void 0, false, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 112,
+                                            lineNumber: 94,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 111,
+                                        lineNumber: 93,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "https://wa.me/7708938866",
-                                            target: "_blank",
-                                            rel: "noopener noreferrer",
-                                            className: "font-medium text-gray-800 hover:text-blue-700 transition duration-300 flex items-center gap-1",
-                                            children: "📞 Contact Us"
-                                        }, void 0, false, {
-                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 120,
-                                            columnNumber: 3
-                                        }, this)
-                                    }, void 0, false, {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>setShowContact(!showContact),
+                                                className: "hover:text-blue-700 transition duration-300 block text-left w-full font-medium",
+                                                children: "Contact Us"
+                                            }, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 101,
+                                                columnNumber: 15
+                                            }, this),
+                                            showContact && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "mt-2 text-sm font-semibold text-gray-800",
+                                                children: "📞 77089 38866"
+                                            }, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 108,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                        lineNumber: 119,
-                                        columnNumber: 12
+                                        lineNumber: 100,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 110,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                        lineNumber: 108,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                lineNumber: 40,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2660,25 +2289,96 @@ function Footer() {
                     className: "grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 items-start text-center md:text-left",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mb-4 flex justify-center md:justify-start",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "/logo.png",
-                                    alt: "CSHR Logo",
-                                    className: "h-16 w-auto object-contain"
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mb-4 flex justify-center md:justify-start",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: "/logo.png",
+                                        alt: "CSHR Logo",
+                                        className: "h-16 w-auto object-contain"
+                                    }, void 0, false, {
+                                        fileName: "[project]/cshr-website-full/components/Footer.js",
+                                        lineNumber: 124,
+                                        columnNumber: 15
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                    lineNumber: 140,
-                                    columnNumber: 15
+                                    lineNumber: 123,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                    className: "font-bold mb-3 text-lg",
+                                    children: "Follow Us"
+                                }, void 0, false, {
+                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                    lineNumber: 127,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex justify-center md:justify-start gap-3 text-white",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-pink-600 transition",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaInstagram"], {}, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 129,
+                                                columnNumber: 134
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 129,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 transition",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaFacebookF"], {}, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 130,
+                                                columnNumber: 134
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 130,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-600 transition",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaLinkedinIn"], {}, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 131,
+                                                columnNumber: 134
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 131,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "#",
+                                            className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-red-500 transition",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaGoogle"], {}, void 0, false, {
+                                                fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                lineNumber: 132,
+                                                columnNumber: 133
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                            lineNumber: 132,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/cshr-website-full/components/Footer.js",
+                                    lineNumber: 128,
+                                    columnNumber: 13
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/cshr-website-full/components/Footer.js",
-                                lineNumber: 139,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                            lineNumber: 138,
+                            lineNumber: 122,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2689,7 +2389,7 @@ function Footer() {
                                     children: "OUR BRANCHES"
                                 }, void 0, false, {
                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                    lineNumber: 150,
+                                    lineNumber: 138,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2715,173 +2415,113 @@ function Footer() {
                                                         title: "Career School IT"
                                                     }, void 0, false, {
                                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                        lineNumber: 160,
+                                                        lineNumber: 149,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 154,
+                                                    lineNumber: 143,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mt-3 text-center max-w-[420px] space-y-3",
+                                                    className: "mt-3 text-center max-w-[420px]",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "flex justify-center items-center gap-2",
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                    src: "/call icon - PNG.png",
-                                                                    alt: "Phone",
-                                                                    className: "w-6 h-6"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 172,
-                                                                    columnNumber: 21
-                                                                }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                     className: "font-bold text-sm sm:text-base",
-                                                                    children: "CSIT: 77089 38866"
+                                                                    children: "CSIT"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 177,
+                                                                    lineNumber: 162,
                                                                     columnNumber: 21
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                            lineNumber: 171,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex justify-center items-start gap-2",
-                                                            children: [
+                                                                }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                    src: "/location icon - PNG.png",
-                                                                    alt: "Address",
-                                                                    className: "w-6 h-6 mt-1"
+                                                                    src: "/call icon.jpg",
+                                                                    alt: "Phone",
+                                                                    className: "w-6 h-6 cursor-pointer",
+                                                                    onClick: ()=>setShowCSIT((prev)=>({
+                                                                                ...prev,
+                                                                                number: !prev.number
+                                                                            }))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 184,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "font-bold text-sm sm:text-base text-left",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "font-semibold",
-                                                                            children: "Address:"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                            lineNumber: 190,
-                                                                            columnNumber: 23
-                                                                        }, this),
-                                                                        " Careerschool IT Solutions, Children's Park Road, Opposite to Aditya Degree College, Aditya Nagar, Nellore, Andhra Pradesh 524002"
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 189,
+                                                                    lineNumber: 163,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                            lineNumber: 183,
+                                                            lineNumber: 161,
                                                             columnNumber: 19
                                                         }, this),
+                                                        showCSIT.number && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-sm sm:text-base mt-1",
+                                                            children: "NUMBER: 77089 38866"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 173,
+                                                            columnNumber: 21
+                                                        }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex justify-center gap-3 mt-3 text-white",
+                                                            className: "flex justify-center items-center gap-2 mt-3",
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://www.instagram.com/careerschoolhrsolutions/?hl=en",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-pink-600 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaInstagram"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 196,
-                                                                        columnNumber: 237
-                                                                    }, this)
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "font-bold text-sm sm:text-base",
+                                                                    children: "ADDRESS"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 196,
+                                                                    lineNumber: 180,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://www.facebook.com/profile.php?id=61578868656121",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaFacebookF"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 197,
-                                                                        columnNumber: 235
-                                                                    }, this)
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                    src: "/location icon.jpg",
+                                                                    alt: "Address",
+                                                                    className: "w-6 h-6 cursor-pointer",
+                                                                    onClick: ()=>setShowCSIT((prev)=>({
+                                                                                ...prev,
+                                                                                address: !prev.address
+                                                                            }))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 197,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://www.linkedin.com/showcase/careerschool-it-solutions/?viewAsMember=true",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-600 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaLinkedinIn"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 198,
-                                                                        columnNumber: 259
-                                                                    }, this)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 198,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://youtube.com/@careerschoolitsolutionsnellore?si=iNimoC_zvVUEWXnA",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-red-500 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaYoutube"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 199,
-                                                                        columnNumber: 251
-                                                                    }, this)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 199,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://whatsapp.com/channel/0029Va4ufgc17Emp80iBn92I",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-green-600 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaWhatsapp"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 200,
-                                                                        columnNumber: 235
-                                                                    }, this)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 200,
+                                                                    lineNumber: 181,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                            lineNumber: 195,
+                                                            lineNumber: 179,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        showCSIT.address && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-sm sm:text-base mt-1",
+                                                            children: "Careerschool IT Solutions, Children's Park Road, Opposite to Aditya Degree College, Aditya Nagar, Nellore, Andhra Pradesh 524002"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 191,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                            href: "https://maps.app.goo.gl/Dp5tKAe5r29MFmCDA",
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            className: "text-blue-700 hover:underline text-sm font-semibold block mt-2"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 196,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 170,
+                                                    lineNumber: 159,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 153,
+                                            lineNumber: 142,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2904,196 +2544,136 @@ function Footer() {
                                                         title: "Career School HR"
                                                     }, void 0, false, {
                                                         fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                        lineNumber: 213,
+                                                        lineNumber: 214,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 207,
+                                                    lineNumber: 208,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mt-3 text-center max-w-[420px] space-y-3",
+                                                    className: "mt-3 text-center max-w-[420px]",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "flex justify-center items-center gap-2",
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                    src: "/call icon - PNG.png",
-                                                                    alt: "Phone",
-                                                                    className: "w-6 h-6"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 225,
-                                                                    columnNumber: 21
-                                                                }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                     className: "font-bold text-sm sm:text-base",
-                                                                    children: "CSHR: 77089 38866"
+                                                                    children: "CSHR"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 230,
+                                                                    lineNumber: 227,
                                                                     columnNumber: 21
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                            lineNumber: 224,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex justify-center items-start gap-2",
-                                                            children: [
+                                                                }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                    src: "/location icon - PNG.png",
-                                                                    alt: "Address",
-                                                                    className: "w-6 h-6 mt-1"
+                                                                    src: "/call icon.jpg",
+                                                                    alt: "Phone",
+                                                                    className: "w-6 h-6 cursor-pointer",
+                                                                    onClick: ()=>setShowCSHR((prev)=>({
+                                                                                ...prev,
+                                                                                number: !prev.number
+                                                                            }))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 237,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "font-bold text-sm sm:text-base text-left",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "font-semibold",
-                                                                            children: "Address:"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                            lineNumber: 243,
-                                                                            columnNumber: 23
-                                                                        }, this),
-                                                                        " Careerschool HR Solutions, L2, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032"
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 242,
+                                                                    lineNumber: 228,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                            lineNumber: 236,
+                                                            lineNumber: 226,
                                                             columnNumber: 19
                                                         }, this),
+                                                        showCSHR.number && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-sm sm:text-base mt-1",
+                                                            children: "NUMBER: 77089 38866"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 238,
+                                                            columnNumber: 21
+                                                        }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex justify-center gap-3 mt-3 text-white",
+                                                            className: "flex justify-center items-center gap-2 mt-3",
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://www.instagram.com/careerschoolhrsolutions/?hl=en",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-pink-600 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaInstagram"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 249,
-                                                                        columnNumber: 237
-                                                                    }, this)
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "font-bold text-sm sm:text-base",
+                                                                    children: "ADDRESS"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 249,
+                                                                    lineNumber: 245,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://www.facebook.com/careerschoolhrsolutions.homepage/",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-800 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaFacebookF"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 250,
-                                                                        columnNumber: 239
-                                                                    }, this)
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                    src: "/location icon.jpg",
+                                                                    alt: "Address",
+                                                                    className: "w-6 h-6 cursor-pointer",
+                                                                    onClick: ()=>setShowCSHR((prev)=>({
+                                                                                ...prev,
+                                                                                address: !prev.address
+                                                                            }))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 250,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://www.linkedin.com/company/careerschool-hr-solutions/?viewAsMember=true",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-600 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaLinkedinIn"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 251,
-                                                                        columnNumber: 258
-                                                                    }, this)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 251,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://youtube.com/@careerschoolhrsolutions?si=B94JdkhKg7byI1ml",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-red-500 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaYoutube"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 252,
-                                                                        columnNumber: 244
-                                                                    }, this)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 252,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                    href: "https://whatsapp.com/channel/0029Va4ufgc17Emp80iBn92I",
-                                                                    target: "_blank",
-                                                                    rel: "noopener noreferrer",
-                                                                    className: "w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-green-600 transition",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["FaWhatsapp"], {}, void 0, false, {
-                                                                        fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                        lineNumber: 253,
-                                                                        columnNumber: 235
-                                                                    }, this)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                                    lineNumber: 253,
+                                                                    lineNumber: 246,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                            lineNumber: 248,
+                                                            lineNumber: 244,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        showCSHR.address && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-sm sm:text-base mt-1",
+                                                            children: "Careerschool HR Solutions, L2, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 256,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                            href: "https://maps.app.goo.gl/h1JTS1oJBWV8Fxeg6",
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            className: "text-blue-700 hover:underline text-sm font-semibold block mt-2"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/cshr-website-full/components/Footer.js",
+                                                            lineNumber: 261,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                                    lineNumber: 223,
+                                                    lineNumber: 224,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                                            lineNumber: 206,
+                                            lineNumber: 207,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                                    lineNumber: 151,
+                                    lineNumber: 139,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/cshr-website-full/components/Footer.js",
-                            lineNumber: 149,
+                            lineNumber: 137,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                    lineNumber: 136,
+                    lineNumber: 119,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                lineNumber: 135,
+                lineNumber: 118,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3102,22 +2682,22 @@ function Footer() {
                     children: "© 2025 CSHR. All Rights Reserved."
                 }, void 0, false, {
                     fileName: "[project]/cshr-website-full/components/Footer.js",
-                    lineNumber: 264,
+                    lineNumber: 278,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/cshr-website-full/components/Footer.js",
-                lineNumber: 263,
+                lineNumber: 277,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/cshr-website-full/components/Footer.js",
-        lineNumber: 38,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
-_s(Footer, "1m+16GgzE/oRpbz2V4F0OLcfizc=");
+_s(Footer, "no5jV19CvHNxRy3OIXDV9cDmnsE=");
 _c = Footer;
 var _c;
 __turbopack_context__.k.register(_c, "Footer");
@@ -3137,7 +2717,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$c
 var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$components$2f$Header$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/components/Header.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$components$2f$FullImage$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/components/FullImage.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$components$2f$GoogleReview$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/components/GoogleReview.js [client] (ecmascript)"); // 👈 must match file name
-var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$components$2f$StudentsReview$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/components/StudentsReview.js [client] (ecmascript)");
+(()=>{
+    const e = new Error("Cannot find module '../components/StudentsReview'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
 var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$components$2f$MeetOurStars$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/components/MeetOurStars.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$components$2f$Courses$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/components/Courses.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$components$2f$Alumni$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/cshr-website-full/components/Alumni.js [client] (ecmascript)");
@@ -3179,7 +2763,7 @@ function Home() {
                 lineNumber: 25,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$components$2f$StudentsReview$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$cshr$2d$website$2d$full$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StudentsReview, {}, void 0, false, {
                 fileName: "[project]/cshr-website-full/pages/index.js",
                 lineNumber: 28,
                 columnNumber: 7
@@ -3254,4 +2838,4 @@ __turbopack_context__.r("[next]/entry/page-loader.ts { PAGE => \"[project]/cshr-
 }),
 ]);
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__0113758e._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__56882710._.js.map

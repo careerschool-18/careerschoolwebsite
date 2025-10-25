@@ -5,11 +5,11 @@ export default function NeedHelp() {
   // ✅ 6 Python Questions and Answers
   const faqs = [
     {
-      q: " What are the best placement-oriented training courses after graduation?",
+      q: "What are the best placement-oriented training courses after graduation?",
       a: "At Careerschool HR & IT Solutions, we offer top-rated career programs like Python Full Stack, Data Analytics, HR Analytics, Digital Marketing, and Java Training with internship and placement support.",
     },
     {
-      q: " Does Careerschool provide placement assistance after completing the training?",
+      q: "Does Careerschool provide placement assistance after completing the training?",
       a: "Yes! Every training program at Careerschool includes pre-placement and post-placement support — covering interview preparation, resume building, aptitude sessions, and company tie-ups to help you get hired faster.",
     },
     {
@@ -41,7 +41,7 @@ export default function NeedHelp() {
   return (
     <section className="py-12 sm:py-16 bg-blue-800 text-center px-4 sm:px-6">
       {/* 🔹 Heading */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8 text-white">
+      <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8 text-white">
         Need Help
       </h2>
 

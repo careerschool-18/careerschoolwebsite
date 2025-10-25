@@ -20,13 +20,18 @@ export default function Courses() {
     },
   ];
 
+  // ✅ Common link for all buttons
+  const enrollLink =
+    "https://243742367.hs-sites-na2.com/training-internship-with-certification-launch-your-career-today";
+
   return (
     <section
+      id="courses" // 👈 Added ID for smooth scroll from Header
       className="py-12 sm:py-16 text-center px-4 sm:px-6 overflow-hidden"
-      style={{ backgroundColor: "#FFFFFF" }} // Section BG Color
+      style={{ backgroundColor: "#FFFFFF" }}
     >
       {/* 🔹 Section Heading */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#004AAD]">
+      <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-[#004AAD]">
         Next Batch Starts Soon
       </h2>
 
@@ -71,9 +76,7 @@ export default function Courses() {
                     {course.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm mt-2">
-                    ⏰ {course.duration}
-                  </p>
+                  <p className="text-xs sm:text-sm mt-2">⏰ {course.duration}</p>
 
                   {/* 🔹 Highlight */}
                   <p
@@ -86,9 +89,13 @@ export default function Courses() {
 
                 {/* 🔹 CTA Button */}
                 <div className="mt-4 flex justify-center">
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={enrollLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <button
-                      className="font-bold px-4 py-2 rounded text-xs sm:text-sm transition"
+                      className="font-bold px-4 py-2 rounded text-xs sm:text-sm transition hover:scale-[1.05]"
                       style={{
                         backgroundColor: "#FFFFFF",
                         color: "#004AAD",
@@ -106,16 +113,19 @@ export default function Courses() {
       </div>
 
       {/* 🔹 Explore More Courses Button */}
-      <div className="mt-10">
-        <button
-          className="text-white px-6 py-3 font-medium shadow-md text-sm sm:text-base transition hover:scale-[1.03]"
-          style={{
-            backgroundColor: "#004AAD",
-            borderRadius: "20px",
-          }}
-        >
-          Explore More Courses
-        </button>
+      <div className="mt-10 flex justify-center">
+        <a href={enrollLink} target="_blank" rel="noopener noreferrer">
+          <button
+            className="font-extrabold px-6 py-3 rounded text-xs sm:text-sm transition hover:scale-[1.05]"
+            style={{
+              backgroundColor: "#004AAD",
+              color: "#FFFFFF",
+              borderRadius: "20px",
+            }}
+          >
+            Explore More Courses
+          </button>
+        </a>
       </div>
 
       {/* 🔹 Marquee Animation */}

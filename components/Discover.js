@@ -1,7 +1,7 @@
 export default function Discover() {
   return (
     <section className="py-10 sm:py-16 bg-yellow-400 text-center px-4">
-      <h2 className="text-lg sm:text-2xl md:text-3xl font-bold leading-snug text-gray-900 max-w-3xl mx-auto">
+      <h2 className="text-2xl sm:text-2xl md:text-3xl font-boldleading-snug text-gray-900 max-w-3xl mx-auto">
         Discover the Right Training to Boost Your Career
       </h2>
 
@@ -15,5 +15,5 @@ export default function Discover() {
         </button>
       </a>
     </section>
-  );
+  );
 }
