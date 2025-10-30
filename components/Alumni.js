@@ -8,38 +8,38 @@ export default function Alumni() {
       {/* 🔹 Row 1 (scroll left) */}
       <div className="relative w-full overflow-hidden py-2 sm:py-3">
         <div className="flex animate-marquee-left gap-6 sm:gap-10">
-          {[...Array(2)].map((_, copy) => (
-            <div key={copy} className="flex gap-6 sm:gap-10 items-center">
-              <img src="/Cognizant.png" alt="Cognizant" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Concentrix.png" alt="Concentrix" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Foundever.png" alt="Foundever" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Zoho.png" alt="Zoho" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Hexaware.png" alt="Hexaware" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Hcl.png" alt="HCL" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Ideas.png" alt="Ideal 2 IT" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Hinduja.png" alt="Hinduja" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Induslnd.png" alt="Indusind Bank" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Tata Consultancy Services.png" alt="Tata Consultancy Services" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+          {[...Array(3)].map((_, copy) => (
+            <div key={copy} className="flex gap-6 sm:gap-10 items-center flex-shrink-0">
+              <img src="/Client image/Cognizant.png" alt="Cognizant" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Concentrix.png" alt="Concentrix" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Foundever.png" alt="Foundever" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Zoho.png" alt="Zoho" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Hexaware.png" alt="Hexaware" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Hcl.png" alt="HCL" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Ideas 2 IT.png" alt="Ideal 2 IT" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Hinduja.png" alt="Hinduja" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Indusind Bank.png" alt="Indusind Bank" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Tata Consultancy Services.png" alt="Tata Consultancy Services" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
             </div>
           ))}
         </div>
       </div>
 
-      {/* 🔹 Row 2 (scroll right, fixed continuous motion) */}
+      {/* 🔹 Row 2 (scroll right) */}
       <div className="relative w-full overflow-hidden py-2 sm:py-3">
         <div className="flex animate-marquee-right gap-6 sm:gap-10">
-          {[...Array(2)].map((_, copy) => (
-            <div key={copy} className="flex gap-6 sm:gap-10 items-center">
-              <img src="/VThink.png" alt="VThink" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Movate.png" alt="Movate" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Omega Healthcare.png" alt="Omega Healthcare" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Quess.png" alt="Quess" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Advertflair.png" alt="Advertflair" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Altruist.png" alt="Altruist" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Ison.png" alt="Ison" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Teleperformance.png" alt="Teleperformance" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Tech Mahindra.png" alt="Tech Mahindra" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Startek.png" alt="Startek" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+          {[...Array(3)].map((_, copy) => (
+            <div key={copy} className="flex gap-6 sm:gap-10 items-center flex-shrink-0">
+              <img src="/Client image/VThink.png" alt="VThink" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Movate.png" alt="Movate" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Omega Healthcare.png" alt="Omega Healthcare" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Quess.png" alt="Quess" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Advertflair.png" alt="Advertflair" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Altruist.png" alt="Altruist" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Ison.png" alt="Ison" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Teleperformance.png" alt="Teleperformance" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Tech Mahindra.png" alt="Tech Mahindra" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Startek.png" alt="Startek" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
             </div>
           ))}
         </div>
@@ -48,18 +48,18 @@ export default function Alumni() {
       {/* 🔹 Row 3 (scroll left) */}
       <div className="relative w-full overflow-hidden py-2 sm:py-3">
         <div className="flex animate-marquee-left gap-6 sm:gap-10">
-          {[...Array(2)].map((_, copy) => (
-            <div key={copy} className="flex gap-6 sm:gap-10 items-center">
-              <img src="/Datamark.png" alt="Datamark" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/HDFC Bank.png" alt="HDFC" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/STAR Health Insurance.png" alt="STAR Health Insurance" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Sysekam.png" alt="Sysekam" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Access Healthcare.png" alt="Access Healthcare" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Emayam Tech.png" alt="Emayam Tech" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Paisabazaar.png" alt="Paisabazaar" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Mtutor.png" alt="Mtutor" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/ICICI Bank.png" alt="ICICI Bank" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
-              <img src="/Sutherland.png" alt="Sutherland" className="h-8 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+          {[...Array(3)].map((_, copy) => (
+            <div key={copy} className="flex gap-6 sm:gap-10 items-center flex-shrink-0">
+              <img src="/Client image/Datamark.png" alt="Datamark" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/HDFC Bank.png" alt="HDFC" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/STAR Health Insurance.png" alt="STAR Health Insurance" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Sysekam.png" alt="Sysekam" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Access Healthcare.png" alt="Access Healthcare" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Emayam Tech.png" alt="Emayam Tech" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Paisabazaar.png" alt="Paisabazaar" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Mtutor.png" alt="Mtutor" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/ICICI Bank.png" alt="ICICI Bank" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
+              <img src="/Client image/Sutherland.png" alt="Sutherland" className="h-12 sm:h-10 md:h-16 object-contain bg-white rounded p-2" />
             </div>
           ))}
         </div>
@@ -72,7 +72,7 @@ export default function Alumni() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-33.333%);
           }
         }
 
@@ -85,12 +85,11 @@ export default function Alumni() {
           animation-iteration-count: infinite;
         }
 
-        /* ✅ Both move the same distance; second one reversed for opposite direction */
         .animate-marquee-left {
-          animation: marquee-left 25s linear infinite;
+          animation: marquee-left 30s linear infinite;
         }
         .animate-marquee-right {
-          animation: marquee-left 25s linear infinite reverse;
+          animation: marquee-left 30s linear infinite reverse;
         }
       `}</style>
     </section>

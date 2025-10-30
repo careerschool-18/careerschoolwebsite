@@ -1,22 +1,32 @@
+"use client";
+
 export default function FullImage() {
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* 🔹 Full-screen image */}
+      {/* 🔹 Desktop Image */}
       <img
-        src="/Home Page - 3840 x 2160.png"
-        alt="Full Screen"
-        className="w-full h-full object-cover"
+        src="/Home page images/Home Page - 3840 x 2160.jpg"
+        alt="Desktop View"
+        className="hidden sm:block w-full h-full object-cover"
       />
 
-      {/* 🔹 Optional dark overlay */}
+      {/* 🔹 Mobile Image */}
+      <img
+        src="/Home page images/Home Page - 1080 x 920.jpg"
+        alt="Mobile View"
+        className="block sm:hidden w-full h-full object-cover"
+        loading="eager" // ensures fast loading on mobile
+      />
+
+      {/* 🔹 Optional Dark Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* 🔹 Hero Text */}
-      <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-        <h1 className="text-[#ffd02b] font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl">
-          <span className="block mb-6 sm:mb-8 md:mb-10">Your</span>
-          <span className="block mb-6 sm:mb-8 md:mb-10">Trusted Training</span>
-          <span className="block mb-6 sm:mb-8 md:mb-10">&</span>
+      <div className="absolute left-5 sm:left-10 top-1/2 transform -translate-y-1/2 text-left">
+        <h1 className="text-[#ffd02b] font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl leading-tight drop-shadow-lg">
+          <span className="block mb-4 sm:mb-6 md:mb-8">Your</span>
+          <span className="block mb-4 sm:mb-6 md:mb-8">Trusted Training</span>
+          <span className="block mb-4 sm:mb-6 md:mb-8">&</span>
           <span className="block">Placement Hub</span>
         </h1>
       </div>

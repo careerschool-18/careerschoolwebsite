@@ -3,74 +3,74 @@
 export default function MeetOurStars() {
   const students = [
     {
-      img: "/Shalini.png",
+      img: "/Meet Our stars/Shalini.png",
       name: "Shalini",
       training: "DATA ANALYTICS TRAINING",
       started: "BSC",
       landed: "Jr Software Developer",
     },
     {
-      img: "/Jayakumar.png",
+      img: "/Meet Our stars/Jayakumar.png",
       name: "Jayakumar",
       training: "DATA ANALYTICS TRAINING",
       started: "BSC",
       landed: "Operations",
     },
     {
-      img: "/Sirisha Dasari.png",
+      img: "/Meet Our stars/Sirisha Dasari.png",
       name: "Sirisha Dasari",
       started: "BSC Data Science",
       landed: "IT Internship",
     },
     {
-      img: "/Prem.png",
+      img: "/Meet Our stars/Prem.png",
       name: "Prem",
       training: "HR TRAINING",
       started: "MSW",
       landed: "HR Recruiter",
     },
     {
-      img: "/Balakumaran.png",
+      img: "/Meet Our stars/Balakumaran.png",
       name: "Balakumaran",
       training: "WEB DEVELOPER TRAINING",
       started: "BCA",
       landed: "IT Backend",
     },
     {
-      img: "/Sindhu.png",
+      img: "/Meet Our stars/Sindhu.png",
       name: "Sindhu",
       training: "HR TRAINING",
       started: "BE ECE",
       landed: "HR Executive",
     },
     {
-      img: "/HariPriya.png",
+      img: "/Meet Our stars/HariPriya.png",
       name: "Haripriya",
       training: "HR TRAINING",
       started: "BE CSE",
       landed: "HR Recruiter",
     },
     {
-      img: "/Shanthini.png",
+      img: "/Meet Our stars/Shanthini.png",
       name: "Shanthini",
       training: "DATA ANALYTICS TRAINING",
       started: "B.COM",
       landed: "Data Executive",
     },
     {
-      img: "/Medhuru Girish Kumar.png",
+      img: "/Meet Our stars/Medhuru Girish Kumar.png",
       name: "Medhuru Girish Kumar",
       started: "BCA",
       landed: "UI/UX Designer",
     },
     {
-      img: "/Dhanyasree Javali.png",
+      img: "/Meet Our stars/Dhanyasree Javali.png",
       name: "Dhanyasree Javali",
       started: "MCA",
       landed: "Python Developer",
     },
     {
-      img: "/Ashwathi.png",
+      img: "/Meet Our stars/Ashwathi.png",
       name: "Aswathi",
       training: "PYTHON WITH AI TRAINING",
       started: "BE ECE",
@@ -119,7 +119,7 @@ export default function MeetOurStars() {
 
                 <div className="flex justify-center my-1">
                   <img
-                    src="/Arrow[1].png"
+                    src="/Meet Our stars/Arrow.png"
                     alt="Arrow Down"
                     className="h-5 w-5 animate-bounce opacity-90"
                   />
