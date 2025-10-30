@@ -128,27 +128,21 @@ export default function Footer() {
   // 🔹 Social Links
   const socialLinks = {
     CSHR: {
-      facebook:
-        "https://www.facebook.com/careerschoolhrsolutions.homepage/",
-      instagram:
-        "https://www.instagram.com/careerschoolhrsolutions/?hl=en",
+      facebook: "https://www.facebook.com/careerschoolhrsolutions.homepage/",
+      instagram: "https://www.instagram.com/careerschoolhrsolutions/?hl=en",
       linkedin:
         "https://www.linkedin.com/company/careerschool-hr-solutions/?viewAsMember=true",
       youtube:
         "https://youtube.com/@careerschoolhrsolutions?si=B94JdkhKg7byI1ml",
-      whatsapp:
-        "https://whatsapp.com/channel/0029Va4ufgc17Emp80iBn92I",
+      whatsapp: "https://whatsapp.com/channel/0029Va4ufgc17Emp80iBn92I",
     },
     CSIT: {
-      facebook:
-        "https://www.facebook.com/profile.php?id=61578868656121",
-      instagram:
-        "https://www.instagram.com/careerschoolitsolutions/?hl=en",
+      facebook: "https://www.facebook.com/profile.php?id=61578868656121",
+      instagram: "https://www.instagram.com/careerschoolitsolutions/?hl=en",
       linkedin: "https://www.linkedin.com", // Placeholder since you said "v"
       youtube:
         "https://youtube.com/@careerschoolitsolutionsnellore?si=iNimoC_zvVUEWXnA",
-      whatsapp:
-        "https://whatsapp.com/channel/0029Va4ufgc17Emp80iBn92I",
+      whatsapp: "https://whatsapp.com/channel/0029Va4ufgc17Emp80iBn92I",
     },
   };
 
@@ -267,7 +261,10 @@ export default function Footer() {
           </h3>
           <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm md:text-base xl:text-lg">
             <li>
-              <a href="#" className="hover:text-[#004AAD] transition duration-300">
+              <a
+                href="#"
+                className="hover:text-[#004AAD] transition duration-300"
+              >
                 About Us
               </a>
             </li>
@@ -321,12 +318,12 @@ export default function Footer() {
               className="h-14 w-auto mb-3 object-contain"
             />
             <p className="text-[#004AAD] font-semibold text-lg mb-2">
-              📞 CSIT: 77089 38866
+              📞 CSIT: 93422 86753 / 77089 38866
             </p>
             <p className="text-gray-800 text-center mb-4 font-medium leading-relaxed text-sm px-2">
               📍 <span className="font-bold">Address:</span> Careerschool IT
-              Solutions, Children's Park Road, Opposite to Aditya Degree College,
-              Aditya Nagar, Nellore, Andhra Pradesh 524002
+              Solutions, Children's Park Road, Opposite to Aditya Degree
+              College, Aditya Nagar, Nellore, Andhra Pradesh 524002
             </p>
 
             {/* 🔹 Social Links for CSIT */}
@@ -400,12 +397,12 @@ export default function Footer() {
               className="h-14 w-auto mb-3 object-contain"
             />
             <p className="text-[#004AAD] font-semibold text-lg mb-2">
-              📞 CSHR: 77089 38866
+              📞 CSHR: 77089 38866 / 99386 36935
             </p>
             <p className="text-gray-800 text-center mb-4 font-medium leading-relaxed text-sm px-2">
               📍 <span className="font-bold">Address:</span> Careerschool HR
-              Solutions, L2, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu
-              600032
+              Solutions, L2, SIDCO Industrial Estate, Guindy, Chennai, Tamil
+              Nadu 600032
             </p>
 
             {/* 🔹 Social Links for CSHR */}
@@ -461,7 +458,8 @@ export default function Footer() {
       {/* 🔹 Bottom Section */}
       <div className="text-center mt-6">
         <p className="text-gray-600 text-sm md:text-base">
-          © {new Date().getFullYear()} Career School HR Solutions — All Rights Reserved.
+          © {new Date().getFullYear()} Careerschool HR & IT Solutions — All
+          Rights Reserved.
         </p>
 
         <div className="flex flex-col items-center mt-4 text-gray-600 text-xs sm:text-sm md:text-base">
