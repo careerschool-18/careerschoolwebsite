@@ -1,149 +1,161 @@
+"use client";
+import { useEffect, useState } from "react";
+
 export default function Courses() {
   const courses = [
     {
       title: "Learn Python with AI",
       duration: "3 Months (Rapid Learning)",
       highlight: "Internship & Placement Included",
-      poster: "/Python Banner.jpg",
+      poster: "/Training cards image/Python Banner.jpg",
     },
     {
       title: "HR with Analytics",
       duration: "3 Months (Rapid Learning)",
       highlight: "ZOHO Pay Roll Module Included",
-      poster: "/HR Analytics Banner.png",
+      poster: "/Training cards image/HR Analytics Banner.png",
     },
     {
       title: "Data Analytics",
       duration: "3 Months (Rapid Learning)",
       highlight: "ZOHO Pay Roll Module Included",
-      poster: "/Data Analytics Banner.png",
+      poster: "/Training cards image/Data Analytics Banner.png",
     },
   ];
 
-  // ✅ Common link for all buttons
   const enrollLink =
     "https://243742367.hs-sites-na2.com/training-internship-with-certification-launch-your-career-today";
 
+  // 🔹 Mobile auto-slide logic
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % courses.length);
+    }, 3000); // every 3s
+    return () => clearInterval(interval);
+  }, [courses.length]);
+
   return (
-    <section
-      id="courses" // 👈 Added ID for smooth scroll from Header
-      className="py-12 sm:py-16 text-center px-4 sm:px-6 overflow-hidden"
-      style={{ backgroundColor: "#FFFFFF" }}
-    >
-      {/* 🔹 Section Heading */}
-      <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-[#004AAD]">
-        Next Batch Starts Soon
-      </h2>
+    <section id="courses" className="w-full bg-white py-12 overflow-hidden">
+      {/* 🔹 Heading */}
+      <div className="text-center mb-10">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#004AAD] mb-3">
+          Next Batch Starts Soon
+        </h2>
+        <p className="text-sm sm:text-base text-gray-700 max-w-2xl mx-auto px-4">
+          Industry-ready Training Programs with Internships & Placement Support
+          for Students, Freshers, and Working Professionals.
+        </p>
+      </div>
 
-      {/* 🔹 Section Tagline */}
-      <p className="mb-10 text-sm sm:text-base text-gray-700 max-w-2xl mx-auto">
-        Industry-ready Training Programs with Internships & Placement Support
-        for Students, Freshers and Working Professionals.
-      </p>
+      {/* 🔹 Desktop View (3 Cards) */}
+      <div className="hidden sm:flex justify-center gap-6 px-6 flex-wrap">
+        {courses.map((course, i) => (
+          <div
+            key={i}
+            className="flex flex-col bg-[#004AAD] rounded-3xl shadow-xl overflow-hidden text-white transition-transform hover:scale-[1.04] flex-shrink-0 w-[300px]"
+          >
+            <img
+              src={course.poster}
+              alt={course.title}
+              className="w-full h-[230px] object-cover"
+            />
 
-      {/* 🔹 Cards Section */}
-      <div className="overflow-hidden relative">
-        <div className="flex animate-marquee gap-6 sm:gap-8">
-          {courses.concat(courses).map((course, i) => (
+            <div className="flex flex-col justify-center items-center p-4 text-center">
+              <h3 className="font-bold text-base sm:text-lg mb-1">
+                {course.title}
+              </h3>
+              <p className="text-xs sm:text-sm mb-2">⏰ {course.duration}</p>
+              <span
+                className="text-black font-semibold text-[10px] sm:text-xs px-3 py-1 rounded-full inline-block mb-3"
+                style={{ backgroundColor: "#FFD02B" }}
+              >
+                {course.highlight}
+              </span>
+
+              <a href={enrollLink} target="_blank" rel="noopener noreferrer">
+                <button
+                  className="font-bold px-5 py-2 rounded-full text-xs sm:text-sm transition hover:scale-[1.05]"
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    color: "#004AAD",
+                  }}
+                >
+                  ENROLL NOW
+                </button>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 🔹 Mobile View (Auto-slide carousel) */}
+      <div className="block sm:hidden relative w-full px-6">
+        <div className="flex justify-center items-center">
+          <div
+            key={current}
+            className="flex flex-col bg-[#004AAD] rounded-3xl shadow-xl overflow-hidden text-white transition-all duration-700 ease-in-out w-full max-w-[330px]"
+          >
+            <img
+              src={courses[current].poster}
+              alt={courses[current].title}
+              className="w-full h-[220px] object-cover"
+            />
+
+            <div className="flex flex-col justify-center items-center p-4 text-center">
+              <h3 className="font-bold text-base mb-1">
+                {courses[current].title}
+              </h3>
+              <p className="text-xs mb-2">⏰ {courses[current].duration}</p>
+              <span
+                className="text-black font-semibold text-[10px] px-3 py-1 rounded-full inline-block mb-3"
+                style={{ backgroundColor: "#FFD02B" }}
+              >
+                {courses[current].highlight}
+              </span>
+
+              <a href={enrollLink} target="_blank" rel="noopener noreferrer">
+                <button
+                  className="font-bold px-5 py-2 rounded-full text-xs transition hover:scale-[1.05]"
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    color: "#004AAD",
+                  }}
+                >
+                  ENROLL NOW
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Small dots indicator */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {courses.map((_, i) => (
             <div
               key={i}
-              className="shadow-lg flex flex-col hover:scale-[1.02] transition-transform duration-300 flex-shrink-0"
-              style={{
-                borderRadius: "20px",
-                overflow: "hidden",
-                backgroundColor: "#004AAD",
-                minWidth: "280px",
-                maxWidth: "280px",
-                height: "380px",
-              }}
-            >
-              {/* 🔹 Poster Image */}
-              <img
-                src={course.poster}
-                alt={course.title}
-                className="w-full object-cover"
-                style={{
-                  height: "160px",
-                  borderTopLeftRadius: "20px",
-                  borderTopRightRadius: "20px",
-                }}
-              />
-
-              {/* 🔹 Card Content */}
-              <div className="flex flex-col justify-between flex-grow p-4 sm:p-6 text-center text-white">
-                <div>
-                  <h3 className="font-bold text-base sm:text-lg">
-                    {course.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm mt-2">⏰ {course.duration}</p>
-
-                  {/* 🔹 Highlight */}
-                  <p
-                    className="text-black font-semibold text-[10px] sm:text-xs px-2 py-1 rounded mt-3 inline-block"
-                    style={{ backgroundColor: "#FFD02B" }}
-                  >
-                    {course.highlight}
-                  </p>
-                </div>
-
-                {/* 🔹 CTA Button */}
-                <div className="mt-4 flex justify-center">
-                  <a
-                    href={enrollLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button
-                      className="font-bold px-4 py-2 rounded text-xs sm:text-sm transition hover:scale-[1.05]"
-                      style={{
-                        backgroundColor: "#FFFFFF",
-                        color: "#004AAD",
-                        borderRadius: "20px",
-                      }}
-                    >
-                      ENROLL NOW
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
+              className={`w-2 h-2 rounded-full transition-all ${
+                i === current ? "bg-[#004AAD] scale-125" : "bg-gray-300"
+              }`}
+            ></div>
           ))}
         </div>
       </div>
 
-      {/* 🔹 Explore More Courses Button */}
-      <div className="mt-10 flex justify-center">
+      {/* 🔹 Explore Button */}
+      <div className="mt-12 text-center">
         <a href={enrollLink} target="_blank" rel="noopener noreferrer">
           <button
-            className="font-extrabold px-6 py-3 rounded text-xs sm:text-sm transition hover:scale-[1.05]"
+            className="font-extrabold px-7 py-3 rounded-full text-sm sm:text-base transition hover:scale-[1.05]"
             style={{
               backgroundColor: "#004AAD",
               color: "#FFFFFF",
-              borderRadius: "20px",
             }}
           >
             Explore More Courses
           </button>
         </a>
       </div>
-
-      {/* 🔹 Marquee Animation */}
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          display: flex;
-          gap: 1.5rem;
-          animation: marquee 30s linear infinite;
-        }
-      `}</style>
     </section>
   );
 }
