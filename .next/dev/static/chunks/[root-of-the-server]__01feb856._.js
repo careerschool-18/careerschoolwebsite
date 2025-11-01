@@ -467,35 +467,74 @@ function triggerUpdate(msg) {
 
 __turbopack_context__.s([
     "default",
-    ()=>MyApp
+    ()=>MyApp,
+    "metadata",
+    ()=>metadata
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/head.js [client] (ecmascript)");
 ;
 ;
 ;
+const metadata = {
+    title: "Careerschool HR & IT Solutions | Best Training, Internship & Placement in Chennai & Nellore",
+    description: "India’s #1 Training & Placement Institute for Python, Full Stack Development, Java, Web Development, Digital Marketing, Data Analytics, HR and more. Learn, Intern & Get Placed with Careerschool!",
+    keywords: "careerschool, career school, careerschool hr solutions, careerschool it solutions, python full stack training, java full stack training, data analytics training, data analysis course, digital marketing training, ai and machine learning course, power bi training, sql training, excel course, finance internship, internship in chennai, internship in nellore, training institute in chennai, training institute in nellore, software training, web development course, full stack course, placement support, job oriented training, college placement training, campus drive, career guidance, online training, offline training, certification course, professional courses, mba student training, engineering student training, arts student training, job seekers course, fresher training, career school chennai, career school nellore",
+    robots: "index, follow",
+    authors: [
+        {
+            name: "Careerschool HR & IT Solutions"
+        }
+    ]
+};
 function MyApp({ Component, pageProps }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
-                    rel: "icon",
-                    href: "/Fav icon/Fav Icon.png"
-                }, void 0, false, {
-                    fileName: "[project]/pages/_app.js",
-                    lineNumber: 9,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                        rel: "icon",
+                        href: "/Fav icon/Fav Icon.png"
+                    }, void 0, false, {
+                        fileName: "[project]/pages/_app.js",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
+                        httpEquiv: "Content-Type",
+                        content: "text/html; charset=utf-8"
+                    }, void 0, false, {
+                        fileName: "[project]/pages/_app.js",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
+                        name: "language",
+                        content: "English"
+                    }, void 0, false, {
+                        fileName: "[project]/pages/_app.js",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
+                        name: "revisit-after",
+                        content: "7 days"
+                    }, void 0, false, {
+                        fileName: "[project]/pages/_app.js",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/pages/_app.js",
-                lineNumber: 7,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Component, {
                 ...pageProps
             }, void 0, false, {
                 fileName: "[project]/pages/_app.js",
-                lineNumber: 13,
+                lineNumber: 25,
                 columnNumber: 7
             }, this)
         ]
