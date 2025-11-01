@@ -1,6 +1,7 @@
 // app/layout.js
 export const metadata = {
-  title: "Careerschool HR & IT Solutions | Best Training, Internship & Placement in Chennai & Nellore",
+  title:
+    "Careerschool HR & IT Solutions | Best Training, Internship & Placement in Chennai & Nellore",
   description:
     "India’s #1 Training & Placement Institute for Python, Full Stack Development, Java, Web Development, Digital Marketing, Data Analytics, HR and more. Learn, Intern & Get Placed with Careerschool!",
   keywords:
