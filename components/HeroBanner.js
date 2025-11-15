@@ -27,10 +27,10 @@ export default function HeroBanner() {
           {/* Duplicate content for smooth infinite loop */}
           <div className="marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-black">
             <span>
-              PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •
+              FREE Data Analytics & HR Workshop – Limited Seats! • FREE Data Analytics & HR Workshop – Limited Seats! • FREE Data Analytics & HR Workshop – Limited Seats! • FREE Data Analytics & HR Workshop – Limited Seats! •
             </span>
             <span>
-              PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •
+              FREE Data Analytics & HR Workshop – Limited Seats! • FREE Data Analytics & HR Workshop – Limited Seats! • FREE Data Analytics & HR Workshop – Limited Seats! • FREE Data Analytics & HR Workshop – Limited Seats! •
             </span>
           </div>
         </div>
