@@ -27,10 +27,17 @@ export default function HeroBanner() {
         >
           <div className="marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-[#1f4a7e]">
             <span>
+<<<<<<< HEAD
               PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •
             </span>
             <span>
               PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •
+=======
+              Open New Opportunities in 2026 🚀 | Start Your Skill Journey Today • 
+            </span>
+            <span>
+              Open New Opportunities in 2026 🚀 | Start Your Skill Journey Today • 
+>>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
             </span>
           </div>
         </div>

@@ -182,6 +182,7 @@ export default function CourseEnquiryPopup({
     }
 
     if (name === "enquiryFor") {
+<<<<<<< HEAD
   const next = { ...formData, enquiryFor: value };
 
   if (value === "Courses / Internship") {
@@ -197,6 +198,19 @@ export default function CourseEnquiryPopup({
   return;
 }
 
+=======
+      const next = { ...formData, enquiryFor: value };
+      if (value === "Courses / Internship") {
+        next.preferredRole = "";
+        next.currentEmployer = "";
+      } else if (value === "Jobs") {
+        next.course = "";
+        next.customCourse = "";
+      }
+      setFormData(next);
+      return;
+    }
+>>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
 
     if (name === "countryCode") {
       setFormData((p) => ({ ...p, [name]: value }));
@@ -526,6 +540,7 @@ export default function CourseEnquiryPopup({
                     <option value="5+ Years">5+ Years</option>
                   </select>
 
+<<<<<<< HEAD
                   {formData.enquiryFor === "Courses / Internship" && (
   <select
     name="branch"
@@ -541,6 +556,20 @@ export default function CourseEnquiryPopup({
   </select>
 )}
 
+=======
+                  <select
+                    name="branch"
+                    required
+                    value={formData.branch}
+                    onChange={handleChange}
+                    className="w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
+                    disabled={isSubmitting}
+                  >
+                    <option value="">Mode of Training</option>
+                    <option value="Offline">Offline</option>
+                    <option value="Online">Online</option>
+                  </select>
+>>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
 
                   {/* Conditional fields based on enquiry type */}
                   {formData.enquiryFor === "Courses / Internship" ? (
@@ -818,4 +847,8 @@ export default function CourseEnquiryPopup({
   `}</style>
 </>
 );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096

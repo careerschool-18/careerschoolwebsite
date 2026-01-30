@@ -21,8 +21,28 @@ export default function Header() {
   };
 
   return (
+<<<<<<< HEAD
     <header className="w-full bg-white shadow relative z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+=======
+    <header className="flex items-center justify-between px-6 py-4 bg-white shadow relative">
+      {/* Logo */}
+      <div
+        className="flex items-center gap-4 cursor-pointer"
+        onClick={() => window.location.reload()}
+      >
+        <img
+          src="/Nav Logo/CSHR - Nav Logo.png"
+          className="h-10"
+          alt="CSHR Logo"
+        />
+        <img
+          src="/Nav Logo/CSIT - Nav Logo.png"
+          className="h-10"
+          alt="CSIT Logo"
+        />
+      </div>
+>>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
 
         {/* LOGO */}
         <div
