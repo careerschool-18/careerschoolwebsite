@@ -21,18 +21,18 @@ function HeroBanner() {
     // Link to your NewYearOffer2026 page
     const offerPageUrl = "/NewYearOffer2026";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-        className: "jsx-3821d651d1d8b06f" + " " + "relative overflow-hidden bg-[#f9ca1b] py-1 sm:py-2",
+        className: "jsx-2e87886b99cff04" + " " + "relative overflow-hidden bg-[#f9ca1b] py-1 sm:py-2",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "jsx-3821d651d1d8b06f" + " " + "relative flex items-center justify-end w-full px-4 sm:px-6",
+                className: "jsx-2e87886b99cff04" + " " + "relative flex items-center justify-end w-full px-4 sm:px-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                         href: offerPageUrl,
                         target: "_blank",
                         rel: "noopener noreferrer",
-                        className: "jsx-3821d651d1d8b06f" + " " + "z-20 flex-shrink-0",
+                        className: "jsx-2e87886b99cff04" + " " + "z-20 flex-shrink-0",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                            className: "jsx-3821d651d1d8b06f" + " " + "bg-[#1f4a7e] text-[#f9ca1b] px-4 sm:px-6 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2",
+                            className: "jsx-2e87886b99cff04" + " " + "bg-[#1f4a7e] text-[#f9ca1b] px-4 sm:px-6 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2",
                             children: "ENROLL NOW"
                         }, void 0, false, {
                             fileName: "[project]/components/HeroBanner.js",
@@ -48,21 +48,21 @@ function HeroBanner() {
                         style: {
                             right: "min(8vw, 180px)"
                         },
-                        className: "jsx-3821d651d1d8b06f" + " " + "absolute left-0 overflow-hidden whitespace-nowrap",
+                        className: "jsx-2e87886b99cff04" + " " + "absolute left-0 overflow-hidden whitespace-nowrap",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "jsx-3821d651d1d8b06f" + " " + "marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-[#1f4a7e]",
+                            className: "jsx-2e87886b99cff04" + " " + "marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-[#1f4a7e]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    className: "jsx-3821d651d1d8b06f",
-                                    children: "Open New Opportunities in 2026 🚀 | Start Your Skill Journey Today •"
+                                    className: "jsx-2e87886b99cff04",
+                                    children: "PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •"
                                 }, void 0, false, {
                                     fileName: "[project]/components/HeroBanner.js",
                                     lineNumber: 29,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    className: "jsx-3821d651d1d8b06f",
-                                    children: "Open New Opportunities in 2026 🚀 | Start Your Skill Journey Today •"
+                                    className: "jsx-2e87886b99cff04",
+                                    children: "PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •"
                                 }, void 0, false, {
                                     fileName: "[project]/components/HeroBanner.js",
                                     lineNumber: 32,
@@ -86,8 +86,8 @@ function HeroBanner() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$styled$2d$jsx$2f$style$2e$js__$5b$external$5d$__$28$styled$2d$jsx$2f$style$2e$js$2c$__cjs$29$__["default"], {
-                id: "3821d651d1d8b06f",
-                children: "@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-50%)}}.marquee-track.jsx-3821d651d1d8b06f{white-space:nowrap;will-change:transform;width:200%;animation:25s linear infinite marquee;display:inline-flex}@media (width>=2560px){.marquee-track.jsx-3821d651d1d8b06f{font-size:1.8rem;animation-duration:35s}}@media (width>=1920px) and (width<=2559px){.marquee-track.jsx-3821d651d1d8b06f{font-size:1.5rem;animation-duration:30s}}@media (width<=768px){.marquee-track.jsx-3821d651d1d8b06f{animation-duration:18s}}"
+                id: "2e87886b99cff04",
+                children: "@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-50%)}}.marquee-track.jsx-2e87886b99cff04{white-space:nowrap;will-change:transform;width:200%;animation:25s linear infinite marquee;display:inline-flex}@media (width>=2560px){.marquee-track.jsx-2e87886b99cff04{font-size:1.8rem;animation-duration:35s}}@media (width>=1920px) and (width<=2559px){.marquee-track.jsx-2e87886b99cff04{font-size:1.5rem;animation-duration:30s}}@media (width<=768px){.marquee-track.jsx-2e87886b99cff04{animation-duration:18s}}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
@@ -886,6 +886,111 @@ function StudentsReview() {
             review: "I’m truly grateful to Careerschool for providing excellent Data Analytics Training and Placement support. Coming from a non-IT background, I was unsure how to start my career in IT field, but their training and internship program gave me the right guidance and hands-on experience to confidently begin my journey as a Data Analyst. Thanks to their continuous support, I was able to secure a job and build my career in the IT domain. I highly recommend Careerschool to anyone looking for career-oriented Online & Offline Training or internships in Data Analytics or other software programs.",
             photo: "/Student Review Images/Velmurugan.jpg",
             alt: "Velmurugan_Data Analytics"
+        },
+        {
+            id: 1,
+            name: "Sarathi S",
+            training: "PYTHON WITH AI",
+            review: "I’m really thankful to Careerschool HR Solutions for their excellent training and placement support. The learning experience was very practical and helped me gain strong technical skills.A special thanks to Ms. Roshini, my placement officer, for her continuous guidance, motivation, and support throughout my journey.With their help, I successfully got placed as a Software Trainee. I truly recommend Careerschool HR Solutions to anyone looking to start a successful IT career.",
+            photo: "/sarathi pic.jpeg"
+        },
+        {
+            id: 2,
+            name: "Pavithra S",
+            training: "PYTHON WITH AI",
+            review: "I recently completed my Python with AI training at Careerschool, and it was an amazing learning experience. The Offline sessions in Chennai were clear, practical, and easy to understand, which helped me build strong technical knowledge and confidence. With the effective placement support and guidance from the team, I successfully got placed as a Software Trainee. I highly recommend Careerschool HR Solutions to anyone who wants to start a successful career in IT.",
+            photo: "/Student Review Images/Pavithra.jpg"
+        },
+        {
+            id: 3,
+            name: "Subha Vadivu Lakshmi",
+            training: "HR TRAINING",
+            review: "I’m delighted to share that I’ve been placed as an HR Recruiter, and I’m truly thankful to Careerschool for this wonderful opportunity. The HR training and internship program helped me gain practical knowledge of key HR functions such as recruitment, college visits, and candidate interviews. It was an unforgettable experience that shaped my confidence and skills. I’m really happy to be moving closer to my dream career at such an early stage.",
+            photo: "/Student Review Images/Subha Vadivu Lakshmi.jpg"
+        },
+        {
+            id: 4,
+            name: "Rajiya",
+            training: "DATA ANALYTICS",
+            review: "I’m Rajiya, and I recently completed my IT training in Nellore at Careerschool IT Solutions. Even after a 5-year career gap, I was able to secure a job in an IT company thanks to their excellent training, mentorship, and placement guidance. For students and job seekers in and around Nellore, I highly recommend Careerschool IT Solutions — it’s the best place to upgrade your skills and restart your career in IT.",
+            photo: "/Student Review Images/Rajiya.jpg"
+        },
+        {
+            id: 5,
+            name: "Malathi",
+            training: "DATA ANALYTICS",
+            review: "I completed a Data Analytics course from Careerschool HR Solutions. Good experience of training and placement sessions. The whole team gave full support and guidance for interviews. This is a good platform to start your career. Thank you...",
+            photo: "/Student Review Images/Malathi.jpg"
+        },
+        {
+            id: 6,
+            name: "Ranjith",
+            training: "DATA ANALYTICS",
+            review: "First of all, special thanks to my great teacher Karthick Sir, my moral supporter Kathiya Ma'am, and my king maker Brindha Ma'am. I have 7+ years of experience in backend operations but lacked updated skills. When I joined Careerschool for Data Analytics, the training completely changed my confidence and career direction. Thanks to Careerschool, I now feel skilled and appreciated in my workplace!",
+            photo: "/Student Review Images/Ranjith.jpg"
+        },
+        {
+            id: 7,
+            name: "Afsal Ahamed",
+            training: "HR TRAINING",
+            review: "I am incredibly grateful to Careerschool HR Solutions for the invaluable guidance and support during my HR internship. A special thanks to Brindha Ma'am for her mentorship and encouragement. I’m thrilled to share that I’ve been placed as an HRBP — this achievement wouldn’t have been possible without the Careerschool team.",
+            photo: "/Student Review Images/Afsal Ahamed.jpg"
+        },
+        {
+            id: 8,
+            name: "Shyam Ganesh Prasad",
+            training: "HR TRAINING",
+            review: "I joined Careerschool 4 months ago as an HR intern. The staff and mentors were very supportive, especially Keerthana Ma'am, Brintha Ma'am, and Roshini Ma'am. I’m now placed as an HR Recruiter in a reputed company. Thanks to Careerschool HR Solutions!",
+            photo: "/Student Review Images/Shyam Ganesh Prasad.jpg"
+        },
+        {
+            id: 9,
+            name: "Manav Magesh",
+            training: "DATA ANALYTICS",
+            review: "I joined Careerschool HR Solutions to pursue Data Analytics, and it completely changed me. The training was excellent — Karthick Sir explains every concept clearly and gives interview tips. Kathya Ma’am encouraged me in both technical and soft skills. Now I’m placed and confident — highly recommended!",
+            photo: "/Student Review Images/Manav.jpg"
+        },
+        {
+            id: 10,
+            name: "Bhuvaneshwaran",
+            training: "DATA ANALYTICS",
+            review: "I completed the Data Analytics course at Careerschool. The sessions covered Advanced Excel, SQL, and Power BI with real-time examples. The HR team also provided strong resume and interview guidance.",
+            photo: "/Student Review Images/Bhuwaneswar.jpg"
+        },
+        {
+            id: 11,
+            name: "Saikumar Mallarapu",
+            training: "FRONTEND DEVELOPMENT",
+            review: "Hi, I’m Sai Kumar from Nellore. I attended the Careerschool Campus Drive and got selected as a Software Trainee. Great place to learn Python, Java Full Stack, AI, and Data Analytics with placement assistance.",
+            photo: "/Student Review Images/Saikumar.jpg"
+        },
+        {
+            id: 12,
+            name: "Gayathri",
+            training: "DATA ANALYTICS",
+            review: "I’m glad to have completed my training and internship with Careerschool HR Solutions. Throughout this journey, I gained valuable real-time exposure to data handling, analysis, and reporting — from collecting and cleaning data to presenting meaningful insights. This experience greatly boosted my confidence, technical skills, and professional approach.I’m also excited to share that I got placed! It’s truly the perfect start to my Data Analytics career.",
+            photo: "/Student Review Images/Gayathri.jpg"
+        },
+        {
+            id: 13,
+            name: "Divya",
+            training: "HR INTERNSHIP",
+            review: "I’m glad to have completed my HR internship at Careerschool HR Solutions, Guindy (one of the best training institutions in Chennai), under the guidance of the amazing Placement Team. Throughout the internship, I gained real-time exposure to recruitment and placement activities — from approaching clients to managing candidate communication and coordination.The Learning & Development (L&D) sessions were equally valuable. They helped me enhance my interpersonal skills, understand training and growth needs, and develop strong professional communication.",
+            photo: "/Student Review Images/Divya.jpg"
+        },
+        {
+            id: 14,
+            name: "Bhargav",
+            training: "BUSSINESS ANALYTICS INTERSHIP",
+            review: "I completed my internship at Careerschool HR Solutions as a Business Analyst, where I gained valuable hands-on experience in the HR training and placement domain. This internship gave me the opportunity to work on real-time business processes, interact with clients, and support their business requirements.The mentors were extremely supportive, offering constant guidance that strengthened my practical skills and confidence in the Business Analyst role.",
+            photo: "/Student Review Images/Bhargav.jpg"
+        },
+        {
+            id: 15,
+            name: "Velmurugan Vignesh",
+            training: "DATA ANALYTICS",
+            review: "I’m truly grateful to Careerschool for providing excellent Data Analytics Training and Placement support. Coming from a non-IT background, I was unsure how to start my career in IT field, but their training and internship program gave me the right guidance and hands-on experience to confidently begin my journey as a Data Analyst. Thanks to their continuous support, I was able to secure a job and build my career in the IT domain. I highly recommend Careerschool to anyone looking for career-oriented Online & Offline Training or internships in Data Analytics or other software programs.",
+            photo: "/Student Review Images/Velmurugan.jpg"
         }
     ];
     const visibleReviews = ("TURBOPACK simplified expression", ("TURBOPACK compile-time value", "undefined") !== "undefined") && !showAllMobile ? "TURBOPACK unreachable" : reviews;
@@ -897,7 +1002,7 @@ function StudentsReview() {
                 children: "Hear It From Our Learners"
             }, void 0, false, {
                 fileName: "[project]/components/StudentsReview.js",
-                lineNumber: 32,
+                lineNumber: 46,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -911,7 +1016,7 @@ function StudentsReview() {
                                 className: "w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-white shadow-md"
                             }, void 0, false, {
                                 fileName: "[project]/components/StudentsReview.js",
-                                lineNumber: 42,
+                                lineNumber: 56,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
@@ -919,7 +1024,7 @@ function StudentsReview() {
                                 children: student.name
                             }, void 0, false, {
                                 fileName: "[project]/components/StudentsReview.js",
-                                lineNumber: 47,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -927,7 +1032,7 @@ function StudentsReview() {
                                 children: student.training
                             }, void 0, false, {
                                 fileName: "[project]/components/StudentsReview.js",
-                                lineNumber: 50,
+                                lineNumber: 64,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -936,18 +1041,18 @@ function StudentsReview() {
                                 children: "Read Review"
                             }, void 0, false, {
                                 fileName: "[project]/components/StudentsReview.js",
-                                lineNumber: 54,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, student.id, true, {
                         fileName: "[project]/components/StudentsReview.js",
-                        lineNumber: 38,
+                        lineNumber: 52,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/StudentsReview.js",
-                lineNumber: 36,
+                lineNumber: 50,
                 columnNumber: 8
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -958,7 +1063,7 @@ function StudentsReview() {
                     children: "See More"
                 }, void 0, false, {
                     fileName: "[project]/components/StudentsReview.js",
-                    lineNumber: 66,
+                    lineNumber: 80,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                     onClick: ()=>setShowAllMobile(false),
@@ -966,12 +1071,12 @@ function StudentsReview() {
                     children: "See Less"
                 }, void 0, false, {
                     fileName: "[project]/components/StudentsReview.js",
-                    lineNumber: 73,
+                    lineNumber: 87,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/StudentsReview.js",
-                lineNumber: 64,
+                lineNumber: 78,
                 columnNumber: 8
             }, this),
             selectedReview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -985,7 +1090,7 @@ function StudentsReview() {
                             children: "✖"
                         }, void 0, false, {
                             fileName: "[project]/components/StudentsReview.js",
-                            lineNumber: 85,
+                            lineNumber: 99,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -997,7 +1102,7 @@ function StudentsReview() {
                                     className: "w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border border-gray-300"
                                 }, void 0, false, {
                                     fileName: "[project]/components/StudentsReview.js",
-                                    lineNumber: 93,
+                                    lineNumber: 107,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1007,7 +1112,7 @@ function StudentsReview() {
                                             children: selectedReview.name
                                         }, void 0, false, {
                                             fileName: "[project]/components/StudentsReview.js",
-                                            lineNumber: 99,
+                                            lineNumber: 113,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1015,19 +1120,19 @@ function StudentsReview() {
                                             children: selectedReview.training
                                         }, void 0, false, {
                                             fileName: "[project]/components/StudentsReview.js",
-                                            lineNumber: 102,
+                                            lineNumber: 116,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/StudentsReview.js",
-                                    lineNumber: 98,
+                                    lineNumber: 112,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/StudentsReview.js",
-                            lineNumber: 92,
+                            lineNumber: 106,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1035,24 +1140,24 @@ function StudentsReview() {
                             children: selectedReview.review
                         }, void 0, false, {
                             fileName: "[project]/components/StudentsReview.js",
-                            lineNumber: 108,
+                            lineNumber: 122,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/StudentsReview.js",
-                    lineNumber: 84,
+                    lineNumber: 98,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/StudentsReview.js",
-                lineNumber: 83,
+                lineNumber: 97,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/StudentsReview.js",
-        lineNumber: 31,
+        lineNumber: 45,
         columnNumber: 5
     }, this);
 }

@@ -27,10 +27,10 @@ export default function HeroBanner() {
         >
           <div className="marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-[#1f4a7e]">
             <span>
-              Open New Opportunities in 2026 🚀 | Start Your Skill Journey Today • 
+              PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •
             </span>
             <span>
-              Open New Opportunities in 2026 🚀 | Start Your Skill Journey Today • 
+              PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •
             </span>
           </div>
         </div>

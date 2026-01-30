@@ -15,27 +15,10 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        {/* 🔹 Add your favicon */}
         <link rel="icon" href="/Fav icon/Fav Icon.png" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-
-        {/* ✅ Google Tag Manager */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-1XKPBTNBET"
-        ></script>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-1XKPBTNBET');
-            `,
-          }}
-        ></script>
+        {/* Optional: other favicon types */}
+        {/* <link rel="icon" type="image/png" href="/favicon.png" /> */}
       </Head>
 
       <Component {...pageProps} />
