@@ -2,34 +2,47 @@
 
 export default function FullImage() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      {/* 🔹 Desktop Image */}
+    <section className="relative w-full h-[100svh] overflow-hidden">
+
+      {/* Desktop Image */}
       <img
-        src="/Home page images/Home Page - 3840 x 2160.jpg"
+        src="/Home page images/Home Page - 3840 x 2160(updated).jpg"
         alt="Desktop View"
         className="hidden sm:block w-full h-full object-cover"
       />
 
-      {/* 🔹 Mobile Image */}
+      {/* Mobile Image */}
       <img
-        src="/Home page images/Home Page - 1080 x 920.jpg"
+        src="/Home page images/Home Page - 1080 x 920(updated).jpg"
         alt="Mobile View"
         className="block sm:hidden w-full h-full object-cover"
-        loading="eager" // ensures fast loading on mobile
+        loading="eager"
       />
 
-      {/* 🔹 Optional Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-      {/* 🔹 Hero Text */}
-      <div className="absolute left-5 sm:left-10 top-1/2 transform -translate-y-1/2 text-left">
-        <h1 className="text-[#ffd02b] font-extrabold uppercase text-3xl sm:text-5xl md:text-6xl leading-tight drop-shadow-lg">
-          <span className="block mb-4 sm:mb-6 md:mb-8">Your</span>
-          <span className="block mb-4 sm:mb-6 md:mb-8">Trusted Training</span>
-          <span className="block mb-4 sm:mb-6 md:mb-8">&</span>
-          <span className="block">Placement Hub</span>
+      {/* TEXT */}
+      <div className="absolute bottom-[32vh] sm:bottom-[25vh] w-full px-4 text-center">
+        <h1
+          className="
+            font-extrabold uppercase text-[#ffd02b]
+            drop-shadow-xl leading-tight
+            mx-auto max-w-[95%] sm:max-w-[85%]
+
+            /* Mobile */
+            text-[20px]
+            line-clamp-none
+
+            /* Tablet & Desktop */
+            sm:text-[clamp(25px,4vw,45px)]
+            sm:line-clamp-2
+          "
+        >
+          Your Trusted Training & <br /> Placement Hub
         </h1>
       </div>
+
     </section>
   );
 }

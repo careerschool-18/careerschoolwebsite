@@ -124,9 +124,7 @@ export default function Footer() {
       </div>
     );
   };
-
-  // 🔹 Social Links
-  const socialLinks = {
+    const socialLinks = {
     CSHR: {
       facebook: "https://www.facebook.com/careerschoolhrsolutions.homepage/",
       instagram: "https://www.instagram.com/careerschoolhrsolutions/?hl=en",
@@ -139,7 +137,7 @@ export default function Footer() {
     CSIT: {
       facebook: "https://www.facebook.com/profile.php?id=61578868656121",
       instagram: "https://www.instagram.com/careerschoolitsolutions/?hl=en",
-      linkedin: "https://www.linkedin.com", // Placeholder since you said "v"
+      linkedin: "https://www.linkedin.com",
       youtube:
         "https://youtube.com/@careerschoolitsolutionsnellore?si=iNimoC_zvVUEWXnA",
       whatsapp: "https://whatsapp.com/channel/0029Va4ufgc17Emp80iBn92I",
@@ -148,9 +146,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-white text-gray-800 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-      {/* 🔹 Top Section */}
+
       <div className="max-w-[1920px] mx-auto grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
-        {/* 🔸 Trending Courses */}
+        
+        {/* TRENDING COURSES */}
         <div className="text-center xs:text-left">
           <h3 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg md:text-xl xl:text-2xl text-[#004AAD]">
             TRENDING COURSE
@@ -180,18 +179,66 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* 🔸 Resources */}
+        {/* RESOURCES (Updated Referral Rewards Link) */}
         <div className="text-center xs:text-left">
           <h3 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg md:text-xl xl:text-2xl text-[#004AAD]">
             RESOURCES
           </h3>
+          
           <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm md:text-base xl:text-lg">
+            <li>
+              <a
+                href="https://wa.me/6369119564"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#004AAD] transition duration-300"
+              >
+                Referral Rewards
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/7305014818"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#004AAD] transition duration-300"
+              >
+                Hire students
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/7708938866"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#004AAD] transition duration-300"
+              >
+                Work with us
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/6369119564"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#004AAD] transition duration-300"
+              >
+                Become a Freelancer
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/6369119564"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#004AAD] transition duration-300"
+              >
+                Connect with Training Team
+              </a>
+            </li>
+
             {[
-              "Referral Rewards",
-              "Hire Students",
-              "Work with us",
-              "Become a Mobilizer",
-              "Connect with Training Team",
+          
             ].map((item, i) => (
               <li key={i}>
                 <a
@@ -207,7 +254,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* 🔸 Placement */}
+        {/* PLACEMENT */}
         <div className="text-center xs:text-left">
           <h3 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg md:text-xl xl:text-2xl text-[#004AAD]">
             PLACEMENT
@@ -223,27 +270,27 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href={courseLink}
+                href="https://wa.me/7708938866"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#004AAD] transition duration-300"
               >
-                Speak With Campus Team
+                Speak with campus Team
               </a>
             </li>
             <li>
               <a
-                href={courseLink}
+                href="https://wa.me/7305014818"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#004AAD] transition duration-300"
               >
-                Speak With Placement Team
+                speak with placement Team
               </a>
             </li>
             <li>
               <a
-                href={courseLink}
+                href="https://wa.me/6382585438"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#004AAD] transition duration-300"
@@ -254,7 +301,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* 🔸 Company */}
+        {/* COMPANY */}
         <div className="text-center xs:text-left">
           <h3 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg md:text-xl xl:text-2xl text-[#004AAD]">
             COMPANY
@@ -282,96 +329,18 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 🔹 Divider */}
+      {/* Divider */}
       <div className="mt-12 border-t border-gray-300"></div>
 
-      {/* 🔹 OUR BRANCHES SECTION */}
+      {/* BRANCHES */}
       <div className="max-w-[1920px] mx-auto mt-12">
         <h3 className="text-center font-bold text-2xl sm:text-3xl xl:text-4xl text-[#004AAD] mb-10">
           OUR BRANCHES
         </h3>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* CSIT Branch */}
-          <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 flex flex-col items-center">
-            <div className="relative w-full h-56 mb-4 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.9361762215854!2d79.97834327566755!3d14.419817784712054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf2d284d13ed3%3A0xe52b9f52d17b904a!2sCareer%20School%20IT!5e0!3m2!1sen!2sin!4v1729154600000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                title="Career School IT Map"
-              ></iframe>
-              <a
-                href="https://maps.app.goo.gl/Dp5tKAe5r29MFmCDA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0"
-              ></a>
-            </div>
 
-            <img
-              src="/Footer Logo/CSIT - Footer Logo.png"
-              alt="CSIT Logo"
-              className="h-14 w-auto mb-3 object-contain"
-            />
-            <p className="text-[#004AAD] font-semibold text-lg mb-2">
-              📞 CSIT: 93422 86753 / 77089 38866
-            </p>
-            <p className="text-gray-800 text-center mb-4 font-medium leading-relaxed text-sm px-2">
-              📍 <span className="font-bold">Address:</span> Careerschool IT
-              Solutions, Children's Park Road, Opposite to Aditya Degree
-              College, Aditya Nagar, Nellore, Andhra Pradesh 524002
-            </p>
-
-            {/* 🔹 Social Links for CSIT */}
-            <div className="flex justify-center gap-4">
-              <a
-                href={socialLinks.CSIT.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href={socialLinks.CSIT.facebook}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href={socialLinks.CSIT.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
-              >
-                <FaLinkedinIn />
-              </a>
-              <a
-                href={socialLinks.CSIT.youtube}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
-              >
-                <FaYoutube />
-              </a>
-              <a
-                href={socialLinks.CSIT.whatsapp}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
-              >
-                <FaWhatsapp />
-              </a>
-            </div>
-          </div>
-
-          {/* CSHR Branch */}
+          {/* CSHR BRANCH */}
           <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 flex flex-col items-center">
             <div className="relative w-full h-56 mb-4 rounded-lg overflow-hidden">
               <iframe
@@ -392,7 +361,7 @@ export default function Footer() {
             </div>
 
             <img
-              src="/Footer Logo/CSHR - Footer Logo.png"
+              src="/Footer Logo/New CSHR Logo (TM).png"
               alt="CSHR Logo"
               className="h-14 w-auto mb-3 object-contain"
             />
@@ -405,8 +374,7 @@ export default function Footer() {
               Nadu 600032
             </p>
 
-            {/* 🔹 Social Links for CSHR */}
-            <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4">
               <a
                 href={socialLinks.CSHR.instagram}
                 target="_blank"
@@ -449,21 +417,94 @@ export default function Footer() {
               </a>
             </div>
           </div>
-        </div>
-      </div>
+          
+          {/* CSIT BRANCH */}
+          <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 flex flex-col items-center">
+            <div className="relative w-full h-56 mb-4 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.9361762215854!2d79.97834327566755!3d14.419817784712054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf2d284d13ed3%3A0xe52b9f52d17b904a!2sCareer%20School%20IT!5e0!3m2!1sen!2sin!4v1729154600000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                title="Career School IT Map"
+              ></iframe>
+              <a
+                href="https://maps.app.goo.gl/Dp5tKAe5r29MFmCDA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0"
+              ></a>
+            </div>
 
-      {/* 🔹 Divider */}
+            <img
+              src="/Footer Logo/New CSIT Logo (TM).png"
+              alt="CSIT Logo"
+              className="h-14 w-auto mb-3 object-contain"
+            />
+            <p className="text-[#004AAD] font-semibold text-lg mb-2">
+              📞 CSIT: 93422 86753 / 77089 38866
+            </p>
+            <p className="text-gray-800 text-center mb-4 font-medium leading-relaxed text-sm px-2">
+              📍 <span className="font-bold">Address:</span> Careerschool IT
+              Solutions, Children's Park Road, Opposite to Aditya Degree
+              College, Aditya Nagar, Nellore, Andhra Pradesh 524002
+            </p>
+               <div className="flex justify-center gap-4">
+              <a
+                href={socialLinks.CSIT.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href={socialLinks.CSIT.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href={socialLinks.CSIT.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href={socialLinks.CSIT.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
+              >
+                <FaYoutube />
+              </a>
+              <a
+                href={socialLinks.CSIT.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#004AAD] w-10 h-10 flex items-center justify-center rounded-full text-white hover:opacity-80 transition"
+              >
+                <FaWhatsapp />
+              </a>
+            </div>
+          </div>
+          </div>
+       </div>
+
+      {/* Divider */}
       <div className="mt-12 border-t border-gray-300"></div>
 
-      {/* 🔹 Bottom Section */}
+      {/* COPYRIGHT + POLICIES */}
       <div className="text-center mt-6">
         <p className="text-gray-600 text-sm md:text-base">
-<<<<<<< HEAD
-          © {new Date().getFullYear()} Career School HR & IT Solutions — All Rights Reserved.
-=======
-          © {new Date().getFullYear()} Careerschool HR & IT Solutions — All
-          Rights Reserved.
->>>>>>> ade9c637d0cc8f0945bb5367053a2809113e9434
+       © {new Date().getFullYear()} Careerschool HR & IT Solutions — All
+        Rights Reserved.
         </p>
 
         <div className="flex flex-col items-center mt-4 text-gray-600 text-xs sm:text-sm md:text-base">
