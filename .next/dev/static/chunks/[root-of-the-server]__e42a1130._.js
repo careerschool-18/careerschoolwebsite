@@ -483,8 +483,8 @@ function OnlineAssessment() {
     const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])({
         name: "",
         email: "",
-        mobile: "",
-        college: "",
+        whatsappNumber: "",
+        collegeName: "",
         category: ""
     });
     /* ------------ VALIDATION ------------ */ const nameRegex = /^[A-Za-z ]+$/;
@@ -497,25 +497,24 @@ function OnlineAssessment() {
             [e.target.name]: e.target.value
         });
     };
-    const handleSubmit = async (e)=>{
+    /* ================= START TEST ================= */ const handleSubmit = async (e)=>{
         e.preventDefault();
         if (!nameRegex.test(form.name)) return alert("Name should contain only letters.");
         if (!gmailRegex.test(form.email)) return alert("Enter a valid Gmail address.");
-        if (!mobileRegex.test(form.mobile)) return alert("Mobile number must be 10 digits.");
-        if (!collegeRegex.test(form.college)) return alert("College name should contain only letters.");
+        if (!mobileRegex.test(form.whatsappNumber)) return alert("Mobile number must be 10 digits.");
+        if (!collegeRegex.test(form.collegeName)) return alert("College name should contain only letters.");
         if (!form.category) return alert("Please select a test category.");
         try {
-            // Replace with your actual API URL
-            const res = await fetch("http://localhost:8080/api/v1/tests", {
+            const res = await fetch("http://localhost:8080/api/tests/start", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    candidateName: form.name,
+                    name: form.name,
                     email: form.email,
-                    whatsappNumber: form.mobile,
-                    college: form.college,
+                    whatsappNumber: form.whatsappNumber,
+                    collegeName: form.collegeName,
                     category: form.category
                 })
             });
@@ -525,15 +524,26 @@ function OnlineAssessment() {
                 return;
             }
             const data = await res.json();
-            // Save student info for test engine
-            localStorage.setItem("studentId", data.testId || Date.now());
+            /*
+        Expected backend response (ANY ONE):
+        1️⃣ { studentId: 1, questions: [...] }
+        2️⃣ { studentId: 1, data: [...] }
+        3️⃣ { studentId: 1, questionsList: [...] }
+      */ const questions = data.questions || data.questionsList || data.data || [];
+            if (!data.studentId || !Array.isArray(questions) || questions.length === 0) {
+                alert("Invalid response from server.");
+                return;
+            }
+            /* ================= STORE SESSION DATA ================= */ localStorage.setItem("studentId", data.studentId);
             localStorage.setItem("name", form.name);
             localStorage.setItem("email", form.email);
-            localStorage.setItem("mobile", form.mobile);
-            localStorage.setItem("college", form.college);
-            router.push(`/test/${form.category}?start=true`);
+            localStorage.setItem("whatsappNumber", form.whatsappNumber);
+            localStorage.setItem("collegeName", form.collegeName);
+            // 🔑 MOST IMPORTANT: store questions for TestEngine
+            localStorage.setItem("questions", JSON.stringify(questions));
+            /* ================= GO TO TEST ================= */ router.push(`/test/${form.category}?start=true`);
         } catch (err) {
-            console.error("Error calling test API:", err);
+            console.error("Error calling start API:", err);
             alert("Cannot connect to backend server.");
         }
     };
@@ -547,7 +557,7 @@ function OnlineAssessment() {
                     children: "Online Assessment"
                 }, void 0, false, {
                     fileName: "[project]/pages/online-assessment.js",
-                    lineNumber: 85,
+                    lineNumber: 104,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -564,7 +574,7 @@ function OnlineAssessment() {
                             className: "w-full border px-3 py-2 rounded-lg"
                         }, void 0, false, {
                             fileName: "[project]/pages/online-assessment.js",
-                            lineNumber: 91,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -577,33 +587,33 @@ function OnlineAssessment() {
                             className: "w-full border px-3 py-2 rounded-lg"
                         }, void 0, false, {
                             fileName: "[project]/pages/online-assessment.js",
-                            lineNumber: 101,
+                            lineNumber: 120,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                             type: "text",
-                            name: "mobile",
+                            name: "whatsappNumber",
                             placeholder: "Mobile Number",
-                            value: form.mobile,
+                            value: form.whatsappNumber,
                             onChange: handleChange,
                             required: true,
                             className: "w-full border px-3 py-2 rounded-lg"
                         }, void 0, false, {
                             fileName: "[project]/pages/online-assessment.js",
-                            lineNumber: 111,
+                            lineNumber: 130,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                             type: "text",
-                            name: "college",
+                            name: "collegeName",
                             placeholder: "College / Company",
-                            value: form.college,
+                            value: form.collegeName,
                             onChange: handleChange,
                             required: true,
                             className: "w-full border px-3 py-2 rounded-lg"
                         }, void 0, false, {
                             fileName: "[project]/pages/online-assessment.js",
-                            lineNumber: 121,
+                            lineNumber: 140,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -618,83 +628,83 @@ function OnlineAssessment() {
                                     children: "Select Test Category"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/online-assessment.js",
-                                    lineNumber: 138,
+                                    lineNumber: 157,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "aptitude",
+                                    value: "APTITUDE",
                                     children: "Aptitude"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/online-assessment.js",
-                                    lineNumber: 139,
+                                    lineNumber: 158,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "java",
+                                    value: "JAVA",
                                     children: "Java"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/online-assessment.js",
-                                    lineNumber: 140,
+                                    lineNumber: 159,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "python",
+                                    value: "PYTHON",
                                     children: "Python"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/online-assessment.js",
-                                    lineNumber: 141,
+                                    lineNumber: 160,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "data",
+                                    value: "DATA",
                                     children: "Data Analytics"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/online-assessment.js",
-                                    lineNumber: 142,
+                                    lineNumber: 161,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "communication",
+                                    value: "COMMUNICATION",
                                     children: "Communication"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/online-assessment.js",
-                                    lineNumber: 143,
+                                    lineNumber: 162,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/pages/online-assessment.js",
-                            lineNumber: 131,
+                            lineNumber: 150,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             type: "submit",
                             className: "w-full bg-blue-600 text-white py-2 rounded-lg font-semibold",
-                            children: "Proceed"
+                            children: "Take Test"
                         }, void 0, false, {
                             fileName: "[project]/pages/online-assessment.js",
-                            lineNumber: 146,
+                            lineNumber: 165,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/pages/online-assessment.js",
-                    lineNumber: 89,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/pages/online-assessment.js",
-            lineNumber: 84,
+            lineNumber: 103,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/pages/online-assessment.js",
-        lineNumber: 83,
+        lineNumber: 102,
         columnNumber: 5
     }, this);
 }
-_s(OnlineAssessment, "n4bSEAC6nvt9YN+bWo4KM2OTYPU=", false, function() {
+_s(OnlineAssessment, "k6rjUlxWnRY7EiQwaDuxmxdB6MI=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

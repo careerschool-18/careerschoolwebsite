@@ -478,18 +478,18 @@ function HeroBanner() {
     // Link to your NewYearOffer2026 page
     const offerPageUrl = "/NewYearOffer2026";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "jsx-2e87886b99cff04" + " " + "relative overflow-hidden bg-[#f9ca1b] py-1 sm:py-2",
+        className: "jsx-3821d651d1d8b06f" + " " + "relative overflow-hidden bg-[#f9ca1b] py-1 sm:py-2",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-2e87886b99cff04" + " " + "relative flex items-center justify-end w-full px-4 sm:px-6",
+                className: "jsx-3821d651d1d8b06f" + " " + "relative flex items-center justify-end w-full px-4 sm:px-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: offerPageUrl,
                         target: "_blank",
                         rel: "noopener noreferrer",
-                        className: "jsx-2e87886b99cff04" + " " + "z-20 flex-shrink-0",
+                        className: "jsx-3821d651d1d8b06f" + " " + "z-20 flex-shrink-0",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: "jsx-2e87886b99cff04" + " " + "bg-[#1f4a7e] text-[#f9ca1b] px-4 sm:px-6 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2",
+                            className: "jsx-3821d651d1d8b06f" + " " + "bg-[#1f4a7e] text-[#f9ca1b] px-4 sm:px-6 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2",
                             children: "ENROLL NOW"
                         }, void 0, false, {
                             fileName: "[project]/components/HeroBanner.js",
@@ -505,12 +505,12 @@ function HeroBanner() {
                         style: {
                             right: "min(8vw, 180px)"
                         },
-                        className: "jsx-2e87886b99cff04" + " " + "absolute left-0 overflow-hidden whitespace-nowrap",
+                        className: "jsx-3821d651d1d8b06f" + " " + "absolute left-0 overflow-hidden whitespace-nowrap",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-2e87886b99cff04" + " " + "marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-[#1f4a7e]",
+                            className: "jsx-3821d651d1d8b06f" + " " + "marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-[#1f4a7e]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "jsx-2e87886b99cff04",
+                                    className: "jsx-3821d651d1d8b06f",
                                     children: "PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •"
                                 }, void 0, false, {
                                     fileName: "[project]/components/HeroBanner.js",
@@ -518,7 +518,7 @@ function HeroBanner() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "jsx-2e87886b99cff04",
+                                    className: "jsx-3821d651d1d8b06f",
                                     children: "PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! • PYTHON with AI Training - Batch Starts Soon! •"
                                 }, void 0, false, {
                                     fileName: "[project]/components/HeroBanner.js",
@@ -543,8 +543,8 @@ function HeroBanner() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "2e87886b99cff04",
-                children: "@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-50%)}}.marquee-track.jsx-2e87886b99cff04{white-space:nowrap;will-change:transform;width:200%;animation:25s linear infinite marquee;display:inline-flex}@media (width>=2560px){.marquee-track.jsx-2e87886b99cff04{font-size:1.8rem;animation-duration:35s}}@media (width>=1920px) and (width<=2559px){.marquee-track.jsx-2e87886b99cff04{font-size:1.5rem;animation-duration:30s}}@media (width<=768px){.marquee-track.jsx-2e87886b99cff04{animation-duration:18s}}"
+                id: "3821d651d1d8b06f",
+                children: "@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-50%)}}.marquee-track.jsx-3821d651d1d8b06f{white-space:nowrap;will-change:transform;width:200%;animation:25s linear infinite marquee;display:inline-flex}@media (width>=2560px){.marquee-track.jsx-3821d651d1d8b06f{font-size:1.8rem;animation-duration:35s}}@media (width>=1920px) and (width<=2559px){.marquee-track.jsx-3821d651d1d8b06f{font-size:1.5rem;animation-duration:30s}}@media (width<=768px){.marquee-track.jsx-3821d651d1d8b06f{animation-duration:18s}}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
@@ -608,7 +608,7 @@ function Header() {
                                 className: "h-8 sm:h-10"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header.js",
-                                lineNumber: 32,
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -616,13 +616,13 @@ function Header() {
                                 className: "h-8 sm:h-10"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header.js",
-                                lineNumber: 33,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 28,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -634,7 +634,7 @@ function Header() {
                                 children: "Courses"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header.js",
-                                lineNumber: 39,
+                                lineNumber: 38,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -643,7 +643,7 @@ function Header() {
                                 children: "Success Story"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header.js",
-                                lineNumber: 46,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -654,7 +654,7 @@ function Header() {
                                 children: "Take Test"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header.js",
-                                lineNumber: 54,
+                                lineNumber: 53,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -665,13 +665,13 @@ function Header() {
                                 children: "Hire Students"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header.js",
-                                lineNumber: 63,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 37,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -685,17 +685,17 @@ function Header() {
                                 children: "Contact Us"
                             }, void 0, false, {
                                 fileName: "[project]/components/Header.js",
-                                lineNumber: 76,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Header.js",
-                            lineNumber: 75,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 74,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -705,18 +705,18 @@ function Header() {
                             size: 28
                         }, void 0, false, {
                             fileName: "[project]/components/Header.js",
-                            lineNumber: 87,
+                            lineNumber: 86,
                             columnNumber: 23
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                             size: 28
                         }, void 0, false, {
                             fileName: "[project]/components/Header.js",
-                            lineNumber: 87,
+                            lineNumber: 86,
                             columnNumber: 41
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 83,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this)
                 ]
@@ -737,7 +737,7 @@ function Header() {
                         children: "Courses"
                     }, void 0, false, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 95,
+                        lineNumber: 94,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -749,7 +749,7 @@ function Header() {
                         children: "Success Story"
                     }, void 0, false, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 105,
+                        lineNumber: 104,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -762,12 +762,12 @@ function Header() {
                             children: "Take Test"
                         }, void 0, false, {
                             fileName: "[project]/components/Header.js",
-                            lineNumber: 122,
+                            lineNumber: 121,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 116,
+                        lineNumber: 115,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -780,12 +780,12 @@ function Header() {
                             children: "Hire Students"
                         }, void 0, false, {
                             fileName: "[project]/components/Header.js",
-                            lineNumber: 133,
+                            lineNumber: 132,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 127,
+                        lineNumber: 126,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -798,18 +798,18 @@ function Header() {
                             children: "Contact Us"
                         }, void 0, false, {
                             fileName: "[project]/components/Header.js",
-                            lineNumber: 144,
+                            lineNumber: 143,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Header.js",
-                        lineNumber: 138,
+                        lineNumber: 137,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Header.js",
-                lineNumber: 93,
+                lineNumber: 92,
                 columnNumber: 9
             }, this)
         ]
@@ -874,7 +874,7 @@ function FullImage() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute bottom-[32vh] sm:bottom-[25vh] w-full px-4 text-center",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                    className: "   font-extrabold uppercase text-[#ffd02b]   drop-shadow-xl leading-tight   mx-auto max-w-[95%] sm:max-w-[85%]      /* Mobile */   text-[20px]   line-clamp-none      /* Tablet & Desktop */   sm:text-[clamp(25px,4vw,45px)]   sm:line-clamp-2   ",
+                    className: " font-extrabold uppercase text-[#ffd02b] drop-shadow-xl leading-tight mx-auto max-w-[95%] sm:max-w-[85%]  /* Mobile */ text-[20px] line-clamp-none  /* Tablet & Desktop */ sm:text-[clamp(25px,4vw,45px)] sm:line-clamp-2 ",
                     children: [
                         "Your Trusted Training & ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -4142,7 +4142,7 @@ function ChatbotFlow() {
                 columnNumber: 7
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed right-4 sm:right-6 z-[1250] bg-[#f5f5f7] rounded-3xl shadow-xl border border-gray-300   w-[94%] max-w-md sm:w-96",
+                className: "fixed right-4 sm:right-6 z-[1250] bg-[#f5f5f7] rounded-3xl shadow-xl border border-gray-300 w-[94%] max-w-md sm:w-96",
                 style: {
                     top: topOffset,
                     bottom: bottomGap,
@@ -4327,7 +4327,7 @@ function ChatbotFlow() {
         ]
     }, void 0, true);
 }
-_s(ChatbotFlow, "kLRFIazXVAuZk4qLWA4iXwK1SuE=");
+_s(ChatbotFlow, "OD8z/Onpej1RTF2dHR2wCoPGnLw=");
 _c = ChatbotFlow;
 /* ---------- Contact form (responsive tweaks) ---------- */ function ContactForm({ meta, onSubmit }) {
     _s1();
@@ -4531,7 +4531,7 @@ _c = ChatbotFlow;
         columnNumber: 5
     }, this);
 }
-_s1(ContactForm, "EvIGXAVmhTxjNl5HiUj7MsaKprk=");
+_s1(ContactForm, "uhE8lmG2elJ8RuEEq4b43RzcPVg=");
 _c1 = ContactForm;
 var _c, _c1;
 __turbopack_context__.k.register(_c, "ChatbotFlow");
@@ -4916,11 +4916,11 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             showInlineTriggers && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-20f8834a89cb853" + " " + "fixed bottom-24 left-4 z-[99999] flex flex-col gap-2",
+                className: "jsx-d09d961da3dc016c" + " " + "fixed bottom-24 left-4 z-[99999] flex flex-col gap-2",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>openWith("Courses / Internship"),
-                        className: "jsx-20f8834a89cb853" + " " + "bg-blue-700 text-white px-3 py-2 rounded-md text-sm shadow hover:bg-blue-600",
+                        className: "jsx-d09d961da3dc016c" + " " + "bg-blue-700 text-white px-3 py-2 rounded-md text-sm shadow hover:bg-blue-600",
                         children: "Courses / Internship"
                     }, void 0, false, {
                         fileName: "[project]/components/Popupform.js",
@@ -4929,7 +4929,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>openWith("Jobs"),
-                        className: "jsx-20f8834a89cb853" + " " + "bg-green-700 text-white px-3 py-2 rounded-md text-sm shadow hover:bg-green-600",
+                        className: "jsx-d09d961da3dc016c" + " " + "bg-green-700 text-white px-3 py-2 rounded-md text-sm shadow hover:bg-green-600",
                         children: "IT / Non-IT Jobs"
                     }, void 0, false, {
                         fileName: "[project]/components/Popupform.js",
@@ -4952,18 +4952,18 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                 onKeyDown: (e)=>{
                     if (e.key === "Enter" || e.key === " ") setOpen(true);
                 },
-                className: "jsx-20f8834a89cb853" + " " + "fixed bottom-32 right-6 z-[99999] cursor-pointer",
+                className: "jsx-d09d961da3dc016c" + " " + "fixed bottom-32 right-6 z-[99999] cursor-pointer",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "jsx-20f8834a89cb853" + " " + "floating-bubble-container",
+                    className: "jsx-d09d961da3dc016c" + " " + "floating-bubble-container",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-20f8834a89cb853" + " " + `chat-bubble ${isHovered ? "bubble-hide" : "bubble-show"}`,
+                            className: "jsx-d09d961da3dc016c" + " " + `chat-bubble ${isHovered ? "bubble-hide" : "bubble-show"}`,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-20f8834a89cb853" + " " + "bubble-content",
+                                    className: "jsx-d09d961da3dc016c" + " " + "bubble-content",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "jsx-20f8834a89cb853" + " " + "bubble-text",
+                                            className: "jsx-d09d961da3dc016c" + " " + "bubble-text",
                                             children: "Enquire Now"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Popupform.js",
@@ -4972,7 +4972,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             "aria-hidden": "true",
-                                            className: "jsx-20f8834a89cb853" + " " + "bubble-pulse"
+                                            className: "jsx-d09d961da3dc016c" + " " + "bubble-pulse"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Popupform.js",
                                             lineNumber: 371,
@@ -4986,7 +4986,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     "aria-hidden": "true",
-                                    className: "jsx-20f8834a89cb853" + " " + "bubble-tail"
+                                    className: "jsx-d09d961da3dc016c" + " " + "bubble-tail"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Popupform.js",
                                     lineNumber: 373,
@@ -4999,11 +4999,11 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-20f8834a89cb853" + " " + `form-icon ${isHovered ? "icon-show" : "icon-hide"}`,
+                            className: "jsx-d09d961da3dc016c" + " " + `form-icon ${isHovered ? "icon-show" : "icon-hide"}`,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "/Popup images/Form Icon 2.png",
                                 alt: "Enquiry Form",
-                                className: "jsx-20f8834a89cb853" + " " + "w-14 h-14 object-contain"
+                                className: "jsx-d09d961da3dc016c" + " " + "w-14 h-14 object-contain"
                             }, void 0, false, {
                                 fileName: "[project]/components/Popupform.js",
                                 lineNumber: 377,
@@ -5026,14 +5026,14 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                 columnNumber: 9
             }, this),
             isOpen && !showSuccessPopup && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-20f8834a89cb853" + " " + "fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-[999999] px-4 sm:px-0",
+                className: "jsx-d09d961da3dc016c" + " " + "fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-[999999] px-4 sm:px-0",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "jsx-20f8834a89cb853" + " " + "bg-blue-800 rounded-xl shadow-2xl w-full max-w-sm sm:max-w-md p-4 sm:p-6 relative animate-fadeIn overflow-y-auto max-h-[85vh] text-white",
+                    className: "jsx-d09d961da3dc016c" + " " + "bg-blue-800 rounded-xl shadow-2xl w-full max-w-sm sm:max-w-md p-4 sm:p-6 relative animate-fadeIn overflow-y-auto max-h-[85vh] text-white",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: handleClose,
                             disabled: isSubmitting,
-                            className: "jsx-20f8834a89cb853" + " " + "absolute top-2 right-3 text-white hover:text-gray-200 text-lg",
+                            className: "jsx-d09d961da3dc016c" + " " + "absolute top-2 right-3 text-white hover:text-gray-200 text-lg",
                             children: "✕"
                         }, void 0, false, {
                             fileName: "[project]/components/Popupform.js",
@@ -5041,11 +5041,11 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                             columnNumber: 13
                         }, this),
                         !submitted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-20f8834a89cb853" + " " + "flex justify-center mb-2 mt-2",
+                            className: "jsx-d09d961da3dc016c" + " " + "flex justify-center mb-2 mt-2",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "/Popup images/Form Icon 2.png",
                                 alt: "Form Public",
-                                className: "jsx-20f8834a89cb853" + " " + "w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                                className: "jsx-d09d961da3dc016c" + " " + "w-14 h-14 sm:w-16 sm:h-16 object-contain"
                             }, void 0, false, {
                                 fileName: "[project]/components/Popupform.js",
                                 lineNumber: 393,
@@ -5056,11 +5056,11 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                             lineNumber: 392,
                             columnNumber: 15
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-20f8834a89cb853" + " " + "flex justify-center mb-2 mt-2",
+                            className: "jsx-d09d961da3dc016c" + " " + "flex justify-center mb-2 mt-2",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "/Popup images/Form Submitted Icon.png",
                                 alt: "Submission Public",
-                                className: "jsx-20f8834a89cb853" + " " + "w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                                className: "jsx-d09d961da3dc016c" + " " + "w-12 h-12 sm:w-16 sm:h-16 object-contain"
                             }, void 0, false, {
                                 fileName: "[project]/components/Popupform.js",
                                 lineNumber: 397,
@@ -5074,7 +5074,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                         !submitted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "jsx-20f8834a89cb853" + " " + "text-lg sm:text-xl font-semibold text-center mb-1 text-yellow-300",
+                                    className: "jsx-d09d961da3dc016c" + " " + "text-lg sm:text-xl font-semibold text-center mb-1 text-yellow-300",
                                     children: "Instant Enquiry for Jobs or Training"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Popupform.js",
@@ -5083,10 +5083,10 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                     onSubmit: handleSubmit,
-                                    className: "jsx-20f8834a89cb853" + " " + "space-y-2",
+                                    className: "jsx-d09d961da3dc016c" + " " + "space-y-2",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-20f8834a89cb853",
+                                            className: "jsx-d09d961da3dc016c",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                     type: "text",
@@ -5096,14 +5096,14 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.fullName,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
+                                                    className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
                                                     lineNumber: 409,
                                                     columnNumber: 21
                                                 }, this),
                                                 errors.fullName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-20f8834a89cb853" + " " + "text-xs text-red-300 mt-1",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "text-xs text-red-300 mt-1",
                                                     children: errors.fullName
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5117,17 +5117,17 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-20f8834a89cb853" + " " + "flex bg-white rounded-md items-center",
+                                            className: "jsx-d09d961da3dc016c" + " " + "flex bg-white rounded-md items-center",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                     name: "countryCode",
                                                     value: formData.countryCode,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "bg-transparent text-gray-700 px-2 outline-none text-sm w-28 border-r border-gray-300",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "bg-transparent text-gray-700 px-2 outline-none text-sm w-28 border-r border-gray-300",
                                                     children: countryList.map((country)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: country.code,
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: [
                                                                 country.name,
                                                                 " ",
@@ -5153,7 +5153,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.phone,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "flex-1 outline-none py-2 px-2 text-sm bg-white text-black rounded-r-md"
+                                                    className: "jsx-d09d961da3dc016c" + " " + "flex-1 outline-none py-2 px-2 text-sm bg-white text-black rounded-r-md"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
                                                     lineNumber: 437,
@@ -5166,7 +5166,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                             columnNumber: 19
                                         }, this),
                                         errors.phone && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "jsx-20f8834a89cb853" + " " + "text-xs text-red-300 mt-1",
+                                            className: "jsx-d09d961da3dc016c" + " " + "text-xs text-red-300 mt-1",
                                             children: errors.phone
                                         }, void 0, false, {
                                             fileName: "[project]/components/Popupform.js",
@@ -5174,7 +5174,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                             columnNumber: 36
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-20f8834a89cb853",
+                                            className: "jsx-d09d961da3dc016c",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                     type: "email",
@@ -5184,14 +5184,14 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.email,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
+                                                    className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
                                                     lineNumber: 453,
                                                     columnNumber: 21
                                                 }, this),
                                                 errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-20f8834a89cb853" + " " + "text-xs text-red-300 mt-1",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "text-xs text-red-300 mt-1",
                                                     children: errors.email
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5205,7 +5205,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-20f8834a89cb853",
+                                            className: "jsx-d09d961da3dc016c",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                     name: "enquiryFor",
@@ -5213,11 +5213,11 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.enquiryFor,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Enquiring For"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5226,7 +5226,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Courses / Internship",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Courses / Internship"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5235,7 +5235,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Jobs",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "IT / Non-IT Jobs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5249,7 +5249,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     columnNumber: 21
                                                 }, this),
                                                 errors.enquiryFor && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-20f8834a89cb853" + " " + "text-xs text-red-300 mt-1",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "text-xs text-red-300 mt-1",
                                                     children: errors.enquiryFor
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5270,14 +5270,14 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                             value: formData.location,
                                             onChange: handleChange,
                                             disabled: isSubmitting,
-                                            className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
+                                            className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Popupform.js",
                                             lineNumber: 482,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-20f8834a89cb853",
+                                            className: "jsx-d09d961da3dc016c",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                     name: "state",
@@ -5285,11 +5285,11 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.state,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Select State / Region"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5298,7 +5298,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Andhra Pradesh",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Andhra Pradesh"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5307,7 +5307,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Tamil Nadu",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Tamil Nadu"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5316,7 +5316,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Telangana",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Telangana"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5325,7 +5325,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Karnataka",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Karnataka"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5334,7 +5334,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Kerala",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Kerala"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5343,7 +5343,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Maharashtra",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Maharashtra"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5352,7 +5352,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Other",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Other"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
@@ -5366,7 +5366,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     columnNumber: 21
                                                 }, this),
                                                 errors.state && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-20f8834a89cb853" + " " + "text-xs text-red-300 mt-1",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "text-xs text-red-300 mt-1",
                                                     children: errors.state
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5385,11 +5385,11 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                             value: formData.experience,
                                             onChange: handleChange,
                                             disabled: isSubmitting,
-                                            className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
+                                            className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     value: "",
-                                                    className: "jsx-20f8834a89cb853",
+                                                    className: "jsx-d09d961da3dc016c",
                                                     children: "Total Experience"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5398,7 +5398,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     value: "Fresher",
-                                                    className: "jsx-20f8834a89cb853",
+                                                    className: "jsx-d09d961da3dc016c",
                                                     children: "Fresher"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5407,7 +5407,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     value: "1-2 Years",
-                                                    className: "jsx-20f8834a89cb853",
+                                                    className: "jsx-d09d961da3dc016c",
                                                     children: "1–2 Years"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5416,7 +5416,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     value: "3-5 Years",
-                                                    className: "jsx-20f8834a89cb853",
+                                                    className: "jsx-d09d961da3dc016c",
                                                     children: "3–5 Years"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5425,7 +5425,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     value: "5+ Years",
-                                                    className: "jsx-20f8834a89cb853",
+                                                    className: "jsx-d09d961da3dc016c",
                                                     children: "5+ Years"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5444,11 +5444,11 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                             value: formData.branch,
                                             onChange: handleChange,
                                             disabled: isSubmitting,
-                                            className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
+                                            className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     value: "",
-                                                    className: "jsx-20f8834a89cb853",
+                                                    className: "jsx-d09d961da3dc016c",
                                                     children: "Mode of Training"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5457,7 +5457,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     value: "Offline",
-                                                    className: "jsx-20f8834a89cb853",
+                                                    className: "jsx-d09d961da3dc016c",
                                                     children: "Offline"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5466,7 +5466,7 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                     value: "Online",
-                                                    className: "jsx-20f8834a89cb853",
+                                                    className: "jsx-d09d961da3dc016c",
                                                     children: "Online"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
@@ -5487,110 +5487,110 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.course,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Select Course / Training"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/Popupform.js",
+                                                            lineNumber: 555,
+                                                            columnNumber: 25
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                            value: "Internship",
+                                                            className: "jsx-d09d961da3dc016c",
+                                                            children: "Internship"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
                                                             lineNumber: 556,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: "Internship",
-                                                            className: "jsx-20f8834a89cb853",
-                                                            children: "Internship"
+                                                            value: "Data Analytics",
+                                                            className: "jsx-d09d961da3dc016c",
+                                                            children: "Data Analytics"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
                                                             lineNumber: 557,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: "Data Analytics",
-                                                            className: "jsx-20f8834a89cb853",
-                                                            children: "Data Analytics"
+                                                            value: "HR Analytics",
+                                                            className: "jsx-d09d961da3dc016c",
+                                                            children: "HR Analytics"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
                                                             lineNumber: 558,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: "HR Analytics",
-                                                            className: "jsx-20f8834a89cb853",
-                                                            children: "HR Analytics"
+                                                            value: "Python Fullstack + AI",
+                                                            className: "jsx-d09d961da3dc016c",
+                                                            children: "Python Fullstack + AI"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
                                                             lineNumber: 559,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: "Python Fullstack + AI",
-                                                            className: "jsx-20f8834a89cb853",
-                                                            children: "Python Fullstack + AI"
+                                                            value: "Java Fullstack",
+                                                            className: "jsx-d09d961da3dc016c",
+                                                            children: "Java Fullstack"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
                                                             lineNumber: 560,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: "Java Fullstack",
-                                                            className: "jsx-20f8834a89cb853",
-                                                            children: "Java Fullstack"
+                                                            value: "Zoho Payroll",
+                                                            className: "jsx-d09d961da3dc016c",
+                                                            children: "Zoho Payroll Training"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
                                                             lineNumber: 561,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: "Zoho Payroll",
-                                                            className: "jsx-20f8834a89cb853",
-                                                            children: "Zoho Payroll Training"
+                                                            value: "Digital Marketing",
+                                                            className: "jsx-d09d961da3dc016c",
+                                                            children: "Digital Marketing"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
                                                             lineNumber: 562,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: "Digital Marketing",
-                                                            className: "jsx-20f8834a89cb853",
-                                                            children: "Digital Marketing"
+                                                            value: "Business Analytics",
+                                                            className: "jsx-d09d961da3dc016c",
+                                                            children: "Business Analytics"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
                                                             lineNumber: 563,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: "Business Analytics",
-                                                            className: "jsx-20f8834a89cb853",
-                                                            children: "Business Analytics"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/components/Popupform.js",
-                                                            lineNumber: 564,
-                                                            columnNumber: 25
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             value: "Other",
-                                                            className: "jsx-20f8834a89cb853",
+                                                            className: "jsx-d09d961da3dc016c",
                                                             children: "Other"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Popupform.js",
-                                                            lineNumber: 565,
+                                                            lineNumber: 564,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/Popupform.js",
-                                                    lineNumber: 548,
+                                                    lineNumber: 547,
                                                     columnNumber: 23
                                                 }, this),
                                                 errors.course && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-20f8834a89cb853" + " " + "text-xs text-red-300 mt-1",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "text-xs text-red-300 mt-1",
                                                     children: errors.course
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
-                                                    lineNumber: 567,
+                                                    lineNumber: 566,
                                                     columnNumber: 41
                                                 }, this),
                                                 formData.course === "Other" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5601,18 +5601,18 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.customCourse,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
+                                                    className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
-                                                    lineNumber: 570,
+                                                    lineNumber: 569,
                                                     columnNumber: 25
                                                 }, this),
                                                 errors.customCourse && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-20f8834a89cb853" + " " + "text-xs text-red-300 mt-1",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "text-xs text-red-300 mt-1",
                                                     children: errors.customCourse
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
-                                                    lineNumber: 581,
+                                                    lineNumber: 580,
                                                     columnNumber: 47
                                                 }, this)
                                             ]
@@ -5626,18 +5626,18 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.preferredRole,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
+                                                    className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
-                                                    lineNumber: 585,
+                                                    lineNumber: 584,
                                                     columnNumber: 23
                                                 }, this),
                                                 errors.preferredRole && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "jsx-20f8834a89cb853" + " " + "text-xs text-red-300 mt-1",
+                                                    className: "jsx-d09d961da3dc016c" + " " + "text-xs text-red-300 mt-1",
                                                     children: errors.preferredRole
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
-                                                    lineNumber: 595,
+                                                    lineNumber: 594,
                                                     columnNumber: 48
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5647,29 +5647,29 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                                     value: formData.currentEmployer,
                                                     onChange: handleChange,
                                                     disabled: isSubmitting,
-                                                    className: "jsx-20f8834a89cb853" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
+                                                    className: "jsx-d09d961da3dc016c" + " " + "w-full bg-white text-black rounded-md py-2 px-3 text-sm outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Popupform.js",
-                                                    lineNumber: 597,
+                                                    lineNumber: 596,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true) : null,
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-20f8834a89cb853" + " " + "flex justify-center mt-4",
+                                            className: "jsx-d09d961da3dc016c" + " " + "flex justify-center mt-4",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 type: "submit",
                                                 disabled: isSubmitting,
-                                                className: "jsx-20f8834a89cb853" + " " + "w-1/2 bg-yellow-400 text-black py-2 rounded-md text-sm font-semibold hover:bg-yellow-300 transition-all disabled:bg-gray-400 disabled:cursor-not-allowed",
+                                                className: "jsx-d09d961da3dc016c" + " " + "w-1/2 bg-yellow-400 text-black py-2 rounded-md text-sm font-semibold hover:bg-yellow-300 transition-all disabled:bg-gray-400 disabled:cursor-not-allowed",
                                                 children: isSubmitting ? "Submitting..." : "Submit"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Popupform.js",
-                                                lineNumber: 610,
+                                                lineNumber: 609,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/Popupform.js",
-                                            lineNumber: 609,
+                                            lineNumber: 608,
                                             columnNumber: 19
                                         }, this)
                                     ]
@@ -5680,66 +5680,66 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                 }, this)
                             ]
                         }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-20f8834a89cb853" + " " + "text-center py-6",
+                            className: "jsx-d09d961da3dc016c" + " " + "text-center py-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "jsx-20f8834a89cb853" + " " + "text-lg sm:text-xl font-semibold mb-2 text-yellow-300",
+                                    className: "jsx-d09d961da3dc016c" + " " + "text-lg sm:text-xl font-semibold mb-2 text-yellow-300",
                                     children: "Thank you!"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Popupform.js",
+                                    lineNumber: 621,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "jsx-d09d961da3dc016c" + " " + "text-gray-200 text-sm mb-4",
+                                    children: "Your enquiry has been submitted."
                                 }, void 0, false, {
                                     fileName: "[project]/components/Popupform.js",
                                     lineNumber: 622,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "jsx-20f8834a89cb853" + " " + "text-gray-200 text-sm mb-4",
-                                    children: "Your enquiry has been submitted."
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Popupform.js",
-                                    lineNumber: 623,
-                                    columnNumber: 17
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "jsx-20f8834a89cb853" + " " + "text-green-200 text-sm font-bold",
+                                    className: "jsx-d09d961da3dc016c" + " " + "text-green-200 text-sm font-bold",
                                     children: [
                                         "Our team will connect with you within ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "jsx-20f8834a89cb853" + " " + "text-yellow-300",
+                                            className: "jsx-d09d961da3dc016c" + " " + "text-yellow-300",
                                             children: "24 hours"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Popupform.js",
-                                            lineNumber: 624,
+                                            lineNumber: 623,
                                             columnNumber: 103
                                         }, this),
                                         "."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Popupform.js",
-                                    lineNumber: 624,
+                                    lineNumber: 623,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-20f8834a89cb853" + " " + "flex justify-center mt-4",
+                                    className: "jsx-d09d961da3dc016c" + " " + "flex justify-center mt-4",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>{
                                             handleClose();
                                             setSubmitted(false);
                                         },
-                                        className: "jsx-20f8834a89cb853" + " " + "px-4 py-2 bg-yellow-400 text-black rounded-md font-semibold hover:bg-yellow-300",
+                                        className: "jsx-d09d961da3dc016c" + " " + "px-4 py-2 bg-yellow-400 text-black rounded-md font-semibold hover:bg-yellow-300",
                                         children: "Close"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Popupform.js",
-                                        lineNumber: 626,
+                                        lineNumber: 625,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/Popupform.js",
-                                    lineNumber: 625,
+                                    lineNumber: 624,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Popupform.js",
-                            lineNumber: 621,
+                            lineNumber: 620,
                             columnNumber: 15
                         }, this)
                     ]
@@ -5754,40 +5754,40 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                 columnNumber: 9
             }, this),
             showSuccessPopup && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-20f8834a89cb853" + " " + "fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-[999999] px-4",
+                className: "jsx-d09d961da3dc016c" + " " + "fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-[999999] px-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "jsx-20f8834a89cb853" + " " + "bg-white rounded-xl shadow-2xl w-full max-w-xs p-5 text-center animate-fadeIn",
+                    className: "jsx-d09d961da3dc016c" + " " + "bg-white rounded-xl shadow-2xl w-full max-w-xs p-5 text-center animate-fadeIn",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-20f8834a89cb853" + " " + "flex justify-center mb-4",
+                            className: "jsx-d09d961da3dc016c" + " " + "flex justify-center mb-4",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "/Popup images/Form Submitted Icon.png",
                                 alt: "Success",
-                                className: "jsx-20f8834a89cb853" + " " + "w-16 h-16 object-contain"
+                                className: "jsx-d09d961da3dc016c" + " " + "w-16 h-16 object-contain"
                             }, void 0, false, {
                                 fileName: "[project]/components/Popupform.js",
-                                lineNumber: 647,
+                                lineNumber: 646,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Popupform.js",
-                            lineNumber: 646,
+                            lineNumber: 645,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                            className: "jsx-20f8834a89cb853" + " " + "text-lg font-semibold text-blue-600 mb-2",
+                            className: "jsx-d09d961da3dc016c" + " " + "text-lg font-semibold text-blue-600 mb-2",
                             children: "Form Submitted Successfully!"
                         }, void 0, false, {
                             fileName: "[project]/components/Popupform.js",
-                            lineNumber: 650,
+                            lineNumber: 649,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "jsx-20f8834a89cb853" + " " + "text-gray-700 mb-4 text-sm",
+                            className: "jsx-d09d961da3dc016c" + " " + "text-gray-700 mb-4 text-sm",
                             children: "Thank you for your enquiry. Our team will contact you within 24 hours."
                         }, void 0, false, {
                             fileName: "[project]/components/Popupform.js",
-                            lineNumber: 652,
+                            lineNumber: 651,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5796,32 +5796,32 @@ function CourseEnquiryPopup({ open, onOpenChange, showInlineTriggers = false, in
                                 setSubmitted(false);
                                 handleClose();
                             },
-                            className: "jsx-20f8834a89cb853" + " " + "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition w-full",
+                            className: "jsx-d09d961da3dc016c" + " " + "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition w-full",
                             children: "OK"
                         }, void 0, false, {
                             fileName: "[project]/components/Popupform.js",
-                            lineNumber: 654,
+                            lineNumber: 653,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Popupform.js",
-                    lineNumber: 645,
+                    lineNumber: 644,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Popupform.js",
-                lineNumber: 644,
+                lineNumber: 643,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "20f8834a89cb853",
-                children: ".floating-bubble-container.jsx-20f8834a89cb853{justify-content:center;align-items:center;display:flex;position:relative}.chat-bubble.jsx-20f8834a89cb853{background:linear-gradient(135deg,#2e477d 0%,#184274 100%);border-radius:25px;padding:12px 20px;transition:all .36s cubic-bezier(.22,1,.36,1);animation:3s ease-in-out infinite floatBubble;position:relative;box-shadow:0 10px 30px #1842742e,0 6px 18px #0e1e3c14}.bubble-content.jsx-20f8834a89cb853{align-items:center;gap:8px;display:flex;position:relative}.bubble-text.jsx-20f8834a89cb853{color:#ffcb0e;white-space:nowrap;text-shadow:0 2px 6px #06122440;font-size:15px;font-weight:700}.bubble-pulse.jsx-20f8834a89cb853{background:#ffcb0e;border-radius:50%;width:8px;height:8px;animation:2s ease-in-out infinite pulse;box-shadow:0 0 10px #ffcb0ea6}.bubble-tail.jsx-20f8834a89cb853{border-top:10px solid #184274;border-left:10px solid #0000;border-right:10px solid #0000;width:0;height:0;transition:all .32s;position:absolute;bottom:-8px;right:20px}.bubble-show.jsx-20f8834a89cb853{opacity:1;pointer-events:auto;transform:scale(1)translateY(0)}.bubble-hide.jsx-20f8834a89cb853{opacity:0;pointer-events:none;transform:scale(.86)translateY(10px)}.form-icon.jsx-20f8834a89cb853{background:linear-gradient(135deg,#184274 0%,#2e477d 100%);border-radius:50%;padding:12px;transition:all .36s cubic-bezier(.22,1,.36,1);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 10px 26px #1842742e,0 6px 18px #0612240f}.icon-show.jsx-20f8834a89cb853{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)scale(1)rotate(0)}.icon-hide.jsx-20f8834a89cb853{opacity:0;pointer-events:none;transform:translate(-50%,-50%)scale(.5)rotate(-180deg)}@keyframes floatBubble{0%,to{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes pulse{0%,to{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(1.25)}}.floating-bubble-container.jsx-20f8834a89cb853:hover .chat-bubble.jsx-20f8834a89cb853{transform:scale(1.06);box-shadow:0 20px 48px #18427447,0 14px 34px #0612241f}.floating-bubble-container.jsx-20f8834a89cb853:hover .form-icon.jsx-20f8834a89cb853{transform:translate(-50%,-50%)scale(1.08)rotate(0);box-shadow:0 18px 44px #18427438,0 12px 30px #06122414}.floating-bubble-container.jsx-20f8834a89cb853:focus-visible{outline-offset:4px;border-radius:30px;outline:3px solid #ffcb0ef2}@media (prefers-reduced-motion:reduce){.chat-bubble.jsx-20f8834a89cb853,.form-icon.jsx-20f8834a89cb853,.bubble-pulse.jsx-20f8834a89cb853{transition:none;animation:none}}@media (width<=640px){.bubble-text.jsx-20f8834a89cb853{font-size:13px}.chat-bubble.jsx-20f8834a89cb853{padding:10px 16px}}@keyframes fadeIn{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.animate-fadeIn.jsx-20f8834a89cb853{animation:.3s ease-out fadeIn}"
+                id: "d09d961da3dc016c",
+                children: ".floating-bubble-container.jsx-d09d961da3dc016c{justify-content:center;align-items:center;display:flex;position:relative}.chat-bubble.jsx-d09d961da3dc016c{background:linear-gradient(135deg,#2e477d 0%,#184274 100%);border-radius:25px;padding:12px 20px;transition:all .36s cubic-bezier(.22,1,.36,1);animation:3s ease-in-out infinite floatBubble;position:relative;box-shadow:0 10px 30px #1842742e,0 6px 18px #0e1e3c14}.bubble-content.jsx-d09d961da3dc016c{align-items:center;gap:8px;display:flex;position:relative}.bubble-text.jsx-d09d961da3dc016c{color:#ffcb0e;white-space:nowrap;text-shadow:0 2px 6px #06122440;font-size:15px;font-weight:700}.bubble-pulse.jsx-d09d961da3dc016c{background:#ffcb0e;border-radius:50%;width:8px;height:8px;animation:2s ease-in-out infinite pulse;box-shadow:0 0 10px #ffcb0ea6}.bubble-tail.jsx-d09d961da3dc016c{border-top:10px solid #184274;border-left:10px solid #0000;border-right:10px solid #0000;width:0;height:0;transition:all .32s;position:absolute;bottom:-8px;right:20px}.bubble-show.jsx-d09d961da3dc016c{opacity:1;pointer-events:auto;transform:scale(1)translateY(0)}.bubble-hide.jsx-d09d961da3dc016c{opacity:0;pointer-events:none;transform:scale(.86)translateY(10px)}.form-icon.jsx-d09d961da3dc016c{background:linear-gradient(135deg,#184274 0%,#2e477d 100%);border-radius:50%;padding:12px;transition:all .36s cubic-bezier(.22,1,.36,1);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 10px 26px #1842742e,0 6px 18px #0612240f}.icon-show.jsx-d09d961da3dc016c{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)scale(1)rotate(0)}.icon-hide.jsx-d09d961da3dc016c{opacity:0;pointer-events:none;transform:translate(-50%,-50%)scale(.5)rotate(-180deg)}@keyframes floatBubble{0%,to{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes pulse{0%,to{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(1.25)}}.floating-bubble-container.jsx-d09d961da3dc016c:hover .chat-bubble.jsx-d09d961da3dc016c{transform:scale(1.06);box-shadow:0 20px 48px #18427447,0 14px 34px #0612241f}.floating-bubble-container.jsx-d09d961da3dc016c:hover .form-icon.jsx-d09d961da3dc016c{transform:translate(-50%,-50%)scale(1.08)rotate(0);box-shadow:0 18px 44px #18427438,0 12px 30px #06122414}.floating-bubble-container.jsx-d09d961da3dc016c:focus-visible{outline-offset:4px;border-radius:30px;outline:3px solid #ffcb0ef2}@media (prefers-reduced-motion:reduce){.chat-bubble.jsx-d09d961da3dc016c,.form-icon.jsx-d09d961da3dc016c,.bubble-pulse.jsx-d09d961da3dc016c{transition:none;animation:none}}@media (width<=640px){.bubble-text.jsx-d09d961da3dc016c{font-size:13px}.chat-bubble.jsx-d09d961da3dc016c{padding:10px 16px}}@keyframes fadeIn{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.animate-fadeIn.jsx-d09d961da3dc016c{animation:.3s ease-out fadeIn}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true);
 }
-_s(CourseEnquiryPopup, "AZU9LScoKXZ05c9p7ECPiiT5KJU=");
+_s(CourseEnquiryPopup, "HGVAumcH4MjV92CGBUB3IN+T/F0=");
 _c = CourseEnquiryPopup;
 var _c;
 __turbopack_context__.k.register(_c, "CourseEnquiryPopup");
@@ -7498,7 +7498,7 @@ function JobsPage() {
         columnNumber: 5
     }, this);
 }
-_s(JobsPage, "sL4ydci0vyUE9aSRPgAtZY++i+4=");
+_s(JobsPage, "3Cqjb/2PUFnXzMUO4HVQuVzfydc=");
 _c = JobsPage;
 var _c;
 __turbopack_context__.k.register(_c, "JobsPage");
@@ -7533,7 +7533,7 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                             loading: "eager"
                         }, void 0, false, {
                             fileName: "[project]/components/Zohopage.js",
-                            lineNumber: 16,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7544,7 +7544,7 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "w-full px-3 sm:px-12 pb-3 sm:pb-12",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "   flex flex-col gap-3   w-full   max-w-[92vw]   sm:max-w-[520px]   ",
+                                    className: " flex flex-col gap-3 w-full max-w-[92vw] sm:max-w-[520px] ",
                                     style: {
                                         padding: "10px 14px",
                                         background: "rgba(8,12,20,0.36)",
@@ -7555,7 +7555,7 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "   self-start   px-2.5 sm:px-3   py-1   rounded-full   text-[10px] sm:text-[14px]   font-semibold   uppercase   tracking-wider   whitespace-normal   ",
+                                            className: " self-start px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-[14px] font-semibold uppercase tracking-wider whitespace-normal ",
                                             style: {
                                                 background: "rgba(234,179,8,0.12)",
                                                 border: "1px solid rgba(250,204,21,0.6)",
@@ -7564,7 +7564,7 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                                             children: "Official Zoho Authorized Training Partner"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Zohopage.js",
-                                            lineNumber: 49,
+                                            lineNumber: 50,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7576,7 +7576,7 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                                                     alt: "Zoho"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Zohopage.js",
-                                                    lineNumber: 72,
+                                                    lineNumber: 73,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -7585,14 +7585,14 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                                                     alt: "Zoho Payroll"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Zohopage.js",
-                                                    lineNumber: 77,
+                                                    lineNumber: 78,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "hidden sm:block w-px h-8 bg-white/10"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Zohopage.js",
-                                                    lineNumber: 82,
+                                                    lineNumber: 83,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -7601,13 +7601,13 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                                                     alt: "CareerSchool"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Zohopage.js",
-                                                    lineNumber: 83,
+                                                    lineNumber: 84,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Zohopage.js",
-                                            lineNumber: 71,
+                                            lineNumber: 72,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7615,34 +7615,34 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                                             children: "A FOCUSED PARTNERSHIP TO BUILD JOB-READY TALENTS."
                                         }, void 0, false, {
                                             fileName: "[project]/components/Zohopage.js",
-                                            lineNumber: 91,
+                                            lineNumber: 92,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Zohopage.js",
-                                    lineNumber: 32,
+                                    lineNumber: 33,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Zohopage.js",
-                                lineNumber: 31,
+                                lineNumber: 32,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Zohopage.js",
-                            lineNumber: 24,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Zohopage.js",
-                    lineNumber: 14,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Zohopage.js",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7660,12 +7660,12 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                             alt: "Zoho Training"
                         }, void 0, false, {
                             fileName: "[project]/components/Zohopage.js",
-                            lineNumber: 110,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Zohopage.js",
-                        lineNumber: 103,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7684,29 +7684,29 @@ function FullImage({ heroSrc = "/Zoho Images/careerschool-zoho-main.png", zohoLo
                                 className: "w-full h-full"
                             }, void 0, false, {
                                 fileName: "[project]/components/Zohopage.js",
-                                lineNumber: 126,
+                                lineNumber: 127,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Zohopage.js",
-                            lineNumber: 125,
+                            lineNumber: 126,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Zohopage.js",
-                        lineNumber: 118,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Zohopage.js",
-                lineNumber: 101,
+                lineNumber: 102,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Zohopage.js",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }

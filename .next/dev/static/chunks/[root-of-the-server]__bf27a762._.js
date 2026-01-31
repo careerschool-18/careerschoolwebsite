@@ -480,46 +480,35 @@ var _s = __turbopack_context__.k.signature();
 function TestEngine() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    const { category, start } = router.query;
+    const { category } = router.query;
     const [questions, setQuestions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [answers, setAnswers] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])({});
     const [step, setStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])("loading");
     const [timer, setTimer] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(20 * 60);
     const [autoSubmitReason, setAutoSubmitReason] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [isSubmitting, setIsSubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false); // ✅ NEW
     const submittedRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRef"])(false);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
+    /* ================= LOAD QUESTIONS ================= */ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "TestEngine.useEffect": ()=>{
-            if (start === "true" && category) {
-                // ✅ FIXED: Corrected fetch syntax and added full backend URL
-                fetch(`http://localhost:8080/api/questions/category/${category}/random`).then({
-                    "TestEngine.useEffect": (res)=>{
-                        if (!res.ok) {
-                            throw new Error(`HTTP error! status: ${res.status}`);
-                        }
-                        return res.json();
-                    }
-                }["TestEngine.useEffect"]).then({
-                    "TestEngine.useEffect": (data)=>{
-                        if (!Array.isArray(data) || data.length === 0) {
-                            alert("No questions available for this category.");
-                            router.push("/");
-                            return;
-                        }
-                        setQuestions(data);
-                        setStep("test");
-                    }
-                }["TestEngine.useEffect"]).catch({
-                    "TestEngine.useEffect": (error)=>{
-                        console.error("Error loading questions:", error);
-                        alert("Server error while loading questions.");
-                        router.push("/");
-                    }
-                }["TestEngine.useEffect"]);
+            const stored = localStorage.getItem("questions");
+            if (!stored) {
+                alert("No active test found. Please start again.");
+                router.push("/");
+                return;
+            }
+            try {
+                const parsed = JSON.parse(stored);
+                if (!Array.isArray(parsed) || parsed.length === 0) {
+                    throw new Error("Invalid questions");
+                }
+                setQuestions(parsed);
+                setStep("test");
+            } catch  {
+                alert("Invalid test data. Please restart test.");
+                router.push("/");
             }
         }
     }["TestEngine.useEffect"], [
-        start,
-        category,
         router
     ]);
     /* ================= TIMER ================= */ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
@@ -546,16 +535,17 @@ function TestEngine() {
     }["TestEngine.useEffect"], [
         step
     ]);
-    /* ================= AUTO SUBMIT ================= */ const triggerAutoSubmit = (message)=>{
+    /* ================= AUTO SUBMIT ================= */ const triggerAutoSubmit = (reason)=>{
         if (submittedRef.current) return;
         submittedRef.current = true;
-        setAutoSubmitReason(message);
+        setAutoSubmitReason(reason);
         submitTest(true);
     };
-    /* ================= SUBMIT TEST ANSWERS ================= */ const submitTest = async (forced = false)=>{
-        const testId = localStorage.getItem("studentId"); // saved during registration
-        if (!testId) {
-            alert("Session expired. Register again.");
+    /* ================= SUBMIT TEST ================= */ const submitTest = async (forced = false)=>{
+        if (submittedRef.current && !forced) return;
+        const studentId = localStorage.getItem("studentId");
+        if (!studentId) {
+            alert("Session expired.");
             router.push("/");
             return;
         }
@@ -563,23 +553,32 @@ function TestEngine() {
             alert("Answer all questions.");
             return;
         }
+        setIsSubmitting(true); // ✅ START LOADER
+        submittedRef.current = true;
+        const formattedAnswers = Object.entries(answers).map(([questionId, selectedAnswer])=>({
+                questionId: Number(questionId),
+                selectedAnswer
+            }));
         try {
-            // ✅ FIXED: Added full backend URL
-            await fetch("http://localhost:8080/api/v1/tests/submit", {
+            const res = await fetch("http://localhost:8080/api/tests/submit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    testId: Number(testId),
-                    category,
-                    answers
+                    studentId: Number(studentId),
+                    answers: formattedAnswers
                 })
             });
+            if (!res.ok) throw new Error(await res.text());
+            localStorage.removeItem("questions");
+            setStep("submitted");
         } catch (err) {
             console.error("Submit error:", err);
+            alert("Error submitting test.");
+            submittedRef.current = false;
+            setIsSubmitting(false); // ❌ stop loader on error
         }
-        setStep("submitted");
     };
     const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
     const seconds = String(timer % 60).padStart(2, "0");
@@ -589,7 +588,7 @@ function TestEngine() {
             children: "Loading Questions..."
         }, void 0, false, {
             fileName: "[project]/pages/test/[category].js",
-            lineNumber: 109,
+            lineNumber: 121,
             columnNumber: 12
         }, this);
     }
@@ -602,7 +601,7 @@ function TestEngine() {
                     children: "Test Submitted"
                 }, void 0, false, {
                     fileName: "[project]/pages/test/[category].js",
-                    lineNumber: 116,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -610,7 +609,7 @@ function TestEngine() {
                     children: autoSubmitReason || "Your test has been submitted successfully."
                 }, void 0, false, {
                     fileName: "[project]/pages/test/[category].js",
-                    lineNumber: 117,
+                    lineNumber: 129,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -619,13 +618,13 @@ function TestEngine() {
                     children: "OK"
                 }, void 0, false, {
                     fileName: "[project]/pages/test/[category].js",
-                    lineNumber: 120,
+                    lineNumber: 132,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/pages/test/[category].js",
-            lineNumber: 115,
+            lineNumber: 127,
             columnNumber: 7
         }, this);
     }
@@ -643,7 +642,7 @@ function TestEngine() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/pages/test/[category].js",
-                        lineNumber: 134,
+                        lineNumber: 146,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -656,13 +655,13 @@ function TestEngine() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/pages/test/[category].js",
-                        lineNumber: 135,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/test/[category].js",
-                lineNumber: 133,
+                lineNumber: 145,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -680,7 +679,7 @@ function TestEngine() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/test/[category].js",
-                                    lineNumber: 141,
+                                    lineNumber: 155,
                                     columnNumber: 13
                                 }, this),
                                 [
@@ -689,46 +688,57 @@ function TestEngine() {
                                     q.optionC,
                                     q.optionD
                                 ].map((opt)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setAnswers((p)=>({
-                                                    ...p,
+                                        disabled: isSubmitting,
+                                        onClick: ()=>setAnswers((prev)=>({
+                                                    ...prev,
                                                     [q.id]: opt
                                                 })),
-                                        className: `w-full text-left px-4 py-2 mb-2 border rounded ${answers[q.id] === opt ? "bg-blue-600 text-white" : "bg-white"}`,
+                                        className: `w-full text-left px-4 py-2 mb-2 border rounded ${answers[q.id] === opt ? "bg-blue-600 text-white" : "bg-white"} ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`,
                                         children: opt
                                     }, opt, false, {
                                         fileName: "[project]/pages/test/[category].js",
-                                        lineNumber: 144,
+                                        lineNumber: 160,
                                         columnNumber: 15
                                     }, this))
                             ]
                         }, q.id, true, {
                             fileName: "[project]/pages/test/[category].js",
-                            lineNumber: 140,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        disabled: isSubmitting,
                         onClick: ()=>submitTest(),
-                        className: "w-full bg-green-600 text-white py-3 rounded font-bold",
-                        children: "Submit Test"
-                    }, void 0, false, {
+                        className: "w-full bg-green-600 text-white py-3 rounded font-bold flex items-center justify-center gap-2 disabled:opacity-60",
+                        children: [
+                            isSubmitting && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin"
+                            }, void 0, false, {
+                                fileName: "[project]/pages/test/[category].js",
+                                lineNumber: 185,
+                                columnNumber: 13
+                            }, this),
+                            isSubmitting ? "Submitting..." : "Submit Test"
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/pages/test/[category].js",
-                        lineNumber: 157,
+                        lineNumber: 179,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/test/[category].js",
-                lineNumber: 138,
+                lineNumber: 152,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/pages/test/[category].js",
-        lineNumber: 132,
+        lineNumber: 144,
         columnNumber: 5
     }, this);
 }
-_s(TestEngine, "bcZVRHhozOXrKAuP2ULfzLZhfzc=", false, function() {
+_s(TestEngine, "EckrAJuYuu/Vsm1K59b7je/eJRg=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

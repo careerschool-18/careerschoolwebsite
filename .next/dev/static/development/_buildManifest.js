@@ -27,8 +27,7 @@ self.__BUILD_MANIFEST = {
     "/NewYearOffer2026",
     "/_app",
     "/_error",
-    "/api/questionApi",
-    "/exam",
+    "/christmas-offer",
     "/online-assessment",
     "/test/[category]"
   ]
