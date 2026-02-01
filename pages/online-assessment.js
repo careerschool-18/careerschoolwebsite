@@ -44,7 +44,7 @@ export default function OnlineAssessment() {
       return alert("Please select a test category.");
 
     try {
-      const res = await fetch("http://localhost:8080/api/tests/start", {
+      const res = await fetch("https://career-school.co.in/api/tests/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

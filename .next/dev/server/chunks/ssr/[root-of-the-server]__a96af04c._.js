@@ -109,7 +109,7 @@ function TestEngine() {
                 selectedAnswer
             }));
         try {
-            const res = await fetch("http://localhost:8080/api/tests/submit", {
+            const res = await fetch("https://career-school.co.in/api/tests/submit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
