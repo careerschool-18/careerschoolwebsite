@@ -1,0 +1,13 @@
+__turbopack_load_page_chunks__("/NewYearOffer2026", [
+  "static/chunks/node_modules_next_dist_compiled_48866e82._.js",
+  "static/chunks/node_modules_next_dist_shared_lib_c27bd7c6._.js",
+  "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
+  "static/chunks/node_modules_next_dist_6024eba3._.js",
+  "static/chunks/node_modules_react_e3593a73._.js",
+  "static/chunks/node_modules_react-dom_cjs_react-dom_development_2b5e0eb3.js",
+  "static/chunks/node_modules_react-dom_8a8085df._.js",
+  "static/chunks/node_modules_7768a268._.js",
+  "static/chunks/[root-of-the-server]__8094a1aa._.js",
+  "static/chunks/pages_NewYearOffer2026_2da965e7._.js",
+  "static/chunks/turbopack-pages_NewYearOffer2026_b7faaa88._.js"
+])

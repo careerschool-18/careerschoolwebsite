@@ -7,8 +7,7 @@ export default function ShowcaseSection() {
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // 🎬 Typewriter Effect
-  useEffect(() => {
+   useEffect(() => {
     const current = words[index];
     const speed = isDeleting ? 80 : 120;
 
@@ -30,58 +29,52 @@ export default function ShowcaseSection() {
     return () => clearTimeout(typingEffect);
   }, [text, isDeleting, index]);
 
-  // 🖥️ Desktop slides
-  const desktopSlides = [
+   const desktopSlides = [
     {
       src: "/Social Media Banner image/Social Media Banners - Google (1).jpg",
       link: "https://www.google.com/search?q=Career+School+HR+Solutions+Reviews",
-      alt: "Desktop Banner 1",
+      alt: "Careerschool Google Review",
     },
     {
       src: "/Social Media Banner image/Social Media Banners - LinkedIn(1).jpg",
       link: "https://www.linkedin.com/company/careerschool-hr-solutions/",
-      alt: "Desktop Banner 2",
+      alt: "Careerschool LinkIn",
     },
     {
       src: "/Social Media Banner image/Social Media Banners - Instagram(2).jpg",
       link: "https://www.instagram.com/careerschoolhrsolutions",
-      alt: "Desktop Banner 3",
+      alt: "Careerschool Instagram",
     },
   ];
 
-  // 📱 Mobile slides
-  const mobileSlides = [
+   const mobileSlides = [
     {
       src: "/Social Media Banner image/Mobile view image/SM Banner - Google (Mobile).jpg",
       link: "https://www.google.com/search?q=Career+School+HR+Solutions+Reviews",
-      alt: "Mobile Banner 1",
+      alt: "Careerschool Google Review",
     },
     {
       src: "/Social Media Banner image/Mobile view image/SM Banner - Linkedin (Mobile).jpg",
       link: "https://www.linkedin.com/company/careerschool-hr-solutions/",
-      alt: "Mobile Banner 2",
+      alt: "Careerschool LinkIn",
     },
     {
       src:"/Social Media Banner image/Mobile view image/SM Banner - Insta (Mobile).jpg",
       link: "https://www.instagram.com/careerschoolhrsolutions",
-      alt: "Mobile Banner 3",
+      alt: "Careerschool Instagram",
     },
   ];
 
-  // 🧭 Current Slide Index
-  const [currentDesktop, setCurrentDesktop] = useState(0);
+   const [currentDesktop, setCurrentDesktop] = useState(0);
   const [currentMobile, setCurrentMobile] = useState(0);
 
-  // ⏱ Auto-slide for Desktop
-  useEffect(() => {
+   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDesktop((prev) => (prev + 1) % desktopSlides.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [desktopSlides.length]);
-
-  // ⏱ Auto-slide for Mobile
-  useEffect(() => {
+   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMobile((prev) => (prev + 1) % mobileSlides.length);
     }, 4000);
