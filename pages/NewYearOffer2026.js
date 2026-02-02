@@ -123,41 +123,24 @@ export default function NewYearOffer2026() {
       ],
     },
     {
-<<<<<<< HEAD
       title: "Java Mastery Program",
-=======
-      title: "Java Full-Stack Development",
->>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
       image: "/Newyear/java-svg.svg",
       syllabus: [
         "Core Java & OOPS",
         "Collections & Exception Handling",
-<<<<<<< HEAD
-=======
-        "HTML,CSS,JavaScript",
->>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
         "JDBC & MySQL",
         "Spring & Spring Boot",
         "REST APIs",
       ],
     },
     {
-<<<<<<< HEAD
       title: "Python Pro Development",
-=======
-      title: "Python Full-Stack Development",
->>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
       image: "/Newyear/python-svg.svg",
       syllabus: [
         "Python Fundamentals",
         "OOPS with Python",
-<<<<<<< HEAD
         "Django & Flask",
         "Automation & Scripting",
-=======
-        "HTML,CSS,JavaScript",
-        "Django / Flask",
->>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
         "Mini Projects",
       ],
     },
@@ -173,11 +156,7 @@ export default function NewYearOffer2026() {
     },
     {
       title: "HR Analytics",
-<<<<<<< HEAD
       image: "/Newyear/HRAnalystics.svg",
-=======
-      image: "/Newyear/HRAnalystics.png",
->>>>>>> cfc2b7ba891dfc718acb5863b2d1065bcf60a096
       syllabus: [
         "Talent Acquisition",
         "Talent Management",
