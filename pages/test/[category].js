@@ -12,9 +12,10 @@ export default function TestEngine() {
   const [step, setStep] = useState("loading");
   const [timer, setTimer] = useState(20 * 60);
   const [autoSubmitReason, setAutoSubmitReason] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false); // ✅ NEW
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const submittedRef = useRef(false);
+  const tabSwitchCountRef = useRef(0); // ✅ NEW
 
   /* ================= LOAD QUESTIONS ================= */
   useEffect(() => {
@@ -57,6 +58,34 @@ export default function TestEngine() {
     return () => clearInterval(interval);
   }, [step]);
 
+  /* ================= TAB SWITCH WARNING ================= */
+  useEffect(() => {
+    if (step !== "test") return;
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        tabSwitchCountRef.current += 1;
+
+        if (tabSwitchCountRef.current <= 2) {
+          alert(
+            `⚠ Warning ${tabSwitchCountRef.current}/2:\nDo not switch tabs. Next time test will be auto-submitted.`
+          );
+        } else {
+          setAnswers({}); // answers become NULL
+          triggerAutoSubmit(
+            "Test auto-submitted due to multiple tab switching."
+          );
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [step]);
+
   /* ================= AUTO SUBMIT ================= */
   const triggerAutoSubmit = (reason) => {
     if (submittedRef.current) return;
@@ -81,7 +110,7 @@ export default function TestEngine() {
       return;
     }
 
-    setIsSubmitting(true); // ✅ START LOADER
+    setIsSubmitting(true);
     submittedRef.current = true;
 
     const formattedAnswers = Object.entries(answers).map(
@@ -109,7 +138,7 @@ export default function TestEngine() {
       console.error("Submit error:", err);
       alert("Error submitting test.");
       submittedRef.current = false;
-      setIsSubmitting(false); // ❌ stop loader on error
+      setIsSubmitting(false);
     }
   };
 
@@ -175,7 +204,6 @@ export default function TestEngine() {
           </div>
         ))}
 
-        {/* ===== SUBMIT BUTTON WITH LOADER ===== */}
         <button
           disabled={isSubmitting}
           onClick={() => submitTest()}
