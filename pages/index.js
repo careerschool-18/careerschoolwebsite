@@ -9,15 +9,12 @@ import Courses from "../components/Courses";
 import Alumni from "../components/Alumni";
 import NeedHelp from "../components/NeedHelp";
 import Footer from "../components/Footer";
-import Chatbot from "../components/chatbot";
 import Popupform from "../components/Popupform";
-import Jobsection from "../components/Jobsection";
 import Zohopage from "../components/Zohopage";
 
 export default function Home() {
   return (
     <main>
-      <Chatbot/>
       <HeroBanner/>
       <Header />
       <Popupform/>
@@ -25,7 +22,6 @@ export default function Home() {
       <Zohopage />
       <GoogleReview/>
       <Discover />
-      <Jobsection />
       <StudentsReview />
       <Courses />
       <MeetOurStars />
