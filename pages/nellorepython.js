@@ -48,7 +48,7 @@ export default function PythonNellore() {
         <div className="animate-marquee whitespace-nowrap text-xs sm:text-sm md:text-base font-bold tracking-wide text-center">
           📢 New Batch Starting SOON in<span className="mx-2 text-yellow-300">
             {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-          </span>Special Discount for Friends Referral 📢
+          </span>Special Discount for Referrals 📢
         </div>
       </div>
 
