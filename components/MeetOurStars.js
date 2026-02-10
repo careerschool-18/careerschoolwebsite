@@ -3,82 +3,110 @@
 export default function MeetOurStars() {
   const students = [
     {
-      img: "/Meet Our stars/Shalini.png",
+      img: "/Meet%20Our%20stars/Shalini.png",
       name: "Shalini",
       training: "DATA ANALYTICS TRAINING",
       started: "BSC",
       landed: "Jr Software Developer",
     },
     {
-      img: "/Meet Our stars/Jayakumar.png",
+      img: "/Meet%20Our%20stars/Jayakumar.png",
       name: "Jayakumar",
       training: "DATA ANALYTICS TRAINING",
       started: "BSC",
       landed: "Operations",
     },
     {
-      img: "/Meet Our stars/Sirisha Dasari.png",
-      name: "Sirisha Dasari",
-      started: "BSC Data Science",
-      landed: "IT Internship",
-    },
-    {
-      img: "/Meet Our stars/Prem.png",
-      name: "Prem",
-      training: "HR TRAINING",
-      started: "MSW",
-      landed: "HR Recruiter",
-    },
-    {
-      img: "/Meet Our stars/Balakumaran.png",
+      img: "/Meet%20Our%20stars/Balakumaran.png",
       name: "Balakumaran",
       training: "WEB DEVELOPER TRAINING",
       started: "BCA",
       landed: "IT Backend",
     },
     {
-      img: "/Meet Our stars/Sindhu.png",
+      img: "/Meet%20Our%20stars/Sindhu.png",
       name: "Sindhu",
       training: "HR TRAINING",
       started: "BE ECE",
       landed: "HR Executive",
     },
     {
-      img: "/Meet Our stars/HariPriya.png",
-      name: "Haripriya",
-      training: "HR TRAINING",
-      started: "BE CSE",
-      landed: "HR Recruiter",
-    },
-    {
-      img: "/Meet Our stars/Shanthini.png",
+      img: "/Meet%20Our%20stars/Shanthini.png",
       name: "Shanthini",
       training: "DATA ANALYTICS TRAINING",
       started: "B.COM",
       landed: "Data Executive",
     },
     {
-      img: "/Meet Our stars/Medhuru Girish Kumar.png",
-      name: "Medhuru Girish Kumar",
+      img: "/Meet%20Our%20stars/Gayathri.jpg",
+      name: "Gayathri",
+      training: "DATA ANALYTICS TRAINING",
+      started: "BA English",
+      landed: "Data Operations",
+      isNew: true,
+    },
+    {
+      img: "/Meet%20Our%20stars/Kokila.jpg",
+      name: "Kokila",
+      training: "PYTHON FULLSTACK + AI TRAINING",
       started: "BCA",
-      landed: "UI/UX Designer",
+      landed: "Eexcutive",
+      isNew: true,
     },
     {
-      img: "/Meet Our stars/Dhanyasree Javali.png",
-      name: "Dhanyasree Javali",
-      started: "MCA",
-      landed: "Python Developer",
+      img: "/Meet%20Our%20stars/Manju Priya.jpg",
+      name: "Manju Priya",
+      training: "DATA ANALYTICS TRAINING",
+      started: "BSC CS",
+      landed: "Data Analyst",
+      isNew: true,
     },
     {
-      img: "/Meet Our stars/Ashwathi.png",
-      name: "Aswathi",
-      training: "PYTHON WITH AI TRAINING",
-      started: "BE ECE",
-      landed: "Prompt Engineer",
+      img: "/Meet%20Our%20stars/Punith.jpg",
+      name: "Punith",
+      training: "DATA ANALYTICS TRAINING",
+      started: "BSDS",
+      landed: "Data Analyst",
+      isNew: true,
+    },
+    {
+      img: "/Meet%20Our%20stars/Riyas.jpg",
+      name: "Riyas",
+      training: "DATA ANALYTICS TRAINING",
+      started: "MBA",
+      landed: "Accounts Executive",
+      isNew: true,
+    },
+    {
+      img: "/Meet%20Our%20stars/Snega.jpg",
+      name: "Snega",
+      training: "HR ANALYTICS TRAINING",
+      started: "BA",
+      landed: "HR Recuiter",
+      isNew: true,
+    },
+    {
+      img: "/Meet%20Our%20stars/Varshini Raghuram.jpg",
+      name: "Varshini Raguvaram",
+      training: "HR ANALYTICS TRAINING",
+      started: "BA",
+      landed: "HR Operations",
+      isNew: true,
     },
   ];
+  
+  const newStudents = students.filter(s => s.isNew);
+  const normalStudents = students.filter(s => !s.isNew);
 
-  const loopedStudents = [...students, ...students];
+  const arrangedStudents = [];
+  const max = Math.max(newStudents.length, normalStudents.length);
+
+  for (let i = 0; i < max; i++) {
+    if (newStudents[i]) arrangedStudents.push(newStudents[i]);
+    if (normalStudents[i]) arrangedStudents.push(normalStudents[i]);
+  }
+
+  const loopedStudents = [...arrangedStudents, ...arrangedStudents];
 
   return (
     <section
@@ -86,7 +114,7 @@ export default function MeetOurStars() {
       className="py-16 text-center overflow-hidden"
       style={{ backgroundColor: "#1d1e22" }}
     >
-      <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-white">
+      <h2 className="text-2xl md:text-3xl font-bold text-white">
         Meet Our Stars
       </h2>
 
@@ -95,13 +123,20 @@ export default function MeetOurStars() {
           {loopedStudents.map((student, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl shadow overflow-hidden min-w-[240px] flex-shrink-0"
+              className="relative bg-white rounded-xl shadow overflow-hidden min-w-[240px] flex-shrink-0"
             >
+              {student.isNew && (
+                <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] px-2 py-1 rounded-full animate-pulse z-10">
+                  NEWLY PLACED
+                </div>
+              )}
+
               <img
                 src={student.img}
                 alt={student.name}
                 className="h-52 w-full object-cover"
               />
+
               <div className="bg-blue-700 text-white p-4 h-52 flex flex-col justify-between text-center">
                 <div className="mb-4">
                   <h3 className="font-bold text-base">{student.name}</h3>
@@ -111,25 +146,25 @@ export default function MeetOurStars() {
                 </div>
 
                 <div>
-                  <p className="text-xs text-white mb-1">Where I Started</p>
-                  <button className="bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded">
+                  <p className="text-xs mb-1">Where I Started</p>
+                  <div className="bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded inline-block">
                     {student.started}
-                  </button>
+                  </div>
                 </div>
 
                 <div className="flex justify-center my-1">
                   <img
-                    src="/Meet Our stars/Arrow.png"
+                    src="/Meet%20Our%20stars/Arrow.png"
                     alt="Arrow Down"
                     className="h-5 w-5 animate-bounce opacity-90"
                   />
                 </div>
 
-                <div className="mb-2">
-                  <p className="text-xs text-white mb-1">Where I Landed</p>
-                  <button className="bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded">
+                <div>
+                  <p className="text-xs mb-1">Where I Landed</p>
+                  <div className="bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded inline-block">
                     {student.landed}
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -139,19 +174,14 @@ export default function MeetOurStars() {
 
       <style jsx>{`
         @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          display: flex;
           animation: marquee 35s linear infinite;
           width: max-content;
         }
       `}</style>
     </section>
-  );
+  );
 }

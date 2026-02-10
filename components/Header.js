@@ -1,19 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/router";
 
 export default function Header() {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  // WhatsApp links
   const hireStudentsLink = "https://wa.me/7305014818";
   const contactLink = "https://wa.me/7708938866";
-
-  // ✅ INTERNAL FORM PAGE
   const takeTestFormLink = "/online-assessment";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      // blur + shadow only after scroll
+      setScrolled(currentY > 10);
+
+      // desktop only hide logic
+      if (window.innerWidth >= 768) {
+        if (currentY > lastScrollY && currentY > 120) {
+          setShowHeader(false);
+        } else {
+          setShowHeader(true);
+        }
+      }
+
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -21,8 +44,16 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-white shadow relative z-50">
+    <header
+      className={`
+        w-full sticky top-0 z-50
+        transition-all duration-500 ease-in-out
+        ${scrolled ? "bg-white/80 backdrop-blur-md shadow-md" : "bg-white"}
+        ${showHeader ? "translate-y-0" : "-translate-y-full"}
+      `}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+
         {/* LOGO */}
         <div
           className="flex items-center gap-2 cursor-pointer"
@@ -34,7 +65,6 @@ export default function Header() {
 
         {/* DESKTOP MENU */}
         <nav className="hidden md:flex items-center gap-3 ml-auto mr-4">
-
           <button
             onClick={() => scrollToSection("courses")}
             className="bg-blue-100 text-blue-700 px-4 py-2 rounded font-semibold text-sm"
@@ -49,7 +79,6 @@ export default function Header() {
             Success Story
           </button>
 
-          {/* ✅ TAKE TEST */}
           <a
             href={takeTestFormLink}
             target="_blank"
@@ -90,7 +119,6 @@ export default function Header() {
       {/* MOBILE MENU */}
       {menuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-6">
-
           <button
             onClick={() => {
               scrollToSection("courses");
@@ -111,7 +139,6 @@ export default function Header() {
             Success Story
           </button>
 
-          {/* ✅ MOBILE TAKE TEST */}
           <a
             href={takeTestFormLink}
             target="_blank"

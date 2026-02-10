@@ -11,3 +11,19 @@ html {
 .translate-y-32 {
   transform: translateY(8rem);
 }
+
+/* Countdown Card Animation */
+@keyframes flipIn {
+  0% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.countdown-card {
+  animation: flipIn 0.3s ease-out;
+}
