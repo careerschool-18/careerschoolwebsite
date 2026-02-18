@@ -3,14 +3,15 @@
 import React from "react";
 
 export default function PythonNellore() {
-  const [timeLeft, setTimeLeft] = React.useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [activeForm, setActiveForm] = React.useState("python");
+  const [seatsLeft] = React.useState(7);
 
-  // Comparison Data stored in a variable for cleaner rendering
+  const getCurrentMonth = () =>{
+    return new Date().toLocaleString("default", { month: "long" });
+  };
+
+  
+// Comparison Data stored in a variable for cleaner rendering
   const comparisonData = [
     { feature: "Trainer Interaction", bad: "Limited due to large batches", good: "Direct & personal interaction" },
     { feature: "Teaching Approach", bad: "Fast-paced, generic flow", good: "Student-paced, concept clarity" },
@@ -19,40 +20,34 @@ export default function PythonNellore() {
     { feature: "Class Mode", bad: "Only Online or Only Offline", good: "Live Online + Offline" },
     { feature: "Local Support", bad: "No local after-class support", good: "On-ground support in Nellore" },
   ];
-
-  React.useEffect(() => {
-    const targetDate = new Date("2026-02-16T00:00:00");
-    const timer = setInterval(() => {
-      const now = new Date();
-      const diff = targetDate - now;
-      if (diff <= 0) {
-        clearInterval(timer);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
+  
+ return (
     <div className="min-h-screen font-sans text-gray-800 bg-slate-50 overflow-x-hidden">
 
-      {/* TOP SCROLLING TICKER */}
-      <div className="bg-black text-white py-2 overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap text-xs sm:text-sm md:text-base font-bold tracking-wide text-center">
-          📢 New Batch Starting SOON in<span className="mx-2 text-yellow-300">
-            {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-          </span>Special Discount for Friends Referral 📢
-        </div>
-      </div>
+{/* PREMIUM URGENCY TICKER */}
+<div className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 relative overflow-hidden">
 
-      {/* NAVBAR */}
+  <div className="max-w-7xl mx-auto px-4 py-2 
+                  flex flex-wrap items-center justify-center gap-3 
+                  text-white text-[11px] sm:text-sm md:text-base font-semibold text-center">
+
+    {/* Blinking Red Dot */}
+    <span className="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse"></span>
+
+    {/* Dynamic Month Text */}
+    <span>
+      🚨 {getCurrentMonth()} Batch Closing Soon
+    </span>
+
+
+    {/* Seats Left */}
+    <span className="bg-red-600 px-3 py-1 rounded-full text-white animate-pulse">
+      Only {seatsLeft} Seats Left
+    </span>
+
+  </div>
+</div>
+            {/* NAVBAR */}
       <nav className="bg-white/95 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         <a href="https://careerschool.co.in" className="flex items-center">
@@ -63,64 +58,178 @@ export default function PythonNellore() {
             />
           </a>
           
-          <a href="#register" className="hidden md:block bg-blue-700 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-lg text-sm md:text-base font-bold hover:bg-blue-800 transition shadow-lg">
-            Book Free Demo
-          </a>
+          <a 
+  href="#register" 
+  className="
+  bg-blue-700 text-white 
+  px-3 py-1.5 
+  sm:px-4 sm:py-2 
+  md:px-6 md:py-2.5 
+  rounded-lg 
+  text-xs sm:text-sm md:text-base 
+  font-bold 
+  hover:bg-blue-800 
+  transition 
+  shadow-lg
+  "
+>
+🎁 Free Demo + Career Guidance
+</a>
+
+
         </div>
       </nav>
 
-      {/* HERO SECTION */}
-      <section
-        // UPDATED: Added bg-[25%_center] for mobile to focus on the left side, lg:bg-[center_30%] for desktop
-        className="relative pt-8 pb-16 lg:pt-20 lg:pb-28 overflow-hidden bg-cover bg-[25%_center] lg:bg-[center_30%]"
-        style={{
-          backgroundImage: "url('/Nellore Python/nellorepython.jpg')",
-          // Note: removed backgroundPosition from style prop to let Tailwind classes handle responsiveness
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/50 to-transparent z-0"></div>
+     {/* HERO SECTION */}
+<section
+  className="relative pt-8 pb-16 lg:pt-20 lg:pb-28 overflow-hidden bg-cover bg-[25%_center] lg:bg-[center_30%]"
+  style={{
+    backgroundImage: "url('/Nellore Python/nellorepython.jpg')",
+  }}
+>
+  <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/50 to-transparent z-0"></div>
 
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            <div className="text-center lg:text-left space-y-6 pt-4">
-              <div className="inline-flex items-center gap-2 bg-white/90 text-slate-900 px-3 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm font-bold border backdrop-blur shadow mx-auto lg:mx-0">
-                <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
-                Why go to Hyderabad? Learn in Nellore.
-              </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
-                Live Online & Offline Python + AI Training<br className="hidden md:block" />
-                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">
-                  in Mana Nellore.
-                </span>
-              </h1>
-              <p className="text-base md:text-lg text-slate-200 max-w-lg mx-auto lg:mx-0 leading-relaxed drop-shadow px-2 md:px-0">
-                Same <b className="text-white">"Ameerpet Level"</b> training, now near you.
-              </p>
-              <div className="flex flex-wrap gap-2 md:gap-3 pt-2 justify-center lg:justify-start">
-                {["100% Practical", "Resume Building", "Mock Interviews"].map((item) => (
-                  <div key={item} className="text-xs md:text-sm font-semibold text-white bg-black/40 px-2 py-1.5 md:px-3 md:py-2 rounded-md border border-white/20 backdrop-blur">
-                    ✅ {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div id="register" className="w-full bg-white rounded-xl md:rounded-2xl shadow-2xl border overflow-hidden mt-6 lg:mt-0">
-              <div className="bg-blue-900 p-3 text-center">
-                <h3 className="text-base md:text-lg font-bold text-white">Enquiry Form</h3>
-                <p className="text-blue-200 text-[10px] md:text-xs">Fill details below to get started</p>
-              </div>
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSepDUm2PNnUH5xhcT8XHoX7_YmptpTqXjZvYGfUM_wFaGWvDw/viewform?embedded=true"
-                className="w-full h-[450px] md:h-[600px]"
-                frameBorder="0"
-                title="Python Training Registration"
-              >Loading…</iframe>
-            </div>
-          </div>
+  <div className="max-w-7xl mx-auto px-4 relative z-10">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+
+      {/* LEFT CONTENT */}
+      <div className="text-center lg:text-left space-y-6 pt-4">
+        <div className="inline-flex items-center gap-2 bg-white/90 text-slate-900 px-3 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm font-bold border backdrop-blur shadow mx-auto lg:mx-0">
+          <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+          Why go to Hyderabad? Learn in Nellore.
         </div>
-      </section>
 
-      {/* COMPARISON + HIGHLIGHT SECTION */}
+        <h1 className="
+text-2xl 
+sm:text-3xl 
+md:text-5xl 
+lg:text-6xl 
+font-extrabold 
+text-white 
+leading-snug 
+drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]
+">
+
+  <span className="block">
+    Live Online & Offline
+  </span>
+
+  <span className="block">
+    Python + AI Training
+  </span>
+
+  <span className="
+    block mt-2 
+    text-transparent bg-clip-text 
+    bg-gradient-to-r from-sky-400 to-blue-500
+  ">
+    in Mana Nellore.
+  </span>
+
+</h1>
+
+
+<p className="text-sm sm:text-base md:text-lg 
+text-slate-200 max-w-xl
+mx-auto lg:mx-0 leading-relaxed drop-shadow px-2 md:px-0">
+  Same <b className="text-white">"MNC Level"</b> training, now near you.
+</p>
+
+
+        <div className="flex flex-wrap gap-2 md:gap-3 pt-2 justify-center lg:justify-start">
+          {[
+            "100% Practical",
+            "Resume Building",
+            "Mock Interviews",
+            "Internships",
+            "Expert Guidance",
+            "Pre Placement Support",
+            "Post Placement Support",
+            "Communication Building"
+          ].map((item) => (
+            <div
+              key={item}
+              className="text-xs md:text-sm font-semibold text-white bg-black/40 px-2 py-1.5 md:px-3 md:py-2 rounded-md border border-white/20 backdrop-blur"
+            >
+              ✅ {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* RIGHT SIDE – TOGGLE + FORM */}
+      <div id="register" className="w-full mt-6 lg:mt-0 space-y-4">
+
+      {/* PREMIUM TAB SWITCHER */}
+<div className="bg-white rounded-2xl shadow-2xl border p-2 relative overflow-hidden">
+
+<div className="relative flex">
+
+  {/* Sliding Highlight */}
+  <div
+    className={`absolute top-0 left-0 h-full w-1/2 rounded-xl transition-all duration-500 ease-in-out
+    ${
+      activeForm === "python"
+        ? "translate-x-0"
+        : "translate-x-full"
+    }
+    bg-gradient-to-r from-blue-600 to-indigo-600 shadow-[0_0_25px_rgba(59,130,246,0.7)]`}
+  />
+
+  {/* Python Button */}
+  <button
+    onClick={() => setActiveForm("python")}
+    className={`relative z-10 w-1/2 py-4 text-lg font-semibold rounded-xl transition-colors duration-300
+    ${
+      activeForm === "python"
+        ? "text-white"
+        : "text-gray-700"
+    }`}
+  >
+    Python Training
+  </button>
+
+  {/* Others Button */}
+  <button
+    onClick={() => setActiveForm("others")}
+    className={`relative z-10 w-1/2 py-4 text-lg font-semibold rounded-xl transition-colors duration-300
+    ${
+      activeForm === "Others"
+        ? "text-white"
+        : "text-gray-700"
+    }`}
+  >
+    Other Courses
+  </button>
+
+</div>
+</div>
+{/* ENQUIRY FORM */}
+<div className="bg-white rounded-2xl shadow-2xl border overflow-hidden mt-4">
+  <div className="bg-blue-900 p-3 text-center">
+    <h3 className="text-base md:text-lg font-bold text-white">
+      Enquiry Form
+      </h3>
+      </div>
+      <div></div>
+      <iframe
+      src={
+        activeForm === "python"
+        ? "https://docs.google.com/forms/d/e/1FAIpQLSepDUm2PNnUH5xhcT8XHoX7_YmptpTqXjZvYGfUM_wFaGWvDw/viewform?embedded=true"
+        : "https://docs.google.com/forms/d/e/1FAIpQLScsKgrL4O2V7y0VJjicVAR2wsfWVQ6t-O8_SsDYFIvHPUn0SQ/viewform?pli=1"
+      }
+      className="w-full h-[400px] sm:h-[450px] md:h-[600px] transition-all duration-500"
+      frameBorder="0"
+      title="Training Registration"
+      >
+        Loading…
+        </iframe>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+  {/* COMPARISON + HIGHLIGHT SECTION */}
       <section className="py-12 md:py-24 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-20">
@@ -529,7 +638,7 @@ export default function PythonNellore() {
 
     </div>
   );
-}
+
 
 /* --- SUB COMPONENTS --- */
 
@@ -568,7 +677,7 @@ function RoadmapItem({ step, title, sections, side }) {
         <div 
           className={`
             relative bg-white rounded-xl md:rounded-2xl shadow-lg border border-gray-200 
-            w-full md:w-[45%] p-4 md:p-6 transition-all
+            w-full md:w-[48%] lg:w-[45%] p-4 md:p-6 transition-all
             /* Mobile: Centered with margin */
             mx-auto
             /* Desktop: Remove center, align to side */
@@ -599,7 +708,7 @@ function RoadmapItem({ step, title, sections, side }) {
           {/* EXPANDABLE CONTENT */}
           <div 
             className={`grid transition-all duration-300 ease-in-out overflow-hidden ${
-              open ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"
+              open ? "max-h-[1000px] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"
             }`}
           >
             <div className="min-h-0 space-y-4">
@@ -630,42 +739,91 @@ function RoadmapItem({ step, title, sections, side }) {
 function FloatingWhatsApp() {
   return (
     <>
-      {/* 1. Define the Keyframes for the custom wiggle animation */}
+      {/* Animation Styles */}
       <style>
         {`
-          @keyframes wiggle-slow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-          }
-          .animate-wiggle {
-            animation: wiggle-slow 2s ease-in-out infinite;
-          }
-        `}
-      </style>
-
-      {/* 2. The Button with the new 'animate-wiggle' class */}
-      <a
-        href="https://wa.me/918939592323?text=Hi,%20I%20am%20interested%20in%20Python%20Training"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-2xl hover:bg-[#20bd5a] transition-all hover:scale-110 group animate-wiggle"
-        aria-label="Chat on WhatsApp"
-      >
-        {/* WhatsApp SVG Icon */}
-        <svg 
-          viewBox="0 0 24 24" 
-          className="w-8 h-8 fill-current" 
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
         
-        {/* Label Text */}
-        <div className="hidden md:block text-left">
-          <div className="text-[10px] leading-tight opacity-90">Need Help?</div>
-          <div className="font-bold text-sm leading-tight">Chat with us</div>
-        </div>
-      </a>
+        /* Slide In Animation */
+        @keyframes slideIn {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Smart Occasional Wiggle */
+        @keyframes wiggleSmart {
+          0%, 88%, 100% { transform: rotate(0deg); }
+          90% { transform: rotate(-6deg); }
+          92% { transform: rotate(6deg); }
+          94% { transform: rotate(-4deg); }
+          96% { transform: rotate(4deg); }
+        }
+
+        /* Soft Glow Pulse */
+        @keyframes glowPulse {
+          0%, 100% { box-shadow: 0 0 0 rgba(37, 211, 102, 0.4); }
+          50% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.7); }
+        }
+
+        .animate-entry {
+          animation: slideIn 0.6s ease-out forwards;
+        }
+
+        .animate-wiggle {
+          animation: wiggleSmart 4s ease-in-out infinite;
+        }
+
+        .animate-glow {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes blinkDot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-dot {
+  animation: blinkDot 1s infinite;
+}
+
+ } `}
+
+</style>
+
+      {/* Wrapper (Entry Animation Here) */}
+      <div className="fixed bottom-6 right-6 z-50 animate-entry">
+
+        {/* Button (Wiggle + Glow Here) */}
+        <a
+          href="https://wa.me/918939592323?text=Hi,%20I%20am%20interested%20in%20Python%20Training"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 
+          bg-[#25D366] text-white px-4 py-3 rounded-full 
+          shadow-2xl hover:bg-[#20bd5a] transition-all 
+          hover:scale-110 animate-wiggle animate-glow"
+          aria-label="Chat on WhatsApp"
+        >
+          {/* WhatsApp Icon */}
+          <svg
+            viewBox="0 0 24 24"
+            className="w-8 h-8 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+
+          {/* Label (Hidden on Mobile) */}
+          <div className="hidden md:block text-left">
+            <div className="text-[10px] leading-tight opacity-90">
+              Need Help?
+            </div>
+            <div className="font-bold text-sm leading-tight">
+              Chat with us
+            </div>
+          </div>
+        </a>
+      </div>
     </>
   );
+}
 }

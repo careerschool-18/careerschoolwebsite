@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.34.1",
     "lucide-react": "^0.546.0",
     "mysql2": "^3.16.2",
     "next": "^16.0.2-canary.26",

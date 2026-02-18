@@ -1,3 +1,4 @@
+import Head from "next/head";
 import HeroBanner from "../components/HeroBanner";
 import Header from "../components/Header";
 import FullImage from "../components/FullImage";
@@ -14,6 +15,17 @@ import Zohopage from "../components/Zohopage";
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <title>
+        Careerschool HR & IT Solutions | Best Training & Placement in Chennai
+      </title>
+      <meta
+        name="description"
+        content="India’s #1 Training & Placement Institute for Python, Java, Data Analytics, Digital Marketing & more. Learn, Intern & Get Placed with Careerschool!"
+      />
+    </Head>
+
     <main>
       <HeroBanner/>
       <Header />
@@ -29,5 +41,6 @@ export default function Home() {
       <NeedHelp />
       <Footer />
     </main>
+    </>
   );
 }
