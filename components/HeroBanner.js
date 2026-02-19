@@ -1,8 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
-
 export default function HeroBanner() {
   // Link to your NewYearOffer2026 page
   const offerPageUrl = "/nellorepython";
@@ -12,15 +9,16 @@ export default function HeroBanner() {
       <div className="relative flex items-center justify-end w-full px-4 sm:px-6">
         
         {/* ENROLL NOW Button - Opens in NEW TAB */}
-  <Link
-  href={offerPageUrl}
-  target="_blank"
-  className="z-20 flex-shrink-0"
->
-  <button className="bg-[#1f4a7e] text-[#f9ca1b] px-4 sm:px-6 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2">
-    ENROLL NOW
-  </button>
-</Link>
+        <a
+          href={offerPageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="z-20 flex-shrink-0"
+        >
+          <button className="bg-[#1f4a7e] text-[#f9ca1b] px-4 sm:px-6 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2">
+            ENROLL NOW
+          </button>
+        </a>
 
         {/* Scrolling Text */}
         <div
@@ -32,7 +30,7 @@ export default function HeroBanner() {
              Mana Nellore lo Python & AI Training | New Batch Starting Soon • 
             </span>
             <span>
-             Mana Nellore lo Python & AI Training | New Batch Starting Soon
+             Mana Nellore lo Python & AI Training | New Batch Starting Soon •
             </span>
           </div>
         </div>
