@@ -44,8 +44,7 @@ export default function PythonNellore() {
     <span className="bg-red-600 px-3 py-1 rounded-full text-white animate-pulse">
       Only {seatsLeft} Seats Left
     </span>
-
-  </div>
+</div>
 </div>
             {/* NAVBAR */}
       <nav className="bg-white/95 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100">
@@ -194,7 +193,7 @@ mx-auto lg:mx-0 leading-relaxed drop-shadow px-2 md:px-0">
     onClick={() => setActiveForm("others")}
     className={`relative z-10 w-1/2 py-4 text-lg font-semibold rounded-xl transition-colors duration-300
     ${
-      activeForm === "Others"
+      activeForm === "others"
         ? "text-white"
         : "text-gray-700"
     }`}
@@ -642,7 +641,7 @@ mx-auto lg:mx-0 leading-relaxed drop-shadow px-2 md:px-0">
 
 /* --- SUB COMPONENTS --- */
 
-function ReviewCard({ initial, name, college, review }) {
+function ReviewCard({ initial, name, review }) {
   return (
     <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 relative mt-6 md:mt-0">
       <div className="absolute -top-6 left-6 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
@@ -652,7 +651,6 @@ function ReviewCard({ initial, name, college, review }) {
         <div className="flex text-yellow-400 text-sm mb-3">★★★★★</div>
         <p className="text-gray-600 italic mb-4 text-sm leading-relaxed">"{review}"</p>
         <h4 className="font-bold text-gray-900">{name}</h4>
-        <span className="text-xs text-blue-600 font-medium">{college}</span>
       </div>
     </div>
   );
