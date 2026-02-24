@@ -10,7 +10,7 @@ export default function TestEngine() {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [step, setStep] = useState("loading");
-  const [timer, setTimer] = useState(20 * 60);
+  const [timer, setTimer] = useState(0);
   const [autoSubmitReason, setAutoSubmitReason] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -40,50 +40,76 @@ export default function TestEngine() {
     }
   }, [router]);
 
-  /* ================= TIMER ================= */
-  useEffect(() => {
-    if (step !== "test") return;
+  
+  /* ================= TIMER (SURVIVES REFRESH) ================= */
 
-    const interval = setInterval(() => {
-      setTimer((prev) => {
-        if (prev <= 1) {
-          triggerAutoSubmit("Time ended. Test auto-submitted.");
-          clearInterval(interval);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
+useEffect(() => {
+  if (step !== "test") return;
 
-    return () => clearInterval(interval);
-  }, [step]);
+  const updateTimer = () => {
+    const storedEndTime = localStorage.getItem("endTime");
 
+    if (!storedEndTime) return;
+
+    const remaining = Math.floor(
+      (Number(storedEndTime) - Date.now()) / 1000
+    );
+
+    if (remaining <= 0) {
+      setTimer(0);
+      triggerAutoSubmit("Time ended. Test auto-submitted.");
+    } else {
+      setTimer(remaining);
+    }
+  };
+
+  updateTimer(); // run immediately
+
+  const interval = setInterval(updateTimer, 1000);
+
+  return () => clearInterval(interval);
+
+}, [step]);
   /* ================= TAB SWITCH WARNING ================= */
   useEffect(() => {
     if (step !== "test") return;
-
+  
     const handleVisibilityChange = () => {
-      if (document.hidden) {
+      if (document.visibilityState === "hidden") {
         tabSwitchCountRef.current += 1;
-
-        if (tabSwitchCountRef.current <= 2) {
+  
+        if (tabSwitchCountRef.current === 1) {
           alert(
-            `⚠ Warning ${tabSwitchCountRef.current}/2:\nDo not switch tabs. Next time test will be auto-submitted.`
+            "⚠ Warning 1 of 2\n\n" +
+            "You have switched tabs or minimized the browser.\n\n" +
+            "Please stay on the test page.\n" +
+            "One more violation will result in automatic submission."
           );
-        } else {
-          setAnswers({}); // answers become NULL
+        }
+  
+        else if (tabSwitchCountRef.current === 2) {
+          alert(
+            "⚠ Final Warning\n\n" +
+            "You have switched tabs again.\n\n" +
+            "If you switch tabs once more, the test will be automatically submitted."
+          );
+        }
+  
+        else {
+          setAnswers({}); // clear answers
           triggerAutoSubmit(
-            "Test auto-submitted due to multiple tab switching."
+            "Test auto-submitted due to repeated tab switching violations.\n\nPlease contact HR for further clarification."
           );
         }
       }
     };
-
+  
     document.addEventListener("visibilitychange", handleVisibilityChange);
-
+  
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
+  
   }, [step]);
 
   /* ================= AUTO SUBMIT ================= */
@@ -105,20 +131,18 @@ export default function TestEngine() {
       return;
     }
 
-    if (!forced && Object.keys(answers).length < questions.length) {
-      alert("Answer all questions.");
+    if (!forced && Object.keys(answers).length === 0) {
+      alert("Please answer at least one question.");
       return;
     }
 
     setIsSubmitting(true);
     submittedRef.current = true;
 
-    const formattedAnswers = Object.entries(answers).map(
-      ([questionId, selectedAnswer]) => ({
-        questionId: Number(questionId),
-        selectedAnswer
-      })
-    );
+    const formattedAnswers = questions.map((q) => ({
+      questionId: Number(q.id),
+      selectedAnswer: answers[q.id] || null
+    }));
 
     try {
       const res = await fetch("https://career-school.co.in/api/tests/submit", {
