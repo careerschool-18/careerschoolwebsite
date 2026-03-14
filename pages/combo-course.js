@@ -170,202 +170,168 @@ export default function DataAnalyst() {
     },
   ];
 
-  // SEO metadata
-  const pageTitle = "Data Analyst Course with Placement | Careerschool";
-  const pageDescription =
-    "Become a certified Data Analyst with our comprehensive course. Learn Excel, SQL, Python, Power BI & Tableau with live projects and industry mentors. Placement assistance available.";
-  const pageKeywords =
-    "data analyst course, data analytics training, excel for data analysis, sql training, python for data science, power bi course, tableau training, data analyst certification, data science course, analytics placement, career in data analytics, best data analyst institute, data analyst training with placement";
-  const pageURL = "https://careerschool.com/data-analyst";
-  const pageImage = "https://cdn-icons-png.flaticon.com/512/4149/4149678.png";
+  // SEO metadata (ONLY for Data Analytics Combo Course Page)
 
-  return (
-    <>
-      <Head>
-        {/* Basic Meta Tags */}
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={pageKeywords} />
-        <meta name="author" content="CareerSchool HR & IT Solutions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="content-language" content="en" />
+const pageTitle =
+"Data Analytics Combo Course with AI Tools | Python, HR, Business, Marketing & Finance | Careerschool HR & IT Solutions";
 
-        {/* Robots Meta Tag */}
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+const pageDescription =
+"Join the Data Analytics Combo Course at Careerschool HR & IT Solutions and specialize with AI-powered training. Choose your track: Data Analytics + Python + AI, HR Analytics + AI, Business Analytics + AI, Digital Marketing Analytics + AI, or Finance Analytics + AI. Learn Excel, SQL, Power BI, Tableau, and build real-world projects with placement assistance.";
 
-        {/* Canonical URL */}
-        <link rel="canonical" href={pageURL} />
+const pageKeywords =
+"data analytics combo course, data analytics with python and ai, hr analytics course with ai, data analytics digital marketing course, business analytics with ai course, finance analytics course, data analytics specialization course, data analytics certification with ai tools, excel sql power bi tableau training, data analytics institute with placement, careerschool data analytics course";
 
-        {/* Open Graph Meta Tags (For Facebook, LinkedIn, etc.) */}
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageURL} />
-        <meta property="og:image" content={pageImage} />
-        <meta
-          property="og:image:alt"
-          content="Data Analyst Course Careerschool"
-        />
-        <meta property="og:site_name" content="Careerschool" />
-        <meta property="og:locale" content="en_US" />
+const pageURL =
+"https://careerschool.co.in/combo-course";
 
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content={pageImage} />
-        <meta
-          name="twitter:image:alt"
-          content="Data Analyst Course CareerSchool"
-        />
+const pageImage =
+"/public/DA Landing Page/combocourse-preview.jpeg";
 
-        {/* Additional SEO Meta Tags */}
-        <meta name="application-name" content="CareerSchool" />
-        <meta name="apple-mobile-web-app-title" content="CareerSchool" />
+return (
+<>
+<Head>
 
-        {/* Structured Data / JSON-LD for Rich Results */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Course",
-              name: "Data Analyst Course",
-              description: pageDescription,
-              provider: {
-                "@type": "Organization",
-                name: "CareerSchool HR & IT Solutions",
-                sameAs: "https://careerschool.com",
-              },
-              offers: {
-                "@type": "Offer",
-                price: "499",
-                priceCurrency: "USD",
-                availability: "https://schema.org/InStock",
-              },
-              hasCourseInstance: {
-                "@type": "CourseInstance",
-                courseMode: ["online", "in-person"],
-                courseWorkload: "P12W",
-                instructor: {
-                  "@type": "Person",
-                  name: "Industry Mentors",
-                },
-              },
-              audience: {
-                "@type": "Audience",
-                audienceType: "Students and Professionals",
-              },
-              teaches: [
-                "Excel for Data Analysis",
-                "SQL & Database Management",
-                "Python Programming",
-                "Power BI Dashboarding",
-                "Tableau Visualization",
-              ],
-            }),
-          }}
-        />
+{/* Basic Meta Tags */}
+<title>{pageTitle}</title>
+<meta name="description" content={pageDescription} />
+<meta name="keywords" content={pageKeywords} />
+<meta name="author" content="Careerschool HR & IT Solutions" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta httpEquiv="content-language" content="en" />
+<meta name="google" content="max-image-preview:large" />
 
-        {/* Course List Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ItemList",
-              itemListElement: curriculumItems.map((item, index) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                item: {
-                  "@type": "Course",
-                  name: item.title,
-                  description: item.content.join(", "),
-                },
-              })),
-            }),
-          }}
-        />
+{/* Robots */}
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
 
-        {/* FAQ Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: faqItems.map((item) => ({
-                "@type": "Question",
-                name: item.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: item.answer,
-                },
-              })),
-            }),
-          }}
-        />
+{/* Canonical */}
+<link rel="canonical" href={pageURL} />
 
-        {/* Organization Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Careerschool HR & IT Solutions",
-              url: "https://careerschool.co.in",
-              logo: "https://cdn-icons-png.flaticon.com/512/2721/2721291.png",
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+91-9876543210",
-                contactType: "customer service",
-                availableLanguage: ["English", "Hindi"],
-              },
-              sameAs: [
-                "https://www.linkedin.com/company/careerschool",
-                "https://twitter.com/careerschool",
-                "https://www.facebook.com/careerschool",
-              ],
-            }),
-          }}
-        />
+{/* Open Graph */}
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={pageDescription} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={pageURL} />
+<meta property="og:image" content={pageImage} />
+<meta
+property="og:image:alt"
+content="Data Analytics Combo Course with AI Tools | Careerschool HR & IT Solutions"
+/>
+<meta property="og:site_name" content="Careerschool HR & IT Solutions" />
+<meta property="og:locale" content="en_US" />
 
-        {/* Breadcrumb Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://careerschool.com",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Courses",
-                  item: "https://careerschool.com/courses",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Data Analyst Course",
-                  item: "https://careerschool.com/data-analyst",
-                },
-              ],
-            }),
-          }}
-        />
+{/* COURSE STRUCTURED DATA */}
+<script
+type="application/ld+json"
+dangerouslySetInnerHTML={{
+__html: JSON.stringify({
+"@context": "https://schema.org",
+"@type": "Course",
+name: "Data Analytics Combo Certification Course with AI Tools",
+description:
+"Comprehensive Data Analytics training where learners choose a specialization including Python, HR Analytics, Business Analytics, Digital Marketing Analytics, or Finance Analytics combined with AI-powered tools.",
+provider: {
+"@type": "Organization",
+name: "Careerschool HR & IT Solutions",
+sameAs: "https://careerschool.co.in"
+},
+offers: {
+"@type": "Offer",
+category: "Data Analytics Training",
+availability: "https://schema.org/InStock"
+},
+hasCourseInstance: {
+"@type": "CourseInstance",
+courseMode: ["online", "offline"],
+instructor: {
+"@type": "Person",
+name: "Industry Data Analytics Experts"
+}
+},
+audience: {
+"@type": "Audience",
+audienceType: "Students and Professionals and Job Seekers"
+},
+teaches: [
+"Data Analytics Fundamentals",
+"Excel for Data Analysis",
+"SQL for Data Analytics",
+"Power BI Dashboard Development",
+"Tableau Data Visualization",
+"AI Tools for Data Analysis",
+"Python for Data Analytics",
+"HR Analytics",
+"Business Analytics",
+"Digital Marketing Analytics",
+"Finance Analytics"
+]
+})
+}}
+/>
 
-        {/* Tailwind CSS */}
+{/* COURSE LIST STRUCTURED DATA */}
+<script
+type="application/ld+json"
+dangerouslySetInnerHTML={{
+__html: JSON.stringify({
+"@context": "https://schema.org",
+"@type": "ItemList",
+itemListElement: curriculumItems.map((item, index) => ({
+"@type": "ListItem",
+position: index + 1,
+item: {
+"@type": "Course",
+name: item.title,
+description: item.content.join(", ")
+}
+}))
+})
+}}
+/>
+
+{/* FAQ STRUCTURED DATA */}
+<script
+type="application/ld+json"
+dangerouslySetInnerHTML={{
+__html: JSON.stringify({
+"@context": "https://schema.org",
+"@type": "FAQPage",
+mainEntity: faqItems.map((item) => ({
+"@type": "Question",
+name: item.question,
+acceptedAnswer: {
+"@type": "Answer",
+text: item.answer
+}
+}))
+})
+}}
+/>
+
+{/* ORGANIZATION STRUCTURED DATA */}
+<script
+type="application/ld+json"
+dangerouslySetInnerHTML={{
+__html: JSON.stringify({
+"@context": "https://schema.org",
+"@type": "Organization",
+name: "Careerschool HR & IT Solutions",
+url: "https://careerschool.co.in",
+logo: "public/Nav Logo/CSHR - Nav Logo.png",
+contactPoint: {
+"@type": "ContactPoint",
+telephone: "+91-89 39 59 2323",
+contactType: "customer service",
+availableLanguage: ["English"]
+},
+})
+}}
+/>
+
+{/* Tailwind CSS */}
         <script src="https://cdn.tailwindcss.com"></script>
-      </Head>
+
+</Head>
 
       <div className="bg-gray-50 font-sans">
         {/* ================= NAVBAR ================= */}
@@ -1052,3 +1018,4 @@ View LinkedIn
     </>
   );
 }
+
