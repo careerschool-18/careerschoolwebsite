@@ -335,7 +335,6 @@ availableLanguage: ["English"]
 
       <div className="bg-gray-50 font-sans">
         {/* ================= NAVBAR ================= */}
-        {/* ================= NAVBAR ================= */}
         <nav className="bg-white shadow sticky top-0 z-50">
 
   {/* NAVBAR ROW */}
@@ -471,39 +470,39 @@ availableLanguage: ["English"]
   <div className="relative max-w-7xl mx-auto px-6">
 
     {/* Hero Text */}
-<div className="max-w-2xl flex flex-col items-center md:items-start">
+<div className="max-w-2xl flex flex-col items-center md:items-start w-full">
 
   {/* Badge */}
-  <div className="mb-4">
+  <div className="mb-6 w-full">
     <div
       className="
-      text-xs md:text-sm
+      w-full
+      text-sm md:text-base
       font-bold
       text-white
-      px-5 py-3
-      rounded-lg
+      px-5 py-4
+      rounded-xl
       bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600
       shadow-lg
       border border-white/20
-      whitespace-nowrap
       flex items-center justify-center
       hover:scale-105
       transition-all duration-300
+      tracking-wide
       "
     >
       ✨ 3 PREMIUM COURSES AT 1 PRICE
     </div>
-  </div>
-  
+  </div>  
 
   {/* Heading */}
   <h1 className="text-3xl md:text-5xl font-bold mb-6 text-center md:text-left">
-    DATA ANALYTICS + ANY CORE DOMAIN + AI TOOLS
+    ANY DOMAIN + DATA ANALYTICS + AI TOOLS
   </h1>
 
   {/* Subtitle */}
   <p className="mb-6 text-lg text-center md:text-left">
-    Choose Any Core Domain & Build AI-Driven Skills
+    Mastering Every Domain, securing Every Future With AI & Analytics.
   </p>
 
   {/* Button */}
@@ -512,11 +511,11 @@ availableLanguage: ["English"]
 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 max-w-2xl">
 
   {[
-    "Python + Analytics",
-    "HR + Analytics",
-    "Digital Marketing  + Analytics",
-    "Business Analysis  + Analytics",
-    "Finance  + Analytics",
+    "Python + Analytics + AI Tools",
+    "HR + Analytics + AI Tools",
+    "Digital Marketing  + Analytics + AI Tools",
+    "Business Analysis  + Analytics + AI Tools",
+    "Finance  + Analytics + AI Tools",
   ].map((item, index) => (
 
     <button
@@ -618,31 +617,25 @@ availableLanguage: ["English"]
   <div className="max-w-5xl mx-auto px-6">
 
     <h2 className="text-4xl font-bold text-center mb-10">
-      Data Analytics Overview
+      Program Overview
     </h2>
 
     <p className="text-gray-700 text-lg leading-relaxed mb-6">
-      Data Analytics is one of the fastest-growing fields in today’s digital economy.
-      Organizations across industries rely on data to make informed decisions,
-      identify trends, optimize operations, and drive innovation. By analyzing
-      structured and unstructured data, businesses can uncover insights that help
-      them improve customer experiences, reduce costs, and gain competitive
-      advantages in the market.
+      Modern industries are rapidly evolving with the adoption of Data Analytics and Artificial Intelligence across all business functions. 
+      Today, professionals in domains such as Human Resources, Finance, Business Analytics, and Digital Marketing are increasingly expected to understand and work with data-driven insights and intelligent tools.
+      To stay relevant and competitive in the job market, it has become essential for students and professionals to develop analytics and AI awareness alongside their core domain knowledge. 
+      Building these future-ready skills helps individuals adapt to industry changes, enhance decision-making capabilities, and secure long-term career growth in a technology-driven world.
     </p>
 
     <p className="text-gray-700 text-lg leading-relaxed mb-6">
-      This program is designed to equip learners with the essential skills needed
-      to work with real-world data. You will learn how to collect, clean, analyze,
-      and visualize data using industry-standard tools such as Python, SQL,
-      Excel, Power BI, and modern AI-powered analytics tools. Through hands-on
-      projects and practical exercises, you will gain experience solving real
-      business problems using data-driven approaches.
+      To stay relevant and competitive in the job market, it has become essential for students and professionals to develop analytics and AI awareness alongside their core domain knowledge. 
+      Building these future-ready skills helps individuals adapt to industry changes, enhance decision-making capabilities, and secure long-term career growth in a technology-driven world.
     </p>
   </div>
 
 </section>
 
-        {/* ================= CURRICULUM ================= */}
+        {/* ================= CURRICULUM =================
         <section id="curriculum" className="pt-44 pb-20">
           <h2 className="text-4xl font-bold text-center mb-16">
             Course Curriculum
@@ -707,10 +700,12 @@ availableLanguage: ["English"]
           </div>
         </section>
 
+        */}
+
 {/* ================= COMPARISON ================= */}
   <section className="bg-gray-100 py-16">
   <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-    Why Choose CareerSchool?
+    Why Choose Careerschool?
   </h2>
 
   <div className="max-w-5xl mx-auto px-4">
@@ -723,7 +718,7 @@ availableLanguage: ["English"]
         <thead>
           <tr className="bg-blue-600 text-white text-sm md:text-base">
             <th className="p-3 md:p-4 text-left">Features</th>
-            <th className="p-3 md:p-4 text-center">CareerSchool</th>
+            <th className="p-3 md:p-4 text-center">Careerschool</th>
             <th className="p-3 md:p-4 text-center">Other Institutes</th>
           </tr>
         </thead>
@@ -794,7 +789,7 @@ availableLanguage: ["English"]
   </div>
 </section>
 
-{/* ================= COMBO COURSES ================= */}
+{/* ================= COMBO COURSES =================
         <section className="bg-yellow-300 py-20">
           <h2 className="text-3xl font-bold text-center mb-12">
             Combo Courses
@@ -815,6 +810,7 @@ availableLanguage: ["English"]
             ))}
           </div>
         </section>
+        */}
 
 {/* ================= REVIEWS ================= */}
        <section id="reviews" className="bg-blue-600 text-white py-20">
@@ -902,10 +898,6 @@ View LinkedIn
 <section id="enroll" className="bg-white py-20">
 
   <div className="max-w-5xl mx-auto px-6">
-
-    <h2 className="text-4xl font-bold text-center mb-10">
-      Enroll for Data Analyst Program
-    </h2>
 
     {/* HubSpot Script */}
     <Script
@@ -1018,4 +1010,5 @@ View LinkedIn
     </>
   );
 }
+
 
