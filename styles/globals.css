@@ -27,3 +27,73 @@ html {
 .countdown-card {
   animation: flipIn 0.3s ease-out;
 }
+
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  opacity: 0;
+  animation: slideUpFade 0.6s ease forwards;
+}
+
+@keyframes aiPulse {
+  0% { box-shadow: 0 0 0px rgba(99,102,241,0.5); }
+  50% { box-shadow: 0 0 18px rgba(99,102,241,0.9); }
+  100% { box-shadow: 0 0 0px rgba(99,102,241,0.5); }
+}
+
+.ai-pulse {
+  animation: aiPulse 2.5s infinite ease-in-out;
+}
+
+.glass-card {
+  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* default slides */
+.swiper-slide {
+  filter: blur(3px);
+  opacity: 0.6;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+
+/* active center slide */
+.swiper-slide-active {
+  filter: blur(0px);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.swiper-slide-active .glass-card {
+  box-shadow: 0 0 30px rgba(255,255,255,0.4);
+}
+
+/* default card */
+.review-card {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  backdrop-filter: blur(12px);
+}
+
+/* active review */
+.swiper-slide-active .review-card {
+  background: white;
+  color: #2563eb;
+}
+
+/* active text */
+.swiper-slide-active .review-text {
+  color: #2563eb;
+}
