@@ -4,35 +4,13 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta charSet="UTF-8" />
-        <meta name="language" content="English" />
-        <meta name="robots" content="index, follow" />
-        <meta
-          name="description"
-          content="India’s #1 Training & Placement Institute for Python, Full Stack Development, Java, Web Development, Digital Marketing, Data Analytics, HR and more. Learn, Intern & Get Placed with Careerschool!"
-        />
-        <meta
-          name="keywords"
-          content="careerschool, python training, full stack training, data analytics training, digital marketing training"
-        />
-        <link rel="icon" href="/Fav icon/Fav Icon.png" />
+        {/* Global tags only */}
 
-        {/* ✅ Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-H2Y6DYC4SX"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-H2Y6DYC4SX');
-            `,
-          }}
-        />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
       </Head>
+
       <body>
         <Main />
         <NextScript />
