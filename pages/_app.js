@@ -1,5 +1,7 @@
 import "../styles/globals.css";
 import Script from "next/script";
+import "react-phone-input-2/lib/style.css";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,10 +17,12 @@ function MyApp({ Component, pageProps }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-H2Y6DYC4SX');
         `}
       </Script>
+
+      {/* ✅ Toast */}
+      <Toaster position="top-right" />
 
       <Component {...pageProps} />
     </>

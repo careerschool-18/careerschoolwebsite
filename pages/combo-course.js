@@ -335,65 +335,84 @@ availableLanguage: ["English"]
 
       <div className="bg-gray-50 font-sans">
         {/* ================= NAVBAR ================= */}
-        <nav className="bg-white shadow sticky top-0 z-50">
+<nav className="bg-white shadow sticky top-0 z-50">
 
-  {/* NAVBAR ROW */}
   <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-    {/* LOGO */}
-    <div
-      className="flex items-center gap-3 cursor-pointer"
-      onClick={goToHome}
-    >
-      <img
-        src="/Nav Logo/CSHR - Nav Logo.png"
-        className="w-18 h-14 object-contain"
-        alt="Careerschool Logo"
-      />
-    </div>
+    {/* LOGO SECTION */}
+   {/* LOGO SECTION */}
+<div
+  className="flex items-center gap-4 cursor-pointer"
+  onClick={goToHome}
+>
+
+  {/* CSHR LOGO */}
+  <img
+    src="/Nav Logo/CSHR - Nav Logo.png"
+    className="h-10 md:h-11 object-contain"
+    alt="Careerschool Logo"
+  />
+
+  {/* Divider */}
+  <div className="h-7 w-[1px] bg-gray-300"></div>
+
+  {/* ZOHO SIMPLE */}
+  <div className="flex flex-col items-center justify-center">
+
+    <img
+      src="/Zoho Images/ZOHO LOGO - Zoho Card.png"
+      className="h-7 md:h-8 object-contain"
+      alt="Zoho Logo"
+    />
+
+  </div>
+
+</div>
 
     {/* DESKTOP MENU */}
     <ul className="hidden md:flex gap-6 items-center font-medium text-gray-700">
 
       <li
-        className="hover:text-blue-600 cursor-pointer"
+        className="hover:text-blue-600 cursor-pointer transition"
         onClick={goToHome}
       >
         Home
       </li>
 
       <li
-        className="hover:text-blue-600 cursor-pointer"
+        className="hover:text-blue-600 cursor-pointer transition"
         onClick={() => scrollToSection("curriculum")}
       >
         Courses
       </li>
 
       <li
-        className="hover:text-blue-600 cursor-pointer"
+        className="hover:text-blue-600 cursor-pointer transition"
         onClick={() => scrollToSection("reviews")}
       >
         Reviews
       </li>
 
       <li
-        className="hover:text-blue-600 cursor-pointer"
+        className="hover:text-blue-600 cursor-pointer transition"
         onClick={openWhatsApp}
       >
         Contact
       </li>
 
+      {/* CTA */}
       <button
-  onClick={() => {
-    const section = document.getElementById("enroll");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
-  className="bg-blue-600 text-white px-6 py-2 rounded-lg"
->
-  Enroll Now
-</button>
+        onClick={() => {
+          const section = document.getElementById("enroll");
+          if (section) section.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="
+          bg-blue-600 text-white px-6 py-2 rounded-lg
+          hover:bg-blue-700 transition shadow-md
+        "
+      >
+        Enroll Now
+      </button>
 
     </ul>
 
@@ -407,54 +426,52 @@ availableLanguage: ["English"]
 
   </div>
 
-
-  {/* MOBILE DROPDOWN MENU */}
+  {/* MOBILE MENU */}
   {menuOpen && (
-
     <div className="md:hidden bg-white border-t">
 
-      <ul className="flex flex-col text-center font-medium text-gray-700">
+      <div className="flex flex-col items-center py-4">
 
-        <li className="py-4 border-b cursor-pointer" onClick={goToHome}>
-          Home
-        </li>
+        <span className="text-xs text-gray-500 mb-4">
+          Powered by Zoho
+        </span>
 
-        <li
-          className="py-4 border-b cursor-pointer"
-          onClick={() => scrollToSection("curriculum")}
-        >
-          Courses
-        </li>
+        <ul className="flex flex-col text-center font-medium text-gray-700 w-full">
 
-        <li
-          className="py-4 border-b cursor-pointer"
-          onClick={() => scrollToSection("reviews")}
-        >
-          Reviews
-        </li>
+          <li className="py-4 border-b cursor-pointer" onClick={goToHome}>
+            Home
+          </li>
 
-        <li
-          className="py-4 border-b cursor-pointer"
-          onClick={openWhatsApp}
-        >
-          Contact
-        </li>
+          <li className="py-4 border-b cursor-pointer" onClick={() => scrollToSection("curriculum")}>
+            Courses
+          </li>
 
-        <li className="py-4">
-          <a
-  href="#enroll"
-  className="bg-blue-600 text-white px-6 py-2 rounded-lg inline-block"
->
-  Enroll Course
-</a>
-        </li>
+          <li className="py-4 border-b cursor-pointer" onClick={() => scrollToSection("reviews")}>
+            Reviews
+          </li>
 
-      </ul>
+          <li className="py-4 border-b cursor-pointer" onClick={openWhatsApp}>
+            Contact
+          </li>
+
+          <li className="py-4">
+            <button
+              onClick={() => {
+                const section = document.getElementById("enroll");
+                if (section) section.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg"
+            >
+              Enroll Course
+            </button>
+          </li>
+
+        </ul>
+
+      </div>
 
     </div>
-
   )}
-
 </nav>
 
         {/* ================= HERO ================= */}
