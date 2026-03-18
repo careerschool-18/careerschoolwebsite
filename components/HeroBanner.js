@@ -2,7 +2,7 @@
 
 export default function HeroBanner() {
   // Link to your NewYearOffer2026 page
-  const offerPageUrl = "/combo-course";
+  const offerPageUrl = "/nellorepython";
 
   return (
     <section className="relative overflow-hidden bg-[#f9ca1b] py-1 sm:py-2">
@@ -26,14 +26,13 @@ export default function HeroBanner() {
           style={{ right: "min(8vw, 180px)" }}
         >
           <div className="marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-[#1f4a7e]">
-  <span className="mr-12">
-    • 3 Premium Course @ 1 Price | Analytics Combo Program with AI Tools
-  </span>
-
-  <span>
-    • 3 Premium Course @ 1 Price | Analytics Combo Program with AI Tools •
-  </span>
-</div>
+            <span>
+             Mana Nellore lo Python & AI Training | New Batch Starting Soon • 
+            </span>
+            <span>
+             Mana Nellore lo Python & AI Training | New Batch Starting Soon •
+            </span>
+          </div>
         </div>
       </div>
 
