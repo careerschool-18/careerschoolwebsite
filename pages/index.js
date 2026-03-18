@@ -16,21 +16,15 @@ import Zohopage from "../components/Zohopage";
 export default function Home() {
   return (
     <>
-          <Head>
-        <title>Careerschool HR & IT Solutions | Training & Placement</title>
-
-        <meta name="description" content="Careerschool HR & IT Solutions provides industry-oriented training and placement services in Chennai for freshers and professionals."/>
-
-        <meta name="keywords" content="IT training Chennai, HR training Chennai, placement training, Careerschool HR Solutions, Python training in nellore, Training institution in nellore, Careerschool IT Solutions, Java fullstack course, Data analytics, Data analyst, Business Analytics"
-        />
-
-        <meta property="og:title" content="Careerschool HR & IT Solutions" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://careerschool.co.in" />
-        <meta property="og:image" content="public/Home page images/Home Page - 1920 x 1080(updated).jpg" />
-
-        <link rel="canonical" href="https://careerschool.co.in" />
-      </Head>
+    <Head>
+      <title>
+        Careerschool HR & IT Solutions | Best Training & Placement in Chennai
+      </title>
+      <meta
+        name="description"
+        content="India’s #1 Training & Placement Institute for Python, Java, Data Analytics, Digital Marketing & more. Learn, Intern & Get Placed with Careerschool!"
+      />
+    </Head>
 
     <main>
       <HeroBanner/>
