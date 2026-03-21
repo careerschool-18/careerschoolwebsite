@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "https://careerschool.co.in/api/:path*",
+        destination: "https://career-school.co.in/api/:path*",
       },
     ];
   },

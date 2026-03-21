@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 
+const ENQUIRY_API_URL = process.env.NEXT_PUBLIC_API_URL || "/api/v1/enquiries";
+
 /**
  * CourseEnquiryPopup component
  *
@@ -285,7 +287,7 @@ export default function CourseEnquiryPopup({
   try {
     const apiPayload = mapToBackendFormat(formData);
 
-   const res = await fetch("/api/v1/enquiries", {
+   const res = await fetch(ENQUIRY_API_URL, {
 
   method: "POST",
   headers: { "Content-Type": "application/json" },
@@ -818,4 +820,3 @@ export default function CourseEnquiryPopup({
 </>
 );
 }
-
