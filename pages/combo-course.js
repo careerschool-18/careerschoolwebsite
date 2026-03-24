@@ -109,25 +109,25 @@ export default function DataAnalyst() {
   const reviews = [
     {
       name: "Dhanush S",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "/Student Review Images/Dhanush.jpg",
       review: "🚀Data Analysis Project - Aircraft Route Performance Dashboard*I recently worked on an*Aircraft Route Profitability Analysis Project* using Excel. The goal of this project was to understand how aircraft perform across different routes, aircraft types and season."	,
       linkedin:"https://www.linkedin.com/posts/dhanush-s-9b071526b_dataanalytics-exceldashboard-datavisualization-activity-7436801902379417600-vl5X?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks",
     },
     {
       name: "Ferozkhan M",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "/Student Review Images/Ferokhan.png",
       review: "I’m thrilled to share that I’ve completed my HR Analytics course and successfully finished my HR internship. I’m incredibly grateful for this opportunity and excited to apply." ,	
       linkedin:"https://www.linkedin.com/posts/ferozkhanm06_hr-internship-activity-7427936298977357824-VtjX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks",
     },
     {
       name: "Mohamed Ismail M",
-      image: "https://randomuser.me/api/portraits/men/65.jpg",
+      image: "/Student Review Images/Mohammed Ismail.png",
       review: "From IPL 2008 to 2024, cricket has generated massive data—and insights 📊🏏I created an end-to-end IPL dashboard covering all seasons from 2008 to 2024, transforming raw cricket data into meaningful insights." ,
       linkedin:"https://www.linkedin.com/posts/mohamed-ismail-m-b31886263_ipl-dataanalytics-dashboard-activity-7422924882633572352-GeaB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks",
     },
     {
       name: "Sujitha Siva",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "/Student Review Images/Sujitha.png",
       review: "I am pleased to share that I have successfully completed the HR Analyst Course from Career School 🎓This certification has enhanced my understanding of HR analytics, data interpretation, and evidence-based HR decision making" ,
       linkedin:"https://www.linkedin.com/posts/sujitha-siva_i-am-pleased-to-share-that-i-have-successfully-activity-7419957629298393088-YuD2?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks",
     },

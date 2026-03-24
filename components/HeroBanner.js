@@ -11,8 +11,6 @@ export default function HeroBanner() {
         {/* ENROLL NOW Button - Opens in NEW TAB */}
         <a
           href={offerPageUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           className="z-20 flex-shrink-0"
         >
           <button className="bg-[#1f4a7e] text-[#f9ca1b] px-4 sm:px-6 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2">

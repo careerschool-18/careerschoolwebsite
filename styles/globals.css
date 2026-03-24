@@ -97,3 +97,51 @@ html {
 .swiper-slide-active .review-text {
   color: #2563eb;
 }
+/* Phone input container */
+.phone-input {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px 12px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Input field */
+.phone-input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Flag dropdown */
+.PhoneInputCountry {
+  margin-right: 10px;
+}
+
+.PhoneInputCountrySelect {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.react-select-container {
+  font-size: 14px;
+}
+
+.react-select__control {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  padding: 5px;
+}
+
+.react-select__menu {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
