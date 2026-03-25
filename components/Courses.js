@@ -16,13 +16,13 @@ export default function Courses() {
     {
       title: "Learn Python with AI",
       duration: "3 Months (Rapid Learning)",
-      highlight: "Internship & Placement Included",
+      highlight: "Internship & Placement Support",
       poster: "/Training cards image/Python Banner.jpg",
     },
     {
       title: "Data Analytics",
       duration: "3 Months (Rapid Learning)",
-      highlight: "Hands-on Projects & Placement Support",
+      highlight: "Internship & Placement Support",
       poster: "/Training cards image/Data Analytics Banner.png",
       label: {
         text: "TRENDING COURSE 📈",
