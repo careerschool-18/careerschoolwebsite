@@ -16,13 +16,13 @@ export default function Courses() {
     {
       title: "Learn Python with AI",
       duration: "3 Months (Rapid Learning)",
-      highlight: "Internship & Placement Included",
+      highlight: "Internship & Placement Support",
       poster: "/Training cards image/Python Banner.jpg",
     },
     {
       title: "Data Analytics",
       duration: "3 Months (Rapid Learning)",
-      highlight: "Hands-on Projects & Placement Support",
+      highlight: "Internship & Placement Support",
       poster: "/Training cards image/Data Analytics Banner.png",
       label: {
         text: "TRENDING COURSE 📈",
@@ -66,9 +66,7 @@ export default function Courses() {
       />
 
       <div className="flex flex-col justify-center items-center p-4 text-center">
-        <h3 className="font-bold text-base sm:text-lg mb-1">
-          {course.title}
-        </h3>
+        <h3 className="font-bold text-base sm:text-lg mb-1">{course.title}</h3>
 
         <p className="text-xs sm:text-sm mb-2">⏰ {course.duration}</p>
 
