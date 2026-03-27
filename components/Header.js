@@ -79,7 +79,7 @@ export default function Header() {
           {/* ZOHO (with label below) */}
           <div className="flex flex-col items-center">
             <img
-              src="/Nav Logo/ZOHO LOGO Nav.webp"
+              src="/Nav Logo/ZOHO LOGO Nav.png"
               className="h-7 sm:h-7 md:h-9 object-contain"
             />
 
