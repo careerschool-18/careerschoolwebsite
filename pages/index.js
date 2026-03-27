@@ -12,35 +12,37 @@ import NeedHelp from "../components/NeedHelp";
 import Footer from "../components/Footer";
 import Popupform from "../components/Popupform";
 import Zohopage from "../components/Zohopage";
+import ChatWithUs from "../components/ChatWithUs";
 
 export default function Home() {
   return (
     <>
-    <Head>
-      <title>
-        Careerschool HR & IT Solutions | Best Training & Placement in Chennai
-      </title>
-      <meta
-        name="description"
-        content="India’s #1 Training & Placement Institute for Python, Java, Data Analytics, Digital Marketing & more. Learn, Intern & Get Placed with Careerschool!"
-      />
-    </Head>
+      <Head>
+        <title>
+          Careerschool HR & IT Solutions | Best Training & Placement in Chennai
+        </title>
+        <meta
+          name="description"
+          content="India’s #1 Training & Placement Institute for Python, Java, Data Analytics, Digital Marketing & more. Learn, Intern & Get Placed with Careerschool!"
+        />
+      </Head>
 
-    <main>
-      <HeroBanner/>
-      <Header />
-      <Popupform/>
-      <FullImage />
-      <Zohopage />
-      <GoogleReview/>
-      <Discover />
-      <StudentsReview />
-      <Courses />
-      <MeetOurStars />
-      <Alumni/>
-      <NeedHelp />
-      <Footer />
-    </main>
+      <main>
+        <HeroBanner />
+        <Header />
+        <Popupform />
+        <FullImage />
+        <ChatWithUs />
+        <Zohopage />
+        <GoogleReview />
+        <Discover />
+        <StudentsReview />
+        <Courses />
+        <MeetOurStars />
+        <Alumni />
+        <NeedHelp />
+        <Footer />
+      </main>
     </>
   );
 }

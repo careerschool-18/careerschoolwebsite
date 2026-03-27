@@ -79,9 +79,13 @@ export default function Header() {
           {/* ZOHO (with label below) */}
           <div className="flex flex-col items-center">
             <img
-              src="/Zoho Images/ZOHO LOGO - Zoho Card.png"
-              className="h-6 sm:h-7 md:h-8 object-contain"
+              src="/Nav Logo/ZOHO LOGO Nav.webp"
+              className="h-7 sm:h-7 md:h-9 object-contain"
             />
+
+            <span className="text-[10px] sm:text-xs text-gray-600 font-semibold text-center mt-1">
+              Authorized Training Partner
+            </span>
           </div>
         </div>
 
@@ -98,7 +102,7 @@ export default function Header() {
             onClick={() => scrollToSection("meet-our-stars")}
             className="bg-blue-100 text-blue-700 px-4 py-2 rounded font-semibold text-sm"
           >
-            Success Story
+            Placed Student
           </button>
 
           <a href={takeTestFormLink}>
@@ -115,13 +119,6 @@ export default function Header() {
         </nav>
 
         {/* CONTACT */}
-        <div className="hidden md:block">
-          <a href={contactLink}>
-            <button className="bg-blue-600 text-white px-5 py-2 rounded font-semibold text-sm hover:scale-105 transition">
-              Contact Us
-            </button>
-          </a>
-        </div>
 
         {/* MOBILE MENU BUTTON */}
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
@@ -145,7 +142,7 @@ export default function Header() {
             onClick={() => scrollToSection("meet-our-stars")}
             className="bg-blue-100 px-6 py-2 rounded"
           >
-            Success Story
+            Placed Student
           </button>
 
           <a href={takeTestFormLink}>
