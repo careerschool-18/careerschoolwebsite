@@ -4,6 +4,34 @@ import { useEffect, useState } from "react";
 export default function Courses() {
   const courses = [
     {
+      title: "Python/Java Full Stack + Analytics + AI",
+      duration: "3 Months (Rapid Learning)",
+      highlight: "Internship & Placement Support",
+      poster: "/Training cards image/Python Banner.jpg",
+    },
+    {
+      title: "Data Analytics + AI",
+      duration: "3 Months (Rapid Learning)",
+      highlight: "Internship & Placement Support",
+      poster: "/Training cards image/Data Analytics Banner.png",
+      label: {
+        text: "MOST PREFERRED 📈",
+        color: "bg-red-600",
+      },
+    },
+
+    {
+      title: "HR with Analytics + AI",
+      duration: "3 Months (Rapid Learning)",
+      highlight: "ZOHO Pay Roll Module Included",
+      poster: "/Training cards image/HR Analytics Banner.png",
+      label: {
+        text: "MOST PREFERRED 📈",
+        color: "bg-red-600",
+      },
+    },
+
+    {
       title: "ZOHO Payroll",
       duration: "1.5 Months (Practical Focused)",
       highlight: "Live Payroll Processing + Certification",
@@ -12,28 +40,6 @@ export default function Courses() {
         text: "RECENTLY ADDED",
         color: "bg-red-600",
       },
-    },
-    {
-      title: "Learn Python with AI",
-      duration: "3 Months (Rapid Learning)",
-      highlight: "Internship & Placement Support",
-      poster: "/Training cards image/Python Banner.jpg",
-    },
-    {
-      title: "Data Analytics",
-      duration: "3 Months (Rapid Learning)",
-      highlight: "Internship & Placement Support",
-      poster: "/Training cards image/Data Analytics Banner.png",
-      label: {
-        text: "TRENDING COURSE 📈",
-        color: "bg-red-600",
-      },
-    },
-    {
-      title: "HR with Analytics",
-      duration: "3 Months (Rapid Learning)",
-      highlight: "ZOHO Pay Roll Module Included",
-      poster: "/Training cards image/HR Analytics Banner.png",
     },
   ];
 
