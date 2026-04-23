@@ -11,18 +11,23 @@ import Select from "react-select";
 import { State, City } from "country-state-city";
 import { Send } from "lucide-react";
 import Swal from "sweetalert2";
+
 export default function Form() {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
-    mobile: "",
-    degree: "",
-    specialization: "",
-    college: "",
+    whatsappNumber: "",
+    countryCode: "+91",
+    enquiryType: "COURSE_INTERNSHIP",
+    courseName: "",
+    preferredRole: "",
+    currentEmployer: "",
     state: "",
     city: "",
-    experience: "",
-    course: "",
+    totalExperience: "",
+    trainingMode: "ONLINE",
+    degree: "",
+    specialization: "",
     source: "",
   });
 
@@ -162,10 +167,10 @@ export default function Form() {
 
   const experienceOptions = [
     { label: "Fresher", value: "FRESHER" },
-    { label: "6 Months - 1 Year", value: "0.5_1" },
-    { label: "1 Year - 3 Years", value: "1_3" },
-    { label: "3 Years - 5 Years", value: "3_5" },
-    { label: "5+ Years", value: "5_PLUS" },
+    { label: "6 Months - 1 Year", value: "ONE_TO_TWO" },
+    { label: "1 Year - 3 Years", value: "ONE_TO_TWO" },
+    { label: "3 Years - 5 Years", value: "THREE_TO_FIVE" },
+    { label: "5+ Years", value: "FIVE_PLUS" },
   ];
 
   const courseOptions = [
@@ -239,13 +244,23 @@ export default function Form() {
     return specializationOptions; // Show all if no direct match
   };
 
-  // --- Logic ---
+  // --- Validation Logic (FIXED - removed preferredRole requirement) ---
   const validate = (data) => {
     let err = {};
-    Object.keys(data).forEach((key) => {
-      if (!data[key]) err[key] = "Required";
-    });
-    if (data.mobile && !isValidPhoneNumber(data.mobile)) err.mobile = "Invalid";
+
+    // Only validate essential fields that are actually used
+    if (!data.fullName) err.fullName = "Required";
+    if (!data.email) err.email = "Required";
+    if (!data.whatsappNumber) err.whatsappNumber = "Required";
+    if (!data.currentEmployer) err.currentEmployer = "Required";
+    if (!data.state) err.state = "Required";
+    if (!data.city) err.city = "Required";
+    if (!data.courseName) err.courseName = "Required";
+
+    if (data.whatsappNumber && !isValidPhoneNumber(data.whatsappNumber)) {
+      err.whatsappNumber = "Invalid number";
+    }
+
     return err;
   };
 
@@ -262,107 +277,89 @@ export default function Form() {
     });
   };
 
-  const mapExperience = (exp) => {
-    switch (exp) {
-      case "FRESHER":
-        return "FRESHER";
-      case "0.5_1":
-        return "ONE_TO_TWO"; // ✅ FIX
-      case "1_3":
-        return "ONE_TO_TWO"; // or adjust based on backend logic
-      case "3_5":
-        return "THREE_TO_FIVE";
-      case "5_PLUS":
-        return "FIVE_PLUS";
-      default:
-        return "FRESHER";
-    }
+  // Handle course selection - automatically set preferredRole
+  const handleCourseChange = (selected) => {
+    updateForm({
+      ...formData,
+      courseName: selected?.value || "",
+      preferredRole: selected?.value || "", // Auto-set preferredRole same as course
+    });
   };
 
+  // --- Submit Handler ---
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const validationErrors = validate(formData);
     if (Object.keys(validationErrors).length > 0) {
-      toast.error("Fix errors before submitting");
+      toast.error("Please fill all required fields");
       return;
     }
 
+    // Prepare payload with proper data
+    const payload = {
+      ...formData,
+      enquiryType: "COURSE_INTERNSHIP",
+      trainingMode: "ONLINE",
+      countryCode: "+91",
+    };
+
+    console.log("Submitting payload:", payload);
+
     try {
-      const payload = {
-        fullName: formData.name?.trim(),
-        countryCode: "+91",
-        whatsappNumber: formData.mobile?.replace("+91", "").trim(),
-        email: formData.email?.trim(),
-
-        enquiryType: "COURSE_INTERNSHIP",
-
-        courseName: formData.course || "JAVA",
-        preferredRole: formData.course || "JAVA",
-
-        currentEmployer: formData.college?.trim() || "NA",
-
-        state:
-          states.find((s) => s.value === formData.state)?.label ||
-          "Andhra Pradesh",
-
-        city: formData.city?.trim() || "Nellore",
-
-        totalExperience: mapExperience(formData.experience),
-
-        trainingMode: "ONLINE",
-      };
-
-      console.log("PAYLOAD:", payload);
-
-      const res = await fetch("https://career-school.co.in/api/v1/enquiries", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://career-school.co.in/api/v1/course-enquiries", // Changed back to original endpoint
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
-      });
+      );
 
       const data = await res.json();
-      console.log("RESPONSE:", data);
 
       if (res.ok && data.success) {
         await Swal.fire({
           title: "Success!",
-          text: "Your form has been successfully submitted. Our team will reach you shortly.",
+          text: "Form submitted successfully",
           icon: "success",
-          confirmButtonText: "OK",
         });
 
-        // ✅ FULL RESET (IMPORTANT)
+        // Reset form
         setFormData({
-          name: "",
+          fullName: "",
           email: "",
-          mobile: undefined, // ✅ FIX for phone input
-          degree: "",
-          specialization: "",
-          college: "",
+          whatsappNumber: "",
+          countryCode: "+91",
+          enquiryType: "COURSE_INTERNSHIP",
+          courseName: "",
+          preferredRole: "",
+          currentEmployer: "",
           state: "",
           city: "",
-          experience: "",
-          course: "",
+          totalExperience: "",
+          trainingMode: "ONLINE",
+          degree: "",
+          specialization: "",
           source: "",
         });
-
-        setErrors({});
       } else {
         toast.error(data.message || "Submission failed");
       }
-    } catch (error) {
-      console.error("ERROR:", error);
-      toast.error("Server error");
+    } catch (err) {
+      console.error(err);
+      toast.error("Server error. Please try again.");
     }
   };
+
   const isValid = Object.keys(validate(formData)).length === 0;
 
   return (
     <>
       <Header />
+
       <div className="min-h-screen w-full flex items-center justify-center bg-[#0a0a0a] p-4 font-sans">
         <div className="w-full max-w-6xl bg-[#121212] rounded-[2.5rem] shadow-2xl overflow-visible flex flex-col lg:flex-row border border-white/5">
           {/* LEFT CONTENT */}
@@ -382,22 +379,19 @@ export default function Form() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 gap-4">
                 <input
-                  placeholder="Your Name"
+                  placeholder="Full Name *"
                   className="w-full p-4 rounded-xl bg-white/90 text-[#1e40af] font-medium outline-none"
-                  required
-                  value={formData.name}
+                  value={formData.fullName}
                   onChange={(e) => {
-                    // Only allows letters (a-z, A-Z) and spaces
                     const value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
-                    updateForm({ ...formData, name: value });
+                    updateForm({ ...formData, fullName: value });
                   }}
                 />
 
                 <input
                   type="email"
-                  placeholder="Email Address"
+                  placeholder="Email Address *"
                   className="w-full p-4 rounded-xl bg-white/90 text-[#1e40af] font-medium outline-none"
-                  required
                   value={formData.email}
                   onChange={(e) =>
                     updateForm({ ...formData, email: e.target.value })
@@ -408,9 +402,9 @@ export default function Form() {
                 <div className="phone-container">
                   <PhoneInput
                     defaultCountry="IN"
-                    value={formData.mobile}
+                    value={formData.whatsappNumber}
                     onChange={(v) =>
-                      updateForm({ ...formData, mobile: v || "" })
+                      updateForm({ ...formData, whatsappNumber: v || "" })
                     }
                     className="custom-phone-input"
                   />
@@ -420,7 +414,7 @@ export default function Form() {
                   <Select
                     styles={customSelectStyles}
                     options={degreeOptions}
-                    placeholder="Degree"
+                    placeholder="Degree (Optional)"
                     value={
                       degreeOptions.find((d) => d.value === formData.degree) ||
                       null
@@ -434,10 +428,14 @@ export default function Form() {
                     }
                   />
                   <input
-                    placeholder="College Name"
+                    placeholder="College / Company *"
                     className="w-full p-4 rounded-xl bg-white/90 text-[#1e40af] font-medium outline-none"
+                    value={formData.currentEmployer}
                     onChange={(e) =>
-                      updateForm({ ...formData, college: e.target.value })
+                      updateForm({
+                        ...formData,
+                        currentEmployer: e.target.value,
+                      })
                     }
                   />
                 </div>
@@ -445,7 +443,7 @@ export default function Form() {
                 <Select
                   styles={customSelectStyles}
                   options={getFilteredSpecs()}
-                  placeholder="Specialization"
+                  placeholder="Specialization (Optional)"
                   value={
                     getFilteredSpecs()
                       .flatMap((g) => g.options)
@@ -461,7 +459,7 @@ export default function Form() {
                   <Select
                     styles={customSelectStyles}
                     options={states}
-                    placeholder="State"
+                    placeholder="State *"
                     value={
                       states.find((s) => s.value === formData.state) || null
                     }
@@ -470,7 +468,7 @@ export default function Form() {
                   <Select
                     styles={customSelectStyles}
                     options={filteredCities}
-                    placeholder="City"
+                    placeholder="City *"
                     isDisabled={!formData.state}
                     value={
                       filteredCities.find((c) => c.value === formData.city) ||
@@ -486,35 +484,33 @@ export default function Form() {
                   <Select
                     styles={customSelectStyles}
                     options={experienceOptions}
-                    placeholder="Experience"
+                    placeholder="Experience (Optional)"
                     value={
                       experienceOptions.find(
-                        (e) => e.value === formData.experience,
+                        (e) => e.value === formData.totalExperience,
                       ) || null
                     }
                     onChange={(s) =>
-                      updateForm({ ...formData, experience: s?.value })
+                      updateForm({ ...formData, totalExperience: s?.value })
                     }
                   />
                   <Select
                     styles={customSelectStyles}
                     options={courseOptions}
-                    placeholder="Course"
+                    placeholder="Course *"
                     value={
                       courseOptions
                         .flatMap((g) => g.options)
-                        .find((o) => o.value === formData.course) || null
+                        .find((o) => o.value === formData.courseName) || null
                     }
-                    onChange={(s) =>
-                      updateForm({ ...formData, course: s?.value })
-                    }
+                    onChange={handleCourseChange}
                   />
                 </div>
 
                 <Select
                   styles={customSelectStyles}
                   options={sourceOptions}
-                  placeholder="Where did you hear about us?"
+                  placeholder="Where did you hear about us? (Optional)"
                   value={
                     sourceOptions.find((s) => s.value === formData.source) ||
                     null
@@ -525,10 +521,11 @@ export default function Form() {
                 />
 
                 <button
+                  type="submit"
                   disabled={!isValid}
                   className={`w-full group mt-4 py-5 rounded-2xl flex items-center justify-center gap-3 text-lg font-black transition-all duration-300 ${
                     isValid
-                      ? "bg-black text-white hover:scale-[1.02]"
+                      ? "bg-black text-white hover:scale-[1.02] cursor-pointer"
                       : "bg-black/20 text-black/40 cursor-not-allowed"
                   }`}
                 >
@@ -584,6 +581,7 @@ export default function Form() {
           box-shadow: none !important;
         }
       `}</style>
+
       <Footer />
     </>
   );
