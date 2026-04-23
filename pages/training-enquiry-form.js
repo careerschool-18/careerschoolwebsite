@@ -177,6 +177,9 @@ export default function Form() {
     {
       label: "Combo Course",
       options: [
+        { label: "Gen AI", value: "GEN_AI" },
+        { label: "Crash Course in Nellore", value: "CRASH_COURSE_NELLORE" },
+
         { label: "Python + AI + Analytics", value: "PYTHON_COMBO" },
         { label: "Java + AI + Analytics", value: "JAVA_COMBO" },
         {
