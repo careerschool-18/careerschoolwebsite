@@ -1,4 +1,3 @@
-
 // components/FullImage.jsx
 "use client";
 
@@ -65,7 +64,7 @@ export default function FullImage({
                     color: "#ffd86b",
                   }}
                 >
-                  Official Zoho Authorized Training Partner
+                  Zoho Authorized Training Partner
                 </div>
 
                 {/* LOGOS */}
