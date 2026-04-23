@@ -102,7 +102,7 @@ export default function Header() {
             onClick={() => scrollToSection("meet-our-stars")}
             className="bg-blue-100 text-blue-700 px-4 py-2 rounded font-semibold text-sm"
           >
-            Placed Student
+            Placed Students
           </button>
 
           <a href={takeTestFormLink}>

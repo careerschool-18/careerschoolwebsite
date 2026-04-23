@@ -3,7 +3,6 @@ import HeroBanner from "../components/HeroBanner";
 import Header from "../components/Header";
 import FullImage from "../components/FullImage";
 import GoogleReview from "../components/GoogleReview";
-import Discover from "../components/Discover";
 import StudentsReview from "../components/StudentsReview";
 import MeetOurStars from "../components/MeetOurStars";
 import Courses from "../components/Courses";
@@ -35,7 +34,6 @@ export default function Home() {
         <ChatWithUs />
         <Zohopage />
         <GoogleReview />
-        <Discover />
         <StudentsReview />
         <Courses />
         <MeetOurStars />
