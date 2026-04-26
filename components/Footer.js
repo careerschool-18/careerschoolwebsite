@@ -444,7 +444,7 @@ export default function Footer() {
               className="h-14 w-auto mb-3 object-contain"
             />
             <p className="text-[#004AAD] font-semibold text-lg mb-2">
-              📞 CSIT: 93422 86753 / 77089 38866
+              📞 CSIT: 89395 92323 / 77089 38866
             </p>
             <p className="text-gray-800 text-center mb-4 font-medium leading-relaxed text-sm px-2">
               📍 <span className="font-bold">Address:</span> Careerschool IT
