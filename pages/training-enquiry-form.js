@@ -177,6 +177,7 @@ export default function Form() {
     {
       label: "Combo Course",
       options: [
+        { label: "Kids Tech Bootcamp", value: "KIDS_TECH_BOOTCAMP" },
         { label: "Gen AI", value: "GEN_AI" },
         { label: "Crash Course in Nellore", value: "CRASH_COURSE_NELLORE" },
 
@@ -541,6 +542,27 @@ export default function Form() {
         </div>
       </div>
 
+      {/* ========== WHATSAPP BUTTON ADDED HERE ========== */}
+      <a
+        href="https://wa.me/918939592323?text=Hello%2C%0A%0AMy%20name%20is%20%5BYour%20Name%5D.%0A%0AI%20am%20interested%20in%20knowing%20more%20about%3A%0A-%20Course%20details%0A-%20Fees%20structure%0A-%20Batch%20timings%0A%0APlease%20share%20the%20details.%0A%0AThank%20you!"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-20 md:bottom-6 right-6 z-50"
+      >
+        <div className="relative">
+          {/* glow effect */}
+          <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+
+          <span className="relative bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-xl flex items-center justify-center transition-colors duration-200">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+              alt="WhatsApp"
+              className="w-7 h-7"
+            />
+          </span>
+        </div>
+      </a>
+
       <style jsx global>{`
         .phone-container {
           background-color: rgba(255, 255, 255, 0.9);
@@ -582,6 +604,23 @@ export default function Form() {
           width: 24px;
           height: auto;
           box-shadow: none !important;
+        }
+
+        /* WhatsApp button ping animation */
+        @keyframes ping {
+          0% {
+            transform: scale(1);
+            opacity: 0.75;
+          }
+          75%,
+          100% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+        }
+
+        .animate-ping {
+          animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
         }
       `}</style>
 

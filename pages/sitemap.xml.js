@@ -3,6 +3,9 @@ export async function getServerSideProps({ res }) {
 
   const urls = [
     "",
+    "/combo-course",
+    "/online-assessment",
+    "/training-enquiry-form",
     "/nellorepython",
   ];
 
@@ -16,7 +19,7 @@ ${urls
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${url === "" ? "1.0" : "0.9"}</priority>
-  </url>`
+  </url>`,
   )
   .join("")}
 </urlset>`;
