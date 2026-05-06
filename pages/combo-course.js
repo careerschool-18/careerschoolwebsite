@@ -187,6 +187,18 @@ const pageURL =
 const pageImage =
 "/public/DA Landing Page/combocourse-preview.jpeg";
 
+
+const companyLogos = [
+  "/Social Media Banner image/Social Media Banners - Google (1).jpg",
+  "/Nav Logo/CSHR - Nav Logo.png",
+  "/Zoho Images/ZOHO LOGO - Zoho Card.png",
+  "/companies/meta.png",
+  "/companies/netflix.png",
+  "/companies/zoho.png",
+  "/companies/tcs.png",
+  "/companies/infosys.png",
+];
+
 return (
 <>
 <Head>
@@ -333,11 +345,11 @@ availableLanguage: ["English"]
 
 </Head>
 
-      <div className="bg-gray-50 font-sans">
+      <div className="bg-black text-white font-sans">
         {/* ================= NAVBAR ================= */}
 <nav className="bg-white shadow sticky top-0 z-50">
 
-  <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+  <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-6">
 
     {/* LOGO SECTION */}
    {/* LOGO SECTION */}
@@ -474,119 +486,452 @@ availableLanguage: ["English"]
   )}
 </nav>
 
-        {/* ================= HERO ================= */}
-<section
-  className="relative text-white py-20 md:py-24 pb-40 md:pb-48 bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/DA Landing Page/dabanner.png')",
-  }}
->
-  {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/10"></div>
 
-  <div className="relative max-w-7xl mx-auto px-6">
+{/* ================= PREMIUM HERO ================= */}
 
-    {/* Hero Text */}
-<div className="max-w-2xl flex flex-col items-center md:items-start w-full">
+<section className="bg-black text-white min-h-[74vh] relative overflow-hidden pb-20">
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(139,92,246,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.18),transparent_35%)]"></div>
+  {/* Background Glow */}
+  <div className="absolute top-0 left-0 w-full h-full">
+    <div className="absolute top-20 left-20 w-72 h-64 bg-purple-600/20 blur-[120px] rounded-full"></div>
+    <div className="absolute bottom-10 right-10 w-72 h-64 bg-blue-600/20 blur-[120px] rounded-full"></div>
+  </div>
 
-  {/* Badge */}
-  <div className="mb-6 w-full">
-    <div
-      className="
-      w-full
-      text-sm md:text-base
-      font-bold
-      text-white
-      px-5 py-4
-      rounded-xl
-      bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600
-      shadow-lg
-      border border-white/20
-      flex items-center justify-center
-      hover:scale-105
-      transition-all duration-300
-      tracking-wide
-      "
-    >
-      ✨ 3 PREMIUM COURSES AT 1 PRICE
+  <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-6">
+
+    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
+
+      {/* LEFT CONTENT */}
+      <div>
+
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm mb-6 backdrop-blur-md">
+          🚀 #1 Combo Course Platform
+        </div>
+
+        {/* Heading */}
+        <h1 className="text-5xl md:text-6xl font-bold leading-[0.95]">
+          Master
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+            Combo Courses
+          </span>
+          With AI Tools
+        </h1>
+
+        {/* Description */}
+        <p className="text-gray-400 text-lg mt-6 max-w-xl leading-relaxed">
+          Learn Data Analytics, Python, AI Tools, HR Analytics,
+          Finance Analytics and more with real-world projects,
+          placement support and industry experts.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-wrap gap-4 mt-8">
+
+          <button
+            onClick={() => scrollToSection("enroll")}
+            className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl"
+          >
+            Enroll Now
+          </button>
+
+          <button
+            onClick={() => scrollToSection("reviews")}
+            className="border border-white/20 bg-white/5 backdrop-blur-md px-8 py-4 rounded-xl hover:bg-white/10 transition"
+          >
+            View Reviews
+          </button>
+
+        </div>
+
+        {/* Stats */}
+        <div className="flex gap-10 mt-12">
+
+          <div>
+            <h2 className="text-3xl font-bold">15K+</h2>
+            <p className="text-gray-400">Students</p>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-bold">100+</h2>
+            <p className="text-gray-400">Projects</p>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-bold">95%</h2>
+            <p className="text-gray-400">Placement</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDE CARDS */}
+      <div className="relative flex justify-center -mt-0.5">
+
+        <div className="flex gap-5 overflow-hidden">
+
+          {/* CARD 1 */}
+          <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden w-56 hover:scale-105 transition duration-500">
+
+            <img
+              src="/Student Review Images/Dhanush.jpg"
+              className="h-60 w-full object-cover"
+            />
+
+            <div className="p-5">
+              <h3 className="font-bold text-xl">Data Analytics</h3>
+              <p className="text-gray-400 text-sm mt-2">
+                Learn dashboards, SQL & Power BI
+              </p>
+            </div>
+
+          </div>
+
+          {/* CARD 2 */}
+          <div className="bg-white rounded-3xl overflow-hidden w-64 text-black hover:scale-105 transition duration-500 mt-10">
+
+            <img
+              src="/Student Review Images/Ferokhan.png"
+              className="h-60 w-full object-cover"
+            />
+
+            <div className="p-5">
+              <h3 className="font-bold text-xl">AI + Python</h3>
+              <p className="text-gray-600 text-sm mt-2">
+                AI tools + automation + real projects
+              </p>
+            </div>
+
+          </div>
+
+          {/* CARD 3 */}
+          <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden w-64 hover:scale-105 transition duration-500 hidden md:block">
+
+            <img
+              src="/Student Review Images/Sujitha.png"
+              className="h-60 w-full object-cover"
+            />
+
+            <div className="p-5">
+              <h3 className="font-bold text-xl">HR Analytics</h3>
+              <p className="text-gray-400 text-sm mt-2">
+                Build modern HR dashboards
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-  </div>  
 
-  {/* Heading */}
-  <h1 className="text-3xl md:text-5xl font-bold mb-6 text-center md:text-left">
-    ANY DOMAIN + DATA ANALYTICS + AI TOOLS
-  </h1>
-
-  {/* Subtitle */}
-  <p className="mb-6 text-lg text-center md:text-left">
-    Mastering Every Domain, securing Every Future With AI & Analytics.
-  </p>
-
-  {/* Button */}
-  {/* Hero Badges */}
-
-<div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 max-w-2xl">
-
-  {[
-    "Python + Analytics + AI Tools",
-    "HR + Analytics + AI Tools",
-    "Digital Marketing  + Analytics + AI Tools",
-    "Business Analysis  + Analytics + AI Tools",
-    "Finance  + Analytics + AI Tools",
-  ].map((item, index) => (
-
-    <button
-      key={item}
-      className={`
-      w-full
-      h-[60px]
-      flex items-center justify-center gap-2
-      text-sm md:text-base
-      font-semibold
-      text-white
-      px-8 py-4
-      rounded-xl
-      bg-gradient-to-r from-blue-600 to-indigo-600
-      hover:from-indigo-700 hover:to-blue-700
-      transition-all duration-300
-      shadow-lg hover:shadow-[0_0_20px_rgba(99,102,241,0.7)]
-      hover:-translate-y-1
-      border border-blue-400/30
-      ${index === 4 ? "md:col-span-2 md:w-1/2 md:mx-auto" : ""}
-      `}
-    >
-       {item}
-    </button>
-
-  ))}
-
-</div>
-</div>
-{/* Start Learning Button */}
-<div className="mt-5 flex justify-center md:hidden">
-  <button
-    onClick={() => scrollToSection("enroll")}
-    className="
-    w-full
-    bg-white
-    text-blue-600
-    px-10 py-4
-    rounded-xl
-    text-lg
-    font-bold
-    shadow-lg
-    hover:shadow-2xl
-    hover:bg-gray-100
-    transition-all duration-300
-    "
-  >
-    Start Learning
-  </button>
-</div>
-</div>
+  </div>
 
 </section>
 
+
+
+{/* ================= STICKY COMPANY LOGOS ================= */}
+
+<section className="sticky bottom-0 z-50 px-6 pb-4">
+
+  <div className="
+    relative
+    overflow-hidden
+    rounded-2xl
+    border border-white/10
+    bg-black/80
+    backdrop-blur-2xl
+    shadow-2xl
+    py-4
+  ">
+
+    {/* LEFT FADE */}
+    <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-black via-black/80 to-transparent z-10"></div>
+
+    {/* RIGHT FADE */}
+    <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-black via-black/80 to-transparent z-10"></div>
+
+    {/* MARQUEE */}
+    <div className="logo-marquee flex items-center justify-center gap-20 px-8">
+
+      {[...companyLogos, ...companyLogos].map((logo, index) => (
+
+        <div
+          key={index}
+          className="
+            flex
+            items-center
+            justify-center
+            min-w-[140px]
+          "
+        >
+
+          <img
+            src={logo}
+            alt="company logo"
+            className="
+              h-12
+              md:h-14
+              object-contain
+              align-middle
+              opacity-70
+              grayscale
+              hover:grayscale-0
+              hover:opacity-100
+              hover:scale-110
+              transition-all
+              duration-300
+            "
+          />
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
+
+{/* ================= COURSE FEATURES SECTION ================= */}
+
+<section className="bg-[#f5f5f7] py-24 rounded-t-[40px] relative z-20">
+
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* TOP SECTION */}
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+      {/* LEFT CONTENT */}
+      <div>
+
+        <p className="text-sm font-semibold text-purple-600 mb-4">
+          WHY CHOOSE US
+        </p>
+
+        <h2 className="text-5xl font-bold text-black leading-tight mb-6">
+          The only combo course you need to become industry ready
+        </h2>
+
+        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+          Learn Data Analytics, AI Tools, Python, HR Analytics,
+          Finance Analytics and Business Analytics with
+          real-world projects, mentorship and placement support.
+        </p>
+
+        {/* BUTTONS */}
+        <div className="flex gap-4 mb-10">
+
+          <button className="
+            bg-gradient-to-r
+            from-purple-600
+            to-blue-600
+            text-white
+            px-8
+            py-4
+            rounded-xl
+            font-semibold
+            shadow-xl
+            hover:scale-105
+            transition
+          ">
+            Enroll Now
+          </button>
+
+          <button className="
+            border
+            border-gray-300
+            text-black
+            px-8
+            py-4
+            rounded-xl
+            font-semibold
+            hover:bg-gray-100
+            transition
+          ">
+            View Curriculum
+          </button>
+
+        </div>
+
+        {/* FEATURES */}
+        <div className="space-y-5">
+
+          {[
+            "Learn design principles from research to creating functional interfaces.",
+            "Build real-world projects using tools like Figma and AI.",
+            "Develop skills in UI/UX, responsive layouts and prototyping.",
+            "Get expert feedback to refine your work."
+          ].map((item, index) => (
+
+            <div key={index} className="flex items-start gap-4">
+
+              <div className="
+                w-7
+                h-7
+                rounded-full
+                bg-purple-600
+                text-white
+                flex
+                items-center
+                justify-center
+                text-sm
+                font-bold
+                mt-1
+              ">
+                ✓
+              </div>
+
+              <p className="text-gray-700 leading-relaxed">
+                {item}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+      {/* RIGHT IMAGE */}
+      <div className="relative">
+
+        <div className="
+          bg-white
+          rounded-[32px]
+          shadow-2xl
+          overflow-hidden
+          border
+          border-gray-200
+        ">
+
+          <img
+            src="/DA Landing Page/student-learning.jpg"
+            alt="Learning"
+            className="w-full h-[500px] object-cover"
+          />
+
+        </div>
+
+        {/* FLOATING CARDS */}
+
+        <div className="
+          absolute
+          -right-8
+          top-10
+          bg-white
+          rounded-2xl
+          shadow-xl
+          p-5
+          w-60
+        ">
+
+          <div className="flex gap-3 items-start">
+
+            <div className="
+              w-10
+              h-10
+              rounded-full
+              bg-purple-100
+              text-purple-600
+              flex
+              items-center
+              justify-center
+              font-bold
+            ">
+              1
+            </div>
+
+            <div>
+              <h4 className="font-bold text-black">
+                Online Learning
+              </h4>
+
+              <p className="text-sm text-gray-500 mt-1">
+                Learn anywhere with live interactive classes.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="
+          absolute
+          -left-8
+          bottom-10
+          bg-white
+          rounded-2xl
+          shadow-xl
+          p-5
+          w-64
+        ">
+
+          <div className="flex gap-3 items-start">
+
+            <div className="
+              w-10
+              h-10
+              rounded-full
+              bg-blue-100
+              text-blue-600
+              flex
+              items-center
+              justify-center
+              font-bold
+            ">
+              2
+            </div>
+
+            <div>
+              <h4 className="font-bold text-black">
+                Hands-on Projects
+              </h4>
+
+              <p className="text-sm text-gray-500 mt-1">
+                Build real-world analytics and AI projects.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* BOTTOM DASHBOARD IMAGE */}
+    <div className="mt-28">
+
+      <div className="
+        rounded-[32px]
+        overflow-hidden
+        shadow-2xl
+        border
+        border-gray-200
+        bg-white
+      ">
+
+        <img
+          src="/DA Landing Page/dashboard-preview.png"
+          alt="Dashboard"
+          className="w-full object-cover"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
   {/* ================= FLOATING COMBO COURSES BOX ================= */}
 
 <div className="w-full mt-12 px-4">

@@ -143,3 +143,142 @@ html {
   border-radius: 12px;
   overflow: hidden;
 }
+/* ================= HERO TITLE ================= */
+
+.hero-title {
+  font-family: "2Dumb", sans-serif;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+  font-weight: 900;
+
+  font-size: clamp(42px, 5vw, 78px);
+
+  line-height: 0.95;
+  letter-spacing: 2px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  text-shadow:
+    0 4px 10px rgba(0,0,0,0.45);
+}
+
+/* EACH LINE */
+.hero-title .line {
+  display: block;
+}
+
+/* FIRST LINE ALIGNMENT */
+.hero-title .first-line {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  justify-content: center;
+
+  flex-wrap: nowrap;
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .hero-title .first-line {
+    justify-content: flex-start;
+  }
+}
+
+/* PREMIUM NO.1 */
+.no-gloss {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 1.2em;
+
+  line-height: 1;
+
+  background:
+    linear-gradient(
+      120deg,
+      #111 0%,
+      #555 25%,
+      #ffffff 50%,
+      #555 75%,
+      #111 100%
+    );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shineMove 4s linear infinite;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255,255,255,0.18));
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,0.45);
+}
+
+/* SHINE ANIMATION */
+@keyframes shineMove {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes marquee {
+  0% {
+  transform: translateX(0%);
+}
+
+100% {
+  transform: translateX(-50%);
+}
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLogos 28s linear infinite;
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.logo-marquee {
+  display: flex;
+  width: max-content;
+  animation: scrollRightToLeft 30s linear infinite;
+}
+
+@keyframes scrollRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
