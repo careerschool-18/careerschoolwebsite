@@ -1,47 +1,174 @@
 "use client";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
-export default function FullImage() {
+
+
+export default function HeroSection() {
+
+    const scrollToSection = (id) => {
+      const section = document.getElementById(id);
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    };
+
+  const [scrolled, setScrolled] = useState(false);
+  
+  const frameData = [
+    { image: "/Hero Banner Student/Appas Banner.webp", link: "https://www.instagram.com/reel/DYHRfcTTSbR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { image: "/Hero Banner Student/Rakesh Banner.webp", link: "https://www.instagram.com/reel/DWGer_8kzbp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { image: "/Hero Banner Student/Kokila Banner.webp", link: "https://www.instagram.com/reel/DU52o-Ck_d6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { image: "/Hero Banner Student/Gayathri Banner.webp", link: "https://www.instagram.com/reel/DTVWubakZ3K/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { image: "/Hero Banner Student/Riyasudeen.webp", link: "https://www.instagram.com/reel/DSKC6VkCGRV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { image: "/Hero Banner Student/Srinivas Banner.webp", link: "https://www.instagram.com/reel/DRPZBKCkY5v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { image: "/Hero Banner Student/Sneha Banner.webp", link: "https://www.linkedin.com/feed/update/urn:li:activity:7458961699233067008/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
+    { image: "/Hero Banner Student/Siddiq Banner.webp", link: "https://www.linkedin.com/posts/abubackar-siddiq-56339a383_jobdrive-srmuniversity-careeropportunities-activity-7450506585073778688-dmM0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
+    { image: "/Hero Banner Student/Thasleem Banner.webp", link: "https://www.linkedin.com/posts/thasleem-s_thank-you-to-careerschool-it-solutions-careerschool-share-7458192716322230272-f9HL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
+    { image: "/Hero Banner Student/Dhanush Banner.webp", link: "https://www.linkedin.com/posts/dhanush-siva-9b071526b_powerbi-dataanalytics-ipl-ugcPost-7458056176044531712-L1Xz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
+    { image: "/Hero Banner Student/Hasma Banner.webp", link: "https://www.linkedin.com/posts/right-skills-right-job-hasma-shaik-share-7451916472584437760-Ay6f?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
+  ];
+
   return (
-    <section className="relative w-full h-[100svh] overflow-hidden">
+    <section className="relative w-full min-h-screen overflow-hidden">
 
-      {/* Desktop Image */}
-      <img
-        src="/Home page images/Home Page - 3840 x 2160(updated).jpg"
-        alt="Desktop View"
-        className="hidden sm:block w-full h-full object-cover"
+      {/* Background Gradient */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(90deg, #2f80d1 0%, #1d5fae 40%, #0b3475 70%, #00164d 100%)",
+        }}
       />
 
-      {/* Mobile Image */}
-      <img
-        src="/Home page images/Home Page - 1080 x 920(updated).jpg"
-        alt="Mobile View"
-        className="block sm:hidden w-full h-full object-cover"
-        loading="eager"
-      />
+      {/* Soft Glow */}
+      <div className="absolute top-0 left-0 w-[60%] h-[60%] bg-white/10 blur-3xl opacity-30" />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-      {/* TEXT */}
-      <div className="absolute bottom-[32vh] sm:bottom-[25vh] w-full px-4 text-center">
-        <h1
-          className="
-            font-extrabold uppercase text-[#ffd02b]
-            drop-shadow-xl leading-tight
-            mx-auto max-w-[95%] sm:max-w-[85%]
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 py-12 gap-10">
 
-            /* Mobile */
-            text-[20px]
-            line-clamp-none
+        {/* LEFT SIDE */}
+        <div className="w-full lg:w-[50%] text-white text-center lg:text-left">
 
-            /* Tablet & Desktop */
-            sm:text-[clamp(25px,4vw,45px)]
-            sm:line-clamp-2
-          "
-        >
-          Your Trusted Training & <br /> Placement Hub
-        </h1>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold"
+            style={{ textShadow: "0 4px 8px rgba(0,0,0,0.3)" }}
+          >
+            <span className="india-flag-text">
+              INDIA'S
+            </span>
+
+            <br />
+
+            TRUSTED CAREER DEVELOPMENT PLATFORM FOR TECHNOLOGY AND MANAGEMENT
+          </h2>
+
+          {/* Buttons */}
+          <div className="flex gap-4 justify-center lg:justify-start flex-wrap mt-8">
+            <a
+              href={`https://wa.me/918939592323?text=${encodeURIComponent(
+                "Hi, I would like to know about the current job openings. Please let me know the available timings for a walk-in interview or a call with the HR team."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-black mt-10 px-6 py-3 rounded-lg font-semibold hover:scale-105 transition duration-300 inline-block"
+            >
+              Careerschool Jobs
+            </a>
+
+            <button onClick={() => scrollToSection("courses")} className="bg-yellow-400 text-black mt-10 px-6 py-3 rounded-lg font-semibold hover:scale-105 transition duration-300">
+              Careerschool Courses
+            </button>
+
+          </div>
+        </div>
+
+        {/* RIGHT SIDE - IMAGE GRID */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 w-full lg:w-1/2 place-items-center">
+
+          {frameData.map((frame, index) => (
+            <a
+              key={index}
+              href={frame.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="float-item relative w-[120px] h-[150px] cursor-pointer block"
+            >
+              <Image
+                src={frame.image}
+                alt={`Student ${index}`}
+                fill
+                className="object-contain rounded-lg drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
+              />
+            </a>
+        ))}
+
+        </div>
       </div>
+
+      {/* Floating Animation */}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translateY(0px) scale(1);
+          }
+
+          50% {
+            transform: translateY(-8px) scale(1);
+          }
+
+          100% {
+            transform: translateY(0px) scale(1);
+          }
+        }
+
+        .float-item {
+          animation: float 4s ease-in-out infinite;
+          transition: transform 1000ms
+        }
+
+        .float-item:hover {
+          animation: none;
+          transform: scale(1.1);
+          transition: transform 300ms ease-in-out;
+        }
+        
+        .india-flag-text {
+          display: inline-block;
+
+          background: linear-gradient(
+            90deg,
+            #ff9933 0%,
+            #ffb366 15%,
+            #ffffff 35%,
+            #dff5df 50%,
+            #138808 70%,
+            #46c646 85%,
+            #ff9933 100%
+            
+          );
+
+          /* large background for seamless looping */
+          background-size: 300% 100%;
+
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          animation: smoothIndiaFlow 8s linear infinite;
+        }
+
+        /* perfectly smooth infinite flow */
+        @keyframes smoothIndiaFlow {
+          from {
+            background-position: 0% center;
+          }
+
+          to {
+            background-position: -200% center;
+          }
+        }
+      `}</style>
 
     </section>
   );

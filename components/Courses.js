@@ -56,7 +56,7 @@ export default function Courses() {
     },
   ];
 
-  const enrollLink = "/training-enquiry-form";
+  const enrollLink = "/DataAnalytics";
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {

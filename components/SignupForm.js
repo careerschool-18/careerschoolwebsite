@@ -76,36 +76,42 @@ export default function Signup() {
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-100 px-4">
 
-      <div className="bg-white shadow-xl rounded-2xl p-10 w-full max-w-lg">
+      <div className="bg-white shadow-xl rounded-2xl p-6 sm:p-10 w-full max-w-lg">
 
         {/* ROLE SELECTOR */}
-        <div className="flex justify-center mb-8">
-          {errors.global && (
-            <div className="p-3 bg-red-100 text-red-700 rounded-lg text-sm mb-4">
-              {errors.global}
+          <div className="flex justify-center mb-8 w-full">
+            <div className="w-full">
+              
+              {errors.global && (
+                <div className="p-3 bg-red-100 text-red-700 rounded-lg text-sm mb-4">
+                  {errors.global}
+                </div>
+              )}
+
+              <div className="flex w-full bg-yellow-400 p-1 rounded-full shadow-md overflow-hidden">
+
+                {["student", "employee", "employer"].map((item) => (
+
+                  <button
+                    key={item}
+                    onClick={() => setRole(item)}
+                    className={`flex-1 min-w-0 py-2 text-[11px] sm:text-sm md:text-base font-semibold rounded-full transition-all duration-300
+                      ${
+                        role === item
+                          ? "bg-blue-600 text-white shadow-md"
+                          : "text-blue-800 hover:bg-yellow-300"
+                      }`}
+                  >
+                    <span className="truncate block">
+                      {item.charAt(0).toUpperCase() + item.slice(1)}
+                    </span>
+                  </button>
+
+                ))}
+
+              </div>
             </div>
-          )}
-
-          <div className="flex bg-yellow-400 p-1 rounded-full shadow-md">
-
-            {["student", "employee", "employer"].map((item) => (
-
-              <button
-                key={item}
-                onClick={() => setRole(item)}
-                className={`px-6 py-2 rounded-full font-semibold transition ${role === item
-                  ? "bg-blue-600 text-white shadow-md"
-                  : "text-blue-800 hover:bg-yellow-300"
-                  }`}
-              >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
-              </button>
-
-            ))}
-
           </div>
-
-        </div>
 
         {/* FORM */}
         <form onSubmit={handleSignup} className="space-y-5">
@@ -130,29 +136,33 @@ export default function Signup() {
           />
           {errors.email && <p className="text-sm text-red-500 mt-1">{errors.email}</p>}
 
-          {/* WHATSAPP */}
-          <input
-            type="tel"
-            placeholder="WhatsApp Number"
-            value={whatsapp}
-            onChange={(e) => setWhatsapp(e.target.value)}
-            className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {errors.whatsapp && <p className="text-sm text-red-500 mt-1">{errors.whatsapp}</p>}
+          <div className="grid grid-cols-2 gap-4">
 
-          <p className="text-xs text-gray-500">
-            This number will be used for contact and future OTP verification.
-          </p>
+            {/* WHATSAPP */}
+            <input
+              type="tel"
+              placeholder="WhatsApp Number"
+              value={whatsapp}
+              onChange={(e) => setWhatsapp(e.target.value)}
+              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            {errors.whatsapp && <p className="text-sm text-red-500 mt-1">{errors.whatsapp}</p>}
 
-          {/* ALTERNATE */}
-          <input
-            type="tel"
-            placeholder="Alternate Number"
-            value={alternate}
-            onChange={(e) => setAlternate(e.target.value)}
-            className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {errors.alternate && <p className="text-sm text-red-500 mt-1">{errors.alternate}</p>}
+            
+
+            {/* ALTERNATE */}
+            <input
+              type="tel"
+              placeholder="Alternate Number"
+              value={alternate}
+              onChange={(e) => setAlternate(e.target.value)}
+              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            {errors.alternate && <p className="text-sm text-red-500 mt-1">{errors.alternate}</p>}
+
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
 
           {/* CITY */}
           <input
@@ -171,6 +181,8 @@ export default function Signup() {
             onChange={(e) => setSelectedState(e.target.value)}
             className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+
+          </div>  
 
           {/* COLLEGE */}
           <input

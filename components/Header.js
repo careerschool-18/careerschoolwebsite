@@ -15,6 +15,7 @@ export default function Header() {
   const hireStudentsLink = "https://wa.me/7305014818";
   const contactLink = "https://wa.me/7708938866";
   const takeTestFormLink = "/online-assessment";
+  const LoginLink = "/login";
 
   // Scroll behavior (only for header hide/show)
   useEffect(() => {
@@ -67,25 +68,15 @@ export default function Header() {
           {/* Divider */}
           <div className="h-6 w-[1px] bg-gray-300"></div>
 
-          {/* CSIT */}
-          <img
-            src="/Nav Logo/CSIT - Nav Logo.png"
-            className="h-7 sm:h-9 md:h-10 object-contain"
-          />
-
           {/* Divider */}
           <div className="h-6 w-[1px] bg-gray-300"></div>
 
           {/* ZOHO (with label below) */}
           <div className="flex flex-col items-center">
             <img
-              src="/Nav Logo/ZOHO Logo Nav.png"
+              src="/Zoho Images/ZOHO LOGO - Zoho Card.png"
               className="h-7 sm:h-7 md:h-9 object-contain"
             />
-
-            <span className="text-[10px] sm:text-xs text-gray-600 font-semibold text-center mt-1">
-              Authorized Training Partner
-            </span>
           </div>
         </div>
 
@@ -117,6 +108,14 @@ export default function Header() {
             </button>
           </a>
         </nav>
+
+      {/*  <a href={LoginLink}>
+            <button className="bg-blue-600 text-white px-6 py-2 rounded font-bold">
+              Login
+            </button>
+        </a>
+
+      */}
 
         {/* CONTACT */}
 
@@ -152,6 +151,12 @@ export default function Header() {
           <a href={hireStudentsLink}>
             <button className="bg-blue-100 px-6 py-2 rounded">
               Hire Students
+            </button>
+          </a>
+
+          <a href={LoginLink}>
+            <button className="bg-blue-600 text-white px-6 py-2 rounded font-bold">
+              Login
             </button>
           </a>
 
