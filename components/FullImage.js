@@ -73,16 +73,16 @@ export default function HeroSection() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-black mt-6 sm:mt-10 px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 inline-block w-full sm:w-auto text-center"
+                className="bg-white text-black mt-6 sm:mt-10 px-9 sm:px-11 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 inline-block w-full sm:w-auto text-center"
               >
-                Careerschool Jobs
+                CAREERSCHOOL JOBS
               </a>
 
               <button
                 onClick={() => scrollToSection("courses")}
                 className="bg-yellow-400 text-black mt-6 sm:mt-10 px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 w-full sm:w-auto"
               >
-                Careerschool Courses
+                CAREERSCHOOL TRAININGS
               </button>
 
             </div>
