@@ -2,7 +2,7 @@
 
 export default function HeroBanner() {
   // Link to your NewYearOffer2026 page
-  const offerPageUrl = "/combo-course";
+  const offerPageUrl = "/data-analytics-ai-course";
 
   return (
     <section className="relative overflow-hidden bg-[#f9ca1b] py-1 sm:py-2">
@@ -15,7 +15,7 @@ export default function HeroBanner() {
           rel="noopener noreferrer"
           className="z-20 flex-shrink-0"
         >
-          <button className="bg-[#1f4a7e] text-[#f9ca1b] px-4 sm:px-6 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2">
+          <button className="bg-[#1f4a7e] text-[#f9ca1b] px-2 sm:px-3 py-1.5 sm:py-2 font-semibold rounded-[7px] text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:bg-[#173a65] focus:outline-none focus:ring-2 focus:ring-[#1f4a7e] focus:ring-offset-2">
             ENROLL NOW
           </button>
         </a>
@@ -26,14 +26,13 @@ export default function HeroBanner() {
           style={{ right: "min(8vw, 180px)" }}
         >
           <div className="marquee-track text-sm sm:text-lg md:text-xl xl:text-2xl font-bold text-[#1f4a7e]">
-  <span className="mr-12">
-    • 3 Premium Course @ 1 Price | Analytics Combo Program with AI Tools
-  </span>
-
-  <span>
-    • 3 Premium Course @ 1 Price | Analytics Combo Program with AI Tools •
-  </span>
-</div>
+            <span>
+             Learn The Super Power Behind Smart Decisions | Data Analytics with AI | Offline & Online Sessions •
+            </span>
+            <span>
+             Learn The Super Power Behind Smart Decisions | Data Analytics with AI | Offline & Online Sessions •
+            </span>
+          </div>
         </div>
       </div>
 
