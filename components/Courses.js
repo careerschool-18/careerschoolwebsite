@@ -56,7 +56,7 @@ export default function Courses() {
     },
   ];
 
-  const enrollLink = "/DataAnalytics";
+  const enrollLink = "/data-analytics-ai-course";
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {

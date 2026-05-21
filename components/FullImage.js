@@ -14,17 +14,17 @@ export default function HeroSection() {
   const [scrolled, setScrolled] = useState(false);
   
   const frameData = [
-    { image: "/Hero Banner Student/Appas Banner.webp", link: "https://www.instagram.com/reel/DYHRfcTTSbR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-    { image: "/Hero Banner Student/Rakesh Banner.webp", link: "https://www.instagram.com/reel/DWGer_8kzbp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-    { image: "/Hero Banner Student/Kokila Banner.webp", link: "https://www.instagram.com/reel/DU52o-Ck_d6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-    { image: "/Hero Banner Student/Gayathri Banner.webp", link: "https://www.instagram.com/reel/DTVWubakZ3K/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-    { image: "/Hero Banner Student/Riyasudeen.webp", link: "https://www.instagram.com/reel/DSKC6VkCGRV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-    { image: "/Hero Banner Student/Srinivas Banner.webp", link: "https://www.instagram.com/reel/DRPZBKCkY5v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { image: "/Hero Banner Student/Appas Banner.webp", link: "https://youtube.com/shorts/LSASGf5u7gE?si=p80jvjCtDg8iZEkL" },
+    { image: "/Hero Banner Student/Rakesh Banner.webp", link: "https://youtube.com/shorts/XChAnt4XhKA?si=Wh1vw4GYV857v_uC" },
+    { image: "/Hero Banner Student/Kokila Banner.webp", link: "https://youtube.com/shorts/fd23oWEWE-k?si=l9bMA5M2ejTL-1-1" },
+    { image: "/Hero Banner Student/Gayathri Banner.webp", link: "https://youtube.com/shorts/4oGEpUAHbn0?si=mfydq8Am1lrctdj9" },
+    { image: "/Hero Banner Student/Riyasudeen.webp", link: "https://youtube.com/shorts/lluWa-rLirU?si=kApKEc5C_OVjq2J2" },
+    { image: "/Hero Banner Student/Srinivas Banner.webp", link: "https://youtu.be/Dxw0yIA_9qw?si=HYR_OQfm2SNyFWs0" },
     { image: "/Hero Banner Student/Sneha Banner.webp", link: "https://www.linkedin.com/feed/update/urn:li:activity:7458961699233067008/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
     { image: "/Hero Banner Student/Siddiq Banner.webp", link: "https://www.linkedin.com/posts/abubackar-siddiq-56339a383_jobdrive-srmuniversity-careeropportunities-activity-7450506585073778688-dmM0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
     { image: "/Hero Banner Student/Thasleem Banner.webp", link: "https://www.linkedin.com/posts/thasleem-s_thank-you-to-careerschool-it-solutions-careerschool-share-7458192716322230272-f9HL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
     { image: "/Hero Banner Student/Dhanush Banner.webp", link: "https://www.linkedin.com/posts/dhanush-siva-9b071526b_powerbi-dataanalytics-ipl-ugcPost-7458056176044531712-L1Xz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
-    { image: "/Hero Banner Student/Hasma Banner.webp", link: "https://www.linkedin.com/posts/right-skills-right-job-hasma-shaik-share-7451916472584437760-Ay6f?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyT6p4BnuGXSZWAph-ReTQElDyDqUml-ks" },
+    { image: "/Hero Banner Student/Hasma Banner.webp", link: "https://youtube.com/shorts/mBaM14b4Xbs?si=qSps-sCqRKlVTgWJ" },
   ];
 
   return (
@@ -65,23 +65,27 @@ export default function HeroSection() {
           </h2>
 
           {/* Buttons */}
-          <div className="flex gap-4 justify-center lg:justify-start flex-wrap mt-8">
-            <a
-              href={`https://wa.me/918939592323?text=${encodeURIComponent(
-                "Hi, I would like to know about the current job openings. Please let me know the available timings for a walk-in interview or a call with the HR team."
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-black mt-10 px-6 py-3 rounded-lg font-semibold hover:scale-105 transition duration-300 inline-block"
-            >
-              Careerschool Jobs
-            </a>
+            <div className="flex gap-4 justify-center lg:justify-start flex-wrap mt-8">
 
-            <button onClick={() => scrollToSection("courses")} className="bg-yellow-400 text-black mt-10 px-6 py-3 rounded-lg font-semibold hover:scale-105 transition duration-300">
-              Careerschool Courses
-            </button>
+              <a
+                href={`https://wa.me/918939592323?text=${encodeURIComponent(
+                  "Hi, I would like to know about the current job openings. Please let me know the available timings for a walk-in interview or a call with the HR team."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black mt-6 sm:mt-10 px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 inline-block w-full sm:w-auto text-center"
+              >
+                Careerschool Jobs
+              </a>
 
-          </div>
+              <button
+                onClick={() => scrollToSection("courses")}
+                className="bg-yellow-400 text-black mt-6 sm:mt-10 px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 w-full sm:w-auto"
+              >
+                Careerschool Courses
+              </button>
+
+            </div>
         </div>
 
         {/* RIGHT SIDE - IMAGE GRID */}

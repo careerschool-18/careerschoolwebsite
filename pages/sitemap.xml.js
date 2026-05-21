@@ -3,7 +3,7 @@ export async function getServerSideProps({ res }) {
 
   const urls = [
     "",
-    "/combo-course",
+    "/data-analytics-ai-course",
     "/online-assessment",
     "/training-enquiry-form",
     "/nellorepython",

@@ -2,7 +2,7 @@
 
 export default function HeroBanner() {
   // Link to your NewYearOffer2026 page
-  const offerPageUrl = "/nellorepython";
+  const offerPageUrl = "/data-analytics-ai-course";
 
   return (
     <section className="relative overflow-hidden bg-[#f9ca1b] py-1 sm:py-2">

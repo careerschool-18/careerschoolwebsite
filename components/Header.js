@@ -68,8 +68,7 @@ export default function Header() {
           {/* Divider */}
           <div className="h-6 w-[1px] bg-gray-300"></div>
 
-          {/* Divider */}
-          <div className="h-6 w-[1px] bg-gray-300"></div>
+          
 
           {/* ZOHO (with label below) */}
           <div className="flex flex-col items-center">
