@@ -82,14 +82,14 @@ export default function HeroSection() {
                 onClick={() => scrollToSection("courses")}
                 className="bg-yellow-400 text-black mt-6 sm:mt-10 px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 w-full sm:w-auto"
               >
-                CAREERSCHOOL TRAININGS
+                CAREERSCHOOL TRAINING
               </button>
 
             </div>
         </div>
 
         {/* RIGHT SIDE - IMAGE GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-7 w-full lg:w-1/2 place-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 w-full lg:w-1/2 place-items-center">
 
           {frameData.map((frame, index) => (
             <a
@@ -99,8 +99,8 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="float-item relative w-[120px] h-[150px] cursor-pointer block"
             >
-              <div className="absolute left-2 top-1/2 -translate-y-1/2 bg-yellow-400/95 text-black text-[10px] px-2 py-1 rounded-full font-medium shadow flex items-center gap-1">
-                ▶ Watch
+              <div className="absolute left-2 top-1/4 -translate-y-1/2 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center shadow animate-pulse">
+                <span className="text-black text-xs font-bold">▶</span>
               </div>
               <Image
                 src={frame.image}

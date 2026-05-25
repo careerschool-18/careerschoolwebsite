@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 
 export default function Courses() {
+
   const enrollLink = "/data-analytics-ai-course";
   const trainingLink = "/training-enquiry-form";
   const courses = [
