@@ -56,7 +56,7 @@ export default function HeroSection() {
             style={{ textShadow: "0 4px 8px rgba(0,0,0,0.3)" }}
           >
             <span className="india-flag-text">
-              INDIA'S
+              INDIA's
             </span>
 
             <br />
@@ -89,7 +89,7 @@ export default function HeroSection() {
         </div>
 
         {/* RIGHT SIDE - IMAGE GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 w-full lg:w-1/2 place-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-7 w-full lg:w-1/2 place-items-center">
 
           {frameData.map((frame, index) => (
             <a
@@ -99,6 +99,9 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="float-item relative w-[120px] h-[150px] cursor-pointer block"
             >
+              <div className="absolute left-2 top-1/2 -translate-y-1/2 bg-yellow-400/95 text-black text-[10px] px-2 py-1 rounded-full font-medium shadow flex items-center gap-1">
+                ▶ Watch
+              </div>
               <Image
                 src={frame.image}
                 alt={`Student ${index}`}

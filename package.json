@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "country-state-city": "^3.2.1",
     "framer-motion": "^12.34.1",
     "lucide-react": "^0.546.0",
     "mysql2": "^3.16.2",

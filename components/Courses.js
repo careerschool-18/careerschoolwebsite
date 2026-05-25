@@ -2,12 +2,15 @@
 import { useEffect, useState } from "react";
 
 export default function Courses() {
+  const enrollLink = "/data-analytics-ai-course";
+  const trainingLink = "/training-enquiry-form";
   const courses = [
     {
       title: "Python Full Stack + Analytics + AI",
       duration: "3 Months (Rapid Learning)",
       highlight: "Internship & Placement Support",
       poster: "/Training cards image/Python-card.jpeg",
+      redirect: trainingLink,
     },
     {
       title: "Data Analytics + AI",
@@ -15,6 +18,7 @@ export default function Courses() {
       highlight: "Internship & Placement Support",
       poster: "/Training cards image/data-analytics-card.jpeg",
       label: { text: "MOST PREFERRED 📈", color: "bg-red-600" },
+      redirect: enrollLink,
     },
     {
       title: "HR with Analytics + AI",
@@ -22,6 +26,7 @@ export default function Courses() {
       highlight: "ZOHO Pay Roll Module Included",
       poster: "/Training cards image/hr-analytics-card.jpeg",
       label: { text: "MOST PREFERRED 📈", color: "bg-red-600" },
+      redirect: trainingLink,
     },
     {
       title: "ZOHO Payroll",
@@ -29,34 +34,39 @@ export default function Courses() {
       highlight: "Live Payroll Processing + Certification",
       poster: "/Training cards image/zoho-card.jpeg",
       label: { text: "RECENTLY ADDED", color: "bg-red-600" },
+      redirect: trainingLink,
     },
     {
       title: "Digital Marketing",
       duration: "3 Months (Rapid Learning)",
       highlight: "Internship & Placement Support",
       poster: "/Training cards image/digitalmarketing-card.jpeg",
+      redirect: trainingLink,
     },
     {
       title: "Java Full Stack + Analytics + AI",
       duration: "3 Months (Rapid Learning)",
       highlight: "Internship & Placement Support",
       poster: "/Training cards image/Java-card.jpeg",
+      redirect: trainingLink,
     },
     {
       title: "AI + Analytics",
       duration: "3 Months (Rapid Learning)",
       highlight: "Analytics + Elective Subject Included",
       poster: "/Training cards image/ai-card.jpeg",
+      redirect: trainingLink,
     },
     {
       title: "Finance & Accounting",
       duration: "3 Months (Rapid Learning)",
       highlight: "Internship & Placement Support",
       poster: "/Training cards image/fin-acc-card.jpeg",
+      redirect: trainingLink,
     },
   ];
 
-  const enrollLink = "/data-analytics-ai-course";
+  
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -103,7 +113,7 @@ export default function Courses() {
 
         {/* mt-auto pushes the button to the very bottom of the card */}
         <div className="mt-auto">
-          <a href={enrollLink}>
+          <a href={course.redirect}>
             <button
               className="font-bold px-5 py-2 rounded-full text-xs transition hover:scale-[1.05]"
               style={{ backgroundColor: "#FFFFFF", color: "#004AAD" }}
