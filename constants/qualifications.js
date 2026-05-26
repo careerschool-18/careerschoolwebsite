@@ -102,4 +102,7 @@ export const qualifications = [
   "Experienced Candidates",
   "No Degree Required"
 
-];
+].map((qualification) => ({
+  value: qualification,
+  label: qualification
+}));

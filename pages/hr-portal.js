@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Select from "react-select";
 import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import { qualifications } from "../constants/qualifications";
@@ -10,12 +11,13 @@ const PostJobs = () => {
   const [activeJobs, setActiveJobs] = useState([]);
   const [expiredJobs, setExpiredJobs] = useState([]);
   const [error, setError] = useState("");
+  const [editJobId, setEditJobId] = useState(null);
 
   const [formData, setFormData] = useState({
     jobTitle: "",
     domain: "",
-    qualification: "",
-    location: "",
+    qualification: [],
+    location: [],
     employmentType: "",
     jobDescription: "",
     skills: "",
@@ -30,27 +32,74 @@ const PostJobs = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
+
     e.preventDefault();
+
     try {
+
+      const payload = {
+
+        ...formData,
+
+        qualification: formData.qualification
+          .map((q) => q.value)
+          .join(", "),
+
+        location: formData.location
+          .map((loc) => loc.value)
+          .join(", ")
+      };
+
       const response = await fetch(
-        "http://localhost:8080/api/jobs",
+        editJobId
+          ? `http://localhost:8080/api/jobs/${editJobId}`
+          : "http://localhost:8080/api/jobs",
         {
-          method: "POST",
+          method: editJobId ? "PUT" : "POST",
+
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(formData)
+
+          body: JSON.stringify(payload)
         }
       );
-      if(response.ok){
+
+      if (response.ok) {
+
         alert("Job posted successfully");
-        setFormData({ jobTitle: "", domain: "", qualification: "", location: "", employmentType: "", jobDescription: "", skills: "", salaryRange: "", applicationDeadline: "" });
+
+        setFormData({
+          jobTitle: "",
+          domain: "",
+          qualification: [],
+          location: [],
+          employmentType: "",
+          jobDescription: "",
+          skills: "",
+          salaryRange: "",
+          applicationDeadline: ""
+        });
+
+        setEditJobId(null);
+
         await fetchActiveJobs();
+
         await fetchExpiredJobs();
+
+      } else {
+
+        alert("Failed to post job");
+
       }
-    } catch(error){
+
+    } catch (error) {
+
       console.error(error);
+
+      alert("Error posting job");
+
     }
   };
   
@@ -74,6 +123,82 @@ const PostJobs = () => {
       console.error("Error fetching expired jobs:", error);
       setError("Failed to load expired jobs");
     }
+  };
+
+  const deleteJob = async (id) => {
+
+    try {
+
+      const response = await fetch(
+        `http://localhost:8080/api/jobs/${id}`,
+        {
+          method: "DELETE"
+        }
+      );
+
+      if (response.ok) {
+
+        alert("Job deleted successfully");
+
+        await fetchActiveJobs();
+
+        await fetchExpiredJobs();
+
+      } else {
+
+        alert("Failed to delete job");
+
+      }
+
+    } catch (error) {
+
+      console.error("Delete error:", error);
+
+      alert("Error deleting job");
+
+    }
+  };
+
+  const handleEdit = (job) => {
+
+    setEditJobId(job.id);
+
+    setFormData({
+
+      jobTitle: job.jobTitle || "",
+
+      domain: job.domain || "",
+
+      qualification: job.qualification
+        ? job.qualification.split(", ").map((q) => ({
+            value: q,
+            label: q
+          }))
+        : [],
+
+      location: job.location
+        ? job.location.split(", ").map((loc) => ({
+            value: loc,
+            label: loc
+          }))
+        : [],
+
+      employmentType: job.employmentType || "",
+
+      jobDescription: job.jobDescription || "",
+
+      skills: job.skills || "",
+
+      salaryRange: job.salaryRange || "",
+
+      applicationDeadline: job.applicationDeadline || ""
+
+    });
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
 
   useEffect(() => {
@@ -144,26 +269,50 @@ const PostJobs = () => {
 
             {/* Qualification */}
             <div>
-              <label className="block font-semibold mb-2">Qualification</label>
-              <select name="qualification" value={formData.qualification} onChange={handleChange} className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500" required>
-                <option value="">Select Qualification</option>
-                {qualifications.map((qualification) => (
-                  <option key={qualification} value={qualification}>{qualification}</option>
-                ))}
-              </select>
+              <label className="block font-semibold mb-2">
+                Qualification
+              </label>
+
+              <Select
+                isMulti
+                options={qualifications}
+
+                value={formData.qualification}
+
+                onChange={(selectedOptions) =>
+                  setFormData({
+                    ...formData,
+                    qualification: selectedOptions
+                  })
+                }
+
+                className="text-black"
+                placeholder="Select Qualifications"
+              />
             </div>
 
             {/* Location */}
             <div>
-              <label className="block font-semibold mb-2">Location</label>
-              <select name="location" value={formData.location} onChange={handleChange} className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500" required>
-                <option value="">Select Location</option>
-                {indianCities.map((city) => (
-                  <option key={city} value={city}>{city}</option>
-                ))}
-                <option value="Remote">Remote</option>
-                <option value="Hybrid">Hybrid</option>
-              </select>
+              <label className="block font-semibold mb-2">
+                Location
+              </label>
+
+              <Select
+                isMulti
+                options={indianCities}
+
+                value={formData.location}
+
+                onChange={(selectedOptions) =>
+                  setFormData({
+                    ...formData,
+                    location: selectedOptions
+                  })
+                }
+
+                className="text-black"
+                placeholder="Select Locations"
+              />
             </div>
 
             {/* Employment Type */}
@@ -204,7 +353,7 @@ const PostJobs = () => {
 
             {/* Submit Button */}
             <button type="submit" className="w-full bg-blue-700 hover:bg-blue-800 text-white py-4 rounded-2xl text-lg font-bold transition">
-              Publish Job
+              {editJobId ? "Update Job" : "Publish Job"}
             </button>
           </form>
         </div>
@@ -226,9 +375,70 @@ const PostJobs = () => {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {activeJobs.map((job) => (
-                  <div key={job.id} className="bg-blue-50 rounded-3xl p-6 border-t-8 border-yellow-400 shadow-md hover:shadow-xl transition">
-                    <h3 className="text-2xl font-bold text-blue-800">{job.jobTitle}</h3>
+                  <div
+                  key={job.id}
+                  className="bg-white rounded-3xl p-7 shadow-lg hover:shadow-2xl transition border-t-8 border-yellow-400"
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h4 className="text-2xl font-bold text-blue-800">
+                        {job.jobTitle}
+                      </h4>
+                    </div>
+
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                      job.employmentType === "FULL_TIME"
+                        ? "bg-green-500 text-white"
+                        : job.employmentType === "PART_TIME"
+                          ? "bg-yellow-500 text-white"
+                          : job.employmentType === "CONTRACT"
+                            ? "bg-purple-500 text-white"
+                            : job.employmentType === "INTERNSHIP"
+                              ? "bg-orange-500 text-white"
+                              : "bg-blue-500 text-white"
+                    }`}
+                    >
+                      {job.employmentType.replace("_", " ")}
+                    </span>
                   </div>
+
+                  <div className="space-y-3 mt-6">
+                    <p className="text-gray-700 text-lg">
+                      📍 <span className="font-medium">Location:</span>{" "}
+                      {job.location}
+                    </p>
+
+                    <p className="text-gray-700 text-lg">
+                      💰 <span className="font-medium">Salary:</span> {job.salaryRange}
+                    </p>
+
+                    <p>
+                      <strong>Domain:</strong> {job.domain}
+                    </p>
+
+                    <p>
+                      <strong>Qualification:</strong> {job.qualification}
+                    </p>
+
+                    <p>
+                      <strong>Skills:</strong> {job.skills}
+                    </p>
+
+                    <p>
+                      <strong>Deadline:</strong> {job.applicationDeadline}
+                    </p>
+                  </div>
+
+                  <button
+                    onClick={() => handleEdit(job)}
+                    className="w-full mt-8 py-4 rounded-2xl text-lg font-semibold transition bg-yellow-500 hover:bg-yellow-600 text-white"
+                  >
+                    Edit Job
+                  </button>
+
+                  
+                </div>
                 ))}
               </div>
             )}
@@ -281,7 +491,10 @@ const PostJobs = () => {
                     <p className="mt-5 text-gray-600">{job.jobDescription}</p>
 
                     {/* DELETE BUTTON */}
-                    <button className="mt-6 w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-2xl font-semibold transition">
+                    <button
+                      onClick={() => deleteJob(job.id)}
+                      className="mt-6 w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-2xl font-semibold transition"
+                    >
                       Delete Job
                     </button>
                   </div>
