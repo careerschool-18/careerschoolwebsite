@@ -56,7 +56,7 @@ export default function HeroSection() {
             style={{ textShadow: "0 4px 8px rgba(0,0,0,0.3)" }}
           >
             <span className="india-flag-text">
-              INDIA'S
+              INDIA's
             </span>
 
             <br />
@@ -82,7 +82,7 @@ export default function HeroSection() {
                 onClick={() => scrollToSection("courses")}
                 className="bg-yellow-400 text-black mt-6 sm:mt-10 px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 w-full sm:w-auto"
               >
-                CAREERSCHOOL TRAININGS
+                CAREERSCHOOL TRAINING
               </button>
 
             </div>
@@ -99,6 +99,9 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="float-item relative w-[120px] h-[150px] cursor-pointer block"
             >
+              <div className="absolute left-2 top-1/4 -translate-y-1/2 w-7 h-7 bg-yellow-400 rounded-full flex items-center justify-center shadow animate-pulse">
+                <span className="text-black text-xs font-bold">▶</span>
+              </div>
               <Image
                 src={frame.image}
                 alt={`Student ${index}`}
