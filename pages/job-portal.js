@@ -26,6 +26,7 @@ const JobPortal = () => {
 };
 
   const [appliedJobs, setAppliedJobs] = useState([]);
+  const [expandedJobs, setExpandedJobs] = useState([]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -172,10 +173,6 @@ const JobPortal = () => {
                     </p>
 
                     <p>
-                      <strong>Domain:</strong> {job.domain}
-                    </p>
-
-                    <p>
                       <strong>Qualification:</strong> {job.qualification}
                     </p>
 
@@ -186,6 +183,53 @@ const JobPortal = () => {
                     <p>
                       <strong>Deadline:</strong> {job.applicationDeadline}
                     </p>
+                  </div>
+
+                  <div className="mt-5">
+
+                    <p
+                      className={`text-gray-600 transition-all duration-300 ${
+                        expandedJobs.includes(job.id)
+                          ? ""
+                          : "line-clamp-2"
+                      }`}
+                    >
+                      {job.jobDescription}
+                    </p>
+
+                    {job.jobDescription?.length > 120 && (
+
+                      <button
+                        onClick={() => {
+
+                          if (expandedJobs.includes(job.id)) {
+
+                            setExpandedJobs(
+                              expandedJobs.filter((id) => id !== job.id)
+                            );
+
+                          } else {
+
+                            setExpandedJobs([
+                              ...expandedJobs,
+                              job.id
+                            ]);
+
+                          }
+
+                        }}
+
+                        className="mt-2 text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                      >
+
+                        {expandedJobs.includes(job.id)
+                          ? "Show Less"
+                          : "Read More"}
+
+                      </button>
+
+                    )}
+
                   </div>
 
                   <button

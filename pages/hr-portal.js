@@ -12,6 +12,7 @@ const PostJobs = () => {
   const [expiredJobs, setExpiredJobs] = useState([]);
   const [error, setError] = useState("");
   const [editJobId, setEditJobId] = useState(null);
+  const [expandedJobs, setExpandedJobs] = useState([]);
 
   const [formData, setFormData] = useState({
     jobTitle: "",
@@ -261,11 +262,6 @@ const handleSubmit = async (e) => {
               <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleChange} placeholder="Frontend Developer" className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500" required />
             </div>
 
-            {/* Domain */}
-            <div>
-              <label className="block font-semibold mb-2">Domain</label>
-              <input type="text" name="domain" value={formData.domain} onChange={handleChange} placeholder="Software Development" className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500" required />
-            </div>
 
             {/* Qualification */}
             <div>
@@ -414,10 +410,6 @@ const handleSubmit = async (e) => {
                     </p>
 
                     <p>
-                      <strong>Domain:</strong> {job.domain}
-                    </p>
-
-                    <p>
                       <strong>Qualification:</strong> {job.qualification}
                     </p>
 
@@ -428,6 +420,53 @@ const handleSubmit = async (e) => {
                     <p>
                       <strong>Deadline:</strong> {job.applicationDeadline}
                     </p>
+
+                    <div className="mt-5">
+
+                      <p
+                        className={`text-gray-600 transition-all duration-300 ${
+                          expandedJobs.includes(job.id)
+                            ? ""
+                            : "line-clamp-2"
+                        }`}
+                      >
+                        {job.jobDescription}
+                      </p>
+
+                      {job.jobDescription?.length > 120 && (
+
+                        <button
+                          onClick={() => {
+
+                            if (expandedJobs.includes(job.id)) {
+
+                              setExpandedJobs(
+                                expandedJobs.filter((id) => id !== job.id)
+                              );
+
+                            } else {
+
+                              setExpandedJobs([
+                                ...expandedJobs,
+                                job.id
+                              ]);
+
+                            }
+
+                          }}
+
+                          className="mt-2 text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                        >
+
+                          {expandedJobs.includes(job.id)
+                            ? "Show Less"
+                            : "Read More"}
+
+                        </button>
+
+                      )}
+
+                    </div>
                   </div>
 
                   <button
@@ -480,15 +519,58 @@ const handleSubmit = async (e) => {
                     {/* DETAILS */}
                     <div className="space-y-2 mt-5 text-gray-700">
                       <p>📍 <strong>Location:</strong> {job.location}</p>
-                      <p>💼 <strong>Domain:</strong> {job.domain}</p>
                       <p>🎓 <strong>Qualification:</strong> {job.qualification}</p>
                       <p>🛠️ <strong>Skills:</strong> {job.skills}</p>
                       <p>💰 <strong>Salary:</strong> {job.salaryRange || "Not Mentioned"}</p>
                       <p>📅 <strong>Deadline:</strong> {job.applicationDeadline}</p>
                     </div>
 
-                    {/* DESCRIPTION */}
-                    <p className="mt-5 text-gray-600">{job.jobDescription}</p>
+                    <div className="mt-5">
+
+                      <p
+                        className={`text-gray-600 transition-all duration-300 ${
+                          expandedJobs.includes(job.id)
+                            ? ""
+                            : "line-clamp-2"
+                        }`}
+                      >
+                        {job.jobDescription}
+                      </p>
+
+                      {job.jobDescription?.length > 120 && (
+
+                        <button
+                          onClick={() => {
+
+                            if (expandedJobs.includes(job.id)) {
+
+                              setExpandedJobs(
+                                expandedJobs.filter((id) => id !== job.id)
+                              );
+
+                            } else {
+
+                              setExpandedJobs([
+                                ...expandedJobs,
+                                job.id
+                              ]);
+
+                            }
+
+                          }}
+
+                          className="mt-2 text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                        >
+
+                          {expandedJobs.includes(job.id)
+                            ? "Show Less"
+                            : "Read More"}
+
+                        </button>
+
+                      )}
+
+                    </div>
 
                     {/* DELETE BUTTON */}
                     <button
