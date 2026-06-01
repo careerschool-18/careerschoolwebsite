@@ -71,7 +71,7 @@ export default function HeroSection() {
                 /*href={`https://wa.me/918939592323?text=${encodeURIComponent(
                   "Hi, I would like to know about the current job openings. Please let me know the available timings for a walk-in interview or a call with the HR team."
                 )}`}*/
-                href="/training-enquiry-form"
+                href="/careerschool-jobs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-black mt-6 sm:mt-10 px-9 sm:px-11 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 inline-block w-full sm:w-auto text-center"

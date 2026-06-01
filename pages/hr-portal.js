@@ -126,6 +126,8 @@ const handleSubmit = async (e) => {
     }
   };
 
+
+
   const deleteJob = async (id) => {
 
     try {
@@ -244,9 +246,23 @@ const handleSubmit = async (e) => {
         <h1 className="text-4xl font-bold text-blue-800">
           HR Dashboard
         </h1>
-        <button onClick={handleLogout} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-xl transition shadow">
-          Logout
-        </button>
+        <div className="flex gap-4">
+
+          <button
+            onClick={() => router.push("/applications")}
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-xl transition shadow"
+          >
+            View Applications
+          </button>
+
+          <button
+            onClick={handleLogout}
+            className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-xl transition shadow"
+          >
+            Logout
+          </button>
+
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
