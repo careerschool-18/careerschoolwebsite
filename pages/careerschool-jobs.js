@@ -668,13 +668,19 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(submissionData)
       });
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         onSuccess();
       } else {
-        alert("Failed to submit application. Please try again.");
+        const errorMessages = result?.errors
+          ? Object.values(result.errors).join(" ")
+          : result?.message || "Failed to submit application. Please try again.";
+        alert(errorMessages);
       }
     } catch (error) {
       console.error("Error submitting application:", error);
+      alert("An unexpected error occurred while submitting. Please try again.");
     }
   };
 
