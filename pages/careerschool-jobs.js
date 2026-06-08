@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import Select from "react-select";
 import SuccessToast from "../components/SuccessToast";
 
+const JOBS_PER_PAGE = 12;
+
 const employmentTypeBadge = (type) => {
   if (type === "FULL_TIME") return "bg-green-500 text-white";
   if (type === "PART_TIME") return "bg-yellow-500 text-white";
@@ -15,16 +17,49 @@ const formatEmploymentType = (type) => {
   return type ? type.replace(/_/g, " ") : "";
 };
 
+const formatDate = (dateString) => {
+  if (!dateString) return "";
+
+  const date = new Date(dateString);
+
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = date.getFullYear();
+
+  return `${day}-${month}-${year}`;
+};
+
+/* ─── SVG Icons ─── */
+const IconLocation = () => (
+  <svg className="w-4 h-4 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 384 512">
+    <path d="M215.7 499.2C267 435 384 279.4 384 192 384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+  </svg>
+);
+const IconSalary = () => (
+  <svg className="w-4 h-4 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 320 512">
+    <path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.5c32.6 0 61.9 16.9 76.4 43.2H12c-6.6 0-12 5.4-12 12v42.7c0 6.6 5.4 12 12 12h176c-11.3 49.1-54.9 86.1-108.2 87.9L12 299c-6.6.2-12 5.6-12 12.2v47.6c0 3.4 1.4 6.6 3.9 8.9l176.9 163.4c2.3 2.1 5.2 3.2 8.3 3.2H255c10.8 0 16.5-12.8 9.2-20.8L101.8 352.3c67.2-10.2 116.6-64.7 121.9-131.3H308c6.6 0 12-5.4 12-12v-42.7c0-6.6-5.4-12-12-12h-80.8c-7-14.3-17.2-26.8-29.5-37H308z" />
+  </svg>
+);
+const IconBag = () => (
+  <svg className="w-4 h-4 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 512 512">
+    <path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+  </svg>
+);
+const IconCalendar = () => (
+  <svg className="w-4 h-4 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 448 512">
+    <path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336z" />
+  </svg>
+);
+
 const JobPortal = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedJob, setSelectedJob] = useState(null);
   const [appliedJobs, setAppliedJobs] = useState([]);
-  const [expandedJobs, setExpandedJobs] = useState([]);
-  const [sheetOpen, setSheetOpen] = useState(false);
   const [activeFormJobId, setActiveFormJobId] = useState(null);
   const [toast, setToast] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -33,8 +68,6 @@ const JobPortal = () => {
 
   const hireStudentsLink = "https://wa.me/7305014818";
   const contactLink = "https://wa.me/7708938866";
-  const takeTestFormLink = "/online-assessment";
-  const LoginLink = "/login";
 
   useEffect(() => { fetchJobs(); }, []);
 
@@ -42,10 +75,8 @@ const JobPortal = () => {
     try {
       const response = await fetch("http://localhost:8080/api/jobs/active");
       const data = await response.json();
-      // Sort newest first (highest id = most recently posted)
       const sorted = [...data].sort((a, b) => b.id - a.id);
       setJobs(sorted);
-      if (sorted.length > 0) setSelectedJob(sorted[0]);
     } catch (error) {
       console.error("Error fetching jobs:", error);
     } finally {
@@ -67,7 +98,7 @@ const JobPortal = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const handleSearch = (e) => { e.preventDefault(); };
+  const handleSearch = (e) => { e.preventDefault(); setCurrentPage(1); };
 
   const handleApply = (jobId) => {
     if (!appliedJobs.includes(jobId)) setActiveFormJobId(jobId);
@@ -86,6 +117,31 @@ const JobPortal = () => {
       (job.location || "").toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const totalPages = Math.ceil(filteredJobs.length / JOBS_PER_PAGE);
+  const paginatedJobs = filteredJobs.slice(
+    (currentPage - 1) * JOBS_PER_PAGE,
+    currentPage * JOBS_PER_PAGE
+  );
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  /* Build page number array with ellipsis */
+  const getPageNumbers = () => {
+    if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1);
+    const pages = [];
+    if (currentPage <= 3) {
+      pages.push(1, 2, 3, 4, "...", totalPages);
+    } else if (currentPage >= totalPages - 2) {
+      pages.push(1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+    } else {
+      pages.push(1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages);
+    }
+    return pages;
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex justify-center items-center text-2xl font-bold text-blue-700">
@@ -96,9 +152,78 @@ const JobPortal = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-white font-sans">
+      <style>{`
+        @keyframes modalIn {
+          from { opacity: 0; transform: scale(0.96) translateY(12px); }
+          to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .modal-panel { animation: modalIn 0.22s cubic-bezier(0.34,1.2,0.64,1) both; }
 
-        {/* ── Header (unchanged) ── */}
+        @keyframes cardPop {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .job-card { animation: cardPop 0.18s ease both; }
+
+        .job-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 28px rgba(30,64,175,0.13);
+        }
+        .job-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+
+        .page-btn {
+          min-width: 38px;
+          height: 38px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 0.875rem;
+          cursor: pointer;
+          border: 2px solid transparent;
+          transition: all 0.15s ease;
+        }
+        .page-btn-default {
+          background: #ffffff;
+          color: #1e40af;
+          border-color: #bfdbfe;
+        }
+        .page-btn-default:hover {
+          background: #eff6ff;
+          border-color: #93c5fd;
+        }
+        .page-btn-active {
+          background: #1d4ed8;
+          color: #ffffff;
+          border-color: #1d4ed8;
+          box-shadow: 0 2px 8px rgba(29,78,216,0.35);
+        }
+        .page-btn-nav {
+          background: #eff6ff;
+          color: #1e40af;
+          border-color: #bfdbfe;
+          padding: 0 14px;
+        }
+        .page-btn-nav:hover:not(:disabled) {
+          background: #dbeafe;
+          border-color: #93c5fd;
+        }
+        .page-btn-nav:disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+        }
+        .page-btn-ellipsis {
+          background: transparent;
+          color: #6b7280;
+          cursor: default;
+          border-color: transparent;
+        }
+      `}</style>
+
+      <div className="min-h-screen bg-gray-50 font-sans">
+
+        {/* ── Header ── */}
         <header className={`
           w-full sticky top-0 z-50
           transition-all duration-500
@@ -109,9 +234,7 @@ const JobPortal = () => {
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.location.href = '/'}>
               <img src="/Nav Logo/CSHR - Nav Logo.png" className="h-7 sm:h-9 md:h-10 object-contain" alt="CSHR Logo" />
               <div className="h-6 w-[1px] bg-gray-300"></div>
-              <div className="flex flex-col items-center">
-                <img src="/Zoho Images/ZOHO LOGO - Zoho Card.png" className="h-7 sm:h-7 md:h-9 object-contain" alt="Zoho Logo" />
-              </div>
+              <img src="/Zoho Images/ZOHO LOGO - Zoho Card.png" className="h-7 sm:h-7 md:h-9 object-contain" alt="Zoho Logo" />
             </div>
 
             <nav className="hidden md:flex items-center gap-3 ml-auto mr-4">
@@ -141,16 +264,19 @@ const JobPortal = () => {
         </header>
 
         {/* ── Hero ── */}
-        <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-20 py-10 text-center">
-          <h2 className="text-5xl font-bold mb-5 leading-tight">Find Your Dream Job Today</h2>
-          <p className="text-xl mb-8 text-blue-100">Explore jobs from top companies and apply instantly.</p>
+        <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-4 sm:px-20 py-10 text-center">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-5 leading-tight">Find Your Dream Job Today</h2>
+          <p className="text-lg sm:text-xl mb-8 text-blue-100">Explore jobs from top companies and apply instantly.</p>
           <form onSubmit={handleSearch} className="flex justify-center">
             <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/30 rounded-2xl px-3 py-2.5 shadow-lg w-full max-w-xl mx-4 sm:mx-0">
+              <svg className="w-5 h-5 text-white/70 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 6.5 6.5a7.5 7.5 0 0 0 10.15 10.15z" />
+              </svg>
               <input
                 type="text"
                 placeholder="Search jobs by title or location..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
                 className="flex-1 min-w-0 bg-transparent text-white placeholder-blue-200 outline-none text-sm sm:text-base"
               />
               <button type="submit"
@@ -161,238 +287,247 @@ const JobPortal = () => {
           </form>
         </section>
 
-        {/* ── Split layout ── */}
-        <section className="px-4 md:px-10 py-16">
-          <h3 className="text-4xl font-bold text-blue-800 text-center mb-12">Latest Job Openings</h3>
+        {/* ── Jobs Grid Section ── */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-blue-800">Latest Job Openings</h3>
+            {filteredJobs.length > 0 && (
+              <span className="text-sm text-gray-500 bg-white border border-blue-100 rounded-full px-4 py-1.5 font-medium self-start sm:self-auto">
+                {filteredJobs.length} {filteredJobs.length === 1 ? "job" : "jobs"} found
+                {totalPages > 1 && ` · Page ${currentPage} of ${totalPages}`}
+              </span>
+            )}
+          </div>
 
           {filteredJobs.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-2xl text-gray-600">No jobs found matching your search.</p>
-              <button onClick={() => setSearchTerm("")}
-                className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+            <div className="text-center py-20">
+              <div className="text-5xl mb-4">🔍</div>
+              <p className="text-xl text-gray-600 mb-4">No jobs found matching your search.</p>
+              <button onClick={() => { setSearchTerm(""); setCurrentPage(1); }}
+                className="mt-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
                 Clear Search
               </button>
             </div>
           ) : (
-            <div className="flex gap-8 items-start">
-
-              {/* ── LEFT: mini card list ── */}
-              <style>{`
-                @keyframes detailFadeIn {
-                  from { opacity: 0; transform: translateY(8px); }
-                  to   { opacity: 1; transform: translateY(0); }
-                }
-                .detail-panel { animation: detailFadeIn 0.22s ease both; }
-                .card-selected { background: linear-gradient(135deg, #1e40af, #2563eb) !important; box-shadow: 0 4px 20px rgba(30,64,175,.35) !important; }
-                .card-selected h4,
-                .card-selected span,
-                .card-selected p { color: #ffffff !important; }
-                .card-selected svg { color: #ffffff !important; }
-                .card-selected .font-medium { color: rgba(255,255,255,0.85) !important; }
-                @keyframes sheetUp {
-                  from { transform: translateY(100%); }
-                  to   { transform: translateY(0); }
-                }
-                .sheet-panel { animation: sheetUp 0.32s cubic-bezier(0.32,0.72,0,1) both; }
-              `}</style>
-              <div className="w-full md:w-[380px] shrink-0 flex flex-col gap-6 max-h-[80vh] overflow-y-auto pr-2">
-                {filteredJobs.map((job) => (
+            <>
+              {/* ── 12-Card Grid ── */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                {paginatedJobs.map((job, idx) => (
                   <div
                     key={job.id}
-                    onClick={() => { setSelectedJob(job); if (window.innerWidth < 768) setSheetOpen(true); }}
-                    className={`bg-blue-50 rounded-3xl p-7 transition-all duration-200 cursor-pointer
-                      ${selectedJob?.id === job.id ? "card-selected" : ""}`}
+                    className="job-card bg-white rounded-2xl p-5 border border-blue-50 shadow-sm cursor-pointer flex flex-col gap-3"
+                    style={{ animationDelay: `${idx * 0.04}s` }}
+                    onClick={() => setSelectedJob(job)}
                   >
-                    <div className="flex justify-between items-start mb-4">
-                      <h4 className="text-2xl font-bold text-blue-800">{job.jobTitle}</h4>
-                      <span className={`px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap ${employmentTypeBadge(job.employmentType)}`}>
+                    {/* Title + badge */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-start justify-between gap-2">
+                        <h4 className="text-base font-bold text-blue-900 leading-snug line-clamp-2 flex-1">
+                          {job.jobTitle}
+                        </h4>
+                      </div>
+                      <span className={`self-start px-2.5 py-0.5 rounded-full text-xs font-semibold ${employmentTypeBadge(job.employmentType)}`}>
                         {formatEmploymentType(job.employmentType)}
                       </span>
                     </div>
 
-                    <div className="space-y-3 mt-4">
-                      <p className="text-gray-700 text-lg flex items-center gap-2">
-                        <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192 384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" /></svg>
-                        <span><span className="font-medium">Location:</span> {job.location}</span>
-                      </p>
-                      <p className="text-gray-700 text-lg flex items-center gap-2">
-                        <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 320 512"><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.5c32.6 0 61.9 16.9 76.4 43.2H12c-6.6 0-12 5.4-12 12v42.7c0 6.6 5.4 12 12 12h176c-11.3 49.1-54.9 86.1-108.2 87.9L12 299c-6.6.2-12 5.6-12 12.2v47.6c0 3.4 1.4 6.6 3.9 8.9l176.9 163.4c2.3 2.1 5.2 3.2 8.3 3.2H255c10.8 0 16.5-12.8 9.2-20.8L101.8 352.3c67.2-10.2 116.6-64.7 121.9-131.3H308c6.6 0 12-5.4 12-12v-42.7c0-6.6-5.4-12-12-12h-80.8c-7-14.3-17.2-26.8-29.5-37H308z" /></svg>
-                        <span><span className="font-medium">Salary:</span> {job.salaryRange}</span>
-                      </p>
-                      <p className="text-gray-700 flex items-center gap-2">
-                        <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" /></svg>
-                        <span><span className="font-medium">Experience:</span> {job.experience || "Fresher"}</span>
-                      </p>
-                      <p className="text-gray-700 flex items-center gap-2">
-                        <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" /></svg>
-                        <span><span className="font-medium">Deadline:</span> {job.applicationDeadline}</span>
+                    {/* Meta info */}
+                    <div className="flex flex-col gap-2 mt-1 flex-1">
+                      <div className="flex items-center gap-2 text-gray-600 text-sm">
+                        <IconLocation />
+                        <span className="truncate">{job.location}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600 text-sm">
+                        <IconSalary />
+                        <span className="truncate">{job.salaryRange}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600 text-sm">
+                        <IconBag />
+                        <span className="truncate">{job.experience || "Fresher"}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-red-400 text-sm font-semibold">
+                        <IconCalendar />
+                        <span className="truncate">Deadline: {formatDate(job.applicationDeadline)}</span>
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="pt-2 border-t border-gray-100">
+                      <span className="text-blue-600 text-xs font-semibold hover:text-blue-800 transition">
+                        View Details →
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* ── Pagination ── */}
+              {totalPages > 1 && (
+                <div className="flex justify-center items-center gap-1.5 mt-10 flex-wrap">
+                  <button
+                    className="page-btn page-btn-nav"
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                  >
+                    ← Previous
+                  </button>
+
+                  {getPageNumbers().map((page, i) => (
+                    page === "..." ? (
+                      <span key={`ellipsis-${i}`} className="page-btn page-btn-ellipsis">…</span>
+                    ) : (
+                      <button
+                        key={page}
+                        className={`page-btn ${page === currentPage ? "page-btn-active" : "page-btn-default"}`}
+                        onClick={() => handlePageChange(page)}
+                      >
+                        {page}
+                      </button>
+                    )
+                  ))}
+
+                  <button
+                    className="page-btn page-btn-nav"
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                  >
+                    Next →
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </section>
+
+        <Footer />
+      </div>
+
+      {/* ── Job Detail Modal (popup) ── */}
+      {selectedJob && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6"
+          style={{ background: "rgba(15,23,42,0.55)", backdropFilter: "blur(4px)" }}
+          onClick={() => setSelectedJob(null)}
+        >
+          <div
+            className="modal-panel bg-white rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal header strip */}
+            <div className="sticky top-0 bg-white rounded-t-3xl border-b border-gray-100 px-6 pt-5 pb-4 flex items-start justify-between gap-3 z-10">
+              <div className="flex-1 min-w-0">
+                <h2 className="text-xl sm:text-2xl font-bold text-blue-900 leading-snug">{selectedJob.jobTitle}</h2>
+                <span className={`inline-block mt-2 px-3 py-0.5 rounded-full text-xs font-semibold ${employmentTypeBadge(selectedJob.employmentType)}`}>
+                  {formatEmploymentType(selectedJob.employmentType)}
+                </span>
+              </div>
+              <button
+                onClick={() => setSelectedJob(null)}
+                className="text-gray-400 hover:text-gray-700 transition text-2xl font-light shrink-0 -mt-1 p-1 rounded-full hover:bg-gray-100"
+                aria-label="Close"
+              >✕</button>
+            </div>
+
+            {/* Modal body */}
+            <div className="px-6 py-5 space-y-5">
+              {/* Quick facts grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { icon: <IconLocation />, label: "Location", value: selectedJob.location },
+                  { icon: <IconSalary />, label: "Salary", value: selectedJob.salaryRange },
+                  { icon: <IconBag />, label: "Experience", value: selectedJob.experience || "Fresher" },
+                  { icon: <IconCalendar />, label: "Deadline", value: formatDate(selectedJob.applicationDeadline) },
+                ].map(({ icon, label, value }) => (
+                  <div key={label} className="flex items-start gap-3 bg-blue-50 rounded-xl p-3.5">
+                    <div className="mt-0.5">{icon}</div>
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide">{label}</p>
+                      <p
+                        className={`text-sm font-medium mt-0.5 break-words ${
+                          label === "Deadline" ? "text-red-400 font-bold" : "text-gray-800"
+                        }`}
+                      >
+                        {value}
                       </p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              {/* ── RIGHT: full job detail (desktop only) ── */}
-              <div className="hidden md:block flex-1 sticky top-24">
-                {selectedJob ? (
-                  <div key={selectedJob.id} className="detail-panel bg-blue-50 rounded-3xl p-7 shadow-lg">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h4 className="text-2xl font-bold text-blue-800">{selectedJob.jobTitle}</h4>
-                      </div>
-                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${employmentTypeBadge(selectedJob.employmentType)}`}>
-                        {formatEmploymentType(selectedJob.employmentType)}
-                      </span>
+              {/* Qualification & Skills */}
+              {(selectedJob.qualification || selectedJob.skills) && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {selectedJob.qualification && (
+                    <div className="bg-gray-50 rounded-xl p-3.5">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Qualification</p>
+                      <p className="text-sm text-gray-800">{selectedJob.qualification}</p>
                     </div>
-
-                    <div className="space-y-3 mt-6">
-                      <p className="text-gray-700 text-lg">📍 <span className="font-medium">Location:</span> {selectedJob.location}</p>
-                      <p className="text-gray-700 text-lg">💰 <span className="font-medium">Salary:</span> {selectedJob.salaryRange}</p>
-                      <p><strong>Qualification:</strong> {selectedJob.qualification}</p>
-                      <p><strong>Skills:</strong> {selectedJob.skills}</p>
-                      <p><strong>Deadline:</strong> {selectedJob.applicationDeadline}</p>
+                  )}
+                  {selectedJob.skills && (
+                    <div className="bg-gray-50 rounded-xl p-3.5">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Skills Required</p>
+                      <p className="text-sm text-gray-800">{selectedJob.skills}</p>
                     </div>
+                  )}
+                </div>
+              )}
 
-                    <div className="mt-5">
-                      <p className="text-gray-600 break-words">
-                        {selectedJob.jobDescription}
-                      </p>
-                    </div>
-
-                    <div className="mt-8 flex flex-col items-end gap-3">
-                      <button
-                        onClick={() => handleApply(selectedJob.id)}
-                        disabled={appliedJobs.includes(selectedJob.id)}
-                        className={`px-8 py-2.5 rounded-xl text-base font-semibold transition ${appliedJobs.includes(selectedJob.id)
-                          ? "bg-green-600 text-white cursor-not-allowed"
-                          : "bg-blue-700 hover:bg-blue-800 text-white cursor-pointer"
-                          }`}
-                      >
-                        {appliedJobs.includes(selectedJob.id) ? "Applied ✓" : "Apply Now"}
-                      </button>
-                      <p className="text-xs text-black-400 text-right">
-                        Don't see a role that fits?{" "}
-                        <a
-                          href={`https://wa.me/918939592323?text=${encodeURIComponent("Hi, I would like to know about the current job openings. Please let me know the available timings for a walk-in interview or a call with the HR team.")}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800 font-semibold underline underline-offset-2"
-                        >
-                          Enquire on WhatsApp →
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="bg-blue-50 rounded-3xl p-7 shadow-lg text-center text-gray-400">
-                    <p className="text-xl">Select a job on the left to view details</p>
-                  </div>
-                )}
-              </div>
-
+              {/* Job description */}
+              {selectedJob.jobDescription && (
+                <div>
+                  <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">Job Description</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-line">{selectedJob.jobDescription}</p>
+                </div>
+              )}
             </div>
-          )}
 
-
-        </section>
-
-        {/* ── Mobile bottom sheet ── */}
-        {sheetOpen && selectedJob && (
-          <div className="md:hidden fixed inset-0 z-50 flex flex-col justify-end">
-            {/* backdrop */}
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={() => setSheetOpen(false)} />
-            {/* sheet */}
-            <div className="sheet-panel relative bg-white rounded-t-3xl max-h-[88vh] overflow-y-auto z-10">
-              {/* drag handle */}
-              <div className="flex justify-center pt-3 pb-1">
-                <div className="w-10 h-1 rounded-full bg-gray-300" />
-              </div>
-              {/* close button */}
-              <button onClick={() => setSheetOpen(false)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl font-bold p-1">✕</button>
-
-              <div key={selectedJob.id} className="detail-panel p-6 pt-3">
-                <div className="flex justify-between items-start mb-4">
-                  <h4 className="text-xl font-bold text-blue-800 pr-8">{selectedJob.jobTitle}</h4>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold shrink-0 ${employmentTypeBadge(selectedJob.employmentType)}`}>
-                    {formatEmploymentType(selectedJob.employmentType)}
-                  </span>
-                </div>
-
-                <div className="space-y-3 mt-4">
-                  <p className="text-gray-700 flex items-center gap-2">
-                    <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192 384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" /></svg>
-                    <span><span className="font-medium">Location:</span> {selectedJob.location}</span>
-                  </p>
-                  <p className="text-gray-700 flex items-center gap-2">
-                    <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 320 512"><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v44.7c0 6.6 5.4 12 12 12h85.5c32.6 0 61.9 16.9 76.4 43.2H12c-6.6 0-12 5.4-12 12v42.7c0 6.6 5.4 12 12 12h176c-11.3 49.1-54.9 86.1-108.2 87.9L12 299c-6.6.2-12 5.6-12 12.2v47.6c0 3.4 1.4 6.6 3.9 8.9l176.9 163.4c2.3 2.1 5.2 3.2 8.3 3.2H255c10.8 0 16.5-12.8 9.2-20.8L101.8 352.3c67.2-10.2 116.6-64.7 121.9-131.3H308c6.6 0 12-5.4 12-12v-42.7c0-6.6-5.4-12-12-12h-80.8c-7-14.3-17.2-26.8-29.5-37H308z" /></svg>
-                    <span><span className="font-medium">Salary:</span> {selectedJob.salaryRange}</span>
-                  </p>
-                  <p className="text-gray-700 flex items-center gap-2">
-                    <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" /></svg>
-                    <span><span className="font-medium">Experience:</span> {selectedJob.experience || "Fresher"}</span>
-                  </p>
-                  <p className="text-gray-700 flex items-center gap-2">
-                    <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" /></svg>
-                    <span><span className="font-medium">Deadline:</span> {selectedJob.applicationDeadline}</span>
-                  </p>
-                  <p className="text-gray-700"><strong>Qualification:</strong> {selectedJob.qualification}</p>
-                  <p className="text-gray-700"><strong>Skills:</strong> {selectedJob.skills}</p>
-                </div>
-
-                <div className="mt-5">
-                  <p className="text-gray-600 break-words">{selectedJob.jobDescription}</p>
-                </div>
-
-                <div className="mt-8 flex flex-col items-end gap-3 pb-4">
-                  <button
-                    onClick={() => handleApply(selectedJob.id)}
-                    disabled={appliedJobs.includes(selectedJob.id)}
-                    className={`px-8 py-2.5 rounded-xl text-base font-semibold transition ${appliedJobs.includes(selectedJob.id)
-                      ? "bg-green-600 text-white cursor-not-allowed"
-                      : "bg-blue-700 hover:bg-blue-800 text-white cursor-pointer"
-                      }`}
-                  >
-                    {appliedJobs.includes(selectedJob.id) ? "Applied ✓" : "Apply Now"}
-                  </button>
-                  <p className="text-xs text-gray-400 text-right">
-                    Don't see a role that fits?{" "}
-                    <a
-                      href={`https://wa.me/918939592323?text=${encodeURIComponent("Hi, I would like to know about the current job openings. Please let me know the available timings for a walk-in interview or a call with the HR team.")}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 font-semibold underline underline-offset-2"
-                    >
-                      Enquire on WhatsApp →
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* ── Apply modal (unchanged) ── */}
-        {activeFormJobId && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex justify-center items-center p-4 overflow-y-auto">
-            <div className="relative bg-white rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-1 animate-in fade-in zoom-in-95 duration-200 shadow-2xl">
+            {/* Modal footer */}
+            <div className="sticky bottom-0 bg-white border-t border-gray-100 rounded-b-3xl px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <p className="text-xs text-gray-400">
+                Don't see a role that fits?{" "}
+                <a
+                  href={`https://wa.me/918939592323?text=${encodeURIComponent("Hi, I would like to know about the current job openings. Please let me know the available timings for a walk-in interview or a call with the HR team.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-semibold underline underline-offset-2"
+                >
+                  Enquire on WhatsApp →
+                </a>
+              </p>
               <button
-                onClick={() => setActiveFormJobId(null)}
-                className="absolute top-6 right-6 text-gray-400 hover:text-gray-600 font-bold text-xl z-10 p-2"
-              >✕</button>
-              <div className="pt-4">
-                <ApplicationForm
-                  jobId={activeFormJobId}
-                  jobTitle={jobs.find(j => j.id === activeFormJobId)?.jobTitle || ""}
-                  onSuccess={() => handleFormSubmitSuccess(activeFormJobId)}
-                />
-              </div>
+                onClick={() => handleApply(selectedJob.id)}
+                disabled={appliedJobs.includes(selectedJob.id)}
+                className={`shrink-0 px-8 py-2.5 rounded-xl text-sm font-bold transition ${
+                  appliedJobs.includes(selectedJob.id)
+                    ? "bg-green-600 text-white cursor-not-allowed"
+                    : "bg-blue-700 hover:bg-blue-800 text-white cursor-pointer shadow-md hover:shadow-lg"
+                }`}
+              >
+                {appliedJobs.includes(selectedJob.id) ? "Applied ✓" : "Apply Now"}
+              </button>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-      </div>
-      <Footer />
+      {/* ── Apply Form Modal ── */}
+      {activeFormJobId && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex justify-center items-center p-4 overflow-y-auto">
+          <div className="relative bg-white rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-1 shadow-2xl">
+            <button
+              onClick={() => setActiveFormJobId(null)}
+              className="absolute top-6 right-6 text-gray-400 hover:text-gray-600 font-bold text-xl z-10 p-2"
+            >✕</button>
+            <div className="pt-4">
+              <ApplicationForm
+                jobId={activeFormJobId}
+                jobTitle={jobs.find(j => j.id === activeFormJobId)?.jobTitle || ""}
+                onSuccess={() => handleFormSubmitSuccess(activeFormJobId)}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Success Toast ── */}
       {toast && (
@@ -494,7 +629,6 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
       language: formData.language.map(lang => lang.value).join(", ")
     };
 
-    // Clear all validation errors before re-checking
     setEmailError("");
     setPhoneLengthError("");
     setPhoneError("");
@@ -591,13 +725,8 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
                 onChange={(e) => {
                   const digitsOnly = e.target.value.replace(/\D/g, "");
                   const limit = getDigitLimit(formData.alternateCountryCode);
-
                   if (digitsOnly.length <= limit) {
-                    setFormData({
-                      ...formData,
-                      alternatePhone: digitsOnly
-                    });
-
+                    setFormData({ ...formData, alternatePhone: digitsOnly });
                     setPhoneError("");
                   }
                 }}
@@ -605,27 +734,18 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
                 className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800" />
             </div>
             {phoneError && (
-              <p className="mt-2 text-sm text-red-600 font-medium">
-                {phoneError}
-              </p>
+              <p className="mt-2 text-sm text-red-600 font-medium">{phoneError}</p>
             )}
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
+            <input type="email" name="email" value={formData.email}
               onChange={(e) => { handleChange(e); setEmailError(""); }}
               placeholder="email@example.com"
-              className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none transition"
-              required
-            />
-            {emailError && (
-              <p className="mt-2 text-sm text-red-600 font-medium">{emailError}</p>
-            )}
+              className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none transition" required />
+            {emailError && <p className="mt-2 text-sm text-red-600 font-medium">{emailError}</p>}
           </div>
           <div>
             <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Current Location? (Area & City)</label>
