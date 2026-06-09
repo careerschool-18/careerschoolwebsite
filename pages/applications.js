@@ -3,12 +3,22 @@ import { useRouter } from "next/router";
 
 export default function Applications() {
   const router = useRouter();
-
   const [applications, setApplications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
+    const authStatus = sessionStorage.getItem("isHRAuthenticated");
+    if (authStatus !== "true") {
+      router.push("/HRLogin");
+    } else {
+      setIsVerified(true);
+    }
+  }, [router]);
+
+  useEffect(() => {
+    if (!isVerified) return;
     const fetchApplications = async () => {
       try {
         const response = await fetch("http://localhost:8080/api/applications");
@@ -21,18 +31,26 @@ export default function Applications() {
       }
     };
     fetchApplications();
-  }, []);
+  }, [isVerified]);
 
   const filteredApplications = applications.filter((app) => {
     const term = searchTerm.toLowerCase().trim();
     if (!term) return true;
     return (
-      (app.jobTitle   || "").toLowerCase().includes(term) ||
-      (app.phone      || "").toLowerCase().includes(term) ||
+      (app.jobTitle || "").toLowerCase().includes(term) ||
+      (app.phone || "").toLowerCase().includes(term) ||
       (app.alternatePhone || "").toLowerCase().includes(term) ||
-      (app.location   || "").toLowerCase().includes(term)
+      (app.location || "").toLowerCase().includes(term)
     );
   });
+
+  if (!isVerified) {
+    return (
+      <div className="min-h-screen bg-blue-50 flex justify-center items-center font-semibold text-blue-800">
+        Verifying access security...
+      </div>
+    );
+  }
 
   if (loading) {
     return (
@@ -46,17 +64,11 @@ export default function Applications() {
     <div className="min-h-screen bg-blue-50 p-8">
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-4xl font-bold text-green-700">Applied Candidates</h1>
-        <button
-          onClick={() => router.push("/hr-portal")}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold"
-        >
+        <button onClick={() => router.push("/hr-portal")} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold">
           Back to HR Portal
         </button>
       </div>
-
       <div className="bg-white p-6 rounded-3xl shadow-xl">
-
-        {/* ── Header row: count badge + search bar ── */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-4">
             <h2 className="text-2xl font-bold text-green-700">Applications</h2>
@@ -64,28 +76,16 @@ export default function Applications() {
               {filteredApplications.length}{searchTerm ? ` of ${applications.length}` : ""} Applications
             </span>
           </div>
-
-          {/* Search bar — white with green border */}
           <div className="flex items-center gap-2 bg-white border-2 border-green-400 focus-within:border-green-600 rounded-2xl px-3 py-2.5 shadow-sm w-full sm:w-auto sm:min-w-[320px] transition">
-            <svg className="w-4 h-4 text-white/70 shrink-0" fill="currentColor" viewBox="0 0 512 512">
+            <svg className="w-4 h-4 text-gray-400 shrink-0" fill="currentColor" viewBox="0 0 512 512">
               <path d="M416 208c0 45.4-14.9 87.3-40 120.9L502.6 457c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L341 363.9C307.4 389.1 265.4 404 220 404C98.6 404 0 305.4 0 184S98.6-36 220-36 416 86.6 416 208zM220 336c70.7 0 128-57.3 128-128S290.7 80 220 80 92 137.3 92 208s57.3 128 128 128z"/>
             </svg>
-            <input
-              type="text"
-              placeholder="Search by job title, phone or location..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="flex-1 min-w-0 bg-transparent text-gray-700 placeholder-gray-400 outline-none text-sm"
-            />
+            <input type="text" placeholder="Search by job title, phone or location..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="flex-1 min-w-0 bg-transparent text-gray-700 placeholder-gray-400 outline-none text-sm" />
             {searchTerm && (
-              <button
-                onClick={() => setSearchTerm("")}
-                className="text-gray-400 hover:text-gray-600 text-lg leading-none shrink-0"
-              >×</button>
+              <button onClick={() => setSearchTerm("")} className="text-gray-400 hover:text-gray-600 text-lg leading-none shrink-0">×</button>
             )}
           </div>
         </div>
-
         {filteredApplications.length === 0 ? (
           <div className="text-center py-10 text-gray-500 text-lg">
             {searchTerm ? `No applications match "${searchTerm}".` : "No applications found."}
@@ -113,10 +113,7 @@ export default function Applications() {
               </thead>
               <tbody>
                 {filteredApplications.map((app, index) => (
-                  <tr
-                    key={app.id}
-                    className={`border-b ${index % 2 === 0 ? "bg-gray-50" : "bg-white"} hover:bg-green-50 transition`}
-                  >
+                  <tr key={app.id} className={`border-b ${index % 2 === 0 ? "bg-gray-50" : "bg-white"} hover:bg-green-50 transition`}>
                     <td className="px-4 py-4 whitespace-nowrap font-semibold">{app.jobTitle}</td>
                     <td className="px-4 py-4 whitespace-nowrap">{app.fullName}</td>
                     <td className="px-4 py-4 whitespace-nowrap">{app.phone}</td>
