@@ -68,20 +68,17 @@ export default function HeroSection() {
             <div className="flex gap-4 justify-center lg:justify-start flex-wrap mt-8">
 
               <a
-                href={`https://wa.me/918939592323?text=${encodeURIComponent(
-                  "Hi, I would like to know about the current job openings. Please let me know the available timings for a walk-in interview or a call with the HR team."
-                )}`}
+                
+                href="/careerschool-jobs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-black mt-6 sm:mt-10 px-9 sm:px-11 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 inline-block w-full sm:w-auto text-center"
-              >
+                className="hero-btn bg-white text-black mt-6 sm:mt-10 px-9 sm:px-11 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 inline-block w-full sm:w-auto text-center">
                 CAREERSCHOOL JOBS
               </a>
 
               <button
                 onClick={() => scrollToSection("courses")}
-                className="bg-yellow-400 text-black mt-6 sm:mt-10 px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 w-full sm:w-auto"
-              >
+                className="hero-btn hero-btn-yellow bg-yellow-400 text-black mt-6 sm:mt-10 px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 w-full sm:w-auto"              >
                 CAREERSCHOOL TRAINING
               </button>
 
@@ -163,6 +160,101 @@ export default function HeroSection() {
           -webkit-text-fill-color: transparent;
 
           animation: smoothIndiaFlow 8s linear infinite;
+        }
+
+        .hero-btn {
+          position: relative;
+          overflow: hidden;
+
+          animation: softGlow 3s ease-in-out infinite;
+        }
+
+        /* Shine sweep */
+
+        .hero-btn::before {
+          content: "";
+
+          position: absolute;
+
+          top: -50%;
+          left: -150%;
+
+          width: 35%;
+          height: 220%;
+
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.4),
+            transparent
+          );
+
+          transform: rotate(25deg);
+
+          animation: shineSweep 5s ease-in-out infinite;
+
+          pointer-events: none;
+        }
+
+        /* White button */
+
+        .hero-btn:hover {
+          box-shadow:
+            0 0 20px rgba(255,255,255,0.7),
+            0 0 50px rgba(255,255,255,0.5),
+            0 0 100px rgba(255,255,255,0.25);
+
+          transition: all 300ms ease;
+        }
+
+        /* Yellow button */
+
+        .hero-btn-yellow:hover {
+          box-shadow:
+            0 0 20px rgba(250,204,21,0.9),
+            0 0 50px rgba(250,204,21,0.6),
+            0 0 100px rgba(250,204,21,0.35);
+        }
+
+        /* Idle glow */
+
+        @keyframes softGlow {
+          0% {
+            box-shadow:
+              0 0 12px rgba(255,255,255,0.18),
+              0 0 25px rgba(255,255,255,0.10),
+              0 0 45px rgba(255,255,255,0.05);
+          }
+
+          50% {
+            box-shadow:
+              0 0 24px rgba(255,255,255,0.45),
+              0 0 55px rgba(255,255,255,0.25),
+              0 0 90px rgba(255,255,255,0.15);
+          }
+
+          100% {
+            box-shadow:
+              0 0 12px rgba(255,255,255,0.18),
+              0 0 25px rgba(255,255,255,0.10),
+              0 0 45px rgba(255,255,255,0.05);
+          }
+        }
+
+        /* Shine */
+
+        @keyframes shineSweep {
+          0% {
+            left: -150%;
+          }
+
+          15% {
+            left: 130%;
+          }
+
+          100% {
+            left: 130%;
+          }
         }
 
         /* perfectly smooth infinite flow */
