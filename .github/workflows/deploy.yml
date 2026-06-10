@@ -62,10 +62,11 @@ jobs:
           script: |
             set -euo pipefail
             cd /var/www/cshr/careerschoolwebsite
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
 
             if [ ! -f package.json ] || [ ! -f package-lock.json ]; then
-              echo "package.json and package-lock.json must exist on the server after pull."
+              echo "package.json and package-lock.json must exist on the server after syncing origin/main."
               exit 1
             fi
 
