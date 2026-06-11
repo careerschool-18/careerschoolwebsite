@@ -10,7 +10,7 @@ export default function LoginPage() {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://72.60.220.80:8080/api/auth/login", {
+      const response = await fetch("https://72.60.220.80:8080/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
