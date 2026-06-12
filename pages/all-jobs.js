@@ -7,9 +7,9 @@ import { qualifications } from "../constants/qualifications";
 import { indianCities } from "../constants/locations";
 
 const statusBadge = (status) => {
-  if (status === "ACTIVE")   return "bg-green-100 text-green-700";
+  if (status === "ACTIVE") return "bg-green-100 text-green-700";
   if (status === "INACTIVE") return "bg-orange-100 text-orange-700";
-  if (status === "EXPIRED")  return "bg-red-100 text-red-600";
+  if (status === "EXPIRED") return "bg-red-100 text-red-600";
   return "bg-gray-100 text-gray-600";
 };
 
@@ -40,7 +40,7 @@ const AllJobs = () => {
     if (!isVerified) return;
     const fetchAllJobs = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/jobs/all");
+        const response = await fetch("https://career-school.co.in/api/jobs/all");
         const data = await response.json();
         const sorted = [...data].sort((a, b) => b.id - a.id);
         setJobs(sorted);
@@ -57,7 +57,7 @@ const AllJobs = () => {
   /* ── Refresh jobs list ── */
   const refreshJobs = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/jobs/all");
+      const response = await fetch("https://career-school.co.in/api/jobs/all");
       const data = await response.json();
       const sorted = [...data].sort((a, b) => b.id - a.id);
       setJobs(sorted);
@@ -79,15 +79,15 @@ const AllJobs = () => {
       });
     };
     return {
-      jobTitle:            job.jobTitle || "",
-      domain:              job.domain || "",
-      qualification:       toOptions(job.qualification, qualifications),
-      location:            toOptions(job.location, indianCities),
-      employmentType:      job.employmentType || "",
-      jobDescription:      job.jobDescription || "",
-      skills:              job.skills || "",
-      salaryRange:         job.salaryRange || "",
-      experience:          job.experience || "",
+      jobTitle: job.jobTitle || "",
+      domain: job.domain || "",
+      qualification: toOptions(job.qualification, qualifications),
+      location: toOptions(job.location, indianCities),
+      employmentType: job.employmentType || "",
+      jobDescription: job.jobDescription || "",
+      skills: job.skills || "",
+      salaryRange: job.salaryRange || "",
+      experience: job.experience || "",
       applicationDeadline: job.applicationDeadline || "",
     };
   };
@@ -97,8 +97,8 @@ const AllJobs = () => {
     const matchesStatus = statusFilter === "ALL" || j.status === statusFilter;
     const term = searchTerm.toLowerCase().trim();
     const matchesSearch = !term ||
-      (j.jobTitle  || "").toLowerCase().includes(term) ||
-      (j.location  || "").toLowerCase().includes(term);
+      (j.jobTitle || "").toLowerCase().includes(term) ||
+      (j.location || "").toLowerCase().includes(term);
     return matchesStatus && matchesSearch;
   });
 
@@ -157,10 +157,10 @@ const AllJobs = () => {
                 ? jobs.length
                 : jobs.filter((j) => j.status === s).length;
               const colours = {
-                ALL:      "bg-blue-100 text-blue-700 border-blue-200",
-                ACTIVE:   "bg-green-100 text-green-700 border-green-200",
+                ALL: "bg-blue-100 text-blue-700 border-blue-200",
+                ACTIVE: "bg-green-100 text-green-700 border-green-200",
                 INACTIVE: "bg-orange-100 text-orange-700 border-orange-200",
-                EXPIRED:  "bg-red-100 text-red-600 border-red-200",
+                EXPIRED: "bg-red-100 text-red-600 border-red-200",
               };
               return (
                 <button
@@ -179,7 +179,7 @@ const AllJobs = () => {
           {/* Search bar */}
           <div className="flex items-center gap-2 bg-white border-2 border-blue-300 focus-within:border-blue-500 rounded-2xl px-3 py-2.5 shadow-sm w-full sm:w-auto sm:min-w-[300px] transition">
             <svg className="w-4 h-4 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 512 512">
-              <path d="M416 208c0 45.4-14.9 87.3-40 120.9L502.6 457c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L341 363.9C307.4 389.1 265.4 404 220 404C98.6 404 0 305.4 0 184S98.6-36 220-36 416 86.6 416 208zM220 336c70.7 0 128-57.3 128-128S290.7 80 220 80 92 137.3 92 208s57.3 128 128 128z"/>
+              <path d="M416 208c0 45.4-14.9 87.3-40 120.9L502.6 457c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L341 363.9C307.4 389.1 265.4 404 220 404C98.6 404 0 305.4 0 184S98.6-36 220-36 416 86.6 416 208zM220 336c70.7 0 128-57.3 128-128S290.7 80 220 80 92 137.3 92 208s57.3 128 128 128z" />
             </svg>
             <input
               type="text"
