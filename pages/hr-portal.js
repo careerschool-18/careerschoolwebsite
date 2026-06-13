@@ -17,7 +17,7 @@ const PostJobs = () => {
 
   const fetchActiveJobs = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/jobs/active");
+      const response = await fetch("https://career-school.co.in/api/jobs/active");
       const data = await response.json();
       const sorted = [...data].sort((a, b) => b.id - a.id);
       setActiveJobs(sorted);
@@ -29,7 +29,7 @@ const PostJobs = () => {
 
   const fetchInactiveJobs = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/jobs/inactive");
+      const response = await fetch("https://career-school.co.in/api/jobs/inactive");
       const data = await response.json();
       const sorted = [...data].sort((a, b) => b.id - a.id);
       setInactiveJobs(sorted);
@@ -41,7 +41,7 @@ const PostJobs = () => {
 
   const deleteJob = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/jobs/${id}`, {
+      const response = await fetch(`https://career-school.co.in/api/jobs/${id}`, {
         method: "DELETE"
       });
       if (response.ok) {
@@ -157,7 +157,7 @@ const PostJobs = () => {
           />
         </div>
 
-       <div className="lg:col-span-2 space-y-8">
+        <div className="lg:col-span-2 space-y-8">
           <div className="bg-white p-6 rounded-3xl shadow-xl overflow-x-auto">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-blue-700">Active Openings</h2>

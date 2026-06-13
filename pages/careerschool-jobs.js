@@ -73,7 +73,7 @@ const JobPortal = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/jobs/active");
+      const response = await fetch("https://career-school.co.in/api/jobs/active");
       const data = await response.json();
       const sorted = [...data].sort((a, b) => b.id - a.id);
       setJobs(sorted);
@@ -443,9 +443,8 @@ const JobPortal = () => {
                     <div className="min-w-0">
                       <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide">{label}</p>
                       <p
-                        className={`text-sm font-medium mt-0.5 break-words ${
-                          label === "Deadline" ? "text-red-400 font-bold" : "text-gray-800"
-                        }`}
+                        className={`text-sm font-medium mt-0.5 break-words ${label === "Deadline" ? "text-red-400 font-bold" : "text-gray-800"
+                          }`}
                       >
                         {value}
                       </p>
@@ -497,11 +496,10 @@ const JobPortal = () => {
               <button
                 onClick={() => handleApply(selectedJob.id)}
                 disabled={appliedJobs.includes(selectedJob.id)}
-                className={`shrink-0 px-8 py-2.5 rounded-xl text-sm font-bold transition ${
-                  appliedJobs.includes(selectedJob.id)
-                    ? "bg-green-600 text-white cursor-not-allowed"
-                    : "bg-blue-700 hover:bg-blue-800 text-white cursor-pointer shadow-md hover:shadow-lg"
-                }`}
+                className={`shrink-0 px-8 py-2.5 rounded-xl text-sm font-bold transition ${appliedJobs.includes(selectedJob.id)
+                  ? "bg-green-600 text-white cursor-not-allowed"
+                  : "bg-blue-700 hover:bg-blue-800 text-white cursor-pointer shadow-md hover:shadow-lg"
+                  }`}
               >
                 {appliedJobs.includes(selectedJob.id) ? "Applied ✓" : "Apply Now"}
               </button>
@@ -663,7 +661,7 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/api/applications", {
+      const response = await fetch("https://career-school.co.in/api/applications", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(submissionData)

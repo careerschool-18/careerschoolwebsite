@@ -21,7 +21,7 @@ export default function Applications() {
     if (!isVerified) return;
     const fetchApplications = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/applications");
+        const response = await fetch("https://career-school.co.in/api/applications");
         const data = await response.json();
         setApplications(data);
       } catch (error) {
@@ -78,7 +78,7 @@ export default function Applications() {
           </div>
           <div className="flex items-center gap-2 bg-white border-2 border-green-400 focus-within:border-green-600 rounded-2xl px-3 py-2.5 shadow-sm w-full sm:w-auto sm:min-w-[320px] transition">
             <svg className="w-4 h-4 text-gray-400 shrink-0" fill="currentColor" viewBox="0 0 512 512">
-              <path d="M416 208c0 45.4-14.9 87.3-40 120.9L502.6 457c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L341 363.9C307.4 389.1 265.4 404 220 404C98.6 404 0 305.4 0 184S98.6-36 220-36 416 86.6 416 208zM220 336c70.7 0 128-57.3 128-128S290.7 80 220 80 92 137.3 92 208s57.3 128 128 128z"/>
+              <path d="M416 208c0 45.4-14.9 87.3-40 120.9L502.6 457c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L341 363.9C307.4 389.1 265.4 404 220 404C98.6 404 0 305.4 0 184S98.6-36 220-36 416 86.6 416 208zM220 336c70.7 0 128-57.3 128-128S290.7 80 220 80 92 137.3 92 208s57.3 128 128 128z" />
             </svg>
             <input type="text" placeholder="Search by job title, phone or location..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="flex-1 min-w-0 bg-transparent text-gray-700 placeholder-gray-400 outline-none text-sm" />
             {searchTerm && (

@@ -54,8 +54,8 @@ const JobForm = ({ editJobId, initialData, onSubmitSuccess, onCancelEdit, onClos
 
       const response = await fetch(
         editJobId
-          ? `http://localhost:8080/api/jobs/${editJobId}`
-          : "http://localhost:8080/api/jobs",
+          ? `https://career-school.co.in/api/jobs/${editJobId}`
+          : "https://career-school.co.in/api/jobs",
         {
           method: editJobId ? "PUT" : "POST",
           headers: { "Content-Type": "application/json" },
