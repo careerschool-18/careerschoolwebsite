@@ -23,6 +23,8 @@ import {
   FiX,
   FiBell,
   FiExternalLink,
+  FiSlash,
+  FiSearch,
 } from "react-icons/fi";
 import SuccessToast from "../components/SuccessToast";
 
@@ -210,6 +212,35 @@ export default function SuperAdminDashboard() {
           const data = await response.json();
           setBatches(data);
           localStorage.setItem("mock_batches", JSON.stringify(data));
+
+          // Align mock students to backend database numeric IDs
+          setStudents(prev => {
+            const updated = { ...prev };
+            let changed = false;
+            data.forEach(dbBatch => {
+              if (!updated[dbBatch.id]) {
+                const mockB = mockBatches.find(mb => mb.name.toLowerCase().trim() === dbBatch.name.toLowerCase().trim());
+                if (mockB && updated[mockB.id]) {
+                  updated[dbBatch.id] = updated[mockB.id];
+                  changed = true;
+                } else {
+                  updated[dbBatch.id] = Array.from({ length: dbBatch.studentCount || 0 }, (_, idx) => ({
+                    id: `${dbBatch.id}-${100 + idx}`,
+                    name: `Student ${idx + 1} (${dbBatch.name})`,
+                    email: `student${idx + 1}.${dbBatch.name.toLowerCase().replace(/\s+/g, '')}@email.com`,
+                    phone: `+91 95555 ${10000 + idx}`,
+                    enrollDate: dbBatch.startDate,
+                    password: `stud${dbBatch.id}${idx + 1}`
+                  }));
+                  changed = true;
+                }
+              }
+            });
+            if (changed) {
+              localStorage.setItem("mock_students", JSON.stringify(updated));
+            }
+            return updated;
+          });
         } else {
           throw new Error(`HTTP error ${response.status}`);
         }
@@ -374,6 +405,8 @@ export default function SuperAdminDashboard() {
     } else {
       setActivateBatchTarget(batch);
       setNewBatchNameInput(batch.name);
+      setNewBatchCourseInput(batch.course || "");
+      setNewBatchDateInput(batch.startDate || "");
     }
   };
 
@@ -382,14 +415,22 @@ export default function SuperAdminDashboard() {
     if (!activateBatchTarget) return;
 
     const newName = newBatchNameInput.trim();
-    if (!newName) return;
+    const newCourse = newBatchCourseInput.trim();
+    const newDate = newBatchDateInput.trim();
+    if (!newName || !newCourse || !newDate) return;
 
     try {
-      const updatedBatch = { ...activateBatchTarget, name: newName, status: "Active", studentCount: 0 };
-      const response = await fetch(getApiUrl(`/api/batches/${activateBatchTarget.id}`), {
-        method: "PUT",
+      const payload = {
+        name: newName,
+        course: newCourse,
+        startDate: newDate,
+        studentCount: 0,
+        status: "Active"
+      };
+      const response = await fetch(getApiUrl("/api/batches"), {
+        method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedBatch)
+        body: JSON.stringify(payload)
       });
       if (!response.ok) {
         const errorData = await response.json();
@@ -397,19 +438,21 @@ export default function SuperAdminDashboard() {
       }
       const savedBatch = await response.json();
 
-      const updated = batches.map(b => b.id === activateBatchTarget.id ? savedBatch : b);
+      const updated = [...batches, savedBatch];
       setBatches(updated);
       localStorage.setItem("mock_batches", JSON.stringify(updated));
 
       setStudents(prev => {
-        const next = { ...prev, [activateBatchTarget.id]: [] };
+        const next = { ...prev, [savedBatch.id]: [] };
         localStorage.setItem("mock_students", JSON.stringify(next));
         return next;
       });
 
-      setToast(`Batch activated as "${newName}" with 0 students.`);
+      setToast(`Batch "${newName}" created successfully as Active.`);
       setActivateBatchTarget(null);
       setNewBatchNameInput("");
+      setNewBatchCourseInput("");
+      setNewBatchDateInput("");
     } catch (err) {
       console.error("Failed to activate batch:", err);
       setToast(`Error activating batch: ${err.message}`);
@@ -438,6 +481,11 @@ export default function SuperAdminDashboard() {
   // State variables for activating inactive batches
   const [activateBatchTarget, setActivateBatchTarget] = useState(null);
   const [newBatchNameInput, setNewBatchNameInput] = useState("");
+  const [newBatchCourseInput, setNewBatchCourseInput] = useState("");
+  const [newBatchDateInput, setNewBatchDateInput] = useState("");
+  const [batchViewMode, setBatchViewMode] = useState("all_batches"); // "students" | "all_batches"
+  const [studentSearchQuery, setStudentSearchQuery] = useState("");
+  const [batchStudentSearchQuery, setBatchStudentSearchQuery] = useState("");
 
   // State variables for creating new batches
   const [showCreateBatchModal, setShowCreateBatchModal] = useState(false);
@@ -738,6 +786,27 @@ export default function SuperAdminDashboard() {
 
   const [studentFeeFilter, setStudentFeeFilter] = useState("all"); // "all" | "paid" | "due" | "restricted"
 
+  const displayedBatches = batchViewMode === "students" ? batches.filter(b => b.status === "Active") : batches;
+
+  const getMatchedStudents = () => {
+    if (!studentSearchQuery.trim()) return [];
+    const query = studentSearchQuery.toLowerCase().trim();
+    const matches = [];
+    Object.entries(students).forEach(([batchId, list]) => {
+      list.forEach(student => {
+        const nameMatch = student.name?.toLowerCase().includes(query);
+        const emailMatch = student.email?.toLowerCase().includes(query);
+        const mobileMatch = student.phone?.toLowerCase().includes(query);
+        if (nameMatch || emailMatch || mobileMatch) {
+          matches.push({ ...student, batchId });
+        }
+      });
+    });
+    return matches;
+  };
+
+  const matchedStudents = getMatchedStudents();
+
   const currentStudents = selectedBatch ? (students[selectedBatch.id] || []) : [];
 
   // Filter students dynamically based on payment status
@@ -745,10 +814,18 @@ export default function SuperAdminDashboard() {
     const total = stud.fee?.total || 0;
     const paid = stud.fee?.paid || 0;
     const due = total - paid;
-    if (studentFeeFilter === "paid") return due === 0;
-    if (studentFeeFilter === "due") return due > 0;
-    if (studentFeeFilter === "restricted") return stud.isBlocked === true;
-    return true; // "all"
+    if (studentFeeFilter === "paid" && due !== 0) return false;
+    if (studentFeeFilter === "due" && due <= 0) return false;
+    if (studentFeeFilter === "restricted" && !stud.isBlocked) return false;
+
+    if (batchStudentSearchQuery.trim() !== "") {
+      const q = batchStudentSearchQuery.toLowerCase().trim();
+      const nameMatch = stud.name?.toLowerCase().includes(q);
+      const emailMatch = stud.email?.toLowerCase().includes(q);
+      const phoneMatch = stud.phone?.toLowerCase().includes(q);
+      if (!nameMatch && !emailMatch && !phoneMatch) return false;
+    }
+    return true;
   });
 
   const totalStudentPages = Math.ceil(filteredStudents.length / itemsPerPage);
@@ -1036,6 +1113,8 @@ export default function SuperAdminDashboard() {
                   <div
                     onClick={() => {
                       setOverviewSubView("batches");
+                      setBatchViewMode("students");
+                      setStudentSearchQuery("");
                       setStudentPage(1);
                     }}
                     className="bg-white p-6 rounded-2xl shadow-sm border cursor-pointer hover:shadow-md hover:border-blue-400 hover:scale-[1.01] transition-all duration-200 group"
@@ -1070,12 +1149,13 @@ export default function SuperAdminDashboard() {
                   <div
                     onClick={() => {
                       setOverviewSubView("batches");
+                      setBatchViewMode("all_batches");
                       setStudentPage(1);
                     }}
                     className="bg-white p-6 rounded-2xl shadow-sm border cursor-pointer hover:shadow-md hover:border-blue-400 hover:scale-[1.01] transition-all duration-200 group"
                   >
                     <FiBook className="text-blue-600 mb-4 group-hover:scale-110 transition-transform" size={28} />
-                    <p className="text-gray-500 font-medium">Active Batches</p>
+                    <p className="text-gray-500 font-medium">All Batches</p>
                     <h3 className="text-3xl font-bold mt-2 text-gray-900 group-hover:text-blue-600 transition-colors">
                       {batches.length}
                     </h3>
@@ -1217,80 +1297,229 @@ export default function SuperAdminDashboard() {
                         <FiArrowLeft size={18} />
                       </button>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">Active Batches</h3>
-                        <p className="text-sm text-gray-500 mt-1">Select a batch to view its students</p>
+                        <h3 className="text-xl font-bold text-gray-900">
+                          {batchViewMode === "students" ? "Active Batches" : "All Batches"}
+                        </h3>
+                        <p className="text-sm text-gray-500 mt-1">
+                          {batchViewMode === "students" ? "Select an active batch to view its students" : "Manage system batches"}
+                        </p>
                       </div>
                     </div>
                     <div className="flex gap-2 self-start sm:self-auto">
-                      <button
-                        onClick={() => setShowCreateBatchModal(true)}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-colors flex items-center justify-center gap-1"
-                      >
-                        + Create Batch
-                      </button>
+                      {batchViewMode === "all_batches" && (
+                        <button
+                          onClick={() => setShowCreateBatchModal(true)}
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-colors flex items-center justify-center gap-1"
+                        >
+                          + Create Batch
+                        </button>
+                      )}
                       <div className="bg-blue-50 text-blue-700 px-4 py-2 rounded-xl text-sm font-semibold flex items-center">
-                        Total: {batches.length} Batches
+                        Total: {displayedBatches.length} {batchViewMode === "students" ? "Active" : ""} Batches
                       </div>
                     </div>
                   </div>
 
-                  {/* Grid */}
-                  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-                    {batches.map((batch) => (
-                      <div
-                        key={batch.id}
-                        onClick={() => {
-                          setSelectedBatch(batch);
-                          setOverviewSubView("students");
-                          setStudentPage(1);
-                          setStudentFeeFilter("all");
-                        }}
-                        className="border hover:border-blue-400 hover:shadow-md rounded-2xl p-5 cursor-pointer transition-all bg-white relative overflow-hidden group"
-                      >
-                        <div className="absolute top-0 left-0 w-2 h-full bg-blue-500 group-hover:bg-blue-600 transition-colors"></div>
-                        <div className="pl-2">
-                          <div className="flex justify-between items-start">
-                            <h4 className="font-bold text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
-                              {batch.name}
-                            </h4>
-                            <span
-                              className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider ${
-                                batch.status === "Active"
-                                  ? "bg-green-50 text-green-700"
-                                  : "bg-gray-100 text-gray-600"
-                              }`}
-                            >
-                              {batch.status}
-                            </span>
-                          </div>
-                          <p className="text-sm text-gray-500 mt-1 font-medium">{batch.course}</p>
-                          
-                          <div className="flex items-center justify-between gap-4 mt-6 pt-4 border-t border-gray-100">
-                            <div className="flex items-center gap-3 text-xs text-gray-400 font-medium">
-                              <div className="flex items-center gap-1">
-                                <FiUsers className="text-blue-500" />
-                                <span>{batch.studentCount} Students</span>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <FiCalendar className="text-purple-500" />
-                                <span>{batch.startDate}</span>
-                              </div>
+                  {batchViewMode === "students" && (
+                    <div className="mb-6 relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <FiSearch className="text-gray-400" size={16} />
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="Search student by name, email, or mobile number..."
+                        value={studentSearchQuery}
+                        onChange={(e) => setStudentSearchQuery(e.target.value)}
+                        className="block w-full pl-10 pr-10 py-2.5 border border-gray-300 rounded-xl text-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-gray-50/50 text-gray-800"
+                      />
+                      {studentSearchQuery && (
+                        <button
+                          onClick={() => setStudentSearchQuery("")}
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center text-xs text-gray-400 hover:text-gray-600 font-medium"
+                        >
+                          Clear
+                        </button>
+                      )}
+                    </div>
+                  )}
+
+                  {/* If user is searching in student tab, display student records */}
+                  {batchViewMode === "students" && studentSearchQuery.trim() !== "" ? (
+                    <div>
+                      <div className="mb-4 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                        Search Results ({matchedStudents.length} matches)
+                      </div>
+                      {matchedStudents.length > 0 ? (
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-left border-collapse">
+                            <thead>
+                              <tr className="border-b text-gray-400 text-xs font-semibold uppercase tracking-wider">
+                                <th className="py-3 px-4">Name</th>
+                                <th className="py-3 px-4">Batch</th>
+                                <th className="py-3 px-4">Email</th>
+                                <th className="py-3 px-4">Phone</th>
+                                <th className="py-3 px-4">Due Balance</th>
+                                <th className="py-3 px-4 text-right">Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y text-sm text-gray-700">
+                              {matchedStudents.map((stud) => {
+                                const total = stud.fee?.total || 0;
+                                const paid = stud.fee?.paid || 0;
+                                const due = total - paid;
+                                const fmt = (n) => "₹" + n.toLocaleString("en-IN");
+                                const batchName = batches.find(b => String(b.id) === String(stud.batchId))?.name || stud.batchId;
+
+                                return (
+                                  <tr key={`${stud.batchId}-${stud.id}`} className="hover:bg-gray-50/70 transition-colors">
+                                    <td className="py-4 px-4 font-semibold text-gray-900">
+                                      <div className="flex items-center gap-2">
+                                        {stud.name}
+                                        {stud.isBlocked && (
+                                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-red-50 text-red-600 uppercase tracking-wide">
+                                            Restricted
+                                          </span>
+                                        )}
+                                      </div>
+                                    </td>
+                                    <td className="py-4 px-4 text-gray-500 font-medium">{batchName}</td>
+                                    <td className="py-4 px-4 text-gray-500">{stud.email}</td>
+                                    <td className="py-4 px-4 text-gray-500">{stud.phone}</td>
+                                    <td className="py-4 px-4">
+                                      {due === 0 ? (
+                                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-50 text-green-700 uppercase tracking-wide">
+                                          Paid
+                                        </span>
+                                      ) : (
+                                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-50 text-orange-700 uppercase tracking-wide">
+                                          {fmt(due)} Due
+                                        </span>
+                                      )}
+                                    </td>
+                                    <td className="py-4 px-4 text-right">
+                                      <div className="inline-flex items-center gap-2">
+                                        <button
+                                          onClick={() => {
+                                            setChangePasswordTarget({
+                                              type: "student",
+                                              id: stud.id,
+                                              name: stud.name,
+                                            });
+                                            setShowChangeForm(false);
+                                            setShowCurrentPassword(false);
+                                          }}
+                                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-blue-600 hover:text-white bg-blue-50 hover:bg-blue-600 rounded-lg border border-blue-200 transition-all shadow-sm"
+                                        >
+                                          <FiEye size={12} />
+                                          View PW
+                                        </button>
+                                        <button
+                                          onClick={() => setViewFeesTarget(stud)}
+                                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-green-600 hover:text-white bg-green-50 hover:bg-green-600 rounded-lg border border-green-200 transition-all shadow-sm"
+                                        >
+                                          <FiCreditCard size={12} />
+                                          View Fees
+                                        </button>
+                                        {stud.isBlocked ? (
+                                          <button
+                                            onClick={() => handleUnblockStudent(stud.id, stud.name, stud.batchId)}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-emerald-600 hover:text-white bg-emerald-50 hover:bg-emerald-600 rounded-lg border border-emerald-200 transition-all shadow-sm"
+                                          >
+                                            <FiUnlock size={12} />
+                                            Restore
+                                          </button>
+                                        ) : (
+                                          <button
+                                            onClick={() => {
+                                              setBlockStudentTarget({
+                                                id: stud.id,
+                                                name: stud.name,
+                                                batchId: stud.batchId,
+                                              });
+                                              setBlockReason("");
+                                              setBlockError("");
+                                            }}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-red-600 hover:text-white bg-red-50 hover:bg-red-600 rounded-lg border border-red-200 transition-all shadow-sm"
+                                          >
+                                            <FiSlash size={12} />
+                                            Restrict
+                                          </button>
+                                        )}
+                                      </div>
+                                    </td>
+                                  </tr>
+                                );
+                              })}
+                            </tbody>
+                          </table>
+                        </div>
+                      ) : (
+                        <div className="text-center py-12 text-gray-500 font-medium bg-gray-50 rounded-xl border border-dashed">
+                          No students found matching your search query.
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    /* Grid */
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+                      {displayedBatches.map((batch) => (
+                        <div
+                          key={batch.id}
+                          onClick={() => {
+                            setSelectedBatch(batch);
+                            setOverviewSubView("students");
+                            setStudentPage(1);
+                            setStudentFeeFilter("all");
+                          }}
+                          className="border hover:border-blue-400 hover:shadow-md rounded-2xl p-5 cursor-pointer transition-all bg-white relative overflow-hidden group"
+                        >
+                          <div className="absolute top-0 left-0 w-2 h-full bg-blue-500 group-hover:bg-blue-600 transition-colors"></div>
+                          <div className="pl-2">
+                            <div className="flex justify-between items-start">
+                              <h4 className="font-bold text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
+                                {batch.name}
+                              </h4>
+                              <span
+                                className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider ${
+                                  batch.status === "Active"
+                                    ? "bg-green-50 text-green-700"
+                                    : "bg-gray-100 text-gray-600"
+                                }`}
+                              >
+                                {batch.status}
+                              </span>
                             </div>
-                            <button
-                              onClick={(e) => handleToggleBatchStatus(batch, e)}
-                              className={`text-[11px] font-bold px-2.5 py-1.5 rounded-xl transition-all active:scale-95 ${
-                                batch.status === "Active"
-                                  ? "bg-red-50 text-red-600 hover:bg-red-100"
-                                  : "bg-green-50 text-green-600 hover:bg-green-100"
-                              }`}
-                            >
-                              {batch.status === "Active" ? "Deactivate" : "Activate"}
-                            </button>
+                            <p className="text-sm text-gray-500 mt-1 font-medium">{batch.course}</p>
+                            
+                            <div className="flex items-center justify-between gap-4 mt-6 pt-4 border-t border-gray-100">
+                              <div className="flex items-center gap-3 text-xs text-gray-400 font-medium">
+                                <div className="flex items-center gap-1">
+                                  <FiUsers className="text-blue-500" />
+                                  <span>{batch.studentCount} Students</span>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                  <FiCalendar className="text-purple-500" />
+                                  <span>{batch.startDate}</span>
+                                </div>
+                              </div>
+                              {batchViewMode === "all_batches" && (
+                                <button
+                                  onClick={(e) => handleToggleBatchStatus(batch, e)}
+                                  className={`text-[11px] font-bold px-2.5 py-1.5 rounded-xl transition-all active:scale-95 ${
+                                    batch.status === "Active"
+                                      ? "bg-red-50 text-red-600 hover:bg-red-100"
+                                      : "bg-green-50 text-green-600 hover:bg-green-100"
+                                  }`}
+                                >
+                                  {batch.status === "Active" ? "Deactivate" : "Activate"}
+                                </button>
+                              )}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -1303,6 +1532,7 @@ export default function SuperAdminDashboard() {
                           setOverviewSubView("batches");
                           setSelectedBatch(null);
                           setStudentFeeFilter("all");
+                          setBatchStudentSearchQuery("");
                         }}
                         className="p-2 hover:bg-gray-100 rounded-lg text-gray-500 hover:text-gray-900 transition-colors flex items-center justify-center border"
                         title="Back to Batches"
@@ -1378,6 +1608,31 @@ export default function SuperAdminDashboard() {
                         {tab.label}
                       </button>
                     ))}
+                  </div>
+
+                  {/* In-batch student search */}
+                  <div className="mb-6 relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <FiSearch className="text-gray-400" size={16} />
+                    </div>
+                    <input
+                      type="text"
+                      placeholder="Search students in this batch..."
+                      value={batchStudentSearchQuery}
+                      onChange={(e) => {
+                        setBatchStudentSearchQuery(e.target.value);
+                        setStudentPage(1);
+                      }}
+                      className="block w-full pl-10 pr-10 py-2.5 border border-gray-300 rounded-xl text-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-gray-50/50 text-gray-800"
+                    />
+                    {batchStudentSearchQuery && (
+                      <button
+                        onClick={() => setBatchStudentSearchQuery("")}
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-xs text-gray-400 hover:text-gray-600 font-medium"
+                      >
+                        Clear
+                      </button>
+                    )}
                   </div>
 
                   {/* Table */}
@@ -1700,6 +1955,8 @@ export default function SuperAdminDashboard() {
                   onClick={() => {
                     setActivateBatchTarget(null);
                     setNewBatchNameInput("");
+                    setNewBatchCourseInput("");
+                    setNewBatchDateInput("");
                   }}
                   className="text-white hover:text-gray-200 text-2xl font-medium focus:outline-none transition-colors"
                 >
@@ -1709,21 +1966,49 @@ export default function SuperAdminDashboard() {
 
               {/* Form Body */}
               <form onSubmit={handleConfirmActivateBatch} className="p-6 space-y-4">
+                <p className="text-sm text-gray-500 mb-2 font-medium">
+                  Activating <strong>{activateBatchTarget.name}</strong> will create a new instance of this batch with a new name and a clean student slate.
+                </p>
+
                 <div>
-                  <p className="text-sm text-gray-500 mb-4 font-medium">
-                    Activating <strong>{activateBatchTarget.name}</strong> will create a new instance of this batch with a new name and a clean student slate.
-                  </p>
                   <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
-                    New Batch Name / Number
+                    Batch Name / Number
                   </label>
                   <input
                     type="text"
                     value={newBatchNameInput}
                     onChange={(e) => setNewBatchNameInput(e.target.value)}
                     placeholder="e.g. Python 5"
-                    className="w-full border rounded-xl p-3.5 outline-none focus:ring-2 focus:ring-blue-500 text-slate-800 placeholder-slate-400 font-medium"
+                    className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500 text-slate-800 placeholder-slate-400 font-medium"
                     required
-                    autoFocus
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    Course / Batch Type
+                  </label>
+                  <input
+                    type="text"
+                    value={newBatchCourseInput}
+                    onChange={(e) => setNewBatchCourseInput(e.target.value)}
+                    placeholder="e.g. Python Full Stack"
+                    className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500 text-slate-800 placeholder-slate-400 font-medium"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    Start Date
+                  </label>
+                  <input
+                    type="text"
+                    value={newBatchDateInput}
+                    onChange={(e) => setNewBatchDateInput(e.target.value)}
+                    placeholder="e.g. 15 Mar 2025"
+                    className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500 text-slate-800 placeholder-slate-400 font-medium"
+                    required
                   />
                 </div>
 
@@ -1733,6 +2018,8 @@ export default function SuperAdminDashboard() {
                     onClick={() => {
                       setActivateBatchTarget(null);
                       setNewBatchNameInput("");
+                      setNewBatchCourseInput("");
+                      setNewBatchDateInput("");
                     }}
                     className="px-4 py-2 border rounded-xl font-semibold text-gray-700 hover:bg-gray-50 transition active:scale-95 text-sm"
                   >
