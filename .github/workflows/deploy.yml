@@ -4,9 +4,52 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure dependency manifests are committed
+        run: |
+          set -euo pipefail
+
+          if [ ! -f package.json ]; then
+            echo "::error::package.json is missing. Commit package.json whenever dependencies change."
+            exit 1
+          fi
+
+          if [ ! -f package-lock.json ]; then
+            echo "::error::package-lock.json is missing. Run npm install and commit the lockfile."
+            exit 1
+          fi
+
+          if git check-ignore -q package.json package-lock.json; then
+            echo "::error::package.json and package-lock.json must not be listed in .gitignore."
+            exit 1
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
   deploy:
+    needs: validate
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
@@ -17,9 +60,16 @@ jobs:
           username: root
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            set -e
+            set -euo pipefail
             cd /var/www/cshr/careerschoolwebsite
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
+
+            if [ ! -f package.json ] || [ ! -f package-lock.json ]; then
+              echo "package.json and package-lock.json must exist on the server after syncing origin/main."
+              exit 1
+            fi
+
             npm ci
             npm run build
             pm2 reload next-app
