@@ -6,7 +6,7 @@ export async function getServerSideProps({ res }) {
     "/data-analytics-ai-course",
     "/online-assessment",
     "/training-enquiry-form",
-    "/nellorepython",
+    "/nellore-python",
     "/careerschool-jobs"
   ];
 
