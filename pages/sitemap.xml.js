@@ -6,7 +6,8 @@ export async function getServerSideProps({ res }) {
     "/data-analytics-ai-course",
     "/online-assessment",
     "/training-enquiry-form",
-    "/nellorepython",
+    "/nellore-python",
+    "/careerschool-jobs"
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -17,7 +18,7 @@ ${urls
   <url>
     <loc>${baseUrl}${url}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>${url === "/careerschool-jobs" ? "daily" : "weekly"}</changefreq>
     <priority>${url === "" ? "1.0" : "0.9"}</priority>
   </url>`,
   )
