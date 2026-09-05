@@ -115,7 +115,7 @@ const JobForm = ({ editJobId, initialData, onSubmitSuccess, onCancelEdit, onClos
           <select name="targetAudience" value={formData.targetAudience} onChange={handleChange} className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500" required>
             <option value="">Select Audience</option>
             <option value="Open For All">Open For All</option>
-            <option value="For Careerschool Student's">For Careerschool Student's</option>
+            <option value="For Careerschool Student's & Alumni">For Careerschool Student's & Alumni</option>
           </select>
         </div>
         <div>

@@ -33,7 +33,11 @@ const formatDate = (dateString) => {
    ("Open For All" / legacy jobs with no value) or Career School students directly. */
 const isCareerSchoolJob = (job) => {
   const audience = (job.targetAudience || "Open For All").toLowerCase();
-  return audience === "open for all" || audience === "for careerschool student's" || audience === "for careerschool students";
+
+  return (
+    audience === "open for all" ||
+    audience === "for careerschool student's & alumni"
+  );
 };
 
 /* ─── SVG Icons ─── */
@@ -737,8 +741,8 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
           <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Enter full name" className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none transition" required />
         </div>
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Student I'd </label>
-          <input type="text" name="studentId" value={formData.studentId} onChange={handleChange} placeholder="Enter your Student I'd (if available)" className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none transition" />
+          <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2"> Careerschool Registration Number : </label>
+          <input type="text" name="studentId" value={formData.studentId} onChange={handleChange} placeholder="Enter your Careerschool Registration Number" className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none transition" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
@@ -892,7 +896,7 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
         <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex justify-center items-center p-4">
           <div className="bg-white rounded-3xl w-full max-w-md p-6 md:p-8 shadow-2xl">
             <h4 className="text-xl font-bold text-blue-800 mb-4 text-center">Submit Your Application</h4>
-            <p className="text-sm text-gray-600 leading-relaxed mb-5 bg-blue-50 border border-blue-100 rounded-2xl p-4">
+            <p className="text-sm font-bold text-gray-800 leading-relaxed mb-5 bg-blue-50 border border-blue-100 rounded-2xl p-4">
               I agree to receive calls and messages from Careerschool regarding job opportunities, upskilling programs, and other career development information.
             </p>
             <label className="flex items-start gap-3 cursor-pointer select-none">
