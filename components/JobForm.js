@@ -7,6 +7,7 @@ const JobForm = ({ editJobId, initialData, onSubmitSuccess, onCancelEdit, onClos
   const [formData, setFormData] = useState({
     jobTitle: "",
     domain: "",
+    targetAudience: "",
     qualification: [],
     location: [],
     employmentType: "",
@@ -24,6 +25,7 @@ const JobForm = ({ editJobId, initialData, onSubmitSuccess, onCancelEdit, onClos
       setFormData({
         jobTitle: "",
         domain: "",
+        targetAudience: "",
         qualification: [],
         location: [],
         employmentType: "",
@@ -107,6 +109,14 @@ const JobForm = ({ editJobId, initialData, onSubmitSuccess, onCancelEdit, onClos
         <div>
           <label className="block font-semibold mb-2">Job Title</label>
           <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleChange} placeholder="Frontend Developer" className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500" required />
+        </div>
+        <div>
+          <label className="block font-semibold mb-2">Target Audience</label>
+          <select name="targetAudience" value={formData.targetAudience} onChange={handleChange} className="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500" required>
+            <option value="">Select Audience</option>
+            <option value="Open For All">Open For All</option>
+            <option value="For Careerschool Student's">For Careerschool Student's</option>
+          </select>
         </div>
         <div>
           <label className="block font-semibold mb-2">Qualification</label>
