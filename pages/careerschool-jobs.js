@@ -7,7 +7,7 @@ const JOBS_PER_PAGE = 12;
 
 const employmentTypeBadge = (type) => {
   if (type === "FULL_TIME") return "bg-green-500 text-white";
-  if (type === "PART_TIME") return "bg-yellow-500 text-white";
+    if (type === "PART_TIME") return "bg-green-500 text-white";
   if (type === "CONTRACT") return "bg-purple-500 text-white";
   if (type === "INTERNSHIP") return "bg-orange-500 text-white";
   return "bg-blue-500 text-white";
@@ -29,6 +29,17 @@ const formatDate = (dateString) => {
   return `${day}-${month}-${year}`;
 };
 
+/* A job is shown to Career School students when it targets everyone
+   ("Open For All" / legacy jobs with no value) or Career School students directly. */
+const isCareerSchoolJob = (job) => {
+  const audience = (job.targetAudience || "Open For All").toLowerCase();
+
+  return (
+    audience === "open for all" ||
+    audience === "for careerschool student's & alumni"
+  );
+};
+
 /* ─── SVG Icons ─── */
 const IconLocation = () => (
   <svg className="w-4 h-4 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 384 512">
@@ -48,6 +59,11 @@ const IconBag = () => (
 const IconCalendar = () => (
   <svg className="w-4 h-4 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 448 512">
     <path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336z" />
+  </svg>
+);
+const IconTarget = () => (
+  <svg className="w-4 h-4 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 512 512">
+    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-416a160 160 0 1 1 0 320 160 160 0 1 1 0-320zm0 256a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"/>
   </svg>
 );
 
@@ -76,7 +92,7 @@ const JobPortal = () => {
       const response = await fetch("https://career-school.co.in/api/jobs/active");
       const data = await response.json();
       const sorted = [...data].sort((a, b) => b.id - a.id);
-      setJobs(sorted);
+      setJobs(sorted.filter(isCareerSchoolJob));
     } catch (error) {
       console.error("Error fetching jobs:", error);
     } finally {
@@ -326,9 +342,17 @@ const JobPortal = () => {
                           {job.jobTitle}
                         </h4>
                       </div>
-                      <span className={`self-start px-2.5 py-0.5 rounded-full text-xs font-semibold ${employmentTypeBadge(job.employmentType)}`}>
-                        {formatEmploymentType(job.employmentType)}
-                      </span>
+                      <div className="flex items-center gap-1.5 min-w-0">
+                        <span className={`inline-flex items-center whitespace-nowrap shrink-0 px-2.5 py-1 rounded-full text-[11px] font-semibold leading-none tracking-wide uppercase ${employmentTypeBadge(job.employmentType)}`}>
+                          {formatEmploymentType(job.employmentType)}
+                        </span>
+                        <span
+                          title={job.targetAudience || "Open For All"}
+                          className="inline-flex items-center min-w-0 max-w-full truncate px-2.5 py-1 rounded-full text-[11px] font-semibold leading-none bg-blue-600 text-white"
+                        >
+                          {job.targetAudience || "Open For All"}
+                        </span>
+                      </div>
                     </div>
 
                     {/* Meta info */}
@@ -417,7 +441,7 @@ const JobPortal = () => {
             <div className="sticky top-0 bg-white rounded-t-3xl border-b border-gray-100 px-6 pt-5 pb-4 flex items-start justify-between gap-3 z-10">
               <div className="flex-1 min-w-0">
                 <h2 className="text-xl sm:text-2xl font-bold text-blue-900 leading-snug">{selectedJob.jobTitle}</h2>
-                <span className={`inline-block mt-2 px-3 py-0.5 rounded-full text-xs font-semibold ${employmentTypeBadge(selectedJob.employmentType)}`}>
+                <span className={`inline-block mt-2 px-3 py-1 rounded-full text-[11px] font-semibold leading-none uppercase tracking-wide whitespace-nowrap ${employmentTypeBadge(selectedJob.employmentType)}`}>
                   {formatEmploymentType(selectedJob.employmentType)}
                 </span>
               </div>
@@ -437,6 +461,7 @@ const JobPortal = () => {
                   { icon: <IconSalary />, label: "Salary", value: selectedJob.salaryRange },
                   { icon: <IconBag />, label: "Experience", value: selectedJob.experience || "Fresher" },
                   { icon: <IconCalendar />, label: "Deadline", value: formatDate(selectedJob.applicationDeadline) },
+                  ...(selectedJob.targetAudience ? [{ icon: <IconTarget />, label: "Audience", value: selectedJob.targetAudience }] : [])
                 ].map(({ icon, label, value }) => (
                   <div key={label} className="flex items-start gap-3 bg-blue-50 rounded-xl p-3.5">
                     <div className="mt-0.5">{icon}</div>
@@ -537,13 +562,13 @@ const JobPortal = () => {
 
 export default JobPortal;
 
-
 /* ─────────────────────────────────────────────
    ApplicationForm — completely unchanged
 ───────────────────────────────────────────── */
 const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
   const [formData, setFormData] = useState({
     fullName: "",
+    studentId: "",
     countryCode: "+91",
     phone: "",
     alternateCountryCode: "+91",
@@ -563,6 +588,12 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
   const [phoneError, setPhoneError] = useState("");
   const [phoneLengthError, setPhoneLengthError] = useState("");
   const [emailError, setEmailError] = useState("");
+
+  // Submission consent modal state
+  const [showConsent, setShowConsent] = useState(false);
+  const [consentAgreed, setConsentAgreed] = useState(false);
+  const [consentError, setConsentError] = useState("");
+  const [pendingSubmission, setPendingSubmission] = useState(null);
 
   const countryCodeOptions = [
     { label: "India +91", value: "+91", digits: 10 },
@@ -643,12 +674,15 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
       return;
     }
 
-    if (formData.alternatePhone) {
-      const alternateLimit = getDigitLimit(formData.alternateCountryCode);
-      if (formData.alternatePhone.length !== alternateLimit) {
-        setPhoneError(`Alternate number must contain exactly ${alternateLimit} digits.`);
-        return;
-      }
+    if (!formData.alternatePhone) {
+      setPhoneError("Alternate number is required.");
+      return;
+    }
+
+    const alternateLimit = getDigitLimit(formData.alternateCountryCode);
+    if (formData.alternatePhone.length !== alternateLimit) {
+      setPhoneError(`Alternate number must contain exactly ${alternateLimit} digits.`);
+      return;
     }
 
     if (
@@ -660,17 +694,33 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
       return;
     }
 
+    // All validations passed — show the consent confirmation modal before submitting
+    setPendingSubmission(submissionData);
+    setConsentAgreed(false);
+    setConsentError("");
+    setShowConsent(true);
+  };
+
+  /* Called from the consent modal — data goes to /applications only when "I Agree" is ticked */
+  const handleConsentSubmit = async () => {
+    if (!consentAgreed) {
+      setConsentError("Please tick \"I Agree\" to submit your application.");
+      return;
+    }
+    setConsentError("");
     try {
       const response = await fetch("https://career-school.co.in/api/applications", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(submissionData)
+        body: JSON.stringify(pendingSubmission)
       });
       const result = await response.json();
 
       if (response.ok && result.success) {
+        setShowConsent(false);
         onSuccess();
       } else {
+        setShowConsent(false);
         const errorMessages = result?.errors
           ? Object.values(result.errors).join(" ")
           : result?.message || "Failed to submit application. Please try again.";
@@ -689,6 +739,10 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
         <div>
           <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Full Name (As per Records)</label>
           <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Enter full name" className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none transition" required />
+        </div>
+        <div>
+          <label className="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2"> Careerschool Registration Number : </label>
+          <input type="text" name="studentId" value={formData.studentId} onChange={handleChange} placeholder="Enter your Careerschool Registration Number" className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none transition" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
@@ -735,7 +789,7 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
                   }
                 }}
                 placeholder="Alternate Number"
-                className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800" />
+                className="w-full bg-gray-50 border-0 rounded-2xl p-4 text-gray-800" required />
             </div>
             {phoneError && (
               <p className="mt-2 text-sm text-red-600 font-medium">{phoneError}</p>
@@ -836,6 +890,51 @@ const ApplicationForm = ({ jobId, jobTitle, onSuccess }) => {
           Submit Application
         </button>
       </form>
+
+      {/* ── Submission Consent Modal ── */}
+      {showConsent && (
+        <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex justify-center items-center p-4">
+          <div className="bg-white rounded-3xl w-full max-w-md p-6 md:p-8 shadow-2xl">
+            <h4 className="text-xl font-bold text-blue-800 mb-4 text-center">Submit Your Application</h4>
+            <p className="text-sm font-bold text-gray-800 leading-relaxed mb-5 bg-blue-50 border border-blue-100 rounded-2xl p-4">
+              I agree to receive calls and messages from Careerschool regarding job opportunities, upskilling programs, and other career development information.
+            </p>
+            <label className="flex items-start gap-3 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={consentAgreed}
+                onChange={(e) => {
+                  setConsentAgreed(e.target.checked);
+                  if (e.target.checked) setConsentError("");
+                }}
+                className="mt-0.5 w-4 h-4 accent-blue-700 shrink-0"
+              />
+              <span className="text-sm font-semibold text-gray-800">
+                I Agree <span className="text-red-500">*</span>
+              </span>
+            </label>
+            {consentError && (
+              <p className="mt-2 text-sm text-red-600 font-medium">{consentError}</p>
+            )}
+            <div className="flex gap-3 justify-end mt-6">
+              <button
+                type="button"
+                onClick={() => setShowConsent(false)}
+                className="px-5 py-2.5 border border-gray-300 rounded-xl font-semibold text-gray-700 hover:bg-gray-100 transition"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={handleConsentSubmit}
+                className="px-5 py-2.5 bg-blue-700 hover:bg-blue-800 text-white rounded-xl font-bold transition"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

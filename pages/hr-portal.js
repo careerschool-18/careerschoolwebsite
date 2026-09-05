@@ -4,6 +4,14 @@ import Footer from "../components/Footer";
 import JobForm from "../components/JobForm";
 import SuccessToast from "../components/SuccessToast";
 
+const targetAudienceInfo = (value) => {
+  const text = value || "Open For All";
+  if (text.toLowerCase().includes("career")) {
+    return { text, cls: "bg-blue-100 text-blue-900" };
+  }
+  return { text, cls: "bg-blue-100 text-blue-900" };
+};
+
 const PostJobs = () => {
   const router = useRouter();
   const [isVerified, setIsVerified] = useState(false);
@@ -61,6 +69,7 @@ const PostJobs = () => {
     setEditJobId(job.id);
     setSelectedJobForEdit({
       ...job,
+      targetAudience: job.targetAudience || "",
       experience: job.experience || "",
       qualification: job.qualification
         ? job.qualification.split(", ").map((q) => ({ value: q, label: q }))
@@ -71,6 +80,7 @@ const PostJobs = () => {
     });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  
   useEffect(() => {
     const authStatus = sessionStorage.getItem("isHRAuthenticated");
     if (authStatus !== "true") {
@@ -174,6 +184,7 @@ const PostJobs = () => {
                     <th className="p-3 border border-gray-200 text-center">Actions</th>
                     <th className="p-3 border border-gray-200">Job Title</th>
                     <th className="p-3 border border-gray-200">Type</th>
+                    <th className="p-3 border border-gray-200">Target Audience</th>
                     <th className="p-3 border border-gray-200">Location</th>
                     <th className="p-3 border border-gray-200">Salary</th>
                     <th className="p-3 border border-gray-200">Qualification</th>
@@ -193,6 +204,11 @@ const PostJobs = () => {
                       <td className="p-3 border border-gray-200">
                         <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">
                           {job.employmentType.replace("_", " ")}
+                        </span>
+                      </td>
+                      <td className="p-3 border border-gray-200">
+                        <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${targetAudienceInfo(job.targetAudience).cls}`}>
+                          {targetAudienceInfo(job.targetAudience).text}
                         </span>
                       </td>
                       <td className="p-3 border border-gray-200">{job.location}</td>
@@ -222,6 +238,7 @@ const PostJobs = () => {
                     <th className="p-3 border border-gray-200 text-center">Actions</th>
                     <th className="p-3 border border-gray-200">Job Title</th>
                     <th className="p-3 border border-gray-200">Type</th>
+                    <th className="p-3 border border-gray-200">Target Audience</th>
                     <th className="p-3 border border-gray-200">Location</th>
                     <th className="p-3 border border-gray-200">Salary</th>
                     <th className="p-3 border border-gray-200">Qualification</th>
@@ -241,6 +258,11 @@ const PostJobs = () => {
                       <td className="p-3 border border-gray-200">
                         <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-700">
                           {job.employmentType.replace("_", " ")}
+                        </span>
+                      </td>
+                      <td className="p-3 border border-gray-200">
+                        <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${targetAudienceInfo(job.targetAudience).cls}`}>
+                          {targetAudienceInfo(job.targetAudience).text}
                         </span>
                       </td>
                       <td className="p-3 border border-gray-200">{job.location}</td>

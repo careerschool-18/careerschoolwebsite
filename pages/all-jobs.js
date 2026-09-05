@@ -13,6 +13,14 @@ const statusBadge = (status) => {
   return "bg-gray-100 text-gray-600";
 };
 
+const targetAudienceInfo = (value) => {
+  const text = value || "Open For All";
+  if (text.toLowerCase().includes("career")) {
+    return { text, cls: "bg-blue-100 text-blue-900" };
+  }
+  return { text, cls: "bg-blue-100 text-blue-900" };
+};
+
 const AllJobs = () => {
   const router = useRouter();
   const [isVerified, setIsVerified] = useState(false);
@@ -81,6 +89,7 @@ const AllJobs = () => {
     return {
       jobTitle: job.jobTitle || "",
       domain: job.domain || "",
+      targetAudience: job.targetAudience || "",
       qualification: toOptions(job.qualification, qualifications),
       location: toOptions(job.location, indianCities),
       employmentType: job.employmentType || "",
@@ -206,6 +215,7 @@ const AllJobs = () => {
                   <th className="p-3 border border-gray-200">Status</th>
                   <th className="p-3 border border-gray-200">Job Title</th>
                   <th className="p-3 border border-gray-200">Type</th>
+                  <th className="p-3 border border-gray-200">Target Audience</th>
                   <th className="p-3 border border-gray-200">Location</th>
                   <th className="p-3 border border-gray-200">Salary</th>
                   <th className="p-3 border border-gray-200">Qualification</th>
@@ -244,6 +254,11 @@ const AllJobs = () => {
                     <td className="p-3 border border-gray-200">
                       <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">
                         {job.employmentType?.replace("_", " ")}
+                      </span>
+                    </td>
+                    <td className="p-3 border border-gray-200">
+                      <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${targetAudienceInfo(job.targetAudience).cls}`}>
+                        {targetAudienceInfo(job.targetAudience).text}
                       </span>
                     </td>
                     <td className="p-3 border border-gray-200">{job.location}</td>
